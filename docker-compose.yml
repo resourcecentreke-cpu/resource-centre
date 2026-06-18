@@ -1,0 +1,46 @@
+# Infrastructure for local development. Run: docker compose up -d
+# App services (api/web) run via `pnpm dev` against these.
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: rc_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: rc
+      POSTGRES_PASSWORD: rc_dev_password
+      POSTGRES_DB: resource_centre
+    ports:
+      - "5432:5432"
+    volumes:
+      - rc_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U rc -d resource_centre"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  redis:
+    image: redis:7-alpine
+    container_name: rc_redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - rc_redisdata:/data
+
+  meilisearch:
+    image: getmeili/meilisearch:v1.10
+    container_name: rc_meili
+    restart: unless-stopped
+    environment:
+      MEILI_MASTER_KEY: rc_dev_meili_key
+      MEILI_ENV: development
+    ports:
+      - "7700:7700"
+    volumes:
+      - rc_meilidata:/meili_data
+
+volumes:
+  rc_pgdata:
+  rc_redisdata:
+  rc_meilidata:

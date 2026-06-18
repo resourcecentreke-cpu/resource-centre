@@ -1,0 +1,8 @@
+{
+  "name": "@rc/config",
+  "version": "0.1.0",
+  "private": true,
+  "main": "index.js",
+  "files": ["eslint-preset.cjs", "prettier.config.cjs"],
+  "scripts": { "lint": "echo \"(config) ok\"" }
+}

@@ -1,0 +1,317 @@
+// Resource Centre — Prisma schema (Phase 1)
+// Money is stored as whole KES shillings (Int). See ROADMAP §4.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ───────────────────────── Enums ─────────────────────────
+enum StockStatus {
+  IN
+  LOW
+  OUT
+}
+
+enum SellerStatus {
+  PENDING
+  ACTIVE
+  SUSPENDED
+}
+
+enum ReviewType {
+  PRODUCT
+  STORE
+}
+
+enum ReviewStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+enum AlertChannel {
+  EMAIL
+  SMS
+  WHATSAPP
+}
+
+enum AlertStatus {
+  ACTIVE
+  TRIGGERED
+  PAUSED
+  CANCELLED
+}
+
+enum SubscriptionPlan {
+  BASIC
+  PREMIUM
+  ENTERPRISE
+}
+
+enum SubscriptionStatus {
+  ACTIVE
+  PAST_DUE
+  CANCELLED
+}
+
+enum PaymentStatus {
+  PENDING
+  COMPLETED
+  FAILED
+}
+
+enum SponsoredPlacement {
+  HOME_HERO
+  CATEGORY_TOP
+  PRODUCT_RELATED
+}
+
+enum EventType {
+  SEARCH
+  PRODUCT_VIEW
+  OFFER_CLICK
+}
+
+// ───────────────────────── Catalogue ─────────────────────────
+model Category {
+  id        String     @id @default(cuid())
+  name      String     @unique
+  slug      String     @unique
+  icon      String?
+  parentId  String?
+  parent    Category?  @relation("CategoryTree", fields: [parentId], references: [id])
+  children  Category[] @relation("CategoryTree")
+  products  Product[]
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+}
+
+model Product {
+  id           String             @id @default(cuid())
+  slug         String             @unique
+  name         String
+  brand        String
+  categoryId   String
+  category     Category           @relation(fields: [categoryId], references: [id])
+  specSummary  String
+  specs        Json?
+  images       Json?
+  imageSlug    String?
+  isNew        Boolean            @default(false)
+  isActive     Boolean            @default(true)
+  minPrice     Int                @default(0)
+  maxPrice     Int                @default(0)
+  offerCount   Int                @default(0)
+  interestSeed Int                @default(0) // baseline popularity; combined with live views for "Top 10 by interest"
+  offers       Offer[]
+  priceHistory PriceHistory[]
+  reviews      Review[]
+  alerts       Alert[]
+  sponsored    SponsoredListing[]
+  createdAt    DateTime           @default(now())
+  updatedAt    DateTime           @updatedAt
+
+  @@index([categoryId])
+  @@index([brand])
+  @@index([minPrice])
+  @@index([interestSeed])
+}
+
+// ───────────────────────── Sellers ─────────────────────────
+model Seller {
+  id                String             @id @default(cuid())
+  name              String             @unique
+  slug              String             @unique
+  website           String?
+  searchUrlTemplate String?
+  yearsInBusiness   Int                @default(0)
+  returnWindowDays  Int                @default(0)
+  warrantyTerms     String?
+  isVerified        Boolean            @default(false)
+  status            SellerStatus       @default(PENDING)
+  metric            SellerMetric?
+  offers            Offer[]
+  deliveryEstimates DeliveryEstimate[]
+  reviews           Review[]
+  sponsored         SponsoredListing[]
+  subscription      Subscription?
+  payments          Payment[]
+  createdAt         DateTime           @default(now())
+  updatedAt         DateTime           @updatedAt
+}
+
+model SellerMetric {
+  id                  String   @id @default(cuid())
+  sellerId            String   @unique
+  seller              Seller   @relation(fields: [sellerId], references: [id], onDelete: Cascade)
+  customerRating      Float    @default(0)
+  deliveryPerformance Float    @default(0) // 0..1
+  trustScore          Int      @default(0) // 0..100
+  updatedAt           DateTime @updatedAt
+}
+
+// ───────────────────────── Offers & prices ─────────────────────────
+model Offer {
+  id           String         @id @default(cuid())
+  productId    String
+  product      Product        @relation(fields: [productId], references: [id], onDelete: Cascade)
+  sellerId     String
+  seller       Seller         @relation(fields: [sellerId], references: [id], onDelete: Cascade)
+  price        Int // whole KES
+  deliveryFee  Int            @default(0)
+  inStock      StockStatus    @default(IN)
+  rating       Float          @default(0)
+  productUrl   String?
+  lastSeenAt   DateTime       @default(now())
+  priceHistory PriceHistory[]
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
+
+  @@unique([productId, sellerId])
+  @@index([productId])
+  @@index([price])
+}
+
+model PriceHistory {
+  id         String   @id @default(cuid())
+  productId  String
+  product    Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  offerId    String?
+  offer      Offer?   @relation(fields: [offerId], references: [id], onDelete: Cascade)
+  sellerId   String?
+  price      Int
+  recordedAt DateTime @default(now())
+
+  @@index([productId, recordedAt])
+  @@index([offerId, recordedAt])
+}
+
+model DeliveryEstimate {
+  id       String @id @default(cuid())
+  sellerId String
+  seller   Seller @relation(fields: [sellerId], references: [id], onDelete: Cascade)
+  city     String
+  days     String
+  fee      Int    @default(0)
+
+  @@unique([sellerId, city])
+}
+
+// ───────────────────────── Users, alerts, reviews ─────────────────────────
+model User {
+  id                 String   @id @default(cuid())
+  email              String   @unique
+  phone              String?
+  passwordHash       String
+  hashedRefreshToken String?
+  locale             String   @default("en")
+  isVerified         Boolean  @default(false)
+  alerts             Alert[]
+  reviews            Review[]
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+}
+
+model Alert {
+  id             String         @id @default(cuid())
+  userId         String
+  user           User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+  productId      String
+  product        Product        @relation(fields: [productId], references: [id], onDelete: Cascade)
+  targetPrice    Int
+  channels       AlertChannel[]
+  status         AlertStatus    @default(ACTIVE)
+  lastNotifiedAt DateTime?
+  createdAt      DateTime       @default(now())
+  updatedAt      DateTime       @updatedAt
+
+  @@unique([userId, productId])
+  @@index([userId])
+  @@index([productId])
+  @@index([status])
+}
+
+model Review {
+  id              String       @id @default(cuid())
+  type            ReviewType
+  productId       String?
+  product         Product?     @relation(fields: [productId], references: [id], onDelete: Cascade)
+  sellerId        String?
+  seller          Seller?      @relation(fields: [sellerId], references: [id], onDelete: Cascade)
+  userId          String?
+  user            User?        @relation(fields: [userId], references: [id], onDelete: SetNull)
+  rating          Int
+  title           String?
+  body            String
+  isVerifiedBuyer Boolean      @default(false)
+  status          ReviewStatus @default(PENDING)
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @updatedAt
+
+  @@index([productId])
+  @@index([sellerId])
+  @@index([status])
+}
+
+// ───────────────────────── Monetization ─────────────────────────
+model SponsoredListing {
+  id        String             @id @default(cuid())
+  sellerId  String
+  seller    Seller             @relation(fields: [sellerId], references: [id], onDelete: Cascade)
+  productId String?
+  product   Product?           @relation(fields: [productId], references: [id], onDelete: SetNull)
+  placement SponsoredPlacement
+  startsAt  DateTime
+  endsAt    DateTime
+  paymentId String?
+  isActive  Boolean            @default(false)
+  createdAt DateTime           @default(now())
+
+  @@index([placement, isActive])
+}
+
+model Subscription {
+  id        String             @id @default(cuid())
+  sellerId  String             @unique
+  seller    Seller             @relation(fields: [sellerId], references: [id], onDelete: Cascade)
+  plan      SubscriptionPlan   @default(BASIC)
+  status    SubscriptionStatus @default(ACTIVE)
+  mpesaRef  String?
+  renewsAt  DateTime?
+  createdAt DateTime           @default(now())
+  updatedAt DateTime           @updatedAt
+}
+
+model Payment {
+  id              String        @id @default(cuid())
+  sellerId        String?
+  seller          Seller?       @relation(fields: [sellerId], references: [id], onDelete: SetNull)
+  amount          Int
+  purpose         String
+  reference       String?
+  status          PaymentStatus @default(PENDING)
+  mpesaCheckoutId String?
+  mpesaReceipt    String?
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+
+  @@index([status])
+}
+
+// ───────────────────────── Analytics ─────────────────────────
+model AnalyticsEvent {
+  id        String    @id @default(cuid())
+  type      EventType
+  query     String?
+  productId String?
+  sellerId  String?
+  meta      Json?
+  createdAt DateTime  @default(now())
+
+  @@index([type, createdAt])
+}

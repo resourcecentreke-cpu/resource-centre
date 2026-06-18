@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Resource Centre · Compare Kenya Electronics Prices</title>
+<meta name="description" content="Compare prices on phones, laptops, TVs, gaming, cameras and more across Kenya's trusted online stores. Price history, seller trust scores, delivery comparison and price alerts." />
+<meta name="theme-color" content="#FF6B5C" />
+<!-- ───────── GOOGLE ADSENSE ─────────
+     Replace ca-pub-XXXXXXXXXXXXXXXX with YOUR AdSense publisher ID (Account → Settings),
+     and set the same ID + your data-ad-slot on each <ins class="adsbygoogle"> below. -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --bg:#FFFDF9;--bg2:#FFF4EC;--panel:#FFFFFF;--card:#FFFFFF;
+ --line:#F1E7DC;--line2:#E7DACd;--shadow:0 10px 30px rgba(43,34,64,.08);--shadow2:0 16px 44px rgba(43,34,64,.12);
+ --ink:#2B2240;--mut:#7A7088;--dim:#A99FB4;
+ --coral:#FF6B5C;--coral-d:#F2543F;--amber:#FFC247;--mint:#2FD3A5;--berry:#FF5DA2;--sky:#5B8DEF;
+ --good:#1FAE78;--warn:#E8902B;--bad:#E25555;
+ --r:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Plus Jakarta Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.5;
+ background-image:radial-gradient(circle at 12% -5%,rgba(255,194,71,.16),transparent 38%),radial-gradient(circle at 92% 0%,rgba(47,211,165,.14),transparent 36%);background-attachment:fixed}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit}
+.wrap{max-width:1240px;margin:0 auto;padding:0 22px}
+.mono{font-family:'Space Mono',monospace}
+.hide{display:none!important}
+/* Header */
+header{position:sticky;top:0;z-index:60;backdrop-filter:blur(12px);background:rgba(255,253,249,.86);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:18px;height:66px}
+.brand{display:flex;align-items:center;gap:11px;flex-shrink:0;cursor:pointer}
+.brand .dots{display:flex;gap:3px}
+.brand .dots span{width:9px;height:9px;border-radius:50%}
+.brand .dots span:nth-child(1){background:var(--coral)}
+.brand .dots span:nth-child(2){background:var(--amber)}
+.brand .dots span:nth-child(3){background:var(--mint)}
+.brand b{font-family:'Space Grotesk';font-weight:700;letter-spacing:.02em;font-size:16px}
+.brand small{color:var(--dim);letter-spacing:.32em;font-size:8px;text-transform:uppercase;display:block;margin-top:-2px}
+.hsearch{flex:1;position:relative;max-width:560px}
+.hsearch input{width:100%;border:1.5px solid var(--line2);background:var(--panel);border-radius:100px;padding:11px 44px 11px 18px;font-size:14px;color:var(--ink);outline:none;transition:.18s}
+.hsearch input:focus{border-color:var(--coral);box-shadow:0 0 0 4px rgba(255,107,92,.12)}
+.hsearch .si{position:absolute;right:16px;top:50%;transform:translateY(-50%);pointer-events:none}
+.ac{position:absolute;top:48px;left:0;right:0;background:var(--panel);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow2);overflow:hidden;z-index:80}
+.ac a,.ac .acrow{display:flex;align-items:center;gap:12px;padding:11px 16px;cursor:pointer;border-bottom:1px solid var(--line)}
+.ac a:last-child{border-bottom:0}
+.ac a:hover{background:var(--bg2)}
+.ac .acimg{width:34px;height:34px;border-radius:9px;background:var(--bg2);display:flex;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden}
+.ac .acimg img{max-width:100%;max-height:100%;object-fit:contain}
+.ac .acn{font-weight:600;font-size:13px}
+.ac .acm{font-size:11px;color:var(--mut)}
+.ac .acp{margin-left:auto;font-weight:700;font-size:13px;color:var(--coral)}
+.ac .achead{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);padding:9px 16px 4px;background:var(--bg2)}
+.navlinks{display:flex;gap:18px;align-items:center;flex-shrink:0}
+.navlinks a{font-size:13px;font-weight:600;color:var(--mut);transition:.18s;white-space:nowrap}
+.navlinks a:hover{color:var(--ink)}
+.lang{display:flex;border:1.5px solid var(--line2);border-radius:100px;overflow:hidden}
+.lang button{border:0;background:transparent;color:var(--mut);font-size:11px;font-weight:700;padding:6px 10px;cursor:pointer}
+.lang button.on{background:var(--coral);color:#fff}
+.cartlike{display:inline-flex;align-items:center;gap:6px;border:1.5px solid var(--line2);background:var(--panel);border-radius:100px;padding:7px 13px;font-size:12px;font-weight:700;cursor:pointer;color:var(--ink)}
+.cartlike .cnt{background:var(--coral);color:#fff;border-radius:100px;font-size:10px;padding:1px 6px}
+@media(max-width:1000px){.navlinks a{display:none}.navlinks a.keep{display:inline}}
+@media(max-width:720px){.hsearch{max-width:none}.brand small{display:none}}
+/* Buttons & chips */
+.btn{display:inline-flex;align-items:center;gap:7px;border:0;border-radius:100px;padding:11px 18px;font-weight:700;font-size:13px;cursor:pointer;transition:.18s}
+.btn-primary{background:var(--coral);color:#fff}.btn-primary:hover{background:var(--coral-d);transform:translateY(-1px)}
+.btn-ghost{background:var(--panel);color:var(--ink);border:1.5px solid var(--line2)}.btn-ghost:hover{border-color:var(--coral);color:var(--coral)}
+.btn-mint{background:var(--mint);color:#06382a}.btn-mint:hover{filter:brightness(1.05);transform:translateY(-1px)}
+.chip{font-size:12px;font-weight:600;color:var(--mut);border:1.5px solid var(--line2);background:var(--panel);padding:8px 14px;border-radius:100px;cursor:pointer;transition:.16s}
+.chip:hover{border-color:var(--coral);color:var(--coral)}
+.chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.tag{font-size:10px;font-weight:700;letter-spacing:.04em;padding:3px 9px;border-radius:100px;text-transform:uppercase}
+.tag-new{background:rgba(47,211,165,.16);color:#0e8f68}
+.tag-deal{background:rgba(255,107,92,.14);color:var(--coral-d)}
+.tag-hot{background:rgba(255,194,71,.2);color:#a9750a}
+.badge-v{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:700;color:#0e8f68;background:rgba(47,211,165,.14);padding:3px 9px;border-radius:100px}
+/* Sections */
+.sec{padding:42px 0}
+.sechead{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:20px;flex-wrap:wrap}
+.sechead h2{font-family:'Space Grotesk';font-size:22px;font-weight:700;letter-spacing:-.01em}
+.sechead .sub{color:var(--mut);font-size:13px;max-width:520px}
+.sechead a.more{font-size:13px;font-weight:700;color:var(--coral)}
+/* Hero */
+.hero{padding:46px 0 8px}
+.hero .htag{display:inline-flex;align-items:center;gap:8px;background:var(--panel);border:1.5px solid var(--line2);border-radius:100px;padding:7px 14px;font-size:12px;font-weight:700;color:var(--coral);box-shadow:var(--shadow)}
+.hero h1{font-family:'Space Grotesk';font-size:clamp(30px,5.4vw,52px);font-weight:700;line-height:1.05;letter-spacing:-.02em;margin-top:18px}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--coral),var(--amber));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--mut);max-width:560px;margin-top:14px;font-size:15px}
+.bigsearch{position:relative;max-width:660px;margin-top:24px}
+.bigsearch input{width:100%;border:2px solid var(--line2);background:var(--panel);border-radius:100px;padding:17px 130px 17px 22px;font-size:16px;outline:none;box-shadow:var(--shadow);transition:.18s}
+.bigsearch input:focus{border-color:var(--coral);box-shadow:0 0 0 5px rgba(255,107,92,.13)}
+.bigsearch .go{position:absolute;right:8px;top:8px;bottom:8px;padding:0 22px}
+.poprow{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;align-items:center}
+.poprow .lbl{font-size:12px;color:var(--dim);font-weight:700}
+.stats{display:flex;gap:30px;margin-top:28px;flex-wrap:wrap}
+.stats div b{font-family:'Space Grotesk';font-size:24px;display:block}
+.stats div span{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);font-weight:700}
+/* Category grid */
+.catgrid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+@media(max-width:900px){.catgrid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:520px){.catgrid{grid-template-columns:repeat(2,1fr)}}
+.cat{position:relative;border:1.5px solid var(--line);border-radius:16px;background:var(--panel);padding:16px 12px;text-align:center;cursor:pointer;transition:.18s;box-shadow:var(--shadow)}
+.cat:hover{transform:translateY(-3px);border-color:var(--coral);box-shadow:var(--shadow2)}
+.cat .ci{width:46px;height:46px;margin:0 auto 8px;border-radius:13px;display:flex;align-items:center;justify-content:center;background:var(--bg2)}
+.cat .cn{font-size:12.5px;font-weight:700}
+.cat .cc{font-size:10px;color:var(--dim);font-weight:700;margin-top:2px}
+.cat .soon{position:absolute;top:8px;right:8px;font-size:8px;font-weight:800;letter-spacing:.08em;color:var(--amber);background:rgba(255,194,71,.18);padding:2px 6px;border-radius:100px}
+/* Product cards */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(232px,1fr));gap:16px}
+.pcard{position:relative;border:1.5px solid var(--line);border-radius:16px;background:var(--card);overflow:hidden;display:flex;flex-direction:column;transition:.18s;box-shadow:var(--shadow);cursor:pointer}
+.pcard:hover{transform:translateY(-4px);box-shadow:var(--shadow2);border-color:var(--line2)}
+.pcard .ph{height:172px;display:flex;align-items:center;justify-content:center;padding:18px;background:linear-gradient(180deg,#fff,#fff7f0);position:relative}
+.pcard .ph img{max-height:100%;max-width:100%;object-fit:contain;filter:drop-shadow(0 10px 16px rgba(43,34,64,.14))}
+.pcard .tags{position:absolute;top:10px;left:10px;display:flex;gap:5px;flex-wrap:wrap}
+.pcard .cmpadd{position:absolute;top:10px;right:10px;width:30px;height:30px;border-radius:9px;border:1.5px solid var(--line2);background:rgba(255,255,255,.9);display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--mut);font-size:16px;font-weight:700;z-index:3}
+.pcard .cmpadd:hover{border-color:var(--mint);color:var(--mint)}
+.pcard .cmpadd.on{background:var(--mint);color:#fff;border-color:var(--mint)}
+.pcard .pb{padding:13px 15px 15px;display:flex;flex-direction:column;flex:1}
+.pcard .pcat{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);font-weight:700}
+.pcard h4{font-size:14.5px;font-weight:700;margin-top:4px;letter-spacing:-.01em;line-height:1.25}
+.pcard .pspec{font-size:11px;color:var(--mut);margin-top:5px;min-height:30px}
+.pcard .prow{margin-top:auto;display:flex;align-items:flex-end;justify-content:space-between;padding-top:11px;border-top:1px solid var(--line)}
+.pcard .px b{font-family:'Space Grotesk';font-size:17px;color:var(--ink);display:block}
+.pcard .px small{font-size:10px;color:var(--dim);font-weight:700}
+.pcard .pstars{font-size:11px;font-weight:700;color:var(--warn);text-align:right}
+.pcard .pstars span{color:var(--dim);display:block;font-size:10px}
+.stockdot{display:inline-flex;align-items:center;gap:5px;font-size:10px;font-weight:700}
+.stockdot i{width:7px;height:7px;border-radius:50%;display:inline-block}
+.s-in i{background:var(--good)}.s-in{color:var(--good)}
+.s-low i{background:var(--warn)}.s-low{color:var(--warn)}
+.s-out i{background:var(--bad)}.s-out{color:var(--bad)}
+/* Deals tabs */
+.tabs{display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap}
+/* Ads & sponsor */
+.adwrap{max-width:1240px;margin:8px auto;padding:0 22px}
+.adband{position:relative;border:1px dashed var(--line2);border-radius:14px;background:#fff;min-height:110px;display:flex;align-items:center;justify-content:center}
+.adband .adlbl{position:absolute;top:6px;left:12px;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);font-weight:700}
+.adband ins{display:block;width:100%}
+.sponsor{position:relative;border:1.5px solid var(--amber);border-radius:18px;background:linear-gradient(110deg,#fff8ec,#fff);padding:22px 24px;display:flex;align-items:center;gap:22px;flex-wrap:wrap;box-shadow:var(--shadow)}
+.sponsor .sflag{position:absolute;top:12px;right:14px;font-size:9px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#a9750a;background:rgba(255,194,71,.22);padding:3px 9px;border-radius:100px}
+.sponsor .sicon{width:74px;height:74px;border-radius:16px;background:radial-gradient(circle at 40% 35%,rgba(255,194,71,.4),#fff);display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid var(--line2)}
+.sponsor .sbody{flex:1;min-width:230px}
+.sponsor .scat{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--mint);font-weight:800;margin-bottom:5px}
+.sponsor h3{font-family:'Space Grotesk';font-size:20px;font-weight:700}
+.sponsor p{color:var(--mut);font-size:13px;margin-top:6px;max-width:540px}
+/* Tables */
+.tbl{width:100%;border-collapse:collapse;font-size:13.5px}
+.tbl th,.tbl td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line)}
+.tbl th{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);font-weight:800;background:var(--bg2)}
+.tbl tr:last-child td{border-bottom:0}
+.tbl .best td{background:rgba(47,211,165,.07)}
+.panel{background:var(--panel);border:1.5px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);overflow:hidden}
+.pad{padding:20px 22px}
+/* Product detail */
+.pdtop{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+@media(max-width:880px){.pdtop{grid-template-columns:1fr}}
+.gallery .main{height:360px;border:1.5px solid var(--line);border-radius:var(--r);background:linear-gradient(180deg,#fff,#fff6ee);display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:var(--shadow)}
+.gallery .main img{max-height:86%;max-width:86%;object-fit:contain;transition:transform .25s;cursor:zoom-in;filter:drop-shadow(0 16px 26px rgba(43,34,64,.18))}
+.gallery .main img:hover{transform:scale(1.7)}
+.gallery .thumbs{display:flex;gap:10px;margin-top:12px}
+.gallery .thumbs button{width:64px;height:64px;border:1.5px solid var(--line2);border-radius:12px;background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;overflow:hidden;padding:6px}
+.gallery .thumbs button.on{border-color:var(--coral)}
+.gallery .thumbs button img{max-width:100%;max-height:100%;object-fit:contain}
+.pdinfo h1{font-family:'Space Grotesk';font-size:28px;font-weight:700;letter-spacing:-.01em;line-height:1.1}
+.pdinfo .row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.bestbox{margin-top:18px;border:1.5px solid var(--mint);border-radius:16px;background:linear-gradient(110deg,rgba(47,211,165,.08),#fff);padding:16px 18px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.bestbox .px{font-family:'Space Grotesk';font-size:30px;font-weight:700}
+.bestbox .px small{font-size:12px;color:var(--mut);font-weight:600;display:block}
+.kv{display:flex;gap:18px;flex-wrap:wrap;margin-top:14px}
+.kv div b{font-family:'Space Grotesk';font-size:15px;display:block}
+.kv div span{font-size:11px;color:var(--dim);font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.subsec{margin-top:30px}
+.subsec h3{font-family:'Space Grotesk';font-size:17px;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:9px}
+.subsec h3 .ic{width:26px;height:26px;border-radius:8px;background:var(--bg2);display:flex;align-items:center;justify-content:center}
+/* Price history chart */
+.chart{position:relative}
+.chartstats{display:flex;gap:22px;flex-wrap:wrap;margin-bottom:10px}
+.chartstats div b{font-family:'Space Grotesk';font-size:16px;display:block}
+.chartstats div span{font-size:10px;color:var(--dim);font-weight:800;text-transform:uppercase;letter-spacing:.06em}
+.chartstats .lo b{color:var(--good)}.chartstats .hi b{color:var(--bad)}
+/* Trust */
+.trustcard{display:flex;align-items:center;gap:16px;padding:14px 16px;border:1.5px solid var(--line);border-radius:14px;background:var(--panel)}
+.trustring{width:62px;height:62px;flex-shrink:0;position:relative}
+.trustring .tnum{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk';font-weight:700;font-size:16px}
+.metric{display:flex;justify-content:space-between;font-size:12px;padding:4px 0;color:var(--mut)}
+.metric b{color:var(--ink)}
+/* Reviews */
+.review{border:1.5px solid var(--line);border-radius:14px;padding:14px 16px;background:var(--panel);margin-bottom:10px}
+.review .rh{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.review .ra{font-weight:700;font-size:13px}
+.review .rs{color:var(--warn);font-weight:700;font-size:12px}
+.review p{font-size:13px;color:var(--mut);margin-top:6px}
+/* Filters */
+.catlayout{display:grid;grid-template-columns:248px 1fr;gap:22px;align-items:start}
+@media(max-width:840px){.catlayout{grid-template-columns:1fr}.filters-side{position:static!important}}
+.filters-side{position:sticky;top:84px}
+.fgroup{border-bottom:1px solid var(--line);padding:14px 0}
+.fgroup h4{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);font-weight:800;margin-bottom:10px}
+.fgroup label{display:flex;align-items:center;gap:9px;font-size:13px;color:var(--mut);padding:4px 0;cursor:pointer}
+.fgroup label input{accent-color:var(--coral);width:15px;height:15px}
+.rangerow{display:flex;align-items:center;gap:8px}
+.rangerow input[type=number]{width:100%;border:1.5px solid var(--line2);border-radius:10px;padding:8px;font-size:12px;font-family:'Space Mono';outline:none}
+/* Compare */
+.cmpbar{position:fixed;left:0;right:0;bottom:0;z-index:70;background:var(--panel);border-top:1.5px solid var(--line);box-shadow:0 -10px 30px rgba(43,34,64,.1);transform:translateY(110%);transition:.25s}
+.cmpbar.show{transform:translateY(0)}
+.cmpbar .in{max-width:1240px;margin:0 auto;padding:12px 22px;display:flex;align-items:center;gap:12px}
+.cmpbar .slots{display:flex;gap:10px;flex:1;overflow-x:auto}
+.cmpslot{display:flex;align-items:center;gap:8px;border:1.5px solid var(--line2);border-radius:12px;padding:6px 10px;font-size:12px;font-weight:600;white-space:nowrap;background:var(--bg2)}
+.cmpslot img{width:26px;height:26px;object-fit:contain}
+.cmpslot .x{cursor:pointer;color:var(--bad);font-weight:800}
+.cmptable-wrap{overflow-x:auto}
+.cmptable{border-collapse:collapse;width:100%;min-width:640px}
+.cmptable th,.cmptable td{padding:13px 14px;border:1px solid var(--line);text-align:left;font-size:13px;vertical-align:top}
+.cmptable thead th{background:var(--bg2);text-align:center}
+.cmptable td.win{background:rgba(47,211,165,.12);font-weight:700}
+.cmptable .rowlbl{font-weight:800;font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--dim);background:#fff;white-space:nowrap}
+.cmpprod{text-align:center}
+.cmpprod img{height:80px;object-fit:contain;margin:0 auto 6px;display:block}
+/* Footer */
+footer{border-top:1px solid var(--line);margin-top:40px;background:var(--bg2)}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:26px;padding:38px 0}
+@media(max-width:760px){.foot{grid-template-columns:1fr}}
+.foot h5{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);font-weight:800;margin-bottom:12px}
+.foot a{display:block;color:var(--mut);font-size:13px;padding:4px 0;cursor:pointer}
+.foot a:hover{color:var(--coral)}
+.foot p{color:var(--mut);font-size:13px;max-width:340px}
+.disc{color:var(--dim);font-size:11px;line-height:1.7;padding:16px 0 34px}
+.stz{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.stz span{font-family:'Space Mono';font-size:10px;color:var(--mut);border:1px solid var(--line2);padding:3px 8px;border-radius:7px;background:#fff}
+/* misc */
+.empty{text-align:center;padding:60px 20px;color:var(--dim);font-weight:600}
+.crumbs{font-size:12px;color:var(--mut);font-weight:600;margin:14px 0}
+.crumbs a{color:var(--coral);cursor:pointer}
+.note{font-size:11px;color:var(--dim);background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:9px 12px;margin-top:10px}
+.recrail{display:grid;grid-template-columns:repeat(auto-fill,minmax(232px,1fr));gap:16px}
+.input{width:100%;border:1.5px solid var(--line2);border-radius:12px;padding:11px 13px;font-size:14px;outline:none;font-family:inherit}
+.input:focus{border-color:var(--coral)}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <div class="brand" onclick="go('/')"><span class="dots"><span></span><span></span><span></span></span><span><b>Resource Centre</b><small data-i="tagline">Compare · Save · Smile</small></span></div>
+  <div class="hsearch">
+    <input id="navSearch" placeholder="Search products, brands or models…" autocomplete="off" data-iph="ph_search">
+    <svg class="si" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#A99FB4" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg>
+    <div id="navAc"></div>
+  </div>
+  <nav class="navlinks">
+    <a onclick="go('/compare')" data-i="nav_compare">Compare</a>
+    <a onclick="go('/alerts')" class="keep" data-i="nav_alerts">Alerts</a>
+    <div class="lang"><button id="langEn" class="on" onclick="setLang('en')">EN</button><button id="langSw" onclick="setLang('sw')">SW</button></div>
+  </nav>
+</div></header>
+
+<main id="app"></main>
+
+<footer><div class="wrap">
+  <div class="foot">
+    <div>
+      <div class="brand" onclick="go('/')"><span class="dots"><span></span><span></span><span></span></span><span><b>Resource Centre</b><small>Kenya</small></span></div>
+      <p style="margin-top:14px" data-i="foot_about">We surface the lowest listed price across Kenya's established online electronics stores — with price history, seller trust scores and delivery comparison — so you always buy smart.</p>
+      <div class="stz" id="storelist"></div>
+    </div>
+    <div>
+      <h5 data-i="foot_explore">Explore</h5>
+      <a onclick="go('/c/Smartphones')" data-i="cat_Smartphones">Smartphones</a>
+      <a onclick="go('/c/Laptops')" data-i="cat_Laptops">Laptops</a>
+      <a onclick="go('/c/TVs')" data-i="cat_TVs">TVs</a>
+      <a onclick="go('/compare')" data-i="nav_compare">Compare</a>
+      <a onclick="go('/alerts')" data-i="nav_alerts">Price alerts</a>
+    </div>
+    <div>
+      <h5 data-i="foot_partners">For stores</h5>
+      <a href="mailto:partnerships@resourcecentre.co.ke" data-i="foot_list">List your store</a>
+      <a href="mailto:partnerships@resourcecentre.co.ke" data-i="foot_sponsor">Sponsored placement</a>
+      <a href="mailto:partnerships@resourcecentre.co.ke" data-i="foot_advertise">Advertise</a>
+      <a href="mailto:partnerships@resourcecentre.co.ke">partnerships@resourcecentre.co.ke</a>
+    </div>
+  </div>
+  <p class="disc" data-i="disclaimer">Prices, ratings, delivery times, stock, trust scores, reviews and price history shown here are indicative — gathered or modelled from public Kenyan store listings around June 2026 — and change often. Seller ratings and review samples are illustrative. Always confirm details on the retailer's page before buying. Product images belong to their respective manufacturers and are shown for identification only.</p>
+</div></footer>
+
+<!-- Compare dock -->
+<div class="cmpbar" id="cmpbar"><div class="in">
+  <b style="font-family:'Space Grotesk';font-size:13px" data-i="compare_tray">Compare tray</b>
+  <div class="slots" id="cmpslots"></div>
+  <button class="btn btn-mint" onclick="go('/compare')"><span data-i="nav_compare">Compare</span> <span id="cmpcount">(0)</span></button>
+</div></div>
+
+<script>
+/* ════════════════ DATA ════════════════ */
+const DATA=[{"cat":"Phones","name":"Samsung Galaxy S26 Ultra","spec":"6.9\" QHD+ · SD 8 Elite Gen5 · 200MP","img":"samsung-galaxy-s26-ultra-5g","new":1,"stores":[["Avechi",134999],["Jumia KE",137500],["Phone Place Kenya",146400],["iTey Store",150100],["Mobile Hub",153800],["Smartphones Planet",163700],["Silkroom",166600]]},{"cat":"Phones","name":"iPhone 17 Pro Max","spec":"6.9\" LTPO · A19 Pro · 48MP tetra","img":"apple-iphone-17-pro-max","new":1,"stores":[["iTey Store",189999],["Phone Place Kenya",198700],["Smartphones Planet",206600],["Avechi",211800],["Silkroom",224400],["Digital Phones",228500],["Price Point",241100]]},{"cat":"Phones","name":"iPhone 17 Pro","spec":"6.3\" LTPO · A19 Pro · 48MP","img":"apple-iphone-17-pro","new":1,"stores":[["iTey Store",169999],["Mobile Hub",172900],["Silkroom",178400],["Avechi",182400],["Gadgets Leo",191100],["Smartphones Planet",197600]]},{"cat":"Phones","name":"iPhone 17","spec":"6.3\" OLED 120Hz · A19 · 48MP","img":"apple-iphone-17","new":1,"stores":[["Jumia KE",129000],["Price Point",133600],["iTey Store",137600],["Avechi",145400],["Phone Place Kenya",151900],["Mobile Hub",156900]]},{"cat":"Phones","name":"Samsung Galaxy S26+","spec":"6.7\" QHD+ · SD 8 Elite Gen5 · 50MP","img":"samsung-galaxy-s26-plus-5g","new":1,"stores":[["Avechi",112000],["Digital Phones",116200],["Silkroom",119700],["Mobile Hub",124200],["Jumia KE",126600],["Phone Place Kenya",133400]]},{"cat":"Phones","name":"Samsung Galaxy S26","spec":"6.3\" FHD+ · SD 8 Elite Gen5 · 50MP","img":"samsung-galaxy-s26-5g","new":1,"stores":[["Avechi",96000],["Silkroom",99300],["Gadgets Leo",103900],["Mobile Hub",109000],["iTey Store",111900],["Smartphones Planet",114700]]},{"cat":"Phones","name":"Google Pixel 10 Pro","spec":"6.3\" LTPO · Tensor G5 · 50MP triple","img":"google-pixel-10-pro","new":1,"stores":[["Gadgets Leo",141900],["Mobile Hub",145800],["Avechi",150100],["Silkroom",158700],["Smartphones Planet",163300],["Price Point",170600]]},{"cat":"Phones","name":"OnePlus 15","spec":"6.78\" 1.5K 165Hz · SD 8 Elite Gen5 · 7300mAh","img":"oneplus-15","new":1,"stores":[["Gadgets Leo",141771],["Phone Place Kenya",147100],["Digital Phones",155000],["Smartphones Planet",160100],["Price Point",162500],["Silkroom",168400]]},{"cat":"Phones","name":"Oppo Find X9 Ultra","spec":"6.82\" QHD LTPO · dual 200MP · Dolby Vision","img":"oppo-find-x9-pro","new":1,"stores":[["Avechi",159000],["Silkroom",163400],["Smartphones Planet",167700],["iTey Store",174400],["Digital Phones",180500],["Gadgets Leo",190300]]},{"cat":"Phones","name":"Honor 600 Pro","spec":"SD 8 Elite · 12GB · 7000mAh Si-C","img":"honor-600-pro","new":1,"stores":[["Jumia KE",92000],["Phone Place Kenya",95500],["Gadgets Leo",98500],["Smartphones Planet",103600],["Avechi",109800],["Silkroom",116200]]},{"cat":"Phones","name":"OnePlus Nord 6 Pro","spec":"6.72\" AMOLED 120Hz · 50MP IMX","img":"oneplus-nord-6","new":1,"stores":[["Jumia KE",54900],["Mobile Hub",57200],["iTey Store",58900],["Price Point",60300],["Smartphones Planet",63000],["Digital Phones",66000]]},{"cat":"Phones","name":"Xiaomi 16 Pro","spec":"6.73\" LTPO · SD 8 Elite Gen5 · Leica 50MP","img":"xiaomi-16-pro","new":1,"stores":[["Avechi",128000],["Gadgets Leo",134400],["Digital Phones",137200],["Smartphones Planet",145100],["Price Point",149900],["Jumia KE",154200]]},{"cat":"Tablets","name":"iPad Pro 13\" (M5)","spec":"13\" tandem OLED · M5 · 16GB","img":"apple-ipad-pro-13-2024","new":1,"stores":[["Phone Place Kenya",166000],["iTey Store",173900],["Avechi",177900],["Jumia KE",186000],["Smartphones Planet",195900],["Gadgets Leo",204600]]},{"cat":"Tablets","name":"iPad Pro 11\" (M5)","spec":"11\" tandem OLED · M5 · 16GB","img":"apple-ipad-pro-11-2024","new":1,"stores":[["Phone Place Kenya",134000],["Digital Phones",138200],["Avechi",140900],["Silkroom",144600],["Smartphones Planet",147200],["iTey Store",155000]]},{"cat":"Tablets","name":"Samsung Galaxy Tab S11 Ultra","spec":"14.6\" AMOLED · Dimensity 9400 · S Pen","img":"samsung-galaxy-tab-s11-ultra","new":1,"stores":[["Avechi",149000],["Price Point",152400],["Digital Phones",159200],["Silkroom",166200],["Phone Place Kenya",171300],["Mobile Hub",179500]]},{"cat":"Tablets","name":"Samsung Galaxy Tab S11","spec":"11\" AMOLED 120Hz · Dimensity 9400","img":"samsung-galaxy-tab-s11","new":1,"stores":[["Jumia KE",98000],["Gadgets Leo",101600],["Price Point",106600],["iTey Store",108400],["Silkroom",110400],["Mobile Hub",112100]]},{"cat":"Tablets","name":"iPad Air 13\" (M3)","spec":"13\" LCD · M3 · USB-C","img":"apple-ipad-air-13-m3-2025","new":0,"stores":[["Phone Place Kenya",112000],["iTey Store",116300],["Gadgets Leo",121000],["Mobile Hub",128700],["Smartphones Planet",135200],["Silkroom",141300]]},{"cat":"Tablets","name":"OnePlus Pad 3","spec":"13.2\" 144Hz · SD 8 Elite · 12140mAh","img":"oneplus-pad-3","new":1,"stores":[["Avechi",69000],["Price Point",70200],["Silkroom",71600],["Smartphones Planet",73800],["Jumia KE",75700],["Mobile Hub",77800]]},{"cat":"Tablets","name":"Xiaomi Pad 7 Pro","spec":"11.2\" 3.2K · SD 8s Gen4","img":"xiaomi-pad-7-pro","new":0,"stores":[["Jumia KE",58000],["Smartphones Planet",60400],["Avechi",62900],["Phone Place Kenya",66300],["Gadgets Leo",70600],["Mobile Hub",73800]]},{"cat":"Tablets","name":"Honor Pad 10","spec":"12.1\" 2.5K · SD 7 Gen3","img":"honor-pad-10","new":0,"stores":[["Jumia KE",42500],["Phone Place Kenya",45000],["Avechi",46900],["iTey Store",47700],["Price Point",50100],["Silkroom",51100]]},{"cat":"Computers","name":"MacBook Pro 16\" (M5 Max)","spec":"16.2\" XDR · M5 Max · up to 128GB","img":"apple-macbook-pro-16-2024","new":1,"stores":[["Phone Place Kenya",380000],["Avechi",387700],["Gadgets Leo",403500],["Silkroom",410600],["Price Point",423800],["iTey Store",434600]]},{"cat":"Computers","name":"MacBook Pro 14\" (M5 Max)","spec":"14.2\" XDR · M5 Max","img":"apple-macbook-pro-14-2024","new":1,"stores":[["Phone Place Kenya",545000],["Jumia KE",556700],["Gadgets Leo",581000],["iTey Store",605000],["Silkroom",616900],["Avechi",634500]]},{"cat":"Computers","name":"MacBook Pro 14\" (M5 Pro)","spec":"14.2\" XDR · M5 Pro · 24GB","img":"apple-macbook-pro-14-2024-1","new":1,"stores":[["Phone Place Kenya",325000],["Silkroom",344600],["iTey Store",365800],["Digital Phones",388300],["Price Point",405000],["Smartphones Planet",426100]]},{"cat":"Computers","name":"MacBook Pro 14\" (M5)","spec":"14.2\" XDR · M5 · 16GB","img":"apple-macbook-pro-14-2024-2","new":1,"stores":[["Phone Place Kenya",219000],["Gadgets Leo",230900],["Mobile Hub",242700],["iTey Store",255900],["Silkroom",265000],["Smartphones Planet",269500]]},{"cat":"Computers","name":"MacBook Air 15\" (M4)","spec":"15.3\" · M4 · 16GB","img":"apple-macbook-air-15-m4","new":0,"stores":[["Jumia KE",182000],["Silkroom",192700],["Mobile Hub",204600],["Smartphones Planet",208700],["Phone Place Kenya",215900],["Price Point",222700]]},{"cat":"Computers","name":"MacBook Air 13\" (M4)","spec":"13.6\" · M4 · 16GB","img":"apple-macbook-air-13-m4","new":0,"stores":[["Jumia KE",158000],["Price Point",168100],["Digital Phones",172700],["iTey Store",181200],["Gadgets Leo",192800],["Silkroom",205000]]},{"cat":"Computers","name":"Dell XPS 16 (2026)","spec":"16\" OLED · Core Ultra 9 · RTX 5070","img":"dell-xps-16-9650","new":1,"stores":[["Avechi",298000],["Jumia KE",304100],["Phone Place Kenya",312900],["Smartphones Planet",333200],["Gadgets Leo",352600],["Price Point",375500]]},{"cat":"Computers","name":"ASUS ROG Zephyrus G16","spec":"16\" OLED 240Hz · RTX 5080","img":"asus-rog-zephyrus-g16-2026","new":1,"stores":[["Avechi",345000],["Price Point",359100],["Silkroom",367600],["Jumia KE",387000],["Gadgets Leo",393600],["Smartphones Planet",400300]]},{"cat":"Computers","name":"Lenovo ThinkPad X1 Carbon Gen13","spec":"14\" · Core Ultra 7 · 32GB","img":"lenovo-thinkpad-x1-carbon-gen13","new":0,"stores":[["Jumia KE",245000],["Silkroom",254700],["Smartphones Planet",263300],["Avechi",269300],["iTey Store",282300],["Gadgets Leo",290700]]},{"cat":"Computers","name":"Microsoft Surface Laptop 7","spec":"13.8\" · Snapdragon X Elite · 16GB","img":"microsoft-surface-laptop-7","new":0,"stores":[["Jumia KE",172000],["Silkroom",182800],["Mobile Hub",187300],["Gadgets Leo",194400],["Smartphones Planet",200200],["iTey Store",209100]]},{"cat":"Audio","name":"AirPods Pro 3","spec":"ANC · heart-rate · IP57 · USB-C","img":"apple-airpods-pro-3","new":1,"stores":[["Gadgets Leo",30499],["Digital Phones",31900],["Mobile Hub",33100],["Smartphones Planet",33900],["Avechi",34600],["iTey Store",36200],["Phone Place Kenya",36900]]},{"cat":"Audio","name":"Samsung Galaxy Buds 3 Pro","spec":"Adaptive ANC · 360 Audio","img":"samsung-galaxy-buds3-pro","new":1,"stores":[["Phone Place Kenya",16000],["Avechi",16200],["Gadgets Leo",16500],["Silkroom",17200],["Mobile Hub",17600],["Jumia KE",18300]]},{"cat":"Audio","name":"Sony WH-1000XM6","spec":"Over-ear · class-leading ANC · 30h","img":"sony-wh-1000xm6","new":1,"stores":[["Jumia KE",58000],["Smartphones Planet",60200],["iTey Store",63600],["Digital Phones",65100],["Price Point",66700],["Silkroom",70800]]},{"cat":"Audio","name":"Sony WF-1000XM5","spec":"In-ear · ANC · 8h","img":"sony-wf-1000xm5","new":0,"stores":[["Jumia KE",34000],["Avechi",35900],["Phone Place Kenya",36700],["Smartphones Planet",37900],["Gadgets Leo",40300],["iTey Store",42800]]},{"cat":"Audio","name":"Bose QuietComfort Ultra Earbuds","spec":"Immersive Audio · ANC","img":"bose-quietcomfort-ultra-earbuds","new":0,"stores":[["Jumia KE",39000],["Phone Place Kenya",40800],["iTey Store",43200],["Smartphones Planet",45300],["Mobile Hub",47000],["Digital Phones",48000]]},{"cat":"Audio","name":"Bose QC Ultra Headphones","spec":"Over-ear · Immersive Audio","img":"bose-quietcomfort-ultra-headphones","new":0,"stores":[["Jumia KE",62000],["Digital Phones",64900],["iTey Store",68400],["Smartphones Planet",70300],["Mobile Hub",74500],["Avechi",77700]]},{"cat":"Audio","name":"AirPods Max (USB-C)","spec":"Over-ear · ANC · Spatial Audio","img":"apple-airpods-max-2024","new":0,"stores":[["Phone Place Kenya",78000],["iTey Store",79200],["Mobile Hub",82000],["Digital Phones",83300],["Gadgets Leo",85700],["Smartphones Planet",87200]]},{"cat":"Audio","name":"Nothing Ear (3)","spec":"Hi-res · ANC · Super Mic","img":"nothing-ear-3","new":1,"stores":[["Jumia KE",22000],["Price Point",23300],["iTey Store",24500],["Smartphones Planet",25300],["Mobile Hub",26500],["Gadgets Leo",27800]]},{"cat":"Audio","name":"JBL Tour Pro 3","spec":"Smart case · Adaptive ANC","img":"jbl-tour-pro-3","new":0,"stores":[["Jumia KE",28000],["Gadgets Leo",29700],["Price Point",30600],["Avechi",32500],["iTey Store",34400],["Smartphones Planet",35600]]},{"cat":"Premium TVs","name":"Samsung Neo QLED 8K QN900D 75\"","spec":"8K · Mini-LED · 240Hz · NQ8 AI Gen3","img":"_tv","new":1,"stores":[["Avechi",689000],["Jumia KE",712700],["iTey Store",733700],["Mobile Hub",757600],["Smartphones Planet",806600],["Price Point",820400]]},{"cat":"Premium TVs","name":"Samsung Neo QLED 8K QN800D 65\"","spec":"8K · Mini-LED · Infinity Air","img":"_tv","new":1,"stores":[["Avechi",465995],["iTey Store",487300],["Mobile Hub",505500],["Phone Place Kenya",516300],["Gadgets Leo",536600],["Silkroom",548700]]},{"cat":"Premium TVs","name":"LG OLED G5 65\"","spec":"4K · OLED evo · α11 AI · 165Hz","img":"_tv","new":1,"stores":[["Avechi",398000],["Silkroom",415700],["Digital Phones",435900],["Price Point",449700],["iTey Store",468800],["Jumia KE",476700]]},{"cat":"Premium TVs","name":"Sony BRAVIA 9 65\"","spec":"4K · Mini-LED QD · XR Processor","img":"_tv","new":1,"stores":[["Avechi",372000],["Mobile Hub",386900],["Smartphones Planet",399000],["Digital Phones",408400],["Phone Place Kenya",421400],["Price Point",435500]]},{"cat":"Premium TVs","name":"Samsung OLED S95F 65\"","spec":"4K · QD-OLED · 165Hz · Glare-free","img":"_tv","new":1,"stores":[["Avechi",312000],["Silkroom",328600],["Digital Phones",342600],["Jumia KE",359500],["Price Point",365000],["Phone Place Kenya",374800]]},{"cat":"Premium TVs","name":"Samsung OLED S90D 65\"","spec":"4K · QD-OLED · NQ4 AI Gen2","img":"_tv","new":0,"stores":[["Avechi",285000],["Mobile Hub",302400],["Silkroom",319200],["Phone Place Kenya",334800],["Jumia KE",355500],["iTey Store",367400]]},{"cat":"Premium TVs","name":"LG OLED C5 65\"","spec":"4K · OLED evo · α9 AI Gen8","img":"_tv","new":1,"stores":[["Avechi",268000],["iTey Store",276200],["Mobile Hub",293200],["Gadgets Leo",309100],["Phone Place Kenya",326200],["Silkroom",335300]]},{"cat":"Premium TVs","name":"Samsung The Frame Pro 65\"","spec":"4K · Mini-LED · Art Mode · Matte","img":"_tv","new":1,"stores":[["Avechi",242000],["Gadgets Leo",249200],["Smartphones Planet",254500],["Digital Phones",258900],["Phone Place Kenya",266900],["Silkroom",276600]]},{"cat":"Other","name":"Apple Watch Ultra 3","spec":"49mm Ti · LTPO3 · satellite","img":"apple-watch-ultra-3","new":1,"stores":[["Phone Place Kenya",112000],["Digital Phones",116000],["iTey Store",121700],["Silkroom",126000],["Mobile Hub",129400],["Smartphones Planet",136000]]},{"cat":"Other","name":"Samsung Galaxy Watch 8 Classic","spec":"46mm · Exynos W1000 · BioActive","img":"samsung-galaxy-watch8-classic","new":1,"stores":[["Jumia KE",48000],["Phone Place Kenya",48800],["iTey Store",50000],["Mobile Hub",50900],["Digital Phones",51900],["Gadgets Leo",53900]]},{"cat":"Other","name":"PlayStation 5 Pro","spec":"2TB · ray-tracing · PSSR upscaling","img":"sony-playstation-5-pro","new":0,"stores":[["Jumia KE",118000],["iTey Store",120900],["Phone Place Kenya",123000],["Price Point",125800],["Avechi",132400],["Mobile Hub",137600]]},{"cat":"Other","name":"Meta Quest 3S","spec":"VR/MR · 128GB · Snapdragon XR2 Gen2","img":"_vr","new":0,"stores":[["Jumia KE",48000],["Silkroom",49200],["Gadgets Leo",51100],["iTey Store",52900],["Smartphones Planet",55400],["Phone Place Kenya",57200]]},{"cat":"Other","name":"DJI Osmo Pocket 3","spec":"1\" sensor · 4K120 · 3-axis gimbal","img":"_cam","new":0,"stores":[["Jumia KE",78000],["Silkroom",81900],["iTey Store",85800],["Avechi",88800],["Digital Phones",93800],["Smartphones Planet",97600]]},{"cat":"Other","name":"GoPro Hero 13 Black","spec":"5.3K60 · HB lens mods · 1900mAh","img":"_cam","new":0,"stores":[["Jumia KE",62000],["Phone Place Kenya",64800],["Digital Phones",67100],["Smartphones Planet",69800],["Gadgets Leo",73000],["Mobile Hub",74600]]},{"cat":"Other","name":"Nintendo Switch 2","spec":"7.9\" 1080p 120Hz · 256GB","img":"_console","new":1,"stores":[["Jumia KE",72000],["iTey Store",74400],["Silkroom",75500],["Price Point",76900],["Gadgets Leo",79700],["Avechi",84200]]},{"cat":"Other","name":"Samsung T9 Portable SSD 2TB","spec":"USB 3.2 Gen2x2 · 2000MB/s","img":"_ssd","new":0,"stores":[["Avechi",24500],["iTey Store",25000],["Phone Place Kenya",26400],["Jumia KE",27900],["Price Point",29100],["Gadgets Leo",30800]]},
+{"cat":"Phones","name":"Nothing Phone (3)","spec":"6.7\" AMOLED · SD 8s Gen4 · Glyph Matrix","img":"nothing-phone-3","new":1,"stores":[["Jumia KE",89000],["Gadgets Leo",92400],["iTey Store",95800],["Smartphones Planet",99100],["Avechi",104200],["Silkroom",108600]]},
+{"cat":"Phones","name":"Nothing Phone (3a) Pro","spec":"6.77\" AMOLED 120Hz · 50MP periscope","img":"nothing-phone-3a-pro","new":1,"stores":[["Jumia KE",42000],["Price Point",43800],["Mobile Hub",45200],["iTey Store",47100],["Gadgets Leo",49500],["Silkroom",52000]]},
+{"cat":"Phones","name":"CMF Phone 2 Pro","spec":"6.77\" AMOLED · Dimensity 7300 Pro","img":"cmf-by-nothing-phone-2-pro","new":1,"stores":[["Jumia KE",28500],["Price Point",29600],["Smartphones Planet",30900],["Mobile Hub",32400],["Gadgets Leo",34100],["iTey Store",35800]]},
+{"cat":"Phones","name":"Samsung Galaxy Z Fold7","spec":"8\" foldable · SD 8 Elite · 200MP","img":"samsung-galaxy-z-fold7","new":1,"stores":[["Avechi",255000],["Silkroom",264700],["Digital Phones",277300],["Phone Place Kenya",291000],["Gadgets Leo",305400],["Price Point",318900]]},
+{"cat":"Phones","name":"Samsung Galaxy Z Flip7","spec":"6.9\" foldable · cover screen · 50MP","img":"samsung-galaxy-z-flip7","new":1,"stores":[["Avechi",138000],["Silkroom",143200],["Mobile Hub",148900],["iTey Store",154100],["Digital Phones",160500],["Gadgets Leo",167000]]},
+{"cat":"Phones","name":"Oppo Find N5","spec":"8.9mm folded · book foldable · 50MP","img":"oppo-find-n5","new":1,"stores":[["Silkroom",228000],["Avechi",236500],["Smartphones Planet",247800],["iTey Store",259200],["Gadgets Leo",271600],["Phone Place Kenya",284000]]},{"cat":"Phones","name":"iPhone 16 Pro Max","spec":"6.9\" LTPO OLED \u00b7 A18 Pro \u00b7 48MP","img":"apple-iphone-16-pro-max","new":0,"stores":[["Avechi",151999],["Phone Place Kenya",156000],["iTey Store",157000],["Silkroom",159000],["Smartphones Planet",160500],["Price Point",162000]]},{"cat":"Phones","name":"iPhone 16","spec":"6.1\" OLED \u00b7 A18 \u00b7 48MP","img":"apple-iphone-16","new":0,"stores":[["Gadgets Leo",87500],["Phone Place Kenya",95000],["Avechi",96999],["iTey Store",99000],["Smartphones Planet",100500],["Mobile Hub",101900]]},{"cat":"Phones","name":"Samsung Galaxy S25 Ultra","spec":"6.9\" QHD+ \u00b7 SD 8 Elite \u00b7 200MP","img":"samsung-galaxy-s25-ultra-5g","new":0,"stores":[["Phone Place Kenya",117000],["Price Point",125000],["Avechi",129000],["Mobile Hub",133000],["Silkroom",139000],["Smartphones Planet",144000]]},{"cat":"Phones","name":"Samsung Galaxy A55 5G","spec":"6.6\" AMOLED 120Hz \u00b7 Exynos 1480 \u00b7 50MP","img":"samsung-galaxy-a55","new":0,"stores":[["Gadgets Leo",38500],["Phone Place Kenya",39999],["Avechi",41500],["Jumia KE",43000],["iTey Store",45000],["Smartphones Planet",47000]]},{"cat":"Phones","name":"Tecno Camon 30","spec":"6.78\" AMOLED 120Hz \u00b7 Helio G99 \u00b7 50MP","img":"tecno-camon-30","new":0,"stores":[["Phone Place Kenya",26000],["Jumia KE",26799],["Avechi",27500],["Gadgets Leo",28200],["Smartphones Planet",29100],["Mobile Hub",29500]]},{"cat":"Phones","name":"Infinix Note 40 Pro","spec":"6.78\" AMOLED 120Hz \u00b7 Helio G99 \u00b7 108MP","img":"infinix-note-40-pro","new":0,"stores":[["Jumia KE",27000],["Gadgets Leo",29999],["Phone Place Kenya",30899],["Avechi",31500],["Silkroom",32800],["Smartphones Planet",34000]]},{"cat":"Phones","name":"Xiaomi Redmi Note 13 Pro","spec":"6.67\" AMOLED 120Hz \u00b7 SD 7s Gen2 \u00b7 200MP","img":"xiaomi-redmi-note-13-pro","new":0,"stores":[["Jumia KE",31000],["Phone Place Kenya",34499],["Avechi",36000],["Gadgets Leo",37500],["Price Point",38800],["Smartphones Planet",40000]]},{"cat":"Computers","name":"HP EliteBook 840 G11","spec":"14\" WUXGA \u00b7 Core Ultra 7 155U \u00b7 16GB/512GB","img":"_laptop","new":0,"stores":[["Phone Place Kenya",153000],["Avechi",155000],["Price Point",157000],["Digital Phones",159000],["Gadgets Leo",160500],["Silkroom",162000]]},{"cat":"Phones","name":"Samsung Galaxy S24 Ultra","spec":"6.8\" QHD+ \u00b7 SD 8 Gen3 \u00b7 200MP","img":"samsung-galaxy-s24-ultra-5g","new":0,"stores":[["Gadgets Leo",109900],["Avechi",115499],["Price Point",118000],["iTey Store",120000],["Silkroom",122500],["Smartphones Planet",124000]]},{"cat":"Phones","name":"Google Pixel 9 Pro","spec":"6.3\" LTPO OLED \u00b7 Tensor G4 \u00b7 50MP triple","img":"google-pixel-9-pro","new":0,"stores":[["Price Point",103700],["Gadgets Leo",109000],["Avechi",115000],["Mobile Hub",119000],["Silkroom",123000],["Smartphones Planet",125000]]},{"cat":"Phones","name":"OnePlus 12","spec":"6.82\" LTPO AMOLED \u00b7 SD 8 Gen3 \u00b7 5400mAh","img":"oneplus-12","new":0,"stores":[["Avechi",78999],["Gadgets Leo",80999],["Phone Place Kenya",82500],["Mobile Hub",85000],["Smartphones Planet",88000],["Price Point",90000]]},{"cat":"Phones","name":"Samsung Galaxy S24 FE","spec":"6.7\" AMOLED 120Hz \u00b7 Exynos 2400e \u00b7 50MP","img":"samsung-galaxy-s24-fe","new":0,"stores":[["Gadgets Leo",57499],["Avechi",58499],["Price Point",61000],["iTey Store",63000],["Silkroom",65000],["Phone Place Kenya",66500]]},{"cat":"Phones","name":"Oppo Reno 12 5G","spec":"6.7\" AMOLED 120Hz \u00b7 Dimensity 7300 \u00b7 50MP","img":"oppo-reno12","new":0,"stores":[["Avechi",59999],["Phone Place Kenya",62000],["Smartphones Planet",63500],["iTey Store",64200],["Silkroom",65000],["Mobile Hub",66000]]},{"cat":"Phones","name":"Xiaomi Redmi Note 14","spec":"6.67\" AMOLED 120Hz \u00b7 Helio G99 \u00b7 108MP","img":"xiaomi-redmi-note-14","new":0,"stores":[["Jumia KE",20000],["Avechi",21995],["Phone Place Kenya",23000],["Gadgets Leo",24000],["Smartphones Planet",25000],["Mobile Hub",25999]]},{"cat":"Phones","name":"Samsung Galaxy A16","spec":"6.7\" AMOLED 90Hz \u00b7 50MP \u00b7 5000mAh","img":"samsung-galaxy-a16","new":0,"stores":[["Phone Place Kenya",18500],["Avechi",19299],["Jumia KE",20500],["Gadgets Leo",22000],["Smartphones Planet",23499],["Mobile Hub",25000]]},{"cat":"Phones","name":"Tecno Spark 30","spec":"6.78\" 120Hz \u00b7 Helio G91 \u00b7 64MP","img":"tecno-spark-30","new":0,"stores":[["Jumia KE",15480],["Phone Place Kenya",17199],["Avechi",17499],["Digital Phones",18000],["Gadgets Leo",18800],["Smartphones Planet",19399]]},{"cat":"Computers","name":"MacBook Air 13\" (M3)","spec":"13.6\" Liquid Retina \u00b7 M3 \u00b7 16GB/256GB","img":"_laptop","new":0,"stores":[["Avechi",123999],["Phone Place Kenya",128000],["Gadgets Leo",131000],["Mobile Hub",136000],["iTey Store",140000],["Silkroom",145000]]},{"cat":"Computers","name":"HP Pavilion 15 (Core i5)","spec":"15.6\" FHD \u00b7 Core i5-1235U \u00b7 16GB/512GB","img":"_laptop","new":0,"stores":[["Phone Place Kenya",73999],["Gadgets Leo",80999],["Avechi",84995],["Digital Phones",88000],["Price Point",91000],["Silkroom",95000]]},{"cat":"Computers","name":"Lenovo IdeaPad Slim 3 (Core i5)","spec":"14\" FHD \u00b7 Core i5-13420H \u00b7 8GB/512GB","img":"_laptop","new":0,"stores":[["Avechi",60000],["Phone Place Kenya",61500],["Gadgets Leo",63000],["Digital Phones",64200],["Price Point",65000],["Silkroom",65900]]},{"cat":"Premium TVs","name":"Hisense 55\" A6 4K UHD","spec":"55\" 4K UHD \u00b7 VIDAA \u00b7 HDR","img":"_tv","new":0,"stores":[["Avechi",45199],["Jumia KE",48000],["Phone Place Kenya",50500],["Gadgets Leo",53000],["Smartphones Planet",55000],["Mobile Hub",56800]]},{"cat":"Premium TVs","name":"LG 55\" UHD UR80","spec":"55\" 4K UHD \u00b7 webOS \u00b7 \u03b15 AI","img":"_tv","new":0,"stores":[["Jumia KE",57900],["Avechi",62000],["Phone Place Kenya",66000],["Gadgets Leo",70000],["Digital Phones",74000],["Silkroom",78000]]},{"cat":"Premium TVs","name":"Samsung 55\" Crystal UHD DU7000","spec":"55\" 4K UHD \u00b7 Tizen \u00b7 Crystal Processor 4K","img":"_tv","new":0,"stores":[["Avechi",67699],["Jumia KE",70999],["Price Point",74000],["Digital Phones",77000],["iTey Store",80000],["Silkroom",84000]]},{"cat":"Premium TVs","name":"Sony BRAVIA 55\" X80L","spec":"55\" 4K HDR \u00b7 Google TV \u00b7 X1 Processor","img":"_tv","new":0,"stores":[["Avechi",99000],["Phone Place Kenya",103995],["Mobile Hub",105000],["Digital Phones",107000],["iTey Store",108500],["Silkroom",110000]]}];
+
+const MONTH=[{"name":"Samsung Galaxy S26 Ultra","cat":"Phone of the month","fcat":"Phones","sp":"New SD 8 Elite Gen5 silicon, a sharper 200MP sensor and a world-first Privacy Display — the most complete Android flagship landing in Kenya right now."},{"name":"Oppo Find X9 Ultra","cat":"Camera of the month","fcat":"Phones","sp":"The only 2026 phone with dual 200MP cameras plus Dolby Vision capture. If photography is the priority, nothing this quarter touches it."},{"name":"AirPods Pro 3","cat":"Audio of the month","fcat":"Audio","sp":"Stronger ANC, on-board heart-rate sensing, live translation and IP57 — the most upgraded earbuds of the season, still under KSh 35k."}];
+
+const STORES_ALL=["Jumia KE","Phone Place Kenya","Avechi","Gadgets Leo","Price Point","iTey Store","Digital Phones","Smartphones Planet","Mobile Hub","Silkroom"];
+
+/* Seller registry → trust scores (indicative) */
+const SELLERS={
+ "Jumia KE":{years:12,rating:4.5,returns:7,warranty:"12-mo",ship:0.86,verified:true},
+ "Phone Place Kenya":{years:9,rating:4.6,returns:7,warranty:"12-mo",ship:0.9,verified:true},
+ "Avechi":{years:11,rating:4.7,returns:14,warranty:"12-mo",ship:0.88,verified:true},
+ "Gadgets Leo":{years:6,rating:4.4,returns:7,warranty:"6-mo",ship:0.82,verified:true},
+ "Price Point":{years:7,rating:4.3,returns:7,warranty:"6-mo",ship:0.8,verified:false},
+ "iTey Store":{years:5,rating:4.5,returns:14,warranty:"12-mo",ship:0.85,verified:true},
+ "Digital Phones":{years:8,rating:4.4,returns:7,warranty:"6-mo",ship:0.83,verified:true},
+ "Smartphones Planet":{years:4,rating:4.2,returns:7,warranty:"6-mo",ship:0.78,verified:false},
+ "Mobile Hub":{years:6,rating:4.3,returns:7,warranty:"6-mo",ship:0.81,verified:false},
+ "Silkroom":{years:5,rating:4.4,returns:14,warranty:"12-mo",ship:0.84,verified:true}
+};
+function trustScore(s){const d=SELLERS[s];if(!d)return 70;
+ const yr=Math.min(d.years,12)/12*22, rt=d.rating/5*34, sh=d.ship*22, rr=Math.min(d.returns,14)/14*12, wr=(d.warranty.startsWith("12")?10:6);
+ return Math.round(yr+rt+sh+rr+wr);}
+
+const STORE_SITE={
+ "Jumia KE":q=>"https://www.jumia.co.ke/catalog/?q="+q,
+ "Phone Place Kenya":q=>"https://www.phoneplacekenya.com/?s="+q,
+ "Avechi":q=>"https://avechi.co.ke/?s="+q,
+ "Gadgets Leo":q=>"https://gadgetsleo.com/?s="+q,
+ "Price Point":q=>"https://pricepoint.co.ke/?s="+q,
+ "iTey Store":q=>"https://iteystore.co.ke/search?q="+q,
+ "Digital Phones":q=>"https://digitalphones.co.ke/?s="+q,
+ "Smartphones Planet":q=>"https://www.smartphonesplanet.co.ke/?s="+q,
+ "Mobile Hub":q=>"https://www.mobilehub.co.ke/?s="+q,
+ "Silkroom":q=>"https://silkroom.odoo.com/shop?search="+q
+};
+
+/* Affiliate config (paste your referral codes) */
+const AFFILIATE={"Jumia KE":"","Phone Place Kenya":"","Avechi":"","Gadgets Leo":"","Price Point":"","iTey Store":"","Digital Phones":"","Smartphones Planet":"","Mobile Hub":"","Silkroom":""};
+const AFFILIATE_DEFAULT="utm_source=resourcecentre&utm_medium=referral";
+function withAffiliate(url,store){if(!url||url==="#")return url||"#";const p=[AFFILIATE_DEFAULT,AFFILIATE[store]].filter(Boolean);return p.length?url+(url.includes("?")?"&":"?")+p.join("&"):url;}
+const storeUrl=(store,name)=>withAffiliate(STORE_SITE[store]?STORE_SITE[store](encodeURIComponent(name)):"#",store);
+
+/* Sponsored slot (sell directly; active:false to hide) */
+const SPONSOR={active:true,flag:"Sponsored",cat:"Featured Partner",title:"Your store could be here",blurb:"Reach Kenyan buyers at the exact moment they compare prices. Book this premium placement — partnerships@resourcecentre.co.ke.",cta:"Advertise with us",url:"mailto:partnerships@resourcecentre.co.ke"};
+
+/* ════════════════ i18n ════════════════ */
+const L={en:{
+ tagline:"Compare · Save · Smile",ph_search:"Search products, brands or models…",nav_compare:"Compare",nav_alerts:"Alerts",
+ hero_tag:"Kenya · Q2 2026 price tracker",hero_h:["Buy electronics in Kenya,","at the best price."],hero_p:"Compare phones, laptops, TVs, gaming, cameras and more across 10 trusted stores — with price history, seller trust scores and delivery comparison.",
+ search_go:"Search",popular:"Popular:",st_devices:"Devices tracked",st_stores:"Trusted stores",st_updated:"Prices updated",cats_h:"Shop by category",cats_s:"Jump straight to what you need.",
+ deals_h:"Trending deals",deals_s:"The biggest live discounts, most-viewed devices and fresh arrivals.",t_disc:"Biggest discounts",t_views:"Most viewed",t_new:"New arrivals",
+ recs_h:"Smart picks for your budget",recs_s:"AI-style recommendations from live prices.",month_h:"Editors' picks · June 2026",
+ view:"View deals",compare_tray:"Compare tray",add_compare:"Add to compare",buy_at:"Buy at",best_price:"Best price",at:"at",last_up:"Updated",delivery:"Delivery",rating:"Rating",stock:"Stock",store:"Store",
+ specs_h:"Specifications",pricecmp_h:"Price comparison",history_h:"Price history",alert_h:"Set a price alert",delivery_h:"Delivery comparison",reviews_h:"Reviews & ratings",trust_h:"Seller trust",similar_h:"Similar devices",video_h:"Video reviews",
+ lowest:"Lowest ever",highest:"Highest",average:"Average",current:"Current",free:"Free",in_stock:"In stock",low_stock:"Low stock",out_stock:"Out of stock",
+ watch_btn:"Notify me",target:"Notify me when price drops below",your_email:"Your email (optional)",alert_note:"Live email / SMS / WhatsApp alerts need the backend service. For now we save your watch on this device and give you a WhatsApp link.",
+ cmp_h:"Compare devices",cmp_s:"Add up to 4 devices. We highlight the winner on each row.",cmp_empty:"No devices yet. Add some from any product card or the search box.",cmp_add:"Add a device",remove:"Remove",differences:"Differences are highlighted in green (best value per row).",
+ alerts_h:"My price alerts",alerts_s:"Devices you're watching on this device (saved locally).",alerts_empty:"No alerts yet. Open any product and tap “Notify me”.",
+ product_reviews:"Product reviews",store_reviews:"Store reviews",verified:"Verified seller",foot_explore:"Explore",foot_partners:"For stores",foot_about:"We surface the lowest listed price across Kenya's established online electronics stores — with price history, seller trust scores and delivery comparison — so you always buy smart.",
+ foot_list:"List your store",foot_sponsor:"Sponsored placement",foot_advertise:"Advertise",no_results:"No devices match",save_label:"save",off:"off"},
+sw:{
+ tagline:"Linganisha · Okoa · Tabasamu",ph_search:"Tafuta bidhaa, chapa au modeli…",nav_compare:"Linganisha",nav_alerts:"Arifa",
+ hero_tag:"Kenya · Bei ya Q2 2026",hero_h:["Nunua elektroniki Kenya,","kwa bei nafuu zaidi."],hero_p:"Linganisha simu, laptop, TV, gaming, kamera na zaidi kutoka maduka 10 ya kuaminika — pamoja na historia ya bei, alama za uaminifu na ulinganishaji wa usafirishaji.",
+ search_go:"Tafuta",popular:"Maarufu:",st_devices:"Bidhaa zilizofuatiliwa",st_stores:"Maduka ya kuaminika",st_updated:"Bei zimesasishwa",cats_h:"Nunua kwa kategoria",cats_s:"Nenda moja kwa moja unachohitaji.",
+ deals_h:"Ofa zinazovuma",deals_s:"Punguzo kubwa, bidhaa zinazotazamwa zaidi na mpya.",t_disc:"Punguzo kubwa",t_views:"Zinazotazamwa zaidi",t_new:"Bidhaa mpya",
+ recs_h:"Mapendekezo kwa bajeti yako",recs_s:"Mapendekezo ya AI kutoka bei halisi.",month_h:"Chaguo la wahariri · Juni 2026",
+ view:"Tazama ofa",compare_tray:"Trei ya kulinganisha",add_compare:"Ongeza kulinganisha",buy_at:"Nunua kutoka",best_price:"Bei nzuri zaidi",at:"kutoka",last_up:"Imesasishwa",delivery:"Usafirishaji",rating:"Kiwango",stock:"Hisa",store:"Duka",
+ specs_h:"Vipimo",pricecmp_h:"Ulinganishaji wa bei",history_h:"Historia ya bei",alert_h:"Weka arifa ya bei",delivery_h:"Ulinganishaji wa usafirishaji",reviews_h:"Maoni na ukadiriaji",trust_h:"Uaminifu wa muuzaji",similar_h:"Bidhaa zinazofanana",video_h:"Mapitio ya video",
+ lowest:"Bei ya chini kabisa",highest:"Ya juu zaidi",average:"Wastani",current:"Sasa",free:"Bure",in_stock:"Ipo",low_stock:"Inakaribia kuisha",out_stock:"Imeisha",
+ watch_btn:"Nijulishe",target:"Nijulishe bei ikishuka chini ya",your_email:"Barua pepe yako (hiari)",alert_note:"Arifa za moja kwa moja za barua pepe / SMS / WhatsApp zinahitaji seva. Kwa sasa tunahifadhi ufuatiliaji kwenye kifaa hiki na kukupa kiungo cha WhatsApp.",
+ cmp_h:"Linganisha bidhaa",cmp_s:"Ongeza hadi bidhaa 4. Tunaangazia mshindi kwa kila safu.",cmp_empty:"Hakuna bidhaa bado. Ongeza kutoka kadi yoyote au sanduku la utafutaji.",cmp_add:"Ongeza bidhaa",remove:"Ondoa",differences:"Tofauti zimeangaziwa kwa kijani (thamani bora kwa kila safu).",
+ alerts_h:"Arifa zangu za bei",alerts_s:"Bidhaa unazofuatilia kwenye kifaa hiki (zimehifadhiwa hapa).",alerts_empty:"Hakuna arifa bado. Fungua bidhaa yoyote ubonyeze “Nijulishe”.",
+ product_reviews:"Maoni ya bidhaa",store_reviews:"Maoni ya duka",verified:"Muuzaji aliyethibitishwa",foot_explore:"Gundua",foot_partners:"Kwa maduka",foot_about:"Tunaonyesha bei ya chini zaidi kutoka maduka ya kuaminika ya elektroniki Kenya — pamoja na historia ya bei, alama za uaminifu na ulinganishaji wa usafirishaji.",
+ foot_list:"Orodhesha duka lako",foot_sponsor:"Nafasi ya udhamini",foot_advertise:"Tangaza",no_results:"Hakuna bidhaa inayolingana na",save_label:"okoa",off:"punguzo"}};
+let LANG=localStorage.getItem("rc_lang")||"en";
+const t=k=>(L[LANG][k]!==undefined?L[LANG][k]:(L.en[k]!==undefined?L.en[k]:k));
+
+/* ════════════════ HELPERS ════════════════ */
+const fmt=n=>"KSh "+Math.round(n).toLocaleString("en-KE");
+const slugify=s=>s.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+const photo=slug=>slug.charAt(0)==="_"?null:"https://fdn2.gsmarena.com/vv/bigpic/"+slug+".jpg";
+function hash(str){let h=2166136261;for(let i=0;i<str.length;i++){h^=str.charCodeAt(i);h=Math.imul(h,16777619);}return h>>>0;}
+function rng(seedStr){let s=hash(seedStr)||1;return()=>{s=(Math.imul(s,1664525)+1013904223)>>>0;return s/4294967296;};}
+function brandOf(name){const b=name.split(/\s+/)[0];const map={"iPhone":"Apple","iPad":"Apple","MacBook":"Apple","AirPods":"Apple","Apple":"Apple","Galaxy":"Samsung","Samsung":"Samsung","Pixel":"Google","Google":"Google","OnePlus":"OnePlus","Oppo":"Oppo","Honor":"Honor","Xiaomi":"Xiaomi","Sony":"Sony","Bose":"Bose","JBL":"JBL","Nothing":"Nothing","CMF":"Nothing","Dell":"Dell","ASUS":"ASUS","Lenovo":"Lenovo","Microsoft":"Microsoft","LG":"LG","PlayStation":"Sony","Nintendo":"Nintendo","Meta":"Meta","DJI":"DJI","GoPro":"GoPro"};return map[b]||b;}
+function subcatOf(d){if(d.cat!=="Other")return null;const n=d.name;if(/PlayStation|Switch|Quest/.test(n))return"Gaming Consoles";if(/DJI|GoPro/.test(n))return"Cameras";if(/Watch/.test(n))return"Smart Watches";if(/SSD/.test(n))return"Accessories";return"Accessories";}
+/* Category mapping for the displayed catalogue */
+function catKey(d){if(d.cat==="Phones")return"Smartphones";if(d.cat==="Computers")return"Laptops";if(d.cat==="Premium TVs")return"TVs";if(d.cat==="Tablets")return"Tablets";if(d.cat==="Audio")return"Audio";return subcatOf(d);}
+const CATS=[
+ {key:"Smartphones",icon:"phone"},{key:"Laptops",icon:"laptop"},{key:"TVs",icon:"tv"},
+ {key:"Tablets",icon:"tablet"},{key:"Audio",icon:"audio"},{key:"Gaming Consoles",icon:"game"},
+ {key:"Cameras",icon:"cam"},{key:"Smart Watches",icon:"watch"},{key:"Accessories",icon:"acc"},
+ {key:"Refrigerators",icon:"fridge",soon:true},{key:"Home Appliances",icon:"home",soon:true},{key:"Networking",icon:"net",soon:true}];
+function catIcon(name){const P="#FF6B5C",T="#2FD3A5";const S=`fill='none' stroke='${P}' stroke-width='1.8'`;
+ const m={phone:`<rect x='8' y='3' width='12' height='22' rx='3' ${S}/><circle cx='14' cy='21' r='1.3' fill='${T}'/>`,
+ laptop:`<rect x='4' y='5' width='20' height='13' rx='2' ${S}/><path d='M2 21 H26 L24 18 H4 Z' fill='none' stroke='${P}' stroke-width='1.8'/>`,
+ tv:`<rect x='3' y='5' width='22' height='14' rx='2' ${S}/><path d='M10 23 H18' stroke='${P}' stroke-width='1.8'/>`,
+ tablet:`<rect x='6' y='4' width='16' height='20' rx='2' ${S}/>`,
+ audio:`<path d='M6 16 V12 a8 8 0 0 1 16 0 V16' ${S}/><rect x='4' y='15' width='4' height='7' rx='2' fill='${T}'/><rect x='20' y='15' width='4' height='7' rx='2' fill='${T}'/>`,
+ game:`<rect x='4' y='9' width='20' height='10' rx='5' ${S}/><circle cx='9' cy='14' r='1.4' fill='${T}'/><circle cx='19' cy='14' r='1.4' fill='${P}'/>`,
+ cam:`<rect x='3' y='8' width='22' height='13' rx='2' ${S}/><circle cx='14' cy='14' r='4' fill='none' stroke='${T}' stroke-width='1.8'/>`,
+ watch:`<rect x='8' y='8' width='12' height='12' rx='3' ${S}/><path d='M11 8 L11 4 H17 L17 8 M11 20 L11 24 H17 L17 20' stroke='${P}' stroke-width='1.8'/>`,
+ acc:`<rect x='6' y='6' width='16' height='16' rx='3' ${S}/><circle cx='14' cy='14' r='4' fill='none' stroke='${T}' stroke-width='1.8'/>`,
+ fridge:`<rect x='8' y='3' width='12' height='22' rx='2' ${S}/><path d='M8 12 H20' stroke='${P}' stroke-width='1.8'/>`,
+ home:`<path d='M5 13 L14 5 L23 13' ${S}/><rect x='8' y='13' width='12' height='10' ${S}/>`,
+ net:`<circle cx='14' cy='20' r='2' fill='${P}'/><path d='M8 15 a8 8 0 0 1 12 0 M5 11 a13 13 0 0 1 18 0' fill='none' stroke='${T}' stroke-width='1.8'/>`};
+ return"<svg width='24' height='24' viewBox='0 0 28 28'>"+(m[name]||m.acc)+"</svg>";}
+
+/* line-art fallback image */
+function fallback(name,cat){const P="#FF6B5C",T="#2FD3A5";
+ const ic={Phones:`<rect x='96' y='40' width='48' height='100' rx='10' fill='none' stroke='${P}' stroke-width='2'/><rect x='104' y='52' width='32' height='66' rx='2' fill='${T}' opacity='.16'/>`,
+ Tablets:`<rect x='80' y='44' width='80' height='100' rx='8' fill='none' stroke='${P}' stroke-width='2'/><rect x='90' y='54' width='60' height='80' rx='2' fill='${T}' opacity='.16'/>`,
+ Computers:`<rect x='74' y='52' width='92' height='58' rx='4' fill='none' stroke='${P}' stroke-width='2'/><path d='M60 122 H180 L172 134 H68 Z' fill='none' stroke='${P}' stroke-width='2'/>`,
+ Audio:`<path d='M76 116 V96 a44 44 0 0 1 88 0 V116' fill='none' stroke='${P}' stroke-width='2'/><rect x='68' y='112' width='18' height='34' rx='6' fill='${T}' opacity='.5'/><rect x='154' y='112' width='18' height='34' rx='6' fill='${T}' opacity='.5'/>`,
+ "Premium TVs":`<rect x='58' y='48' width='124' height='74' rx='5' fill='none' stroke='${P}' stroke-width='2'/><rect x='66' y='56' width='108' height='58' fill='${T}' opacity='.16'/><rect x='88' y='132' width='64' height='5' rx='2' fill='${P}'/>`,
+ _def:`<rect x='86' y='66' width='68' height='68' rx='14' fill='none' stroke='${P}' stroke-width='2'/><circle cx='120' cy='100' r='20' fill='none' stroke='${T}' stroke-width='2'/>`};
+ const initials=name.split(/\s+/).slice(0,2).map(w=>w[0]).join("").toUpperCase();
+ return"data:image/svg+xml;utf8,"+encodeURIComponent("<svg xmlns='http://www.w3.org/2000/svg' width='240' height='200'><rect width='240' height='200' fill='#FFF7F0'/>"+(ic[cat]||ic._def)+"<text x='120' y='180' font-family='monospace' font-size='12' letter-spacing='3' fill='#FF6B5C' text-anchor='middle'>"+initials+"</text></svg>");}
+const onerr="this.onerror=null;this.src=this.dataset.fb;this.style.filter='none'";
+function imgOf(d){return photo(d.img)||fallback(d.name,d.cat);}
+
+/* ════════════════ ENRICHMENT ════════════════ */
+const cities=["Nairobi","Mombasa","Kisumu"];
+function enrich(d){
+ const r=rng(d.name);
+ const stores=d.stores.map(([name,price])=>{
+  const rr=rng(name+d.name);
+  const fee=rr()<0.55?0:[200,300,400,500][Math.floor(rr()*4)];
+  const rating=Math.round((SELLERS[name].rating+(rr()-0.5)*0.5)*10)/10;
+  const sv=rr();const stock=sv<0.1?"out":sv<0.28?"low":"in";
+  const cityDays=cities.map(()=>{const v=rr();return v<0.2?"Same day":v<0.65?"1 day":v<0.9?"2 days":"3 days";});
+  return{name,price,fee,rating:Math.min(5,rating),stock,cityDays,trust:trustScore(name)};
+ }).sort((a,b)=>a.price-b.price);
+ const min=stores[0].price, max=Math.max(...stores.map(s=>s.price));
+ // price history: 12 weekly points ending near current min
+ const hist=[];let base=min*(1.1+r()*0.12);
+ for(let i=0;i<11;i++){base=base*(0.97+r()*0.05);hist.push(Math.round(base/100)*100);}
+ hist.push(min);
+ const hi=Math.max(...hist),lo=Math.min(...hist),avg=Math.round(hist.reduce((a,b)=>a+b,0)/hist.length);
+ const disc=Math.max(0,Math.round((hi-min)/hi*100));
+ const views=2000+Math.floor(r()*48000);
+ const prating=Math.round((4.1+r()*0.85)*10)/10;
+ const pcount=40+Math.floor(r()*460);
+ return{...d,id:slugify(d.name),brand:brandOf(d.name),catKey:catKey(d),sub:subcatOf(d),
+  estores:stores,min,max,hist,hi,lo,avg,disc,views,prating,pcount,
+  anyStock:stores.some(s=>s.stock!=="out")};
+}
+const CAT=DATA.map(enrich);
+const byId=id=>CAT.find(p=>p.id===id);
+
+/* spec parsing → table rows */
+function specRows(p){
+ const parts=p.spec.split("·").map(s=>s.trim()).filter(Boolean);
+ const rows=[];const used=new Array(parts.length).fill(false);
+ const grab=(rx,label)=>{for(let i=0;i<parts.length;i++){if(!used[i]&&rx.test(parts[i])){used[i]=true;rows.push([label,parts[i]]);return;}}};
+ grab(/inch|"|AMOLED|OLED|LCD|QHD|FHD|1\.5K|2\.5K|3\.2K|144Hz|120Hz|165Hz|240Hz|8K|4K|foldable/i,"Display");
+ grab(/SD |Snapdragon|Tensor|Dimensity|A19|M5|M4|M3|Core Ultra|Exynos|XR2|NQ8|NQ4|α1|XR Proc/i,"Processor");
+ grab(/MP|camera|Leica|periscope|sensor|gimbal|lens/i,"Camera / Optics");
+ grab(/mAh|battery/i,"Battery");
+ grab(/GB|TB/i,"Memory / Storage");
+ grab(/ANC|Audio|Spatial|Dolby|360/i,"Audio");
+ parts.forEach((pt,i)=>{if(!used[i])rows.push(["Highlight",pt]);});
+ rows.push(["Connectivity",p.catKey==="Smartphones"||p.catKey==="Tablets"?"5G · Wi-Fi 7 · BT 5.4":(p.catKey==="Laptops"?"Wi-Fi 7 · BT 5.4 · USB-C":"Wi-Fi · Bluetooth")]);
+ rows.push(["Release","2025–2026"]);
+ return rows;
+}
+/* comparable attributes for compare table & filters */
+function attr(p){
+ const s=p.spec;
+ const display=(s.match(/(\d{1,2}(\.\d)?)\s?(?:inch|")/)||[])[1];
+ const camMP=(s.match(/(\d{2,3})\s?MP/)||[])[1];
+ const batt=(s.match(/(\d{3,5})\s?mAh/)||[])[1];
+ const mem=(s.match(/(\d{1,3})\s?(GB|TB)/)||[]);
+ return{display:display?display+'"':"—",cam:camMP?camMP+"MP":"—",camN:camMP?+camMP:0,
+  batt:batt?batt+"mAh":"—",battN:batt?+batt:0,mem:mem[0]?mem[0]:"—",dispN:display?+display:0,
+  fiveG:(p.catKey==="Smartphones"||p.catKey==="Tablets")};
+}
+function stars(n){const f=Math.round(n);return"★".repeat(f)+"☆".repeat(5-f);}
+
+/* ════════════════ COMPARE STATE ════════════════ */
+let CMP=JSON.parse(localStorage.getItem("rc_cmp")||"[]").filter(byId).slice(0,4);
+function saveCmp(){localStorage.setItem("rc_cmp",JSON.stringify(CMP));renderCmpBar();}
+function toggleCmp(id,ev){if(ev)ev.stopPropagation();const i=CMP.indexOf(id);if(i>=0)CMP.splice(i,1);else{if(CMP.length>=4){alert("You can compare up to 4 devices.");return;}CMP.push(id);}saveCmp();if(location.hash.includes("/compare"))route();document.querySelectorAll('[data-cmp="'+id+'"]').forEach(b=>b.classList.toggle("on",CMP.includes(id)));}
+function renderCmpBar(){const bar=document.getElementById("cmpbar");bar.classList.toggle("show",CMP.length>0);document.getElementById("cmpcount").textContent="("+CMP.length+")";
+ document.getElementById("cmpslots").innerHTML=CMP.map(id=>{const p=byId(id);return"<span class='cmpslot'><img src='"+imgOf(p)+"' data-fb=\""+fallback(p.name,p.cat)+"\" onerror=\""+onerr+"\">"+p.name+" <span class='x' onclick=\"toggleCmp('"+id+"')\">✕</span></span>";}).join("");}
+
+/* ════════════════ ALERTS STATE ════════════════ */
+let ALERTS=JSON.parse(localStorage.getItem("rc_alerts")||"[]");
+function saveAlerts(){localStorage.setItem("rc_alerts",JSON.stringify(ALERTS));}
+
+/* ════════════════ ROUTER ════════════════ */
+function go(path){location.hash="#"+path;}
+function route(){
+ const h=location.hash.replace(/^#/,"")||"/";
+ const app=document.getElementById("app");
+ window.scrollTo(0,0);
+ if(h==="/"){app.innerHTML=viewHome();afterHome();}
+ else if(h.startsWith("/c/")){const c=decodeURIComponent(h.slice(3));app.innerHTML=viewCategory(c);afterCategory(c);}
+ else if(h.startsWith("/p/")){const id=decodeURIComponent(h.slice(3));app.innerHTML=viewProduct(id);afterProduct(id);}
+ else if(h.startsWith("/search")){const q=decodeURIComponent((h.split("q=")[1]||""));app.innerHTML=viewSearch(q);afterSearch(q);}
+ else if(h.startsWith("/compare")){app.innerHTML=viewCompare();afterCompare();}
+ else if(h.startsWith("/alerts")){app.innerHTML=viewAlerts();}
+ else{app.innerHTML=viewHome();afterHome();}
+ pushAds();
+}
+window.addEventListener("hashchange",route);
+
+/* ════════════════ CARD ════════════════ */
+function pcard(p){
+ const on=CMP.includes(p.id)?"on":"";
+ const stk=p.anyStock?(p.estores.filter(s=>s.stock==="in").length<2?"low":"in"):"out";
+ const stkl=stk==="in"?t("in_stock"):stk==="low"?t("low_stock"):t("out_stock");
+ return"<article class='pcard' onclick=\"go('/p/"+p.id+"')\">"+
+  "<div class='ph'><div class='tags'>"+(p.new?"<span class='tag tag-new'>NEW</span>":"")+(p.disc>=8?"<span class='tag tag-deal'>-"+p.disc+"%</span>":"")+"</div>"+
+   "<div class='cmpadd "+on+"' data-cmp='"+p.id+"' title='"+t("add_compare")+"' onclick=\"toggleCmp('"+p.id+"',event)\">"+(on?"✓":"+")+"</div>"+
+   "<img src='"+imgOf(p)+"' data-fb=\""+fallback(p.name,p.cat)+"\" onerror=\""+onerr+"\" alt='"+p.name+"'></div>"+
+  "<div class='pb'><div class='pcat'>"+p.catKey+"</div><h4>"+p.name+"</h4><div class='pspec'>"+p.spec+"</div>"+
+   "<div class='prow'><div class='px'><small>"+t("best_price")+"</small><b>"+fmt(p.min)+"</b><span class='stockdot s-"+stk+"'><i></i>"+stkl+"</span></div>"+
+    "<div class='pstars'>"+stars(p.prating)+"<span>"+p.prating+" · "+p.pcount+"</span></div></div></div></article>";
+}
+function grid(list){return list.length?"<div class='pgrid'>"+list.map(pcard).join("")+"</div>":"<div class='empty'>"+t("no_results")+".</div>";}
+
+/* ════════════════ HOME ════════════════ */
+function viewHome(){
+ const disc=[...CAT].sort((a,b)=>b.disc-a.disc).slice(0,8);
+ const recs=[
+  {h:LANG==="sw"?"Simu bora chini ya KSh 35,000":"Best phone under KSh 35,000",list:CAT.filter(p=>p.catKey==="Smartphones"&&p.min<35000).sort((a,b)=>b.prating-a.prating).slice(0,4)},
+  {h:LANG==="sw"?"Laptop kwa wanafunzi":"Best laptops for students",list:CAT.filter(p=>p.catKey==="Laptops"&&p.min<210000).sort((a,b)=>a.min-b.min).slice(0,4)},
+  {h:LANG==="sw"?"Gaming laptop chini ya KSh 400,000":"Gaming laptops under KSh 400,000",list:CAT.filter(p=>p.catKey==="Laptops"&&/RTX|ROG|Zephyrus/.test(p.spec+p.name)&&p.min<400000).sort((a,b)=>a.min-b.min).slice(0,4)}
+ ];
+ const popular=["iPhone 17 Pro","Galaxy S26 Ultra","Nothing Phone (3)","PlayStation 5 Pro","MacBook Air","Sony WH-1000XM6"];
+ return `
+ <section class="hero wrap">
+  <span class="htag">✨ ${t("hero_tag")}</span>
+  <h1>${L[LANG].hero_h[0]}<br><em>${L[LANG].hero_h[1]}</em></h1>
+  <p>${t("hero_p")}</p>
+  <div class="bigsearch"><input id="homeSearch" placeholder="${t("ph_search")}" autocomplete="off"><button class="btn btn-primary go" onclick="doHomeSearch()">${t("search_go")}</button><div id="homeAc"></div></div>
+  <div class="poprow"><span class="lbl">${t("popular")}</span>${popular.map(p=>`<span class='chip' onclick="go('/search?q=${encodeURIComponent(p)}')">${p}</span>`).join("")}</div>
+  <div class="stats"><div><b>${CAT.length}+</b><span>${t("st_devices")}</span></div><div><b>10</b><span>${t("st_stores")}</span></div><div><b>June&nbsp;2026</b><span>${t("st_updated")}</span></div></div>
+ </section>
+
+ <section class="sec wrap">
+  <div class="sechead"><div><h2>${t("cats_h")}</h2><div class="sub">${t("cats_s")}</div></div></div>
+  <div class="catgrid">${CATS.map(c=>{const n=CAT.filter(p=>p.catKey===c.key).length;return `<div class="cat" onclick="${c.soon?'':"go('/c/"+encodeURIComponent(c.key)+"')"}">${c.soon?'<span class="soon">SOON</span>':''}<div class="ci">${catIcon(c.icon)}</div><div class="cn">${catLabel(c.key)}</div><div class="cc">${c.soon?'—':n+" devices"}</div></div>`;}).join("")}</div>
+ </section>
+
+ <div class="adwrap"><div class="adband"><span class="adlbl">Advertisement</span><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="0000000001" data-ad-format="auto" data-full-width-responsive="true"></ins></div></div>
+
+ <section class="sec wrap" id="sponsorWrap"></section>
+
+ <section class="sec wrap">
+  <div class="sechead"><div><h2>${t("deals_h")}</h2><div class="sub">${t("deals_s")}</div></div></div>
+  <div class="tabs" id="dealTabs">
+   <button class="chip on" data-d="disc">${t("t_disc")}</button>
+   <button class="chip" data-d="views">${t("t_views")}</button>
+   <button class="chip" data-d="new">${t("t_new")}</button></div>
+  <div id="dealGrid">${grid(disc)}</div>
+ </section>
+
+ <section class="sec wrap">
+  <div class="sechead"><div><h2>${t("recs_h")}</h2><div class="sub">${t("recs_s")}</div></div></div>
+  ${recs.map(r=>`<h3 style="font-family:'Space Grotesk';font-size:15px;margin:14px 0 12px">🎯 ${r.h}</h3><div class="recrail">${r.list.map(pcard).join("")||"<div class='empty'>—</div>"}</div>`).join("")}
+ </section>
+
+ <section class="sec wrap">
+  <div class="sechead"><div><h2>${t("month_h")}</h2></div></div>
+  <div class="pgrid">${MONTH.map(m=>{const p=byId(slugify(m.name));if(!p)return"";return pcard(p);}).join("")}</div>
+ </section>
+
+ <div class="adwrap"><div class="adband"><span class="adlbl">Advertisement</span><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="0000000002" data-ad-format="auto" data-full-width-responsive="true"></ins></div></div>`;
+}
+function catLabel(k){const key="cat_"+k.replace(/\s+/g,"_");const sw={Smartphones:"Simu",Laptops:"Laptop",TVs:"TV",Tablets:"Tablet",Audio:"Sauti","Gaming Consoles":"Gaming",Cameras:"Kamera","Smart Watches":"Saa Janja",Accessories:"Vifaa",Refrigerators:"Friji","Home Appliances":"Vifaa vya Nyumbani",Networking:"Mtandao"};return LANG==="sw"?(sw[k]||k):k;}
+function afterHome(){
+ buildAutocomplete("homeSearch","homeAc");
+ const sp=document.getElementById("sponsorWrap");
+ if(SPONSOR.active){const ext=SPONSOR.url.startsWith("mailto")?"":" target='_blank' rel='noopener sponsored noreferrer'";
+  sp.innerHTML="<div class='sponsor'><span class='sflag'>"+SPONSOR.flag+"</span><div class='sicon'><svg width='38' height='38' viewBox='0 0 24 24' fill='none' stroke='#FF6B5C' stroke-width='1.6'><path d='M12 2 L15 9 L22 9.5 L16.5 14 L18.5 21 L12 17 L5.5 21 L7.5 14 L2 9.5 L9 9 Z'/></svg></div><div class='sbody'><div class='scat'>"+SPONSOR.cat+"</div><h3>"+SPONSOR.title+"</h3><p>"+SPONSOR.blurb+"</p></div><a class='btn btn-primary' href='"+SPONSOR.url+"'"+ext+">"+SPONSOR.cta+" →</a></div>";}
+ else sp.remove();
+ const tabs=document.getElementById("dealTabs");
+ tabs.addEventListener("click",e=>{const b=e.target.closest(".chip");if(!b)return;[...tabs.children].forEach(x=>x.classList.toggle("on",x===b));
+  const d=b.dataset.d;let list;
+  if(d==="disc")list=[...CAT].sort((a,b)=>b.disc-a.disc).slice(0,8);
+  else if(d==="views")list=[...CAT].sort((a,b)=>b.views-a.views).slice(0,8);
+  else list=CAT.filter(p=>p.new).slice(0,8);
+  document.getElementById("dealGrid").innerHTML=grid(list);});
+}
+function doHomeSearch(){const v=document.getElementById("homeSearch").value.trim();if(v)go("/search?q="+encodeURIComponent(v));}
+
+/* ════════════════ CATEGORY ════════════════ */
+let FILT={brand:new Set(),min:null,max:null,instock:false,newonly:false,sort:"price",cam:false};
+function viewCategory(c){
+ FILT={brand:new Set(),min:null,max:null,instock:false,newonly:false,sort:"price",cam:false};
+ return `<div class="wrap">
+  <div class="crumbs"><a onclick="go('/')">Home</a> / ${catLabel(c)}</div>
+  <div class="sechead"><div><h2>${catLabel(c)}</h2><div class="sub" id="catCount"></div></div></div>
+  <div class="catlayout">
+   <aside class="filters-side panel pad" id="filtbox"></aside>
+   <div id="catGrid"></div>
+  </div></div>
+  <div class="adwrap"><div class="adband"><span class="adlbl">Advertisement</span><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="0000000003" data-ad-format="auto" data-full-width-responsive="true"></ins></div></div>`;
+}
+function afterCategory(c){
+ const items=CAT.filter(p=>p.catKey===c);
+ const brands=[...new Set(items.map(p=>p.brand))].sort();
+ const isPhone=c==="Smartphones";
+ document.getElementById("filtbox").innerHTML=
+  `<div class="fgroup"><h4>${LANG==="sw"?"Bei (KSh)":"Price (KSh)"}</h4><div class="rangerow"><input type="number" id="fmin" placeholder="min"><span>–</span><input type="number" id="fmax" placeholder="max"></div></div>
+   <div class="fgroup"><h4>${LANG==="sw"?"Chapa":"Brand"}</h4>${brands.map(b=>`<label><input type="checkbox" class="fbrand" value="${b}">${b}</label>`).join("")}</div>
+   ${isPhone?`<div class="fgroup"><h4>Camera</h4><label><input type="checkbox" id="fcam">100MP+ camera</label><label><input type="checkbox" id="f5g" checked disabled>5G</label></div>`:""}
+   <div class="fgroup"><h4>${LANG==="sw"?"Zaidi":"More"}</h4><label><input type="checkbox" id="finstock">${LANG==="sw"?"Ipo dukani tu":"In stock only"}</label><label><input type="checkbox" id="fnew">${LANG==="sw"?"Mpya tu":"New arrivals only"}</label></div>
+   <div class="fgroup"><h4>${LANG==="sw"?"Panga":"Sort by"}</h4>
+    <select class="input" id="fsort"><option value="price">${LANG==="sw"?"Bei: chini→juu":"Price: low → high"}</option><option value="pricedesc">${LANG==="sw"?"Bei: juu→chini":"Price: high → low"}</option><option value="rating">${LANG==="sw"?"Ukadiriaji":"Top rated"}</option><option value="disc">${LANG==="sw"?"Punguzo":"Biggest discount"}</option></select></div>`;
+ const apply=()=>{
+  FILT.min=+document.getElementById("fmin").value||null;
+  FILT.max=+document.getElementById("fmax").value||null;
+  FILT.brand=new Set([...document.querySelectorAll(".fbrand:checked")].map(x=>x.value));
+  FILT.instock=document.getElementById("finstock").checked;
+  FILT.newonly=document.getElementById("fnew").checked;
+  FILT.cam=document.getElementById("fcam")?document.getElementById("fcam").checked:false;
+  FILT.sort=document.getElementById("fsort").value;
+  let list=items.filter(p=>(!FILT.min||p.min>=FILT.min)&&(!FILT.max||p.min<=FILT.max)&&(!FILT.brand.size||FILT.brand.has(p.brand))&&(!FILT.instock||p.anyStock)&&(!FILT.newonly||p.new)&&(!FILT.cam||attr(p).camN>=100));
+  if(FILT.sort==="price")list.sort((a,b)=>a.min-b.min);else if(FILT.sort==="pricedesc")list.sort((a,b)=>b.min-a.min);else if(FILT.sort==="rating")list.sort((a,b)=>b.prating-a.prating);else list.sort((a,b)=>b.disc-a.disc);
+  document.getElementById("catGrid").innerHTML=grid(list);
+  document.getElementById("catCount").textContent=list.length+(LANG==="sw"?" bidhaa":" devices");};
+ document.getElementById("filtbox").addEventListener("input",apply);
+ document.getElementById("filtbox").addEventListener("change",apply);
+ apply();
+}
+
+/* ════════════════ SEARCH ════════════════ */
+function searchList(q){q=q.toLowerCase().trim();if(!q)return[];return CAT.filter(p=>p.name.toLowerCase().includes(q)||p.brand.toLowerCase().includes(q)||p.catKey.toLowerCase().includes(q)||p.spec.toLowerCase().includes(q));}
+function viewSearch(q){const list=searchList(q);
+ return `<div class="wrap"><div class="crumbs"><a onclick="go('/')">Home</a> / Search</div>
+  <div class="sechead"><div><h2>${list.length} ${LANG==="sw"?"matokeo ya":"results for"} “${q}”</h2></div></div>
+  ${grid(list)}</div>`;}
+function afterSearch(q){}
+
+/* ════════════════ PRODUCT ════════════════ */
+function priceChart(p){
+ const w=620,h=180,pad=10;const min=p.lo*0.98,max=p.hi*1.02;const sx=i=>pad+i*(w-2*pad)/(p.hist.length-1);const sy=v=>h-pad-(v-min)/(max-min)*(h-2*pad);
+ const pts=p.hist.map((v,i)=>sx(i)+","+sy(v)).join(" ");
+ const area="M"+pad+","+(h-pad)+" L"+pts.replace(/ /g," L")+" L"+(w-pad)+","+(h-pad)+" Z";
+ const last=p.hist.length-1;
+ return `<svg viewBox="0 0 ${w} ${h}" width="100%" preserveAspectRatio="none" style="max-height:200px">
+   <defs><linearGradient id="g1" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#FF6B5C" stop-opacity=".22"/><stop offset="1" stop-color="#FF6B5C" stop-opacity="0"/></linearGradient></defs>
+   <path d="${area}" fill="url(#g1)"/>
+   <polyline points="${pts}" fill="none" stroke="#FF6B5C" stroke-width="2.4" stroke-linejoin="round"/>
+   <line x1="${pad}" x2="${w-pad}" y1="${sy(p.avg)}" y2="${sy(p.avg)}" stroke="#A99FB4" stroke-width="1" stroke-dasharray="4 4"/>
+   <circle cx="${sx(last)}" cy="${sy(p.hist[last])}" r="4.5" fill="#FF6B5C"/>
+  </svg>`;
+}
+function viewProduct(id){
+ const p=byId(id);if(!p)return `<div class="wrap empty">Device not found. <a onclick="go('/')" style="color:var(--coral)">Go home</a></div>`;
+ const best=p.estores[0];const yt="https://www.youtube.com/results?search_query="+encodeURIComponent(p.name+" review");
+ const rws=reviews(p);
+ const stockTxt=s=>s==="in"?`<span class='stockdot s-in'><i></i>${t("in_stock")}</span>`:s==="low"?`<span class='stockdot s-low'><i></i>${t("low_stock")}</span>`:`<span class='stockdot s-out'><i></i>${t("out_stock")}</span>`;
+ const a=attr(p);
+ return `<div class="wrap">
+  <div class="crumbs"><a onclick="go('/')">Home</a> / <a onclick="go('/c/${encodeURIComponent(p.catKey)}')">${catLabel(p.catKey)}</a> / ${p.name}</div>
+  <div class="pdtop">
+   <div class="gallery">
+    <div class="main"><img id="mainImg" src="${imgOf(p)}" data-fb="${fallback(p.name,p.cat)}" onerror="${onerr}" alt="${p.name}"></div>
+    <div class="thumbs" id="thumbs"></div>
+    <div class="note">🔍 ${LANG==="sw"?"Elea juu ya picha kuona kwa karibu. Picha moja rasmi inapatikana; pembe za ziada ni vielelezo.":"Hover the image to zoom. One official image is available; extra angles are indicative."}</div>
+   </div>
+   <div class="pdinfo">
+    <div class="pcat" style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);font-weight:700">${p.brand} · ${p.catKey}</div>
+    <h1>${p.name}</h1>
+    <div class="row">${p.new?'<span class="tag tag-new">NEW</span>':''}${p.disc>=8?'<span class="tag tag-deal">-'+p.disc+'% '+t("off")+'</span>':''}<span class="rs" style="color:var(--warn);font-weight:700">${stars(p.prating)} ${p.prating}</span><span style="color:var(--mut);font-size:12px">(${p.pcount} ${LANG==="sw"?"maoni":"reviews"})</span></div>
+    <p style="color:var(--mut);font-size:13.5px;margin-top:10px">${p.spec}</p>
+    <div class="bestbox"><div><div class="px">${fmt(p.min)}<small>${t("best_price")} ${t("at")} ${best.name} · ${best.fee?fmt(best.fee)+" "+t("delivery").toLowerCase():t("free")+" "+t("delivery").toLowerCase()}</small></div></div>
+     <a class="btn btn-primary" href="${storeUrl(best.name,p.name)}" target="_blank" rel="noopener sponsored noreferrer">${t("buy_at")} ${best.name} →</a></div>
+    <div class="kv"><div><b>${a.display}</b><span>Display</span></div><div><b>${a.cam}</b><span>Camera</span></div><div><b>${a.batt}</b><span>Battery</span></div><div><b>${p.estores.length}</b><span>${LANG==="sw"?"Maduka":"Stores"}</span></div></div>
+    <div style="display:flex;gap:10px;margin-top:16px;flex-wrap:wrap"><button class="btn btn-mint" data-cmp="${p.id}" onclick="toggleCmp('${p.id}',event)">${CMP.includes(p.id)?"✓ ":"+ "}${t("add_compare")}</button><a class="btn btn-ghost" href="${yt}" target="_blank" rel="noopener noreferrer">▶ ${t("video_h")}</a></div>
+   </div>
+  </div>
+
+  <div class="subsec"><h3><span class="ic">📋</span>${t("specs_h")}</h3>
+   <div class="panel"><table class="tbl"><tbody>${specRows(p).map(r=>`<tr><td style="font-weight:700;width:200px">${r[0]}</td><td>${r[1]}</td></tr>`).join("")}</tbody></table></div></div>
+
+  <div class="subsec"><h3><span class="ic">🏷️</span>${t("pricecmp_h")} <span style="font-size:11px;font-weight:600;color:var(--dim)">· ${t("last_up")} ${nowTxt()}</span></h3>
+   <div class="panel cmptable-wrap"><table class="tbl"><thead><tr><th>${t("store")}</th><th>${LANG==="sw"?"Bei":"Price"}</th><th>${t("delivery")}</th><th>${t("rating")}</th><th>${LANG==="sw"?"Uaminifu":"Trust"}</th><th>${t("stock")}</th><th></th></tr></thead><tbody>
+    ${p.estores.map((s,i)=>`<tr class="${i===0?'best':''}"><td><b>${s.name}</b>${SELLERS[s.name].verified?' <span class="badge-v">✓</span>':''}${i===0?' <span class="tag tag-deal" style="margin-left:4px">'+t("best_price")+'</span>':''}</td>
+     <td class="mono" style="font-weight:700;color:${i===0?'var(--coral)':'inherit'}">${fmt(s.price)}${i>0?` <span style="color:var(--dim);font-size:11px">+${fmt(s.price-p.min)}</span>`:''}</td>
+     <td>${s.fee?fmt(s.fee):'<span style="color:var(--good);font-weight:700">'+t("free")+'</span>'}</td>
+     <td style="color:var(--warn);font-weight:700">★ ${s.rating}</td>
+     <td><b>${s.trust}</b><span style="color:var(--dim)">/100</span></td>
+     <td>${stockTxt(s.stock)}</td>
+     <td><a class="btn btn-ghost" style="padding:7px 13px" href="${storeUrl(s.name,p.name)}" target="_blank" rel="noopener sponsored noreferrer">${t("buy_at")} →</a></td></tr>`).join("")}
+   </tbody></table></div></div>
+
+  <div class="subsec"><h3><span class="ic">📈</span>${t("history_h")}</h3>
+   <div class="panel pad chart">
+    <div class="chartstats"><div class="lo"><b>${fmt(p.lo)}</b><span>${t("lowest")}</span></div><div class="hi"><b>${fmt(p.hi)}</b><span>${t("highest")}</span></div><div><b>${fmt(p.avg)}</b><span>${t("average")}</span></div><div><b style="color:var(--coral)">${fmt(p.min)}</b><span>${t("current")}</span></div></div>
+    ${priceChart(p)}
+    <div class="note">${p.min<=p.avg?(LANG==="sw"?"✅ Bei ya sasa iko chini ya wastani — ni wakati mzuri kununua.":"✅ Current price is below the 12-week average — a genuinely good time to buy."):(LANG==="sw"?"⏳ Bei iko juu ya wastani — huenda ikashuka.":"⏳ Current price is above average — it may drop further.")} ${LANG==="sw"?"Historia ni ya kielelezo (wiki 12).":"History is indicative (last 12 weeks)."}</div></div></div>
+
+  <div class="subsec"><h3><span class="ic">🔔</span>${t("alert_h")}</h3>
+   <div class="panel pad">
+    <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end">
+     <div style="flex:1;min-width:200px"><label style="font-size:12px;font-weight:700;color:var(--mut)">${t("target")} (KSh)</label><input class="input mono" id="alertTarget" type="number" value="${Math.round(p.min*0.95/1000)*1000}"></div>
+     <div style="flex:1;min-width:200px"><label style="font-size:12px;font-weight:700;color:var(--mut)">${t("your_email")}</label><input class="input" id="alertEmail" type="email" placeholder="you@email.com"></div>
+     <button class="btn btn-primary" onclick="addAlert('${p.id}')">🔔 ${t("watch_btn")}</button>
+    </div>
+    <div id="alertMsg"></div>
+    <div class="note">${t("alert_note")}</div></div></div>
+
+  <div class="subsec"><h3><span class="ic">🚚</span>${t("delivery_h")}</h3>
+   <div class="panel cmptable-wrap"><table class="tbl"><thead><tr><th>${t("store")}</th>${cities.map(c=>`<th>${c}</th>`).join("")}<th>${t("delivery")}</th></tr></thead><tbody>
+    ${p.estores.map(s=>`<tr><td><b>${s.name}</b></td>${s.cityDays.map(d=>`<td>${d}</td>`).join("")}<td>${s.fee?fmt(s.fee):'<span style="color:var(--good);font-weight:700">'+t("free")+'</span>'}</td></tr>`).join("")}
+   </tbody></table></div></div>
+
+  <div class="subsec"><h3><span class="ic">🛡️</span>${t("trust_h")}</h3>
+   <div class="pgrid" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr))">
+    ${p.estores.slice(0,3).map(s=>{const d=SELLERS[s.name];const ts=s.trust;const col=ts>=85?"var(--good)":ts>=72?"var(--warn)":"var(--bad)";
+     return `<div class="trustcard"><div class="trustring"><svg width="62" height="62" viewBox="0 0 62 62"><circle cx="31" cy="31" r="26" fill="none" stroke="#F1E7DC" stroke-width="6"/><circle cx="31" cy="31" r="26" fill="none" stroke="${col}" stroke-width="6" stroke-linecap="round" stroke-dasharray="${2*Math.PI*26}" stroke-dashoffset="${2*Math.PI*26*(1-ts/100)}" transform="rotate(-90 31 31)"/></svg><div class="tnum">${ts}</div></div>
+      <div style="flex:1"><div style="font-weight:800;font-size:14px">${s.name}</div>${d.verified?'<span class="badge-v">✓ '+t("verified")+'</span>':'<span style="font-size:11px;color:var(--dim)">Unverified</span>'}
+       <div class="metric"><span>${LANG==="sw"?"Miaka sokoni":"Years in business"}</span><b>${d.years}</b></div>
+       <div class="metric"><span>${LANG==="sw"?"Ukadiriaji":"Customer rating"}</span><b>★ ${d.rating}</b></div>
+       <div class="metric"><span>${LANG==="sw"?"Sera ya kurudisha":"Return window"}</span><b>${d.returns} days</b></div>
+       <div class="metric"><span>${LANG==="sw"?"Warranti":"Warranty"}</span><b>${d.warranty}</b></div></div></div>`;}).join("")}
+   </div></div>
+
+  <div class="subsec"><h3><span class="ic">⭐</span>${t("reviews_h")}</h3>
+   <div class="tabs" id="revTabs"><button class="chip on" data-r="prod">${t("product_reviews")}</button><button class="chip" data-r="store">${t("store_reviews")}</button></div>
+   <div id="revBox"></div></div>
+
+  <div class="subsec"><h3><span class="ic">🔁</span>${t("similar_h")}</h3>
+   <div class="recrail">${CAT.filter(x=>x.catKey===p.catKey&&x.id!==p.id).sort((a,b)=>Math.abs(a.min-p.min)-Math.abs(b.min-p.min)).slice(0,4).map(pcard).join("")}</div></div>
+  <div style="height:30px"></div>
+ </div>`;
+}
+function nowTxt(){const d=new Date();return d.toLocaleDateString("en-KE",{day:"numeric",month:"short"})+" "+d.toLocaleTimeString("en-KE",{hour:"2-digit",minute:"2-digit"});}
+function reviews(p){
+ const r=rng("rev"+p.name);
+ const prodT_en=["Excellent device — exactly as described and the screen is gorgeous.","Battery easily lasts a full day. Very happy with this upgrade.","Camera quality is superb in daylight. Worth the price.","Fast and smooth, no complaints after two weeks of use.","Premium build. Feels much more expensive than it is."];
+ const prodT_sw=["Kifaa bora — kama ilivyoelezwa na skrini ni nzuri sana.","Betri inadumu siku nzima. Nimefurahishwa na uboreshaji huu.","Ubora wa kamera ni mzuri sana mchana. Inastahili bei.","Haraka na laini, hakuna malalamiko baada ya wiki mbili.","Muundo wa hali ya juu. Inaonekana ghali kuliko bei yake."];
+ const storeT_en=["Delivered in 2 days. Original product, sealed box.","Seller responsive on call. Genuine unit with warranty.","Smooth M-Pesa payment and fast Nairobi delivery.","Good price and the item matched the listing exactly."];
+ const storeT_sw=["Iliwasilishwa kwa siku 2. Bidhaa halisi, kisanduku kimefungwa.","Muuzaji alijibu simu haraka. Kifaa halisi chenye warranti.","Malipo ya M-Pesa rahisi na usafirishaji wa haraka Nairobi.","Bei nzuri na bidhaa ililingana na orodha kabisa."];
+ const names=["Brian K.","Aisha M.","Wanjiru N.","David O.","Faith C.","Samuel M.","Mercy A.","Kevin O."];
+ const mk=(arr,n)=>Array.from({length:n},(_,i)=>({a:names[Math.floor(r()*names.length)],s:4+Math.round(r()),p:arr[Math.floor(r()*arr.length)]}));
+ return{prod:mk(LANG==="sw"?prodT_sw:prodT_en,3),store:mk(LANG==="sw"?storeT_sw:storeT_en,3)};
+}
+function renderReviews(p,kind){const rws=reviews(p);const arr=kind==="store"?rws.store:rws.prod;
+ document.getElementById("revBox").innerHTML=arr.map(rv=>`<div class="review"><div class="rh"><span class="ra">${rv.a}</span><span class="rs">${stars(rv.s)} ${rv.s}.0</span></div><p>${rv.p}</p></div>`).join("");}
+function afterProduct(id){
+ const p=byId(id);if(!p)return;
+ const imgs=[imgOf(p),fallback(p.name,p.cat),fallback(p.name+" x",p.cat)];
+ const tb=document.getElementById("thumbs");
+ tb.innerHTML=imgs.map((s,i)=>`<button class="${i===0?'on':''}" onclick="setMain('${s.replace(/'/g,"\\'")}',this)"><img src="${s}" onerror="this.src='${fallback(p.name,p.cat)}'"></button>`).join("");
+ renderReviews(p,"prod");
+ const rt=document.getElementById("revTabs");
+ rt.addEventListener("click",e=>{const b=e.target.closest(".chip");if(!b)return;[...rt.children].forEach(x=>x.classList.toggle("on",x===b));renderReviews(p,b.dataset.r);});
+}
+function setMain(src,btn){document.getElementById("mainImg").src=src;document.querySelectorAll("#thumbs button").forEach(b=>b.classList.toggle("on",b===btn));}
+function addAlert(id){const p=byId(id);const target=+document.getElementById("alertTarget").value;const email=document.getElementById("alertEmail").value.trim();
+ if(!target){document.getElementById("alertMsg").innerHTML="<div class='note' style='color:var(--bad)'>Enter a target price.</div>";return;}
+ ALERTS=ALERTS.filter(a=>a.id!==id);ALERTS.push({id,name:p.name,target,email,created:Date.now()});saveAlerts();
+ const wa="https://wa.me/?text="+encodeURIComponent("Watch "+p.name+" — notify me under "+fmt(target)+" (Resource Centre)");
+ document.getElementById("alertMsg").innerHTML="<div class='note' style='color:var(--good)'>✅ "+(LANG==="sw"?"Arifa imehifadhiwa kwenye kifaa hiki":"Alert saved on this device")+". <a href='"+wa+"' target='_blank' rel='noopener' style='color:var(--coral);font-weight:700'>"+(LANG==="sw"?"Tuma kwa WhatsApp":"Send to WhatsApp")+" →</a> · <a onclick=\"go('/alerts')\" style='color:var(--coral);font-weight:700;cursor:pointer'>"+t("nav_alerts")+"</a></div>";}
+
+/* ════════════════ COMPARE ════════════════ */
+function viewCompare(){
+ if(!CMP.length)return `<div class="wrap"><div class="sechead"><div><h2>${t("cmp_h")}</h2><div class="sub">${t("cmp_s")}</div></div></div>
+   <div class="panel pad" style="text-align:center;padding:50px"><p style="color:var(--mut)">${t("cmp_empty")}</p>
+   <div class="bigsearch" style="margin:20px auto 0;max-width:480px"><input id="cmpSearch" placeholder="${t("ph_search")}" autocomplete="off"><div id="cmpAc"></div></div></div></div>`;
+ const ps=CMP.map(byId);
+ const rows=[
+  ["Price",ps.map(p=>fmt(p.min)),ps.map(p=>p.min),"min"],
+  ["Best store",ps.map(p=>p.estores[0].name),null,null],
+  ["Display",ps.map(p=>attr(p).display),ps.map(p=>attr(p).dispN),"max"],
+  ["Camera",ps.map(p=>attr(p).cam),ps.map(p=>attr(p).camN),"max"],
+  ["Battery",ps.map(p=>attr(p).batt),ps.map(p=>attr(p).battN),"max"],
+  ["Rating",ps.map(p=>"★ "+p.prating),ps.map(p=>p.prating),"max"],
+  ["Stores",ps.map(p=>p.estores.length+""),ps.map(p=>p.estores.length),"max"],
+  ["Best discount",ps.map(p=>p.disc+"%"),ps.map(p=>p.disc),"max"],
+  ["Trust (best store)",ps.map(p=>p.estores[0].trust+"/100"),ps.map(p=>p.estores[0].trust),"max"],
+  ["5G",ps.map(p=>attr(p).fiveG?"Yes":"—"),null,null]
+ ];
+ const winners=rows.map(r=>{if(!r[2])return-1;const vals=r[2];const best=r[3]==="min"?Math.min(...vals):Math.max(...vals);return vals.indexOf(best);});
+ return `<div class="wrap"><div class="sechead"><div><h2>${t("cmp_h")}</h2><div class="sub">${t("differences")}</div></div>${CMP.length<4?`<a class="chip" onclick="go('/')">+ ${t("cmp_add")}</a>`:""}</div>
+  <div class="panel cmptable-wrap"><table class="cmptable"><thead><tr><th></th>${ps.map(p=>`<th class="cmpprod"><img src="${imgOf(p)}" data-fb="${fallback(p.name,p.cat)}" onerror="${onerr}"><div style="font-weight:800;font-size:13px">${p.name}</div><span class="x" style="color:var(--bad);cursor:pointer;font-size:12px" onclick="toggleCmp('${p.id}')">✕ ${t("remove")}</span></th>`).join("")}</tr></thead>
+   <tbody>${rows.map((r,ri)=>`<tr><td class="rowlbl">${r[0]}</td>${r[1].map((v,ci)=>`<td class="${winners[ri]===ci?'win':''}">${v}${winners[ri]===ci?' 🏆':''}</td>`).join("")}</tr>`).join("")}
+   <tr><td class="rowlbl"></td>${ps.map(p=>`<td><a class="btn btn-primary" style="padding:8px 14px" href="${storeUrl(p.estores[0].name,p.name)}" target="_blank" rel="noopener sponsored noreferrer">${t("buy_at")} →</a></td>`).join("")}</tr></tbody></table></div>
+  <div style="height:30px"></div></div>`;
+}
+function afterCompare(){if(!CMP.length)buildAutocomplete("cmpSearch","cmpAc",true);}
+
+/* ════════════════ ALERTS ════════════════ */
+function viewAlerts(){
+ if(!ALERTS.length)return `<div class="wrap"><div class="sechead"><div><h2>${t("alerts_h")}</h2><div class="sub">${t("alerts_s")}</div></div></div><div class="panel pad empty">${t("alerts_empty")}</div></div>`;
+ return `<div class="wrap"><div class="sechead"><div><h2>${t("alerts_h")}</h2><div class="sub">${t("alerts_s")}</div></div></div>
+  <div class="panel cmptable-wrap"><table class="tbl"><thead><tr><th>${LANG==="sw"?"Bidhaa":"Device"}</th><th>${LANG==="sw"?"Bei sasa":"Current"}</th><th>${LANG==="sw"?"Lengo":"Target"}</th><th>${LANG==="sw"?"Hali":"Status"}</th><th></th></tr></thead><tbody>
+   ${ALERTS.map(a=>{const p=byId(a.id);if(!p)return"";const hit=p.min<=a.target;return `<tr><td><a onclick="go('/p/${a.id}')" style="color:var(--coral);font-weight:700;cursor:pointer">${a.name}</a></td><td class="mono">${fmt(p.min)}</td><td class="mono">${fmt(a.target)}</td><td>${hit?'<span class="badge-v">✓ '+(LANG==="sw"?"Imefikiwa":"Target hit")+'</span>':'<span style="color:var(--mut);font-size:12px">'+(LANG==="sw"?"Inasubiri":"Watching")+'</span>'}</td><td><span class="x" style="color:var(--bad);cursor:pointer" onclick="removeAlert('${a.id}')">✕</span></td></tr>`;}).join("")}
+  </tbody></table></div><div style="height:30px"></div></div>`;
+}
+function removeAlert(id){ALERTS=ALERTS.filter(a=>a.id!==id);saveAlerts();route();}
+
+/* ════════════════ AUTOCOMPLETE ════════════════ */
+function buildAutocomplete(inputId,boxId,addMode){
+ const inp=document.getElementById(inputId);const box=document.getElementById(boxId);if(!inp)return;
+ const render=()=>{const q=inp.value.toLowerCase().trim();if(!q){box.innerHTML="";return;}
+  const list=searchList(q).slice(0,6);
+  if(!list.length){box.innerHTML="";return;}
+  box.innerHTML="<div class='ac'><div class='achead'>"+(LANG==="sw"?"Bidhaa":"Products")+"</div>"+list.map(p=>addMode
+   ?`<div class="acrow" onclick="toggleCmp('${p.id}');document.getElementById('${inputId}').value='';document.getElementById('${boxId}').innerHTML=''"><span class="acimg"><img src="${imgOf(p)}" onerror="this.src='${fallback(p.name,p.cat)}'"></span><span><span class="acn">${p.name}</span><span class="acm">${p.catKey} · ${p.brand}</span></span><span class="acp">+ ${t("add_compare")}</span></div>`
+   :`<a onclick="go('/p/${p.id}');document.getElementById('${inputId}').value='';document.getElementById('${boxId}').innerHTML=''"><span class="acimg"><img src="${imgOf(p)}" onerror="this.src='${fallback(p.name,p.cat)}'"></span><span><span class="acn">${p.name}</span><span class="acm">${p.catKey} · ${p.brand}</span></span><span class="acp">${fmt(p.min)}</span></a>`).join("")+"</div>";};
+ inp.oninput=render;
+ inp.onkeydown=e=>{if(e.key==="Enter"&&!addMode){const v=inp.value.trim();if(v)go("/search?q="+encodeURIComponent(v));box.innerHTML="";}};
+ inp.onblur=()=>setTimeout(()=>{box.innerHTML="";},180);
+}
+
+/* ════════════════ LANG + INIT ════════════════ */
+function setLang(l){LANG=l;localStorage.setItem("rc_lang",l);document.getElementById("langEn").classList.toggle("on",l==="en");document.getElementById("langSw").classList.toggle("on",l==="sw");applyStatic();route();}
+function applyStatic(){
+ document.querySelectorAll("[data-i]").forEach(el=>{const k=el.getAttribute("data-i");if(L[LANG][k]!==undefined)el.textContent=L[LANG][k];});
+ document.querySelectorAll("[data-iph]").forEach(el=>{const k=el.getAttribute("data-iph");if(L[LANG][k]!==undefined)el.setAttribute("placeholder",L[LANG][k]);});
+ document.getElementById("storelist").innerHTML=STORES_ALL.map(s=>"<span>"+s+"</span>").join("");
+}
+function pushAds(){try{document.querySelectorAll("ins.adsbygoogle").forEach(function(el){if(!el.dataset.done){el.dataset.done="1";(window.adsbygoogle=window.adsbygoogle||[]).push({});}});}catch(e){}}
+buildAutocomplete("navSearch","navAc");
+document.getElementById("langEn").classList.toggle("on",LANG==="en");
+document.getElementById("langSw").classList.toggle("on",LANG==="sw");
+applyStatic();
+renderCmpBar();
+route();
+</script>
+</body>
+</html>

@@ -1,0 +1,9254 @@
+[
+  {
+    "cat": "Phones",
+    "name": "Samsung Galaxy S26 Ultra",
+    "spec": "6.9\" QHD+ · SD 8 Elite Gen5 · 200MP",
+    "img": "samsung-galaxy-s26-ultra-5g",
+    "new": 1,
+    "stores": [
+      [
+        "Avechi",
+        134999
+      ],
+      [
+        "Jumia KE",
+        137500
+      ],
+      [
+        "Phone Place Kenya",
+        146400
+      ],
+      [
+        "iTey Store",
+        150100
+      ],
+      [
+        "Mobile Hub",
+        153800
+      ],
+      [
+        "Smartphones Planet",
+        163700
+      ],
+      [
+        "Silkroom",
+        166600
+      ]
+    ],
+    "interest": 1162
+  },
+  {
+    "cat": "Phones",
+    "name": "iPhone 17 Pro Max",
+    "spec": "6.9\" LTPO · A19 Pro · 48MP tetra",
+    "img": "apple-iphone-17-pro-max",
+    "new": 1,
+    "stores": [
+      [
+        "iTey Store",
+        189999
+      ],
+      [
+        "Phone Place Kenya",
+        198700
+      ],
+      [
+        "Smartphones Planet",
+        206600
+      ],
+      [
+        "Avechi",
+        211800
+      ],
+      [
+        "Silkroom",
+        224400
+      ],
+      [
+        "Digital Phones",
+        228500
+      ],
+      [
+        "Price Point",
+        241100
+      ]
+    ],
+    "interest": 1349
+  },
+  {
+    "cat": "Phones",
+    "name": "iPhone 17 Pro",
+    "spec": "6.3\" LTPO · A19 Pro · 48MP",
+    "img": "apple-iphone-17-pro",
+    "new": 1,
+    "stores": [
+      [
+        "iTey Store",
+        169999
+      ],
+      [
+        "Mobile Hub",
+        172900
+      ],
+      [
+        "Silkroom",
+        178400
+      ],
+      [
+        "Avechi",
+        182400
+      ],
+      [
+        "Gadgets Leo",
+        191100
+      ],
+      [
+        "Smartphones Planet",
+        197600
+      ]
+    ],
+    "interest": 1258
+  },
+  {
+    "cat": "Phones",
+    "name": "iPhone 17",
+    "spec": "6.3\" OLED 120Hz · A19 · 48MP",
+    "img": "apple-iphone-17",
+    "new": 1,
+    "stores": [
+      [
+        "Jumia KE",
+        129000
+      ],
+      [
+        "Price Point",
+        133600
+      ],
+      [
+        "iTey Store",
+        137600
+      ],
+      [
+        "Avechi",
+        145400
+      ],
+      [
+        "Phone Place Kenya",
+        151900
+      ],
+      [
+        "Mobile Hub",
+        156900
+      ]
+    ],
+    "interest": 1336
+  },
+  {
+    "cat": "Phones",
+    "name": "Samsung Galaxy S26+",
+    "spec": "6.7\" QHD+ · SD 8 Elite Gen5 · 50MP",
+    "img": "samsung-galaxy-s26-plus-5g",
+    "new": 1,
+    "stores": [
+      [
+        "Avechi",
+        112000
+      ],
+      [
+        "Digital Phones",
+        116200
+      ],
+      [
+        "Silkroom",
+        119700
+      ],
+      [
+        "Mobile Hub",
+        124200
+      ],
+      [
+        "Jumia KE",
+        126600
+      ],
+      [
+        "Phone Place Kenya",
+        133400
+      ]
+    ],
+    "interest": 1208
+  },
+  {
+    "cat": "Phones",
+    "name": "Samsung Galaxy S26",
+    "spec": "6.3\" FHD+ · SD 8 Elite Gen5 · 50MP",
+    "img": "samsung-galaxy-s26-5g",
+    "new": 1,
+    "stores": [
+      [
+        "Avechi",
+        96000
+      ],
+      [
+        "Silkroom",
+        99300
+      ],
+      [
+        "Gadgets Leo",
+        103900
+      ],
+      [
+        "Mobile Hub",
+        109000
+      ],
+      [
+        "iTey Store",
+        111900
+      ],
+      [
+        "Smartphones Planet",
+        114700
+      ]
+    ],
+    "interest": 1168
+  },
+  {
+    "cat": "Phones",
+    "name": "Google Pixel 10 Pro",
+    "spec": "6.3\" LTPO · Tensor G5 · 50MP triple",
+    "img": "google-pixel-10-pro",
+    "new": 1,
+    "stores": [
+      [
+        "Gadgets Leo",
+        141900
+      ],
+      [
+        "Mobile Hub",
+        145800
+      ],
+      [
+        "Avechi",
+        150100
+      ],
+      [
+        "Silkroom",
+        158700
+      ],
+      [
+        "Smartphones Planet",
+        163300
+      ],
+      [
+        "Price Point",
+        170600
+      ]
+    ],
+    "interest": 1149
+  },
+  {
+    "cat": "Phones",
+    "name": "OnePlus 15",
+    "spec": "6.78\" 1.5K 165Hz · SD 8 Elite Gen5 · 7300mAh",
+    "img": "oneplus-15",
+    "new": 1,
+    "stores": [
+      [
+        "Gadgets Leo",
+        141771
+      ],
+      [
+        "Phone Place Kenya",
+        147100
+      ],
+      [
+        "Digital Phones",
+        155000
+      ],
+      [
+        "Smartphones Planet",
+        160100
+      ],
+      [
+        "Price Point",
+        162500
+      ],
+      [
+        "Silkroom",
+        168400
+      ]
+    ],
+    "interest": 1162
+  },
+  {
+    "cat": "Phones",
+    "name": "Oppo Find X9 Ultra",
+    "spec": "6.82\" QHD LTPO · dual 200MP · Dolby Vision",
+    "img": "oppo-find-x9-pro",
+    "new": 1,
+    "stores": [
+      [
+        "Avechi",
+        159000
+      ],
+      [
+        "Silkroom",
+        163400
+      ],
+      [
+        "Smartphones Planet",
+        167700
+      ],
+      [
+        "iTey Store",
+        174400
+      ],
+      [
+        "Digital Phones",
+        180500
+      ],
+      [
+        "Gadgets Leo",
+        190300
+      ]
+    ],
+    "interest": 1282
+  },
+  {
+    "cat": "Phones",
+    "name": "Honor 600 Pro",
+    "spec": "SD 8 Elite · 12GB · 7000mAh Si-C",
+    "img": "honor-600-pro",
+    "new": 1,
+    "stores": [
+      [
+        "Jumia KE",
+        92000
+      ],
+      [
+        "Phone Place Kenya",
+        95500
+      ],
+      [
+        "Gadgets Leo",
+        98500
+      ],
+      [
+        "Smartphones Planet",
+        103600
+      ],
+      [
+        "Avechi",
+        109800
+      ],
+      [
+        "Silkroom",
+        116200
+      ]
+    ],
+    "interest": 1158
+  },
+  {
+    "cat": "Phones",
+    "name": "OnePlus Nord 6 Pro",
+    "spec": "6.72\" AMOLED 120Hz · 50MP IMX",
+    "img": "oneplus-nord-6",
+    "new": 1,
+    "stores": [
+      [
+        "Jumia KE",
+        54900
+      ],
+      [
+        "Mobile Hub",
+        57200
+      ],
+      [
+        "iTey Store",
+        58900
+      ],
+      [
+        "Price Point",
+        60300
+      ],
+      [
+        "Smartphones Planet",
+        63000
+      ],
+      [
+        "Digital Phones",
+        66000
+      ]
+    ],
+    "interest": 1150
+  },
+  {
+    "cat": "Phones",
+    "name": "Xiaomi 16 Pro",
+    "spec": "6.73\" LTPO · SD 8 Elite Gen5 · Leica 50MP",
+    "img": "xiaomi-16-pro",
+    "new": 1,
+    "stores": [
+      [
+        "Avechi",
+        128000
+      ],
+      [
+        "Gadgets Leo",
+        134400
+      ],
+      [
+        "Digital Phones",
+        137200
+      ],
+      [
+        "Smartphones Planet",
+        145100
+      ],
+      [
+        "Price Point",
+        149900
+      ],
+      [
+        "Jumia KE",
+        154200
+      ]
+    ],
+    "interest": 1210
+  },
+  {
+    "cat": "Tablets",
+    "name": "iPad Pro 13\" (M5)",
+    "spec": "13\" tandem OLED · M5 · 16GB",
+    "img": "apple-ipad-pro-13-2024",
+    "new": 1,
+    "stores": [
+      [
+        "Phone Place Kenya",
+        166000
+      ],
+      [
+        "iTey Store",
+        173900
+      ],
+      [
+        "Avechi",
+        177900
+      ],
+      [
+        "Jumia KE",
+        186000
+      ],
+      [
+        "Smartphones Planet",
+        195900
+      ],
+      [
+        "Gadgets Leo",
+        204600
+      ]
+    ],
+    "interest": 633
+  },
+  {
+    "cat": "Tablets",
+    "name": "iPad Pro 11\" (M5)",
+    "spec": "11\" tandem OLED · M5 · 16GB",
+    "img": "apple-ipad-pro-11-2024",
+    "new": 1,
+    "stores": [
+      [
+        "Phone Place Kenya",
+        134000
+      ],
+      [
+        "Digital Phones",
+        138200
+      ],
+      [
+        "Avechi",
+        140900
+      ],
+      [
+        "Silkroom",
+        144600
+      ],
+      [
+        "Smartphones Planet",
+        147200
+      ],
+      [
+        "iTey Store",
+        155000
+      ]
+    ],
+    "interest": 754
+  },
+  {
+    "cat": "Tablets",
+    "name": "Samsung Galaxy Tab S11 Ultra",
+    "spec": "14.6\" AMOLED · Dimensity 9400 · S Pen",
+    "img": "samsung-galaxy-tab-s11-ultra",
+    "new": 1,
+    "stores": [
+      [
+        "Avechi",
+        149000
+      ],
+      [
+        "Price Point",
+        152400
+      ],
+      [
+        "Digital Phones",
+        159200
+      ],
+      [
+        "Silkroom",
+        166200
+      ],
+      [
+        "Phone Place Kenya",
+        171300
+      ],
+      [
+        "Mobile Hub",
+        179500
+      ]
+    ],
+    "interest": 849
+  },
+  {
+    "cat": "Tablets",
+    "name": "Samsung Galaxy Tab S11",
+    "spec": "11\" AMOLED 120Hz · Dimensity 9400",
+    "img": "samsung-galaxy-tab-s11",
+    "new": 1,
+    "stores": [
+      [
+        "Jumia KE",
+        98000
+      ],
+      [
+        "Gadgets Leo",
+        101600
+      ],
+      [
+        "Price Point",
+        106600
+      ],
+      [
+        "iTey Store",
+        108400
+      ],
+      [
+        "Silkroom",
+        110400
+      ],
+      [
+        "Mobile Hub",
+        112100
+      ]
+    ],
+    "interest": 771
+  },
+  {
+    "cat": "Tablets",
+    "name": "iPad Air 13\" (M3)",
+    "spec": "13\" LCD · M3 · USB-C",
+    "img": "apple-ipad-air-13-m3-2025",
+    "new": 0,
+    "stores": [
+      [
+        "Phone Place Kenya",
+        112000
+      ],
+      [
+        "iTey Store",
+        116300
+      ],
+      [
+        "Gadgets Leo",
+        121000
+      ],
+      [
+        "Mobile Hub",
+        128700
+      ],
+      [
+        "Smartphones Planet",
+        135200
+      ],
+      [
+        "Silkroom",
+        141300
+      ]
+    ],
+    "interest": 394
+  },
+  {
+    "cat": "Tablets",
+    "name": "OnePlus Pad 3",
+    "spec": "13.2\" 144Hz · SD 8 Elite · 12140mAh",
+    "img": "oneplus-pad-3",
+    "new": 1,
+    "stores": [
+      [
+        "Avechi",
+        69000
+      ],
+      [
+        "Price Point",
+        70200
+      ],
+      [
+        "Silkroom",
+        71600
+      ],
+      [
+        "Smartphones Planet",
+        73800
+      ],
+      [
+        "Jumia KE",
+        75700
+      ],
+      [
+        "Mobile Hub",
+        77800
+      ]
+    ],
+    "interest": 665
+  },
+  {
+    "cat": "Tablets",
+    "name": "Xiaomi Pad 7 Pro",
+    "spec": "11.2\" 3.2K · SD 8s Gen4",
+    "img": "xiaomi-pad-7-pro",
+    "new": 0,
+    "stores": [
+      [
+        "Jumia KE",
+        58000
+      ],
+      [
+        "Smartphones Planet",
+        60400
+      ],
+      [
+        "Avechi",
+        62900
+      ],
+      [
+        "Phone Place Kenya",
+        66300
+      ],
+      [
+        "Gadgets Leo",
+        70600
+      ],
+      [
+        "Mobile Hub",
+        73800
+      ]
+    ],
+    "interest": 427
+  },
+  {
+    "cat": "Tablets",
+    "name": "Honor Pad 10",
+    "spec": "12.1\" 2.5K · SD 7 Gen3",
+    "img": "honor-pad-10",
+    "new": 0,
+    "stores": [
+      [
+        "Jumia KE",
+        42500
+      ],
+      [
+        "Phone Place Kenya",
+        45000
+      ],
+      [
+        "Avechi",
+        46900
+      ],
+      [
+        "iTey Store",
+        47700
+      ],
+      [
+        "Price Point",
+        50100
+      ],
+      [
+        "Silkroom",
+        51100
+      ]
+    ],
+    "interest": 557
+  },
+  {
+    "cat": "Computers",
+    "name": "MacBook Pro 16\" (M5 Max)",
+    "spec": "16.2\" XDR · M5 Max · up to 128GB",
+    "img": "apple-macbook-pro-16-2024",
+    "new": 1,
+    "stores": [
+      [
+        "Phone Place Kenya",
+        380000
+      ],
+      [
+        "Avechi",
+        387700
+      ],
+      [
+        "Gadgets Leo",
+        403500
+      ],
+      [
+        "Silkroom",
+        410600
+      ],
+      [
+        "Price Point",
+        423800
+      ],
+      [
+        "iTey Store",
+        434600
+      ]
+    ],
+    "interest": 635
+  },
+  {
+    "cat": "Computers",
+    "name": "MacBook Pro 14\" (M5 Max)",
+    "spec": "14.2\" XDR · M5 Max",
+    "img": "apple-macbook-pro-14-2024",
+    "new": 1,
+    "stores": [
+      [
+        "Phone Place Kenya",
+        545000
+      ],
+      [
+        "Jumia KE",
+        556700
+      ],
+      [
+        "Gadgets Leo",
+        581000
+      ],
+      [
+        "iTey Store",
+        605000
+      ],
+      [
+        "Silkroom",
+        616900
+      ],
+      [
+        "Avechi",
+        634500
+      ]
+    ],
+    "interest": 583
+  },
+  {
+    "cat": "Computers",
+    "name": "MacBook Pro 14\" (M5 Pro)",
+    "spec": "14.2\" XDR · M5 Pro · 24GB",
+    "img": "apple-macbook-pro-14-2024-1",
+    "new": 1,
+    "stores": [
+      [
+        "Phone Place Kenya",
+        325000
+      ],
+      [
+        "Silkroom",
+        344600
+      ],
+      [
+        "iTey Store",
+        365800
+      ],
+      [
+        "Digital Phones",
+        388300
+      ],
+      [
+        "Price Point",
+        405000
+      ],
+      [
+        "Smartphones Planet",
+        426100
+      ]
+    ],
+    "interest": 570
+  },
+  {
+    "cat": "Computers",
+    "name": "MacBook Pro 14\" (M5)",
+    "spec": "14.2\" XDR · M5 · 16GB",
+    "img": "apple-macbook-pro-14-2024-2",
+    "new": 1,
+    "stores": [
+      [
+        "Phone Place Kenya",
+        219000
+      ],
+      [
+        "Gadgets Leo",
+        230900
+      ],
+      [
+        "Mobile Hub",
+        242700
+      ],
+      [
+        "iTey Store",
+        255900
+      ],
+      [
+        "Silkroom",
+        265000
+      ],
+      [
+        "Smartphones Planet",
+        269500
+      ]
+    ],
+    "interest": 576
+  },
+  {
+    "cat": "Computers",
+    "name": "MacBook Air 15\" (M4)",
+    "spec": "15.3\" · M4 · 16GB",
+    "img": "apple-macbook-air-15-m4",
+    "new": 0,
+    "stores": [
+      [
+        "Jumia KE",
+        182000
+      ],
+      [
+        "Silkroom",
+        192700
+      ],
+      [
+        "Mobile Hub",
+        204600
+      ],
+      [
+        "Smartphones Planet",
+        208700
+      ],
+      [
+        "Phone Place Kenya",
+        215900
+      ],
+      [
+        "Price Point",
+        222700
+      ]
+    ],
+    "interest": 481
+  },
+  {
+    "cat": "Computers",
+    "name": "MacBook Air 13\" (M4)",
+    "spec": "13.6\" · M4 · 16GB",
+    "img": "apple-macbook-air-13-m4",
+    "new": 0,
+    "stores": [
+      [
+        "Jumia KE",
+        158000
+      ],
+      [
+        "Price Point",
+        168100
+      ],
+      [
+        "Digital Phones",
+        172700
+      ],
+      [
+        "iTey Store",
+        181200
+      ],
+      [
+        "Gadgets Leo",
+        192800
+      ],
+      [
+        "Silkroom",
+        205000
+      ]
+    ],
+    "interest": 336
+  },
+  {
+    "cat": "Computers",
+    "name": "Dell XPS 16 (2026)",
+    "spec": "16\" OLED · Core Ultra 9 · RTX 5070",
+    "img": "dell-xps-16-9650",
+    "new": 1,
+    "stores": [
+      [
+        "Avechi",
+        298000
+      ],
+      [
+        "Jumia KE",
+        304100
+      ],
+      [
+        "Phone Place Kenya",
+        312900
+      ],
+      [
+        "Smartphones Planet",
+        333200
+      ],
+      [
+        "Gadgets Leo",
+        352600
+      ],
+      [
+        "Price Point",
+        375500
+      ]
+    ],
+    "interest": 725
+  },
+  {
+    "cat": "Computers",
+    "name": "ASUS ROG Zephyrus G16",
+    "spec": "16\" OLED 240Hz · RTX 5080",
+    "img": "asus-rog-zephyrus-g16-2026",
+    "new": 1,
+    "stores": [
+      [
+        "Avechi",
+        345000
+      ],
+      [
+        "Price Point",
+        359100
+      ],
+      [
+        "Silkroom",
+        367600
+      ],
+      [
+        "Jumia KE",
+        387000
+      ],
+      [
+        "Gadgets Leo",
+        393600
+      ],
+      [
+        "Smartphones Planet",
+        400300
+      ]
+    ],
+    "interest": 685
+  },
+  {
+    "cat": "Computers",
+    "name": "Lenovo ThinkPad X1 Carbon Gen13",
+    "spec": "14\" · Core Ultra 7 · 32GB",
+    "img": "lenovo-thinkpad-x1-carbon-gen13",
+    "new": 0,
+    "stores": [
+      [
+        "Jumia KE",
+        245000
+      ],
+      [
+        "Silkroom",
+        254700
+      ],
+      [
+        "Smartphones Planet",
+        263300
+      ],
+      [
+        "Avechi",
+        269300
+      ],
+      [
+        "iTey Store",
+        282300
+      ],
+      [
+        "Gadgets Leo",
+        290700
+      ]
+    ],
+    "interest": 425
+  },
+  {
+    "cat": "Computers",
+    "name": "Microsoft Surface Laptop 7",
+    "spec": "13.8\" · Snapdragon X Elite · 16GB",
+    "img": "microsoft-surface-laptop-7",
+    "new": 0,
+    "stores": [
+      [
+        "Jumia KE",
+        172000
+      ],
+      [
+        "Silkroom",
+        182800
+      ],
+      [
+        "Mobile Hub",
+        187300
+      ],
+      [
+        "Gadgets Leo",
+        194400
+      ],
+      [
+        "Smartphones Planet",
+        200200
+      ],
+      [
+        "iTey Store",
+        209100
+      ]
+    ],
+    "interest": 435
+  },
+  {
+    "cat": "Audio",
+    "name": "AirPods Pro 3",
+    "spec": "ANC · heart-rate · IP57 · USB-C",
+    "img": "apple-airpods-pro-3",
+    "new": 1,
+    "stores": [
+      [
+        "Gadgets Leo",
+        30499
+      ],
+      [
+        "Digital Phones",
+        31900
+      ],
+      [
+        "Mobile Hub",
+        33100
+      ],
+      [
+        "Smartphones Planet",
+        33900
+      ],
+      [
+        "Avechi",
+        34600
+      ],
+      [
+        "iTey Store",
+        36200
+      ],
+      [
+        "Phone Place Kenya",
+        36900
+      ]
+    ],
+    "interest": 679
+  },
+  {
+    "cat": "Audio",
+    "name": "Samsung Galaxy Buds 3 Pro",
+    "spec": "Adaptive ANC · 360 Audio",
+    "img": "samsung-galaxy-buds3-pro",
+    "new": 1,
+    "stores": [
+      [
+        "Phone Place Kenya",
+        16000
+      ],
+      [
+        "Avechi",
+        16200
+      ],
+      [
+        "Gadgets Leo",
+        16500
+      ],
+      [
+        "Silkroom",
+        17200
+      ],
+      [
+        "Mobile Hub",
+        17600
+      ],
+      [
+        "Jumia KE",
+        18300
+      ]
+    ],
+    "interest": 704
+  },
+  {
+    "cat": "Audio",
+    "name": "Sony WH-1000XM6",
+    "spec": "Over-ear · class-leading ANC · 30h",
+    "img": "sony-wh-1000xm6",
+    "new": 1,
+    "stores": [
+      [
+        "Jumia KE",
+        58000
+      ],
+      [
+        "Smartphones Planet",
+        60200
+      ],
+      [
+        "iTey Store",
+        63600
+      ],
+      [
+        "Digital Phones",
+        65100
+      ],
+      [
+        "Price Point",
+        66700
+      ],
+      [
+        "Silkroom",
+        70800
+      ]
+    ],
+    "interest": 553
+  },
+  {
+    "cat": "Audio",
+    "name": "Sony WF-1000XM5",
+    "spec": "In-ear · ANC · 8h",
+    "img": "sony-wf-1000xm5",
+    "new": 0,
+    "stores": [
+      [
+        "Jumia KE",
+        34000
+      ],
+      [
+        "Avechi",
+        35900
+      ],
+      [
+        "Phone Place Kenya",
+        36700
+      ],
+      [
+        "Smartphones Planet",
+        37900
+      ],
+      [
+        "Gadgets Leo",
+        40300
+      ],
+      [
+        "iTey Store",
+        42800
+      ]
+    ],
+    "interest": 418
+  },
+  {
+    "cat": "Audio",
+    "name": "Bose QuietComfort Ultra Earbuds",
+    "spec": "Immersive Audio · ANC",
+    "img": "bose-quietcomfort-ultra-earbuds",
+    "new": 0,
+    "stores": [
+      [
+        "Jumia KE",
+        39000
+      ],
+      [
+        "Phone Place Kenya",
+        40800
+      ],
+      [
+        "iTey Store",
+        43200
+      ],
+      [
+        "Smartphones Planet",
+        45300
+      ],
+      [
+        "Mobile Hub",
+        47000
+      ],
+      [
+        "Digital Phones",
+        48000
+      ]
+    ],
+    "interest": 291
+  },
+  {
+    "cat": "Audio",
+    "name": "Bose QC Ultra Headphones",
+    "spec": "Over-ear · Immersive Audio",
+    "img": "bose-quietcomfort-ultra-headphones",
+    "new": 0,
+    "stores": [
+      [
+        "Jumia KE",
+        62000
+      ],
+      [
+        "Digital Phones",
+        64900
+      ],
+      [
+        "iTey Store",
+        68400
+      ],
+      [
+        "Smartphones Planet",
+        70300
+      ],
+      [
+        "Mobile Hub",
+        74500
+      ],
+      [
+        "Avechi",
+        77700
+      ]
+    ],
+    "interest": 414
+  },
+  {
+    "cat": "Audio",
+    "name": "AirPods Max (USB-C)",
+    "spec": "Over-ear · ANC · Spatial Audio",
+    "img": "apple-airpods-max-2024",
+    "new": 0,
+    "stores": [
+      [
+        "Phone Place Kenya",
+        78000
+      ],
+      [
+        "iTey Store",
+        79200
+      ],
+      [
+        "Mobile Hub",
+        82000
+      ],
+      [
+        "Digital Phones",
+        83300
+      ],
+      [
+        "Gadgets Leo",
+        85700
+      ],
+      [
+        "Smartphones Planet",
+        87200
+      ]
+    ],
+    "interest": 339
+  },
+  {
+    "cat": "Audio",
+    "name": "Nothing Ear (3)",
+    "spec": "Hi-res · ANC · Super Mic",
+    "img": "nothing-ear-3",
+    "new": 1,
+    "stores": [
+      [
+        "Jumia KE",
+        22000
+      ],
+      [
+        "Price Point",
+        23300
+      ],
+      [
+        "iTey Store",
+        24500
+      ],
+      [
+        "Smartphones Planet",
+        25300
+      ],
+      [
+        "Mobile Hub",
+        26500
+      ],
+      [
+        "Gadgets Leo",
+        27800
+      ]
+    ],
+    "interest": 630
+  },
+  {
+    "cat": "Audio",
+    "name": "JBL Tour Pro 3",
+    "spec": "Smart case · Adaptive ANC",
+    "img": "jbl-tour-pro-3",
+    "new": 0,
+    "stores": [
+      [
+        "Jumia KE",
+        28000
+      ],
+      [
+        "Gadgets Leo",
+        29700
+      ],
+      [
+        "Price Point",
+        30600
+      ],
+      [
+        "Avechi",
+        32500
+      ],
+      [
+        "iTey Store",
+        34400
+      ],
+      [
+        "Smartphones Planet",
+        35600
+      ]
+    ],
+    "interest": 337
+  },
+  {
+    "cat": "Premium TVs",
+    "name": "Samsung Neo QLED 8K QN900D 75\"",
+    "spec": "8K · Mini-LED · 240Hz · NQ8 AI Gen3",
+    "img": "_tv",
+    "new": 1,
+    "stores": [
+      [
+        "Avechi",
+        689000
+      ],
+      [
+        "Jumia KE",
+        712700
+      ],
+      [
+        "iTey Store",
+        733700
+      ],
+      [
+        "Mobile Hub",
+        757600
+      ],
+      [
+        "Smartphones Planet",
+        806600
+      ],
+      [
+        "Price Point",
+        820400
+      ]
+    ],
+    "interest": 586
+  },
+  {
+    "cat": "Premium TVs",
+    "name": "Samsung Neo QLED 8K QN800D 65\"",
+    "spec": "8K · Mini-LED · Infinity Air",
+    "img": "_tv",
+    "new": 1,
+    "stores": [
+      [
+        "Avechi",
+        465995
+      ],
+      [
+        "iTey Store",
+        487300
+      ],
+      [
+        "Mobile Hub",
+        505500
+      ],
+      [
+        "Phone Place Kenya",
+        516300
+      ],
+      [
+        "Gadgets Leo",
+        536600
+      ],
+      [
+        "Silkroom",
+        548700
+      ]
+    ],
+    "interest": 705
+  },
+  {
+    "cat": "Premium TVs",
+    "name": "LG OLED G5 65\"",
+    "spec": "4K · OLED evo · α11 AI · 165Hz",
+    "img": "_tv",
+    "new": 1,
+    "stores": [
+      [
+        "Avechi",
+        398000
+      ],
+      [
+        "Silkroom",
+        415700
+      ],
+      [
+        "Digital Phones",
+        435900
+      ],
+      [
+        "Price Point",
+        449700
+      ],
+      [
+        "iTey Store",
+        468800
+      ],
+      [
+        "Jumia KE",
+        476700
+      ]
+    ],
+    "interest": 649
+  },
+  {
+    "cat": "Premium TVs",
+    "name": "Sony BRAVIA 9 65\"",
+    "spec": "4K · Mini-LED QD · XR Processor",
+    "img": "_tv",
+    "new": 1,
+    "stores": [
+      [
+        "Avechi",
+        372000
+      ],
+      [
+        "Mobile Hub",
+        386900
+      ],
+      [
+        "Smartphones Planet",
+        399000
+      ],
+      [
+        "Digital Phones",
+        408400
+      ],
+      [
+        "Phone Place Kenya",
+        421400
+      ],
+      [
+        "Price Point",
+        435500
+      ]
+    ],
+    "interest": 532
+  },
+  {
+    "cat": "Premium TVs",
+    "name": "Samsung OLED S95F 65\"",
+    "spec": "4K · QD-OLED · 165Hz · Glare-free",
+    "img": "_tv",
+    "new": 1,
+    "stores": [
+      [
+        "Avechi",
+        312000
+      ],
+      [
+        "Silkroom",
+        328600
+      ],
+      [
+        "Digital Phones",
+        342600
+      ],
+      [
+        "Jumia KE",
+        359500
+      ],
+      [
+        "Price Point",
+        365000
+      ],
+      [
+        "Phone Place Kenya",
+        374800
+      ]
+    ],
+    "interest": 676
+  },
+  {
+    "cat": "Premium TVs",
+    "name": "Samsung OLED S90D 65\"",
+    "spec": "4K · QD-OLED · NQ4 AI Gen2",
+    "img": "_tv",
+    "new": 0,
+    "stores": [
+      [
+        "Avechi",
+        285000
+      ],
+      [
+        "Mobile Hub",
+        302400
+      ],
+      [
+        "Silkroom",
+        319200
+      ],
+      [
+        "Phone Place Kenya",
+        334800
+      ],
+      [
+        "Jumia KE",
+        355500
+      ],
+      [
+        "iTey Store",
+        367400
+      ]
+    ],
+    "interest": 335
+  },
+  {
+    "cat": "Premium TVs",
+    "name": "LG OLED C5 65\"",
+    "spec": "4K · OLED evo · α9 AI Gen8",
+    "img": "_tv",
+    "new": 1,
+    "stores": [
+      [
+        "Avechi",
+        268000
+      ],
+      [
+        "iTey Store",
+        276200
+      ],
+      [
+        "Mobile Hub",
+        293200
+      ],
+      [
+        "Gadgets Leo",
+        309100
+      ],
+      [
+        "Phone Place Kenya",
+        326200
+      ],
+      [
+        "Silkroom",
+        335300
+      ]
+    ],
+    "interest": 653
+  },
+  {
+    "cat": "Premium TVs",
+    "name": "Samsung The Frame Pro 65\"",
+    "spec": "4K · Mini-LED · Art Mode · Matte",
+    "img": "_tv",
+    "new": 1,
+    "stores": [
+      [
+        "Avechi",
+        242000
+      ],
+      [
+        "Gadgets Leo",
+        249200
+      ],
+      [
+        "Smartphones Planet",
+        254500
+      ],
+      [
+        "Digital Phones",
+        258900
+      ],
+      [
+        "Phone Place Kenya",
+        266900
+      ],
+      [
+        "Silkroom",
+        276600
+      ]
+    ],
+    "interest": 641
+  },
+  {
+    "cat": "Other",
+    "name": "Apple Watch Ultra 3",
+    "spec": "49mm Ti · LTPO3 · satellite",
+    "img": "apple-watch-ultra-3",
+    "new": 1,
+    "stores": [
+      [
+        "Phone Place Kenya",
+        112000
+      ],
+      [
+        "Digital Phones",
+        116000
+      ],
+      [
+        "iTey Store",
+        121700
+      ],
+      [
+        "Silkroom",
+        126000
+      ],
+      [
+        "Mobile Hub",
+        129400
+      ],
+      [
+        "Smartphones Planet",
+        136000
+      ]
+    ],
+    "interest": 708
+  },
+  {
+    "cat": "Other",
+    "name": "Samsung Galaxy Watch 8 Classic",
+    "spec": "46mm · Exynos W1000 · BioActive",
+    "img": "samsung-galaxy-watch8-classic",
+    "new": 1,
+    "stores": [
+      [
+        "Jumia KE",
+        48000
+      ],
+      [
+        "Phone Place Kenya",
+        48800
+      ],
+      [
+        "iTey Store",
+        50000
+      ],
+      [
+        "Mobile Hub",
+        50900
+      ],
+      [
+        "Digital Phones",
+        51900
+      ],
+      [
+        "Gadgets Leo",
+        53900
+      ]
+    ],
+    "interest": 552
+  },
+  {
+    "cat": "Other",
+    "name": "PlayStation 5 Pro",
+    "spec": "2TB · ray-tracing · PSSR upscaling",
+    "img": "sony-playstation-5-pro",
+    "new": 0,
+    "stores": [
+      [
+        "Jumia KE",
+        118000
+      ],
+      [
+        "iTey Store",
+        120900
+      ],
+      [
+        "Phone Place Kenya",
+        123000
+      ],
+      [
+        "Price Point",
+        125800
+      ],
+      [
+        "Avechi",
+        132400
+      ],
+      [
+        "Mobile Hub",
+        137600
+      ]
+    ],
+    "interest": 449
+  },
+  {
+    "cat": "Other",
+    "name": "Meta Quest 3S",
+    "spec": "VR/MR · 128GB · Snapdragon XR2 Gen2",
+    "img": "_vr",
+    "new": 0,
+    "stores": [
+      [
+        "Jumia KE",
+        48000
+      ],
+      [
+        "Silkroom",
+        49200
+      ],
+      [
+        "Gadgets Leo",
+        51100
+      ],
+      [
+        "iTey Store",
+        52900
+      ],
+      [
+        "Smartphones Planet",
+        55400
+      ],
+      [
+        "Phone Place Kenya",
+        57200
+      ]
+    ],
+    "interest": 416
+  },
+  {
+    "cat": "Other",
+    "name": "DJI Osmo Pocket 3",
+    "spec": "1\" sensor · 4K120 · 3-axis gimbal",
+    "img": "_cam",
+    "new": 0,
+    "stores": [
+      [
+        "Jumia KE",
+        78000
+      ],
+      [
+        "Silkroom",
+        81900
+      ],
+      [
+        "iTey Store",
+        85800
+      ],
+      [
+        "Avechi",
+        88800
+      ],
+      [
+        "Digital Phones",
+        93800
+      ],
+      [
+        "Smartphones Planet",
+        97600
+      ]
+    ],
+    "interest": 391
+  },
+  {
+    "cat": "Other",
+    "name": "GoPro Hero 13 Black",
+    "spec": "5.3K60 · HB lens mods · 1900mAh",
+    "img": "_cam",
+    "new": 0,
+    "stores": [
+      [
+        "Jumia KE",
+        62000
+      ],
+      [
+        "Phone Place Kenya",
+        64800
+      ],
+      [
+        "Digital Phones",
+        67100
+      ],
+      [
+        "Smartphones Planet",
+        69800
+      ],
+      [
+        "Gadgets Leo",
+        73000
+      ],
+      [
+        "Mobile Hub",
+        74600
+      ]
+    ],
+    "interest": 333
+  },
+  {
+    "cat": "Other",
+    "name": "Nintendo Switch 2",
+    "spec": "7.9\" 1080p 120Hz · 256GB",
+    "img": "_console",
+    "new": 1,
+    "stores": [
+      [
+        "Jumia KE",
+        72000
+      ],
+      [
+        "iTey Store",
+        74400
+      ],
+      [
+        "Silkroom",
+        75500
+      ],
+      [
+        "Price Point",
+        76900
+      ],
+      [
+        "Gadgets Leo",
+        79700
+      ],
+      [
+        "Avechi",
+        84200
+      ]
+    ],
+    "interest": 530
+  },
+  {
+    "cat": "Other",
+    "name": "Samsung T9 Portable SSD 2TB",
+    "spec": "USB 3.2 Gen2x2 · 2000MB/s",
+    "img": "_ssd",
+    "new": 0,
+    "stores": [
+      [
+        "Avechi",
+        24500
+      ],
+      [
+        "iTey Store",
+        25000
+      ],
+      [
+        "Phone Place Kenya",
+        26400
+      ],
+      [
+        "Jumia KE",
+        27900
+      ],
+      [
+        "Price Point",
+        29100
+      ],
+      [
+        "Gadgets Leo",
+        30800
+      ]
+    ],
+    "interest": 391
+  },
+  {
+    "cat": "Phones",
+    "name": "Nothing Phone (3)",
+    "spec": "6.7\" AMOLED · SD 8s Gen4 · Glyph Matrix",
+    "img": "nothing-phone-3",
+    "new": 1,
+    "stores": [
+      [
+        "Jumia KE",
+        89000
+      ],
+      [
+        "Gadgets Leo",
+        92400
+      ],
+      [
+        "iTey Store",
+        95800
+      ],
+      [
+        "Smartphones Planet",
+        99100
+      ],
+      [
+        "Avechi",
+        104200
+      ],
+      [
+        "Silkroom",
+        108600
+      ]
+    ],
+    "interest": 1170
+  },
+  {
+    "cat": "Phones",
+    "name": "Nothing Phone (3a) Pro",
+    "spec": "6.77\" AMOLED 120Hz · 50MP periscope",
+    "img": "nothing-phone-3a-pro",
+    "new": 1,
+    "stores": [
+      [
+        "Jumia KE",
+        42000
+      ],
+      [
+        "Price Point",
+        43800
+      ],
+      [
+        "Mobile Hub",
+        45200
+      ],
+      [
+        "iTey Store",
+        47100
+      ],
+      [
+        "Gadgets Leo",
+        49500
+      ],
+      [
+        "Silkroom",
+        52000
+      ]
+    ],
+    "interest": 1230
+  },
+  {
+    "cat": "Phones",
+    "name": "CMF Phone 2 Pro",
+    "spec": "6.77\" AMOLED · Dimensity 7300 Pro",
+    "img": "cmf-by-nothing-phone-2-pro",
+    "new": 1,
+    "stores": [
+      [
+        "Jumia KE",
+        28500
+      ],
+      [
+        "Price Point",
+        29600
+      ],
+      [
+        "Smartphones Planet",
+        30900
+      ],
+      [
+        "Mobile Hub",
+        32400
+      ],
+      [
+        "Gadgets Leo",
+        34100
+      ],
+      [
+        "iTey Store",
+        35800
+      ]
+    ],
+    "interest": 1216
+  },
+  {
+    "cat": "Phones",
+    "name": "Samsung Galaxy Z Fold7",
+    "spec": "8\" foldable · SD 8 Elite · 200MP",
+    "img": "samsung-galaxy-z-fold7",
+    "new": 1,
+    "stores": [
+      [
+        "Avechi",
+        255000
+      ],
+      [
+        "Silkroom",
+        264700
+      ],
+      [
+        "Digital Phones",
+        277300
+      ],
+      [
+        "Phone Place Kenya",
+        291000
+      ],
+      [
+        "Gadgets Leo",
+        305400
+      ],
+      [
+        "Price Point",
+        318900
+      ]
+    ],
+    "interest": 1306
+  },
+  {
+    "cat": "Phones",
+    "name": "Samsung Galaxy Z Flip7",
+    "spec": "6.9\" foldable · cover screen · 50MP",
+    "img": "samsung-galaxy-z-flip7",
+    "new": 1,
+    "stores": [
+      [
+        "Avechi",
+        138000
+      ],
+      [
+        "Silkroom",
+        143200
+      ],
+      [
+        "Mobile Hub",
+        148900
+      ],
+      [
+        "iTey Store",
+        154100
+      ],
+      [
+        "Digital Phones",
+        160500
+      ],
+      [
+        "Gadgets Leo",
+        167000
+      ]
+    ],
+    "interest": 1202
+  },
+  {
+    "cat": "Phones",
+    "name": "Oppo Find N5",
+    "spec": "8.9mm folded · book foldable · 50MP",
+    "img": "oppo-find-n5",
+    "new": 1,
+    "stores": [
+      [
+        "Silkroom",
+        228000
+      ],
+      [
+        "Avechi",
+        236500
+      ],
+      [
+        "Smartphones Planet",
+        247800
+      ],
+      [
+        "iTey Store",
+        259200
+      ],
+      [
+        "Gadgets Leo",
+        271600
+      ],
+      [
+        "Phone Place Kenya",
+        284000
+      ]
+    ],
+    "interest": 1269
+  },
+  {
+    "cat": "Phones",
+    "name": "iPhone 16 Pro Max",
+    "spec": "6.9\" LTPO OLED · A18 Pro · 48MP",
+    "img": "apple-iphone-16-pro-max",
+    "new": 0,
+    "stores": [
+      [
+        "Avechi",
+        151999
+      ],
+      [
+        "Phone Place Kenya",
+        156000
+      ],
+      [
+        "iTey Store",
+        157000
+      ],
+      [
+        "Silkroom",
+        159000
+      ],
+      [
+        "Smartphones Planet",
+        160500
+      ],
+      [
+        "Price Point",
+        162000
+      ]
+    ],
+    "interest": 1040
+  },
+  {
+    "cat": "Phones",
+    "name": "iPhone 16",
+    "spec": "6.1\" OLED · A18 · 48MP",
+    "img": "apple-iphone-16",
+    "new": 0,
+    "stores": [
+      [
+        "Gadgets Leo",
+        87500
+      ],
+      [
+        "Phone Place Kenya",
+        95000
+      ],
+      [
+        "Avechi",
+        96999
+      ],
+      [
+        "iTey Store",
+        99000
+      ],
+      [
+        "Smartphones Planet",
+        100500
+      ],
+      [
+        "Mobile Hub",
+        101900
+      ]
+    ],
+    "interest": 914
+  },
+  {
+    "cat": "Phones",
+    "name": "Samsung Galaxy S25 Ultra",
+    "spec": "6.9\" QHD+ · SD 8 Elite · 200MP",
+    "img": "samsung-galaxy-s25-ultra-5g",
+    "new": 0,
+    "stores": [
+      [
+        "Phone Place Kenya",
+        117000
+      ],
+      [
+        "Price Point",
+        125000
+      ],
+      [
+        "Avechi",
+        129000
+      ],
+      [
+        "Mobile Hub",
+        133000
+      ],
+      [
+        "Silkroom",
+        139000
+      ],
+      [
+        "Smartphones Planet",
+        144000
+      ]
+    ],
+    "interest": 1052
+  },
+  {
+    "cat": "Phones",
+    "name": "Samsung Galaxy A55 5G",
+    "spec": "6.6\" AMOLED 120Hz · Exynos 1480 · 50MP",
+    "img": "samsung-galaxy-a55",
+    "new": 0,
+    "stores": [
+      [
+        "Gadgets Leo",
+        38500
+      ],
+      [
+        "Phone Place Kenya",
+        39999
+      ],
+      [
+        "Avechi",
+        41500
+      ],
+      [
+        "Jumia KE",
+        43000
+      ],
+      [
+        "iTey Store",
+        45000
+      ],
+      [
+        "Smartphones Planet",
+        47000
+      ]
+    ],
+    "interest": 1119
+  },
+  {
+    "cat": "Phones",
+    "name": "Tecno Camon 30",
+    "spec": "6.78\" AMOLED 120Hz · Helio G99 · 50MP",
+    "img": "tecno-camon-30",
+    "new": 0,
+    "stores": [
+      [
+        "Phone Place Kenya",
+        26000
+      ],
+      [
+        "Jumia KE",
+        26799
+      ],
+      [
+        "Avechi",
+        27500
+      ],
+      [
+        "Gadgets Leo",
+        28200
+      ],
+      [
+        "Smartphones Planet",
+        29100
+      ],
+      [
+        "Mobile Hub",
+        29500
+      ]
+    ],
+    "interest": 1066
+  },
+  {
+    "cat": "Phones",
+    "name": "Infinix Note 40 Pro",
+    "spec": "6.78\" AMOLED 120Hz · Helio G99 · 108MP",
+    "img": "infinix-note-40-pro",
+    "new": 0,
+    "stores": [
+      [
+        "Jumia KE",
+        27000
+      ],
+      [
+        "Gadgets Leo",
+        29999
+      ],
+      [
+        "Phone Place Kenya",
+        30899
+      ],
+      [
+        "Avechi",
+        31500
+      ],
+      [
+        "Silkroom",
+        32800
+      ],
+      [
+        "Smartphones Planet",
+        34000
+      ]
+    ],
+    "interest": 1057
+  },
+  {
+    "cat": "Phones",
+    "name": "Xiaomi Redmi Note 13 Pro",
+    "spec": "6.67\" AMOLED 120Hz · SD 7s Gen2 · 200MP",
+    "img": "xiaomi-redmi-note-13-pro",
+    "new": 0,
+    "stores": [
+      [
+        "Jumia KE",
+        31000
+      ],
+      [
+        "Phone Place Kenya",
+        34499
+      ],
+      [
+        "Avechi",
+        36000
+      ],
+      [
+        "Gadgets Leo",
+        37500
+      ],
+      [
+        "Price Point",
+        38800
+      ],
+      [
+        "Smartphones Planet",
+        40000
+      ]
+    ],
+    "interest": 1163
+  },
+  {
+    "cat": "Computers",
+    "name": "HP EliteBook 840 G11",
+    "spec": "14\" WUXGA · Core Ultra 7 155U · 16GB/512GB",
+    "img": "_laptop",
+    "new": 0,
+    "stores": [
+      [
+        "Phone Place Kenya",
+        153000
+      ],
+      [
+        "Avechi",
+        155000
+      ],
+      [
+        "Price Point",
+        157000
+      ],
+      [
+        "Digital Phones",
+        159000
+      ],
+      [
+        "Gadgets Leo",
+        160500
+      ],
+      [
+        "Silkroom",
+        162000
+      ]
+    ],
+    "interest": 438
+  },
+  {
+    "cat": "Phones",
+    "name": "Samsung Galaxy S24 Ultra",
+    "spec": "6.8\" QHD+ · SD 8 Gen3 · 200MP",
+    "img": "samsung-galaxy-s24-ultra-5g",
+    "new": 0,
+    "stores": [
+      [
+        "Gadgets Leo",
+        109900
+      ],
+      [
+        "Avechi",
+        115499
+      ],
+      [
+        "Price Point",
+        118000
+      ],
+      [
+        "iTey Store",
+        120000
+      ],
+      [
+        "Silkroom",
+        122500
+      ],
+      [
+        "Smartphones Planet",
+        124000
+      ]
+    ],
+    "interest": 1065
+  },
+  {
+    "cat": "Phones",
+    "name": "Google Pixel 9 Pro",
+    "spec": "6.3\" LTPO OLED · Tensor G4 · 50MP triple",
+    "img": "google-pixel-9-pro",
+    "new": 0,
+    "stores": [
+      [
+        "Price Point",
+        103700
+      ],
+      [
+        "Gadgets Leo",
+        109000
+      ],
+      [
+        "Avechi",
+        115000
+      ],
+      [
+        "Mobile Hub",
+        119000
+      ],
+      [
+        "Silkroom",
+        123000
+      ],
+      [
+        "Smartphones Planet",
+        125000
+      ]
+    ],
+    "interest": 944
+  },
+  {
+    "cat": "Phones",
+    "name": "OnePlus 12",
+    "spec": "6.82\" LTPO AMOLED · SD 8 Gen3 · 5400mAh",
+    "img": "oneplus-12",
+    "new": 0,
+    "stores": [
+      [
+        "Avechi",
+        78999
+      ],
+      [
+        "Gadgets Leo",
+        80999
+      ],
+      [
+        "Phone Place Kenya",
+        82500
+      ],
+      [
+        "Mobile Hub",
+        85000
+      ],
+      [
+        "Smartphones Planet",
+        88000
+      ],
+      [
+        "Price Point",
+        90000
+      ]
+    ],
+    "interest": 914
+  },
+  {
+    "cat": "Phones",
+    "name": "Samsung Galaxy S24 FE",
+    "spec": "6.7\" AMOLED 120Hz · Exynos 2400e · 50MP",
+    "img": "samsung-galaxy-s24-fe",
+    "new": 0,
+    "stores": [
+      [
+        "Gadgets Leo",
+        57499
+      ],
+      [
+        "Avechi",
+        58499
+      ],
+      [
+        "Price Point",
+        61000
+      ],
+      [
+        "iTey Store",
+        63000
+      ],
+      [
+        "Silkroom",
+        65000
+      ],
+      [
+        "Phone Place Kenya",
+        66500
+      ]
+    ],
+    "interest": 1121
+  },
+  {
+    "cat": "Phones",
+    "name": "Oppo Reno 12 5G",
+    "spec": "6.7\" AMOLED 120Hz · Dimensity 7300 · 50MP",
+    "img": "oppo-reno12",
+    "new": 0,
+    "stores": [
+      [
+        "Avechi",
+        59999
+      ],
+      [
+        "Phone Place Kenya",
+        62000
+      ],
+      [
+        "Smartphones Planet",
+        63500
+      ],
+      [
+        "iTey Store",
+        64200
+      ],
+      [
+        "Silkroom",
+        65000
+      ],
+      [
+        "Mobile Hub",
+        66000
+      ]
+    ],
+    "interest": 1043
+  },
+  {
+    "cat": "Phones",
+    "name": "Xiaomi Redmi Note 14",
+    "spec": "6.67\" AMOLED 120Hz · Helio G99 · 108MP",
+    "img": "xiaomi-redmi-note-14",
+    "new": 0,
+    "stores": [
+      [
+        "Jumia KE",
+        20000
+      ],
+      [
+        "Avechi",
+        21995
+      ],
+      [
+        "Phone Place Kenya",
+        23000
+      ],
+      [
+        "Gadgets Leo",
+        24000
+      ],
+      [
+        "Smartphones Planet",
+        25000
+      ],
+      [
+        "Mobile Hub",
+        25999
+      ]
+    ],
+    "interest": 1093
+  },
+  {
+    "cat": "Phones",
+    "name": "Samsung Galaxy A16",
+    "spec": "6.7\" AMOLED 90Hz · 50MP · 5000mAh",
+    "img": "samsung-galaxy-a16",
+    "new": 0,
+    "stores": [
+      [
+        "Phone Place Kenya",
+        18500
+      ],
+      [
+        "Avechi",
+        19299
+      ],
+      [
+        "Jumia KE",
+        20500
+      ],
+      [
+        "Gadgets Leo",
+        22000
+      ],
+      [
+        "Smartphones Planet",
+        23499
+      ],
+      [
+        "Mobile Hub",
+        25000
+      ]
+    ],
+    "interest": 1061
+  },
+  {
+    "cat": "Phones",
+    "name": "Tecno Spark 30",
+    "spec": "6.78\" 120Hz · Helio G91 · 64MP",
+    "img": "tecno-spark-30",
+    "new": 0,
+    "stores": [
+      [
+        "Jumia KE",
+        15480
+      ],
+      [
+        "Phone Place Kenya",
+        17199
+      ],
+      [
+        "Avechi",
+        17499
+      ],
+      [
+        "Digital Phones",
+        18000
+      ],
+      [
+        "Gadgets Leo",
+        18800
+      ],
+      [
+        "Smartphones Planet",
+        19399
+      ]
+    ],
+    "interest": 954
+  },
+  {
+    "cat": "Computers",
+    "name": "MacBook Air 13\" (M3)",
+    "spec": "13.6\" Liquid Retina · M3 · 16GB/256GB",
+    "img": "_laptop",
+    "new": 0,
+    "stores": [
+      [
+        "Avechi",
+        123999
+      ],
+      [
+        "Phone Place Kenya",
+        128000
+      ],
+      [
+        "Gadgets Leo",
+        131000
+      ],
+      [
+        "Mobile Hub",
+        136000
+      ],
+      [
+        "iTey Store",
+        140000
+      ],
+      [
+        "Silkroom",
+        145000
+      ]
+    ],
+    "interest": 477
+  },
+  {
+    "cat": "Computers",
+    "name": "HP Pavilion 15 (Core i5)",
+    "spec": "15.6\" FHD · Core i5-1235U · 16GB/512GB",
+    "img": "_laptop",
+    "new": 0,
+    "stores": [
+      [
+        "Phone Place Kenya",
+        73999
+      ],
+      [
+        "Gadgets Leo",
+        80999
+      ],
+      [
+        "Avechi",
+        84995
+      ],
+      [
+        "Digital Phones",
+        88000
+      ],
+      [
+        "Price Point",
+        91000
+      ],
+      [
+        "Silkroom",
+        95000
+      ]
+    ],
+    "interest": 486
+  },
+  {
+    "cat": "Computers",
+    "name": "Lenovo IdeaPad Slim 3 (Core i5)",
+    "spec": "14\" FHD · Core i5-13420H · 8GB/512GB",
+    "img": "_laptop",
+    "new": 0,
+    "stores": [
+      [
+        "Avechi",
+        60000
+      ],
+      [
+        "Phone Place Kenya",
+        61500
+      ],
+      [
+        "Gadgets Leo",
+        63000
+      ],
+      [
+        "Digital Phones",
+        64200
+      ],
+      [
+        "Price Point",
+        65000
+      ],
+      [
+        "Silkroom",
+        65900
+      ]
+    ],
+    "interest": 563
+  },
+  {
+    "cat": "Premium TVs",
+    "name": "Hisense 55\" A6 4K UHD",
+    "spec": "55\" 4K UHD · VIDAA · HDR",
+    "img": "_tv",
+    "new": 0,
+    "stores": [
+      [
+        "Avechi",
+        45199
+      ],
+      [
+        "Jumia KE",
+        48000
+      ],
+      [
+        "Phone Place Kenya",
+        50500
+      ],
+      [
+        "Gadgets Leo",
+        53000
+      ],
+      [
+        "Smartphones Planet",
+        55000
+      ],
+      [
+        "Mobile Hub",
+        56800
+      ]
+    ],
+    "interest": 410
+  },
+  {
+    "cat": "Premium TVs",
+    "name": "LG 55\" UHD UR80",
+    "spec": "55\" 4K UHD · webOS · α5 AI",
+    "img": "_tv",
+    "new": 0,
+    "stores": [
+      [
+        "Jumia KE",
+        57900
+      ],
+      [
+        "Avechi",
+        62000
+      ],
+      [
+        "Phone Place Kenya",
+        66000
+      ],
+      [
+        "Gadgets Leo",
+        70000
+      ],
+      [
+        "Digital Phones",
+        74000
+      ],
+      [
+        "Silkroom",
+        78000
+      ]
+    ],
+    "interest": 382
+  },
+  {
+    "cat": "Premium TVs",
+    "name": "Samsung 55\" Crystal UHD DU7000",
+    "spec": "55\" 4K UHD · Tizen · Crystal Processor 4K",
+    "img": "_tv",
+    "new": 0,
+    "stores": [
+      [
+        "Avechi",
+        67699
+      ],
+      [
+        "Jumia KE",
+        70999
+      ],
+      [
+        "Price Point",
+        74000
+      ],
+      [
+        "Digital Phones",
+        77000
+      ],
+      [
+        "iTey Store",
+        80000
+      ],
+      [
+        "Silkroom",
+        84000
+      ]
+    ],
+    "interest": 439
+  },
+  {
+    "cat": "Premium TVs",
+    "name": "Sony BRAVIA 55\" X80L",
+    "spec": "55\" 4K HDR · Google TV · X1 Processor",
+    "img": "_tv",
+    "new": 0,
+    "stores": [
+      [
+        "Avechi",
+        99000
+      ],
+      [
+        "Phone Place Kenya",
+        103995
+      ],
+      [
+        "Mobile Hub",
+        105000
+      ],
+      [
+        "Digital Phones",
+        107000
+      ],
+      [
+        "iTey Store",
+        108500
+      ],
+      [
+        "Silkroom",
+        110000
+      ]
+    ],
+    "interest": 359
+  },
+  {
+    "cat": "Phones",
+    "name": "iPhone Air",
+    "spec": "6.5\" LTPO OLED · A19 Pro · titanium",
+    "img": "apple-iphone-air",
+    "new": 1,
+    "interest": 1263,
+    "stores": [
+      [
+        "Jumia KE",
+        165000
+      ],
+      [
+        "iTey Store",
+        171700
+      ],
+      [
+        "Smartphones Planet",
+        181900
+      ],
+      [
+        "Mobile Hub",
+        189200
+      ],
+      [
+        "Avechi",
+        197200
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "iPhone 16 Pro",
+    "spec": "6.3\" LTPO 120Hz · A18 Pro · 48MP",
+    "img": "apple-iphone-16-pro",
+    "new": 0,
+    "interest": 1055,
+    "stores": [
+      [
+        "Price Point",
+        150000
+      ],
+      [
+        "iTey Store",
+        157600
+      ],
+      [
+        "Jumia KE",
+        167600
+      ],
+      [
+        "Digital Phones",
+        174600
+      ],
+      [
+        "Gadgets Leo",
+        179300
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "iPhone 16 Plus",
+    "spec": "6.7\" OLED · A18 · 48MP dual",
+    "img": "apple-iphone-16-plus",
+    "new": 0,
+    "interest": 964,
+    "stores": [
+      [
+        "Smartphones Planet",
+        120000
+      ],
+      [
+        "iTey Store",
+        123300
+      ],
+      [
+        "Silkroom",
+        127100
+      ],
+      [
+        "Avechi",
+        131100
+      ],
+      [
+        "Jumia KE",
+        137600
+      ],
+      [
+        "Price Point",
+        140800
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "iPhone 16e",
+    "spec": "6.1\" OLED · A18 · 48MP",
+    "img": "apple-iphone-16e",
+    "new": 0,
+    "interest": 908,
+    "stores": [
+      [
+        "Mobile Hub",
+        75000
+      ],
+      [
+        "Jumia KE",
+        76900
+      ],
+      [
+        "Phone Place Kenya",
+        80300
+      ],
+      [
+        "Avechi",
+        83300
+      ],
+      [
+        "Digital Phones",
+        87000
+      ],
+      [
+        "Silkroom",
+        89000
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "iPhone 15",
+    "spec": "6.1\" OLED · A16 · 48MP",
+    "img": "apple-iphone-15",
+    "new": 0,
+    "interest": 969,
+    "stores": [
+      [
+        "Phone Place Kenya",
+        85000
+      ],
+      [
+        "Mobile Hub",
+        86800
+      ],
+      [
+        "Gadgets Leo",
+        91600
+      ],
+      [
+        "Digital Phones",
+        95600
+      ],
+      [
+        "iTey Store",
+        101000
+      ],
+      [
+        "Smartphones Planet",
+        107300
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "iPhone 15 Pro Max",
+    "spec": "6.7\" LTPO · A17 Pro · 5x tele",
+    "img": "apple-iphone-15-pro-max",
+    "new": 0,
+    "interest": 1017,
+    "stores": [
+      [
+        "Avechi",
+        140000
+      ],
+      [
+        "iTey Store",
+        148200
+      ],
+      [
+        "Price Point",
+        151200
+      ],
+      [
+        "Silkroom",
+        159800
+      ],
+      [
+        "Phone Place Kenya",
+        168800
+      ],
+      [
+        "Smartphones Planet",
+        179500
+      ],
+      [
+        "Digital Phones",
+        184200
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "iPhone 15 Plus",
+    "spec": "6.7\" OLED · A16 · 48MP",
+    "img": "apple-iphone-15-plus",
+    "new": 0,
+    "interest": 885,
+    "stores": [
+      [
+        "Avechi",
+        95000
+      ],
+      [
+        "Gadgets Leo",
+        99300
+      ],
+      [
+        "Silkroom",
+        104600
+      ],
+      [
+        "Smartphones Planet",
+        108000
+      ],
+      [
+        "Price Point",
+        113700
+      ],
+      [
+        "Phone Place Kenya",
+        120000
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Samsung Galaxy S25 Edge",
+    "spec": "6.7\" QHD+ · SD 8 Elite · 200MP · 5.8mm",
+    "img": "samsung-galaxy-s25-edge",
+    "new": 1,
+    "interest": 1179,
+    "stores": [
+      [
+        "Gadgets Leo",
+        130000
+      ],
+      [
+        "Jumia KE",
+        137200
+      ],
+      [
+        "Price Point",
+        146000
+      ],
+      [
+        "iTey Store",
+        150900
+      ],
+      [
+        "Silkroom",
+        157800
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Samsung Galaxy S25+",
+    "spec": "6.7\" QHD+ 120Hz · SD 8 Elite",
+    "img": "samsung-galaxy-s25-plus-5g",
+    "new": 0,
+    "interest": 1064,
+    "stores": [
+      [
+        "Gadgets Leo",
+        120000
+      ],
+      [
+        "Mobile Hub",
+        122900
+      ],
+      [
+        "Jumia KE",
+        128400
+      ],
+      [
+        "Digital Phones",
+        132800
+      ],
+      [
+        "Silkroom",
+        140100
+      ],
+      [
+        "Smartphones Planet",
+        144900
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Samsung Galaxy S25 FE",
+    "spec": "6.7\" AMOLED · Exynos 2400 · 50MP",
+    "img": "samsung-galaxy-s25-fe",
+    "new": 1,
+    "interest": 1129,
+    "stores": [
+      [
+        "Digital Phones",
+        85000
+      ],
+      [
+        "Silkroom",
+        89100
+      ],
+      [
+        "iTey Store",
+        92700
+      ],
+      [
+        "Smartphones Planet",
+        94700
+      ],
+      [
+        "Price Point",
+        96700
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Samsung Galaxy A56 5G",
+    "spec": "6.7\" AMOLED 120Hz · Exynos 1580 · 50MP",
+    "img": "samsung-galaxy-a56",
+    "new": 1,
+    "interest": 1335,
+    "stores": [
+      [
+        "Price Point",
+        52000
+      ],
+      [
+        "Silkroom",
+        55300
+      ],
+      [
+        "Digital Phones",
+        58300
+      ],
+      [
+        "Phone Place Kenya",
+        60900
+      ],
+      [
+        "Smartphones Planet",
+        64700
+      ],
+      [
+        "Mobile Hub",
+        68600
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Samsung Galaxy A36 5G",
+    "spec": "6.7\" AMOLED · SD 6 Gen3 · 50MP",
+    "img": "samsung-galaxy-a36",
+    "new": 1,
+    "interest": 1312,
+    "stores": [
+      [
+        "iTey Store",
+        42000
+      ],
+      [
+        "Avechi",
+        42900
+      ],
+      [
+        "Smartphones Planet",
+        43800
+      ],
+      [
+        "Phone Place Kenya",
+        45800
+      ],
+      [
+        "Price Point",
+        48200
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Samsung Galaxy A26 5G",
+    "spec": "6.7\" AMOLED · Exynos 1380 · 50MP",
+    "img": "samsung-galaxy-a26",
+    "new": 1,
+    "interest": 1295,
+    "stores": [
+      [
+        "Digital Phones",
+        32000
+      ],
+      [
+        "Jumia KE",
+        32800
+      ],
+      [
+        "Mobile Hub",
+        34000
+      ],
+      [
+        "Silkroom",
+        35600
+      ],
+      [
+        "Gadgets Leo",
+        37200
+      ],
+      [
+        "iTey Store",
+        38500
+      ],
+      [
+        "Smartphones Planet",
+        40400
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Samsung Galaxy A17 5G",
+    "spec": "6.7\" AMOLED · Dimensity 6300 · 50MP",
+    "img": "samsung-galaxy-a17",
+    "new": 1,
+    "interest": 1380,
+    "stores": [
+      [
+        "Mobile Hub",
+        25000
+      ],
+      [
+        "Gadgets Leo",
+        25900
+      ],
+      [
+        "Avechi",
+        27100
+      ],
+      [
+        "iTey Store",
+        28500
+      ],
+      [
+        "Silkroom",
+        29700
+      ],
+      [
+        "Price Point",
+        31300
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Samsung Galaxy A06",
+    "spec": "6.7\" HD+ · Helio G85 · 50MP",
+    "img": "samsung-galaxy-a06",
+    "new": 0,
+    "interest": 976,
+    "stores": [
+      [
+        "Price Point",
+        14000
+      ],
+      [
+        "Digital Phones",
+        14600
+      ],
+      [
+        "Gadgets Leo",
+        15500
+      ],
+      [
+        "Avechi",
+        15900
+      ],
+      [
+        "Jumia KE",
+        16600
+      ],
+      [
+        "iTey Store",
+        17100
+      ],
+      [
+        "Silkroom",
+        17500
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Samsung Galaxy A35 5G",
+    "spec": "6.6\" AMOLED · Exynos 1380 · 50MP",
+    "img": "samsung-galaxy-a35",
+    "new": 0,
+    "interest": 1053,
+    "stores": [
+      [
+        "Silkroom",
+        38000
+      ],
+      [
+        "Avechi",
+        39200
+      ],
+      [
+        "Price Point",
+        41200
+      ],
+      [
+        "Gadgets Leo",
+        42600
+      ],
+      [
+        "Digital Phones",
+        45200
+      ],
+      [
+        "Mobile Hub",
+        47600
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Google Pixel 10 Pro XL",
+    "spec": "6.8\" LTPO · Tensor G5 · 5x tele",
+    "img": "google-pixel-10-pro-xl",
+    "new": 1,
+    "interest": 1241,
+    "stores": [
+      [
+        "Gadgets Leo",
+        165000
+      ],
+      [
+        "Phone Place Kenya",
+        169600
+      ],
+      [
+        "Digital Phones",
+        179500
+      ],
+      [
+        "Jumia KE",
+        188700
+      ],
+      [
+        "iTey Store",
+        196500
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Google Pixel 10",
+    "spec": "6.3\" OLED 120Hz · Tensor G5 · 48MP",
+    "img": "google-pixel-10",
+    "new": 1,
+    "interest": 1113,
+    "stores": [
+      [
+        "Silkroom",
+        110000
+      ],
+      [
+        "Avechi",
+        116500
+      ],
+      [
+        "Jumia KE",
+        123400
+      ],
+      [
+        "Gadgets Leo",
+        130500
+      ],
+      [
+        "Price Point",
+        133500
+      ],
+      [
+        "Smartphones Planet",
+        137100
+      ],
+      [
+        "Phone Place Kenya",
+        140700
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Google Pixel 10 Pro Fold",
+    "spec": "8\" foldable · Tensor G5",
+    "img": "google-pixel-10-pro-fold",
+    "new": 1,
+    "interest": 1194,
+    "stores": [
+      [
+        "Jumia KE",
+        250000
+      ],
+      [
+        "Silkroom",
+        260900
+      ],
+      [
+        "Gadgets Leo",
+        271900
+      ],
+      [
+        "Smartphones Planet",
+        286700
+      ],
+      [
+        "Avechi",
+        297200
+      ],
+      [
+        "iTey Store",
+        312500
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Google Pixel 9",
+    "spec": "6.3\" OLED · Tensor G4 · 50MP",
+    "img": "google-pixel-9",
+    "new": 0,
+    "interest": 925,
+    "stores": [
+      [
+        "Jumia KE",
+        90000
+      ],
+      [
+        "Silkroom",
+        91900
+      ],
+      [
+        "Price Point",
+        97800
+      ],
+      [
+        "Digital Phones",
+        100400
+      ],
+      [
+        "iTey Store",
+        105400
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Google Pixel 9 Pro XL",
+    "spec": "6.8\" LTPO · Tensor G4 · 5x tele",
+    "img": "google-pixel-9-pro-xl",
+    "new": 0,
+    "interest": 938,
+    "stores": [
+      [
+        "Gadgets Leo",
+        140000
+      ],
+      [
+        "Mobile Hub",
+        146100
+      ],
+      [
+        "Digital Phones",
+        150700
+      ],
+      [
+        "Phone Place Kenya",
+        154000
+      ],
+      [
+        "Smartphones Planet",
+        161500
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Google Pixel 9a",
+    "spec": "6.3\" OLED · Tensor G4 · 48MP",
+    "img": "google-pixel-9a",
+    "new": 1,
+    "interest": 1096,
+    "stores": [
+      [
+        "Silkroom",
+        62000
+      ],
+      [
+        "Phone Place Kenya",
+        65200
+      ],
+      [
+        "Smartphones Planet",
+        66700
+      ],
+      [
+        "iTey Store",
+        71000
+      ],
+      [
+        "Avechi",
+        74900
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "OnePlus 14",
+    "spec": "6.82\" LTPO · SD 8 Elite Gen5 · 50MP",
+    "img": "oneplus-14",
+    "new": 1,
+    "interest": 1081,
+    "stores": [
+      [
+        "Avechi",
+        98000
+      ],
+      [
+        "Jumia KE",
+        102700
+      ],
+      [
+        "Gadgets Leo",
+        104900
+      ],
+      [
+        "Silkroom",
+        107500
+      ],
+      [
+        "Digital Phones",
+        111900
+      ],
+      [
+        "iTey Store",
+        116600
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "OnePlus 13",
+    "spec": "6.82\" QHD+ · SD 8 Elite · 50MP Hasselblad",
+    "img": "oneplus-13",
+    "new": 0,
+    "interest": 758,
+    "stores": [
+      [
+        "Jumia KE",
+        95000
+      ],
+      [
+        "Digital Phones",
+        100200
+      ],
+      [
+        "Smartphones Planet",
+        105100
+      ],
+      [
+        "Mobile Hub",
+        109000
+      ],
+      [
+        "Phone Place Kenya",
+        112200
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "OnePlus 13R",
+    "spec": "6.78\" 120Hz · SD 8 Gen3 · 50MP",
+    "img": "oneplus-13r",
+    "new": 0,
+    "interest": 895,
+    "stores": [
+      [
+        "Avechi",
+        62000
+      ],
+      [
+        "Gadgets Leo",
+        65900
+      ],
+      [
+        "Smartphones Planet",
+        69500
+      ],
+      [
+        "Digital Phones",
+        73200
+      ],
+      [
+        "Mobile Hub",
+        75800
+      ],
+      [
+        "iTey Store",
+        80100
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "OnePlus 13T",
+    "spec": "6.32\" · SD 8 Elite · 6260mAh",
+    "img": "oneplus-13t",
+    "new": 1,
+    "interest": 1025,
+    "stores": [
+      [
+        "Mobile Hub",
+        70000
+      ],
+      [
+        "Avechi",
+        73700
+      ],
+      [
+        "Price Point",
+        78100
+      ],
+      [
+        "Gadgets Leo",
+        81800
+      ],
+      [
+        "Smartphones Planet",
+        84600
+      ],
+      [
+        "Jumia KE",
+        87900
+      ],
+      [
+        "Phone Place Kenya",
+        90600
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "OnePlus Nord 5",
+    "spec": "6.83\" 144Hz · SD 8s Gen3 · 50MP",
+    "img": "oneplus-nord-5",
+    "new": 1,
+    "interest": 1209,
+    "stores": [
+      [
+        "Avechi",
+        48000
+      ],
+      [
+        "iTey Store",
+        49600
+      ],
+      [
+        "Smartphones Planet",
+        52400
+      ],
+      [
+        "Gadgets Leo",
+        55700
+      ],
+      [
+        "Jumia KE",
+        57400
+      ],
+      [
+        "Phone Place Kenya",
+        61000
+      ],
+      [
+        "Mobile Hub",
+        64200
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "OnePlus Nord 4",
+    "spec": "6.74\" AMOLED · SD 7+ Gen3 · 50MP",
+    "img": "oneplus-nord-4",
+    "new": 0,
+    "interest": 908,
+    "stores": [
+      [
+        "iTey Store",
+        45000
+      ],
+      [
+        "Price Point",
+        46500
+      ],
+      [
+        "Gadgets Leo",
+        47500
+      ],
+      [
+        "Smartphones Planet",
+        49100
+      ],
+      [
+        "Mobile Hub",
+        51100
+      ],
+      [
+        "Avechi",
+        53900
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "OnePlus Nord CE4",
+    "spec": "6.7\" AMOLED · SD 7 Gen3 · 50MP",
+    "img": "oneplus-nord-ce4",
+    "new": 0,
+    "interest": 1022,
+    "stores": [
+      [
+        "iTey Store",
+        38000
+      ],
+      [
+        "Smartphones Planet",
+        39200
+      ],
+      [
+        "Jumia KE",
+        40100
+      ],
+      [
+        "Gadgets Leo",
+        41600
+      ],
+      [
+        "Avechi",
+        44100
+      ],
+      [
+        "Price Point",
+        45200
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Xiaomi 16",
+    "spec": "6.3\" LTPO · SD 8 Elite Gen5 · 50MP",
+    "img": "xiaomi-16",
+    "new": 1,
+    "interest": 1159,
+    "stores": [
+      [
+        "Avechi",
+        115000
+      ],
+      [
+        "Phone Place Kenya",
+        120500
+      ],
+      [
+        "Gadgets Leo",
+        123300
+      ],
+      [
+        "Price Point",
+        131200
+      ],
+      [
+        "iTey Store",
+        138100
+      ],
+      [
+        "Mobile Hub",
+        142800
+      ],
+      [
+        "Silkroom",
+        148200
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Xiaomi 15",
+    "spec": "6.36\" LTPO · SD 8 Elite · Leica 50MP",
+    "img": "xiaomi-15",
+    "new": 0,
+    "interest": 901,
+    "stores": [
+      [
+        "Price Point",
+        102000
+      ],
+      [
+        "Avechi",
+        108000
+      ],
+      [
+        "Mobile Hub",
+        111500
+      ],
+      [
+        "Silkroom",
+        115700
+      ],
+      [
+        "Digital Phones",
+        121300
+      ],
+      [
+        "Smartphones Planet",
+        128400
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Xiaomi 15 Ultra",
+    "spec": "6.73\" QHD+ · SD 8 Elite · Leica 200MP",
+    "img": "xiaomi-15-ultra",
+    "new": 0,
+    "interest": 975,
+    "stores": [
+      [
+        "Phone Place Kenya",
+        150000
+      ],
+      [
+        "Price Point",
+        155900
+      ],
+      [
+        "Jumia KE",
+        161600
+      ],
+      [
+        "Avechi",
+        170200
+      ],
+      [
+        "Gadgets Leo",
+        174100
+      ],
+      [
+        "Mobile Hub",
+        180800
+      ],
+      [
+        "Smartphones Planet",
+        191900
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Xiaomi Redmi Note 14 Pro+ 5G",
+    "spec": "6.67\" AMOLED · SD 7s Gen3 · 200MP",
+    "img": "xiaomi-redmi-note-14-pro-plus-5g",
+    "new": 0,
+    "interest": 1033,
+    "stores": [
+      [
+        "Digital Phones",
+        49000
+      ],
+      [
+        "Mobile Hub",
+        50500
+      ],
+      [
+        "iTey Store",
+        52900
+      ],
+      [
+        "Silkroom",
+        55800
+      ],
+      [
+        "Smartphones Planet",
+        58900
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Xiaomi Redmi Note 14 Pro",
+    "spec": "6.67\" AMOLED · Dimensity 7300 · 200MP",
+    "img": "xiaomi-redmi-note-14-pro",
+    "new": 0,
+    "interest": 1049,
+    "stores": [
+      [
+        "Phone Place Kenya",
+        38000
+      ],
+      [
+        "Mobile Hub",
+        39500
+      ],
+      [
+        "Gadgets Leo",
+        41500
+      ],
+      [
+        "Smartphones Planet",
+        43400
+      ],
+      [
+        "iTey Store",
+        44400
+      ],
+      [
+        "Jumia KE",
+        46900
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Xiaomi Redmi Note 15 Pro",
+    "spec": "6.67\" AMOLED · Dimensity 7400 · 50MP",
+    "img": "xiaomi-redmi-note-15-pro",
+    "new": 1,
+    "interest": 1244,
+    "stores": [
+      [
+        "Price Point",
+        36000
+      ],
+      [
+        "Avechi",
+        38200
+      ],
+      [
+        "Smartphones Planet",
+        40000
+      ],
+      [
+        "Silkroom",
+        41300
+      ],
+      [
+        "Gadgets Leo",
+        42500
+      ],
+      [
+        "Mobile Hub",
+        44800
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Xiaomi Redmi 15",
+    "spec": "6.9\" 144Hz · SD 6s Gen3 · 50MP",
+    "img": "xiaomi-redmi-15",
+    "new": 1,
+    "interest": 1345,
+    "stores": [
+      [
+        "Mobile Hub",
+        29000
+      ],
+      [
+        "Jumia KE",
+        30000
+      ],
+      [
+        "Digital Phones",
+        31900
+      ],
+      [
+        "iTey Store",
+        32800
+      ],
+      [
+        "Price Point",
+        34000
+      ],
+      [
+        "Gadgets Leo",
+        36000
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Xiaomi Redmi 14C",
+    "spec": "6.88\" · Helio G81 · 50MP",
+    "img": "xiaomi-redmi-14c",
+    "new": 0,
+    "interest": 828,
+    "stores": [
+      [
+        "Avechi",
+        16000
+      ],
+      [
+        "Jumia KE",
+        16700
+      ],
+      [
+        "Gadgets Leo",
+        17600
+      ],
+      [
+        "Silkroom",
+        18500
+      ],
+      [
+        "Mobile Hub",
+        19000
+      ],
+      [
+        "Digital Phones",
+        19700
+      ],
+      [
+        "iTey Store",
+        20100
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Xiaomi Poco X7 Pro",
+    "spec": "6.67\" AMOLED · Dimensity 8400 · 50MP",
+    "img": "xiaomi-poco-x7-pro",
+    "new": 1,
+    "interest": 1316,
+    "stores": [
+      [
+        "Jumia KE",
+        43000
+      ],
+      [
+        "Phone Place Kenya",
+        44200
+      ],
+      [
+        "Price Point",
+        46900
+      ],
+      [
+        "Silkroom",
+        49500
+      ],
+      [
+        "iTey Store",
+        50700
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Xiaomi Poco F7",
+    "spec": "6.83\" · SD 8s Gen4 · 6500mAh",
+    "img": "xiaomi-poco-f7",
+    "new": 1,
+    "interest": 1264,
+    "stores": [
+      [
+        "Silkroom",
+        55000
+      ],
+      [
+        "Jumia KE",
+        57500
+      ],
+      [
+        "Avechi",
+        59200
+      ],
+      [
+        "iTey Store",
+        62400
+      ],
+      [
+        "Gadgets Leo",
+        65400
+      ],
+      [
+        "Price Point",
+        67100
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Xiaomi Poco C75",
+    "spec": "6.88\" · Helio G81 · 50MP",
+    "img": "xiaomi-poco-c75",
+    "new": 0,
+    "interest": 857,
+    "stores": [
+      [
+        "Price Point",
+        15000
+      ],
+      [
+        "Silkroom",
+        15900
+      ],
+      [
+        "iTey Store",
+        16200
+      ],
+      [
+        "Avechi",
+        17100
+      ],
+      [
+        "Phone Place Kenya",
+        18000
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Tecno Camon 40 Pro 5G",
+    "spec": "6.78\" AMOLED · Dimensity 7300 · 50MP",
+    "img": "tecno-camon-40-pro",
+    "new": 1,
+    "interest": 1341,
+    "stores": [
+      [
+        "Gadgets Leo",
+        32000
+      ],
+      [
+        "iTey Store",
+        33500
+      ],
+      [
+        "Phone Place Kenya",
+        34700
+      ],
+      [
+        "Silkroom",
+        36800
+      ],
+      [
+        "Price Point",
+        38800
+      ],
+      [
+        "Avechi",
+        41000
+      ],
+      [
+        "Mobile Hub",
+        43100
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Tecno Camon 40",
+    "spec": "6.78\" AMOLED · Helio G100 · 50MP",
+    "img": "tecno-camon-40",
+    "new": 1,
+    "interest": 1267,
+    "stores": [
+      [
+        "Jumia KE",
+        25000
+      ],
+      [
+        "Price Point",
+        26000
+      ],
+      [
+        "Silkroom",
+        27700
+      ],
+      [
+        "Phone Place Kenya",
+        29300
+      ],
+      [
+        "Gadgets Leo",
+        30800
+      ],
+      [
+        "iTey Store",
+        32000
+      ],
+      [
+        "Mobile Hub",
+        33000
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Tecno Camon 30 Pro 5G",
+    "spec": "6.78\" AMOLED · Dimensity 8200 · 50MP",
+    "img": "tecno-camon-30-pro",
+    "new": 0,
+    "interest": 1109,
+    "stores": [
+      [
+        "Smartphones Planet",
+        38000
+      ],
+      [
+        "Phone Place Kenya",
+        39200
+      ],
+      [
+        "Price Point",
+        40400
+      ],
+      [
+        "Avechi",
+        42800
+      ],
+      [
+        "Mobile Hub",
+        44900
+      ],
+      [
+        "Digital Phones",
+        47700
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Tecno Spark 40 Pro+",
+    "spec": "6.78\" AMOLED · Helio G200 · 50MP",
+    "img": "tecno-spark-40-pro-plus",
+    "new": 1,
+    "interest": 1430,
+    "stores": [
+      [
+        "Silkroom",
+        22000
+      ],
+      [
+        "Digital Phones",
+        23300
+      ],
+      [
+        "Avechi",
+        24600
+      ],
+      [
+        "Price Point",
+        25600
+      ],
+      [
+        "Gadgets Leo",
+        27100
+      ],
+      [
+        "iTey Store",
+        28800
+      ],
+      [
+        "Jumia KE",
+        30600
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Tecno Spark 40",
+    "spec": "6.7\" · Helio G100 · 50MP",
+    "img": "tecno-spark-40",
+    "new": 1,
+    "interest": 1173,
+    "stores": [
+      [
+        "Gadgets Leo",
+        16000
+      ],
+      [
+        "Digital Phones",
+        16700
+      ],
+      [
+        "Smartphones Planet",
+        17200
+      ],
+      [
+        "Phone Place Kenya",
+        17800
+      ],
+      [
+        "Silkroom",
+        18600
+      ],
+      [
+        "Price Point",
+        19500
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Tecno Spark 30 Pro",
+    "spec": "6.78\" AMOLED · Helio G100 · 108MP",
+    "img": "tecno-spark-30-pro",
+    "new": 0,
+    "interest": 1173,
+    "stores": [
+      [
+        "Phone Place Kenya",
+        20000
+      ],
+      [
+        "Smartphones Planet",
+        21100
+      ],
+      [
+        "Digital Phones",
+        22100
+      ],
+      [
+        "iTey Store",
+        23200
+      ],
+      [
+        "Gadgets Leo",
+        24000
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Tecno Pova 7 Pro 5G",
+    "spec": "6.78\" AMOLED · Dimensity 7300 · 6000mAh",
+    "img": "tecno-pova-7-pro",
+    "new": 1,
+    "interest": 1405,
+    "stores": [
+      [
+        "Phone Place Kenya",
+        28000
+      ],
+      [
+        "iTey Store",
+        28900
+      ],
+      [
+        "Digital Phones",
+        29600
+      ],
+      [
+        "Avechi",
+        30300
+      ],
+      [
+        "Silkroom",
+        31100
+      ],
+      [
+        "Smartphones Planet",
+        32600
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Tecno Pova 6 Pro 5G",
+    "spec": "6.78\" AMOLED · Dimensity 6080 · 108MP",
+    "img": "tecno-pova-6-pro",
+    "new": 0,
+    "interest": 1142,
+    "stores": [
+      [
+        "iTey Store",
+        24000
+      ],
+      [
+        "Gadgets Leo",
+        25000
+      ],
+      [
+        "Smartphones Planet",
+        25600
+      ],
+      [
+        "Silkroom",
+        26200
+      ],
+      [
+        "Avechi",
+        27000
+      ],
+      [
+        "Jumia KE",
+        27900
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Tecno Phantom V Fold2 5G",
+    "spec": "7.85\" foldable · Dimensity 9000+",
+    "img": "tecno-phantom-v-fold2",
+    "new": 0,
+    "interest": 1047,
+    "stores": [
+      [
+        "Silkroom",
+        120000
+      ],
+      [
+        "Mobile Hub",
+        126800
+      ],
+      [
+        "Phone Place Kenya",
+        131800
+      ],
+      [
+        "Jumia KE",
+        138800
+      ],
+      [
+        "Smartphones Planet",
+        144600
+      ],
+      [
+        "Gadgets Leo",
+        151000
+      ],
+      [
+        "Price Point",
+        158400
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Tecno Phantom V Flip2 5G",
+    "spec": "6.9\" flip · Dimensity 8350",
+    "img": "tecno-phantom-v-flip2",
+    "new": 0,
+    "interest": 874,
+    "stores": [
+      [
+        "Gadgets Leo",
+        75000
+      ],
+      [
+        "Mobile Hub",
+        78100
+      ],
+      [
+        "Avechi",
+        79800
+      ],
+      [
+        "Silkroom",
+        82300
+      ],
+      [
+        "Smartphones Planet",
+        84200
+      ],
+      [
+        "Phone Place Kenya",
+        86400
+      ],
+      [
+        "iTey Store",
+        90800
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Infinix Note 50 Pro+ 5G",
+    "spec": "6.78\" AMOLED · Dimensity 8350 · 50MP",
+    "img": "infinix-note-50-pro-plus",
+    "new": 1,
+    "interest": 1382,
+    "stores": [
+      [
+        "Smartphones Planet",
+        35000
+      ],
+      [
+        "Gadgets Leo",
+        35800
+      ],
+      [
+        "Phone Place Kenya",
+        36800
+      ],
+      [
+        "Mobile Hub",
+        38500
+      ],
+      [
+        "Avechi",
+        40700
+      ],
+      [
+        "Digital Phones",
+        42900
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Infinix Note 50 Pro",
+    "spec": "6.78\" AMOLED · Helio G100 · 50MP",
+    "img": "infinix-note-50-pro",
+    "new": 1,
+    "interest": 1361,
+    "stores": [
+      [
+        "Digital Phones",
+        28000
+      ],
+      [
+        "Mobile Hub",
+        29800
+      ],
+      [
+        "Smartphones Planet",
+        30900
+      ],
+      [
+        "Price Point",
+        32700
+      ],
+      [
+        "iTey Store",
+        33400
+      ],
+      [
+        "Gadgets Leo",
+        34400
+      ],
+      [
+        "Jumia KE",
+        36600
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Infinix Note 50",
+    "spec": "6.78\" AMOLED · Dimensity 7300 · 50MP",
+    "img": "infinix-note-50",
+    "new": 1,
+    "interest": 1251,
+    "stores": [
+      [
+        "Jumia KE",
+        24000
+      ],
+      [
+        "Digital Phones",
+        24500
+      ],
+      [
+        "Phone Place Kenya",
+        25500
+      ],
+      [
+        "Silkroom",
+        26900
+      ],
+      [
+        "Price Point",
+        27900
+      ],
+      [
+        "Gadgets Leo",
+        29400
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Infinix Hot 60 Pro+",
+    "spec": "6.78\" curved AMOLED · Helio G200",
+    "img": "infinix-hot-60-pro-plus",
+    "new": 1,
+    "interest": 1427,
+    "stores": [
+      [
+        "Jumia KE",
+        22000
+      ],
+      [
+        "Avechi",
+        23100
+      ],
+      [
+        "Mobile Hub",
+        23900
+      ],
+      [
+        "Phone Place Kenya",
+        24700
+      ],
+      [
+        "Digital Phones",
+        25600
+      ],
+      [
+        "Price Point",
+        26600
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Infinix Hot 60",
+    "spec": "6.8\" · Helio G100 · 50MP",
+    "img": "infinix-hot-60",
+    "new": 1,
+    "interest": 1202,
+    "stores": [
+      [
+        "Phone Place Kenya",
+        16000
+      ],
+      [
+        "Avechi",
+        16500
+      ],
+      [
+        "Silkroom",
+        17200
+      ],
+      [
+        "Mobile Hub",
+        18100
+      ],
+      [
+        "Smartphones Planet",
+        19200
+      ],
+      [
+        "Price Point",
+        20400
+      ],
+      [
+        "Gadgets Leo",
+        21300
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Infinix GT 30 Pro 5G",
+    "spec": "6.78\" AMOLED 144Hz · Dimensity 8350",
+    "img": "infinix-gt-30-pro",
+    "new": 1,
+    "interest": 1288,
+    "stores": [
+      [
+        "Smartphones Planet",
+        30000
+      ],
+      [
+        "Jumia KE",
+        31900
+      ],
+      [
+        "Phone Place Kenya",
+        33500
+      ],
+      [
+        "Silkroom",
+        34700
+      ],
+      [
+        "Digital Phones",
+        36100
+      ],
+      [
+        "Gadgets Leo",
+        37600
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Infinix Zero 40 5G",
+    "spec": "6.78\" AMOLED · Dimensity 8200 · 50MP",
+    "img": "infinix-zero-40",
+    "new": 0,
+    "interest": 1059,
+    "stores": [
+      [
+        "Jumia KE",
+        33000
+      ],
+      [
+        "Avechi",
+        33800
+      ],
+      [
+        "Digital Phones",
+        34700
+      ],
+      [
+        "Gadgets Leo",
+        35800
+      ],
+      [
+        "Mobile Hub",
+        36800
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Infinix Smart 9",
+    "spec": "6.7\" · Unisoc T7250 · 13MP",
+    "img": "infinix-smart-9",
+    "new": 0,
+    "interest": 899,
+    "stores": [
+      [
+        "Smartphones Planet",
+        11000
+      ],
+      [
+        "Avechi",
+        11400
+      ],
+      [
+        "iTey Store",
+        11800
+      ],
+      [
+        "Gadgets Leo",
+        12100
+      ],
+      [
+        "Silkroom",
+        12500
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Nothing Phone (3a)",
+    "spec": "6.77\" AMOLED · SD 7s Gen3 · 50MP",
+    "img": "nothing-phone-3a",
+    "new": 0,
+    "interest": 1031,
+    "stores": [
+      [
+        "Digital Phones",
+        42000
+      ],
+      [
+        "Avechi",
+        43300
+      ],
+      [
+        "Price Point",
+        45900
+      ],
+      [
+        "Phone Place Kenya",
+        47100
+      ],
+      [
+        "Silkroom",
+        49000
+      ],
+      [
+        "Jumia KE",
+        51100
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Nothing Phone (2a)",
+    "spec": "6.7\" AMOLED · Dimensity 7200 Pro · 50MP",
+    "img": "nothing-phone-2a",
+    "new": 0,
+    "interest": 918,
+    "stores": [
+      [
+        "Mobile Hub",
+        35000
+      ],
+      [
+        "Smartphones Planet",
+        36400
+      ],
+      [
+        "Digital Phones",
+        38700
+      ],
+      [
+        "Phone Place Kenya",
+        40700
+      ],
+      [
+        "Avechi",
+        41800
+      ],
+      [
+        "Price Point",
+        44000
+      ],
+      [
+        "Silkroom",
+        45500
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Nothing CMF Phone 2",
+    "spec": "6.77\" AMOLED · Dimensity 7300 Pro",
+    "img": "nothing-cmf-phone-2",
+    "new": 1,
+    "interest": 1232,
+    "stores": [
+      [
+        "Gadgets Leo",
+        30000
+      ],
+      [
+        "Avechi",
+        31400
+      ],
+      [
+        "Price Point",
+        32600
+      ],
+      [
+        "Phone Place Kenya",
+        34600
+      ],
+      [
+        "Smartphones Planet",
+        36800
+      ],
+      [
+        "Digital Phones",
+        39000
+      ],
+      [
+        "Jumia KE",
+        41300
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Nothing CMF Phone 1",
+    "spec": "6.67\" AMOLED · Dimensity 7300 · 50MP",
+    "img": "nothing-cmf-phone-1",
+    "new": 0,
+    "interest": 881,
+    "stores": [
+      [
+        "iTey Store",
+        28000
+      ],
+      [
+        "Silkroom",
+        29600
+      ],
+      [
+        "Phone Place Kenya",
+        30400
+      ],
+      [
+        "Smartphones Planet",
+        31500
+      ],
+      [
+        "Avechi",
+        32400
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Oppo Find X9 Pro",
+    "spec": "6.78\" LTPO · Dimensity 9500 · Hasselblad",
+    "img": "oppo-find-x9-pro",
+    "new": 1,
+    "interest": 1100,
+    "stores": [
+      [
+        "Jumia KE",
+        125000
+      ],
+      [
+        "Digital Phones",
+        128900
+      ],
+      [
+        "Price Point",
+        136400
+      ],
+      [
+        "iTey Store",
+        143600
+      ],
+      [
+        "Avechi",
+        147400
+      ],
+      [
+        "Silkroom",
+        150900
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Oppo Find X9",
+    "spec": "6.59\" LTPO · Dimensity 9500 · 50MP",
+    "img": "oppo-find-x9",
+    "new": 1,
+    "interest": 1035,
+    "stores": [
+      [
+        "Silkroom",
+        95000
+      ],
+      [
+        "Digital Phones",
+        98000
+      ],
+      [
+        "Mobile Hub",
+        103500
+      ],
+      [
+        "Price Point",
+        106200
+      ],
+      [
+        "Gadgets Leo",
+        112500
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Oppo Find X8 Pro",
+    "spec": "6.78\" LTPO · Dimensity 9400 · Hasselblad",
+    "img": "oppo-find-x8-pro",
+    "new": 0,
+    "interest": 1027,
+    "stores": [
+      [
+        "Silkroom",
+        110000
+      ],
+      [
+        "Phone Place Kenya",
+        114500
+      ],
+      [
+        "Avechi",
+        118400
+      ],
+      [
+        "iTey Store",
+        124000
+      ],
+      [
+        "Jumia KE",
+        130700
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Oppo Reno 14 Pro 5G",
+    "spec": "6.83\" AMOLED · Dimensity 8450 · 50MP",
+    "img": "oppo-reno-14-pro",
+    "new": 1,
+    "interest": 1127,
+    "stores": [
+      [
+        "iTey Store",
+        62000
+      ],
+      [
+        "Price Point",
+        65000
+      ],
+      [
+        "Gadgets Leo",
+        67000
+      ],
+      [
+        "Silkroom",
+        69800
+      ],
+      [
+        "Phone Place Kenya",
+        72600
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Oppo Reno 14 5G",
+    "spec": "6.59\" AMOLED · Dimensity 8350 · 50MP",
+    "img": "oppo-reno-14",
+    "new": 1,
+    "interest": 1310,
+    "stores": [
+      [
+        "Mobile Hub",
+        50000
+      ],
+      [
+        "Jumia KE",
+        52600
+      ],
+      [
+        "Digital Phones",
+        53900
+      ],
+      [
+        "Avechi",
+        56600
+      ],
+      [
+        "Gadgets Leo",
+        60000
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Oppo Reno 13 5G",
+    "spec": "6.59\" AMOLED · Dimensity 8350 · 50MP",
+    "img": "oppo-reno-13",
+    "new": 0,
+    "interest": 1055,
+    "stores": [
+      [
+        "Gadgets Leo",
+        48000
+      ],
+      [
+        "Digital Phones",
+        49700
+      ],
+      [
+        "Avechi",
+        51800
+      ],
+      [
+        "Mobile Hub",
+        53100
+      ],
+      [
+        "Phone Place Kenya",
+        55600
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Oppo A5 Pro 5G",
+    "spec": "6.67\" · Dimensity 6300 · 50MP",
+    "img": "oppo-a5-pro",
+    "new": 0,
+    "interest": 1020,
+    "stores": [
+      [
+        "Phone Place Kenya",
+        28000
+      ],
+      [
+        "Avechi",
+        29600
+      ],
+      [
+        "iTey Store",
+        31400
+      ],
+      [
+        "Digital Phones",
+        32100
+      ],
+      [
+        "Mobile Hub",
+        34000
+      ],
+      [
+        "Gadgets Leo",
+        34900
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Oppo A80 5G",
+    "spec": "6.67\" · Dimensity 6300 · 50MP",
+    "img": "oppo-a80",
+    "new": 0,
+    "interest": 1031,
+    "stores": [
+      [
+        "Jumia KE",
+        24000
+      ],
+      [
+        "Mobile Hub",
+        25400
+      ],
+      [
+        "Price Point",
+        26100
+      ],
+      [
+        "Gadgets Leo",
+        27700
+      ],
+      [
+        "iTey Store",
+        29100
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Realme 14 Pro+ 5G",
+    "spec": "6.83\" curved AMOLED · SD 7s Gen3 · 50MP",
+    "img": "realme-14-pro-plus",
+    "new": 1,
+    "interest": 1227,
+    "stores": [
+      [
+        "Mobile Hub",
+        45000
+      ],
+      [
+        "Gadgets Leo",
+        47600
+      ],
+      [
+        "Price Point",
+        50100
+      ],
+      [
+        "Avechi",
+        52300
+      ],
+      [
+        "Silkroom",
+        54900
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Realme GT 7 Pro",
+    "spec": "6.78\" LTPO · SD 8 Elite · 50MP",
+    "img": "realme-gt-7-pro",
+    "new": 1,
+    "interest": 1102,
+    "stores": [
+      [
+        "Digital Phones",
+        78000
+      ],
+      [
+        "Jumia KE",
+        81100
+      ],
+      [
+        "Smartphones Planet",
+        85000
+      ],
+      [
+        "iTey Store",
+        89100
+      ],
+      [
+        "Mobile Hub",
+        93000
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Realme GT 7",
+    "spec": "6.78\" AMOLED · Dimensity 9400e · 7000mAh",
+    "img": "realme-gt-7",
+    "new": 1,
+    "interest": 1311,
+    "stores": [
+      [
+        "Silkroom",
+        60000
+      ],
+      [
+        "Jumia KE",
+        63300
+      ],
+      [
+        "Gadgets Leo",
+        64800
+      ],
+      [
+        "Phone Place Kenya",
+        67100
+      ],
+      [
+        "iTey Store",
+        70500
+      ],
+      [
+        "Smartphones Planet",
+        73600
+      ],
+      [
+        "Digital Phones",
+        75400
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Realme 13 Pro+ 5G",
+    "spec": "6.7\" curved AMOLED · SD 7s Gen2 · 200MP",
+    "img": "realme-13-pro-plus",
+    "new": 0,
+    "interest": 1087,
+    "stores": [
+      [
+        "Silkroom",
+        42000
+      ],
+      [
+        "Mobile Hub",
+        43000
+      ],
+      [
+        "Jumia KE",
+        45600
+      ],
+      [
+        "Price Point",
+        46500
+      ],
+      [
+        "Digital Phones",
+        48400
+      ],
+      [
+        "iTey Store",
+        50300
+      ],
+      [
+        "Smartphones Planet",
+        52000
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Realme C75",
+    "spec": "6.72\" · Helio G92 Max · 50MP",
+    "img": "realme-c75",
+    "new": 0,
+    "interest": 958,
+    "stores": [
+      [
+        "Phone Place Kenya",
+        22000
+      ],
+      [
+        "Smartphones Planet",
+        23200
+      ],
+      [
+        "Gadgets Leo",
+        24600
+      ],
+      [
+        "iTey Store",
+        25900
+      ],
+      [
+        "Digital Phones",
+        26500
+      ],
+      [
+        "Avechi",
+        27600
+      ],
+      [
+        "Silkroom",
+        29100
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Realme Note 60",
+    "spec": "6.74\" · Unisoc T612 · 32MP",
+    "img": "realme-note-60",
+    "new": 0,
+    "interest": 884,
+    "stores": [
+      [
+        "Mobile Hub",
+        14000
+      ],
+      [
+        "iTey Store",
+        14600
+      ],
+      [
+        "Silkroom",
+        15000
+      ],
+      [
+        "Avechi",
+        15300
+      ],
+      [
+        "Phone Place Kenya",
+        16200
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "HMD Skyline",
+    "spec": "6.55\" AMOLED · SD 7s Gen2 · 108MP",
+    "img": "hmd-skyline",
+    "new": 0,
+    "interest": 985,
+    "stores": [
+      [
+        "Price Point",
+        45000
+      ],
+      [
+        "Avechi",
+        47200
+      ],
+      [
+        "Mobile Hub",
+        48200
+      ],
+      [
+        "Smartphones Planet",
+        49200
+      ],
+      [
+        "Digital Phones",
+        51400
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "HMD Fusion",
+    "spec": "6.56\" · SD 4 Gen2 · 108MP",
+    "img": "hmd-fusion",
+    "new": 0,
+    "interest": 1015,
+    "stores": [
+      [
+        "Smartphones Planet",
+        35000
+      ],
+      [
+        "Digital Phones",
+        37100
+      ],
+      [
+        "Mobile Hub",
+        38600
+      ],
+      [
+        "iTey Store",
+        39500
+      ],
+      [
+        "Gadgets Leo",
+        42000
+      ],
+      [
+        "Price Point",
+        42900
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Nokia G42 5G",
+    "spec": "6.56\" · SD 4 Gen2 · 50MP",
+    "img": "nokia-g42",
+    "new": 0,
+    "interest": 955,
+    "stores": [
+      [
+        "Digital Phones",
+        22000
+      ],
+      [
+        "iTey Store",
+        22500
+      ],
+      [
+        "Silkroom",
+        23400
+      ],
+      [
+        "Smartphones Planet",
+        24000
+      ],
+      [
+        "Gadgets Leo",
+        24700
+      ],
+      [
+        "Mobile Hub",
+        25500
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Nokia C32",
+    "spec": "6.5\" · Unisoc SC9863A1 · 50MP",
+    "img": "nokia-c32",
+    "new": 0,
+    "interest": 770,
+    "stores": [
+      [
+        "Mobile Hub",
+        12000
+      ],
+      [
+        "Phone Place Kenya",
+        12700
+      ],
+      [
+        "Silkroom",
+        13200
+      ],
+      [
+        "Avechi",
+        14000
+      ],
+      [
+        "Digital Phones",
+        14900
+      ],
+      [
+        "Price Point",
+        15500
+      ],
+      [
+        "Gadgets Leo",
+        16000
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Nokia 110 4G (2025)",
+    "spec": "1.8\" · feature phone · UPI",
+    "img": "nokia-110-4g",
+    "new": 0,
+    "interest": 665,
+    "stores": [
+      [
+        "Gadgets Leo",
+        3500
+      ],
+      [
+        "Phone Place Kenya",
+        3700
+      ],
+      [
+        "Silkroom",
+        3800
+      ],
+      [
+        "Mobile Hub",
+        4000
+      ],
+      [
+        "iTey Store",
+        4200
+      ],
+      [
+        "Avechi",
+        4400
+      ],
+      [
+        "Price Point",
+        4600
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Honor Magic 7 Pro",
+    "spec": "6.8\" LTPO · SD 8 Elite · 200MP tele",
+    "img": "honor-magic-7-pro",
+    "new": 1,
+    "interest": 1235,
+    "stores": [
+      [
+        "iTey Store",
+        120000
+      ],
+      [
+        "Silkroom",
+        123400
+      ],
+      [
+        "Avechi",
+        127700
+      ],
+      [
+        "Jumia KE",
+        135400
+      ],
+      [
+        "Digital Phones",
+        138600
+      ],
+      [
+        "Mobile Hub",
+        147500
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Honor Magic 7",
+    "spec": "6.78\" · SD 8 Elite · 50MP",
+    "img": "honor-magic-7",
+    "new": 0,
+    "interest": 878,
+    "stores": [
+      [
+        "Phone Place Kenya",
+        95000
+      ],
+      [
+        "Jumia KE",
+        100000
+      ],
+      [
+        "iTey Store",
+        103000
+      ],
+      [
+        "Smartphones Planet",
+        107200
+      ],
+      [
+        "Price Point",
+        113800
+      ],
+      [
+        "Digital Phones",
+        118700
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Honor Magic V3",
+    "spec": "7.92\" foldable · SD 8 Gen3",
+    "img": "honor-magic-v3",
+    "new": 0,
+    "interest": 867,
+    "stores": [
+      [
+        "Avechi",
+        190000
+      ],
+      [
+        "iTey Store",
+        198800
+      ],
+      [
+        "Gadgets Leo",
+        205800
+      ],
+      [
+        "Silkroom",
+        218700
+      ],
+      [
+        "Digital Phones",
+        230000
+      ],
+      [
+        "Mobile Hub",
+        236500
+      ],
+      [
+        "Price Point",
+        248900
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Honor 400 Pro",
+    "spec": "6.7\" AMOLED · SD 8 Gen3 · 200MP",
+    "img": "honor-400-pro",
+    "new": 1,
+    "interest": 1149,
+    "stores": [
+      [
+        "Price Point",
+        58000
+      ],
+      [
+        "Mobile Hub",
+        60900
+      ],
+      [
+        "Phone Place Kenya",
+        62600
+      ],
+      [
+        "Gadgets Leo",
+        64900
+      ],
+      [
+        "Jumia KE",
+        68900
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Honor 400",
+    "spec": "6.55\" AMOLED · SD 7 Gen3 · 200MP",
+    "img": "honor-400",
+    "new": 1,
+    "interest": 1263,
+    "stores": [
+      [
+        "Gadgets Leo",
+        45000
+      ],
+      [
+        "iTey Store",
+        47900
+      ],
+      [
+        "Silkroom",
+        50400
+      ],
+      [
+        "Mobile Hub",
+        51900
+      ],
+      [
+        "Avechi",
+        53700
+      ],
+      [
+        "Digital Phones",
+        56500
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Honor 200 Pro",
+    "spec": "6.78\" curved AMOLED · SD 8s Gen3 · 50MP",
+    "img": "honor-200-pro",
+    "new": 0,
+    "interest": 776,
+    "stores": [
+      [
+        "Avechi",
+        62000
+      ],
+      [
+        "Gadgets Leo",
+        63800
+      ],
+      [
+        "Price Point",
+        67000
+      ],
+      [
+        "Silkroom",
+        70800
+      ],
+      [
+        "Digital Phones",
+        74400
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Honor X9c",
+    "spec": "6.78\" curved AMOLED · SD 6 Gen1 · 108MP",
+    "img": "honor-x9c",
+    "new": 0,
+    "interest": 987,
+    "stores": [
+      [
+        "iTey Store",
+        32000
+      ],
+      [
+        "Mobile Hub",
+        33700
+      ],
+      [
+        "Price Point",
+        35200
+      ],
+      [
+        "Gadgets Leo",
+        35900
+      ],
+      [
+        "Silkroom",
+        37300
+      ],
+      [
+        "Avechi",
+        38300
+      ],
+      [
+        "Digital Phones",
+        39700
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Honor X7c",
+    "spec": "6.77\" · SD 685 · 108MP · 6500mAh",
+    "img": "honor-x7c",
+    "new": 0,
+    "interest": 1049,
+    "stores": [
+      [
+        "Gadgets Leo",
+        22000
+      ],
+      [
+        "Phone Place Kenya",
+        23400
+      ],
+      [
+        "Digital Phones",
+        24100
+      ],
+      [
+        "Silkroom",
+        25100
+      ],
+      [
+        "Jumia KE",
+        25900
+      ],
+      [
+        "Mobile Hub",
+        27300
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Motorola Edge 60 Pro",
+    "spec": "6.7\" pOLED · Dimensity 8350 · 50MP",
+    "img": "motorola-edge-60-pro",
+    "new": 1,
+    "interest": 1286,
+    "stores": [
+      [
+        "Phone Place Kenya",
+        52000
+      ],
+      [
+        "Price Point",
+        54900
+      ],
+      [
+        "Silkroom",
+        56300
+      ],
+      [
+        "Gadgets Leo",
+        59200
+      ],
+      [
+        "Mobile Hub",
+        62900
+      ],
+      [
+        "Smartphones Planet",
+        65600
+      ],
+      [
+        "iTey Store",
+        69500
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Motorola Edge 60",
+    "spec": "6.67\" pOLED · Dimensity 7300 · 50MP",
+    "img": "motorola-edge-60",
+    "new": 1,
+    "interest": 1188,
+    "stores": [
+      [
+        "Price Point",
+        42000
+      ],
+      [
+        "Digital Phones",
+        44300
+      ],
+      [
+        "Smartphones Planet",
+        46100
+      ],
+      [
+        "Silkroom",
+        48900
+      ],
+      [
+        "Gadgets Leo",
+        50200
+      ],
+      [
+        "Mobile Hub",
+        51200
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Motorola Edge 60 Fusion",
+    "spec": "6.67\" pOLED · Dimensity 7400 · 50MP",
+    "img": "motorola-edge-60-fusion",
+    "new": 1,
+    "interest": 1124,
+    "stores": [
+      [
+        "Smartphones Planet",
+        38000
+      ],
+      [
+        "Gadgets Leo",
+        39700
+      ],
+      [
+        "Mobile Hub",
+        41600
+      ],
+      [
+        "Avechi",
+        43700
+      ],
+      [
+        "Jumia KE",
+        45200
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Motorola Razr 60 Ultra",
+    "spec": "7\" flip · SD 8 Elite · 4700mAh",
+    "img": "motorola-razr-60-ultra",
+    "new": 1,
+    "interest": 1190,
+    "stores": [
+      [
+        "Gadgets Leo",
+        135000
+      ],
+      [
+        "Phone Place Kenya",
+        138300
+      ],
+      [
+        "Digital Phones",
+        145800
+      ],
+      [
+        "Silkroom",
+        151500
+      ],
+      [
+        "Avechi",
+        159000
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Motorola Razr 60",
+    "spec": "6.9\" flip · Dimensity 7400X",
+    "img": "motorola-razr-60",
+    "new": 1,
+    "interest": 1100,
+    "stores": [
+      [
+        "Avechi",
+        85000
+      ],
+      [
+        "Digital Phones",
+        89700
+      ],
+      [
+        "Gadgets Leo",
+        93500
+      ],
+      [
+        "Silkroom",
+        98400
+      ],
+      [
+        "Jumia KE",
+        102800
+      ],
+      [
+        "Smartphones Planet",
+        107500
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Motorola Edge 50 Pro",
+    "spec": "6.7\" pOLED · SD 7 Gen3 · 50MP",
+    "img": "motorola-edge-50-pro",
+    "new": 0,
+    "interest": 912,
+    "stores": [
+      [
+        "Smartphones Planet",
+        45000
+      ],
+      [
+        "Phone Place Kenya",
+        46800
+      ],
+      [
+        "Mobile Hub",
+        48600
+      ],
+      [
+        "Digital Phones",
+        50500
+      ],
+      [
+        "Silkroom",
+        51700
+      ],
+      [
+        "Jumia KE",
+        54300
+      ],
+      [
+        "Price Point",
+        57500
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Motorola Moto G85 5G",
+    "spec": "6.67\" pOLED · SD 6s Gen3 · 50MP",
+    "img": "motorola-moto-g85",
+    "new": 0,
+    "interest": 951,
+    "stores": [
+      [
+        "Phone Place Kenya",
+        32000
+      ],
+      [
+        "Digital Phones",
+        33800
+      ],
+      [
+        "Gadgets Leo",
+        34500
+      ],
+      [
+        "Smartphones Planet",
+        36400
+      ],
+      [
+        "Mobile Hub",
+        37300
+      ],
+      [
+        "Jumia KE",
+        39200
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Motorola Moto G55 5G",
+    "spec": "6.49\" · Dimensity 7025 · 50MP",
+    "img": "motorola-moto-g55",
+    "new": 0,
+    "interest": 1044,
+    "stores": [
+      [
+        "Smartphones Planet",
+        26000
+      ],
+      [
+        "Digital Phones",
+        27300
+      ],
+      [
+        "Gadgets Leo",
+        28300
+      ],
+      [
+        "Price Point",
+        29400
+      ],
+      [
+        "Avechi",
+        30500
+      ],
+      [
+        "iTey Store",
+        32200
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Vivo X200 Pro",
+    "spec": "6.78\" LTPO · Dimensity 9400 · 200MP Zeiss",
+    "img": "vivo-x200-pro",
+    "new": 0,
+    "interest": 885,
+    "stores": [
+      [
+        "Avechi",
+        120000
+      ],
+      [
+        "Mobile Hub",
+        127300
+      ],
+      [
+        "Digital Phones",
+        132000
+      ],
+      [
+        "Phone Place Kenya",
+        135400
+      ],
+      [
+        "Gadgets Leo",
+        144100
+      ],
+      [
+        "Price Point",
+        150900
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Vivo X200",
+    "spec": "6.67\" LTPO · Dimensity 9400 · 50MP Zeiss",
+    "img": "vivo-x200",
+    "new": 0,
+    "interest": 783,
+    "stores": [
+      [
+        "iTey Store",
+        95000
+      ],
+      [
+        "Gadgets Leo",
+        97300
+      ],
+      [
+        "Jumia KE",
+        99900
+      ],
+      [
+        "Silkroom",
+        102200
+      ],
+      [
+        "Price Point",
+        105500
+      ],
+      [
+        "Digital Phones",
+        110500
+      ],
+      [
+        "Mobile Hub",
+        113300
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Vivo X200 FE",
+    "spec": "6.31\" LTPO · Dimensity 9300+ · 50MP",
+    "img": "vivo-x200-fe",
+    "new": 1,
+    "interest": 1137,
+    "stores": [
+      [
+        "Avechi",
+        70000
+      ],
+      [
+        "Jumia KE",
+        74500
+      ],
+      [
+        "Price Point",
+        78700
+      ],
+      [
+        "Phone Place Kenya",
+        83700
+      ],
+      [
+        "Smartphones Planet",
+        88000
+      ],
+      [
+        "iTey Store",
+        91600
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Vivo X Fold5",
+    "spec": "8.03\" foldable · SD 8 Elite",
+    "img": "vivo-x-fold5",
+    "new": 1,
+    "interest": 1142,
+    "stores": [
+      [
+        "iTey Store",
+        190000
+      ],
+      [
+        "Digital Phones",
+        201600
+      ],
+      [
+        "Mobile Hub",
+        208400
+      ],
+      [
+        "Avechi",
+        218400
+      ],
+      [
+        "Phone Place Kenya",
+        226800
+      ],
+      [
+        "Gadgets Leo",
+        232400
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Vivo V50",
+    "spec": "6.77\" curved AMOLED · SD 7 Gen3 · 50MP Zeiss",
+    "img": "vivo-v50",
+    "new": 1,
+    "interest": 1199,
+    "stores": [
+      [
+        "iTey Store",
+        52000
+      ],
+      [
+        "Mobile Hub",
+        54700
+      ],
+      [
+        "Jumia KE",
+        56500
+      ],
+      [
+        "Silkroom",
+        59700
+      ],
+      [
+        "Smartphones Planet",
+        62900
+      ],
+      [
+        "Gadgets Leo",
+        65100
+      ],
+      [
+        "Phone Place Kenya",
+        69200
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Vivo V40",
+    "spec": "6.78\" curved AMOLED · SD 7 Gen3 · 50MP",
+    "img": "vivo-v40",
+    "new": 0,
+    "interest": 937,
+    "stores": [
+      [
+        "Smartphones Planet",
+        45000
+      ],
+      [
+        "Silkroom",
+        46100
+      ],
+      [
+        "Digital Phones",
+        48200
+      ],
+      [
+        "Gadgets Leo",
+        50300
+      ],
+      [
+        "Phone Place Kenya",
+        53000
+      ],
+      [
+        "Price Point",
+        56000
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Vivo Y29 5G",
+    "spec": "6.68\" · Dimensity 6300 · 50MP",
+    "img": "vivo-y29",
+    "new": 0,
+    "interest": 933,
+    "stores": [
+      [
+        "Silkroom",
+        24000
+      ],
+      [
+        "iTey Store",
+        25100
+      ],
+      [
+        "Digital Phones",
+        25800
+      ],
+      [
+        "Jumia KE",
+        26400
+      ],
+      [
+        "Mobile Hub",
+        27200
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Vivo Y19s",
+    "spec": "6.68\" · Unisoc T612 · 50MP · 6500mAh",
+    "img": "vivo-y19s",
+    "new": 0,
+    "interest": 871,
+    "stores": [
+      [
+        "Jumia KE",
+        16000
+      ],
+      [
+        "Avechi",
+        16300
+      ],
+      [
+        "Silkroom",
+        17000
+      ],
+      [
+        "Digital Phones",
+        17400
+      ],
+      [
+        "Smartphones Planet",
+        18500
+      ],
+      [
+        "Phone Place Kenya",
+        19100
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Asus ROG Phone 9 Pro",
+    "spec": "6.78\" AMOLED 185Hz · SD 8 Elite · 5800mAh",
+    "img": "asus-rog-phone-9-pro",
+    "new": 1,
+    "interest": 1068,
+    "stores": [
+      [
+        "Jumia KE",
+        135000
+      ],
+      [
+        "Price Point",
+        141500
+      ],
+      [
+        "Avechi",
+        145900
+      ],
+      [
+        "Silkroom",
+        153500
+      ],
+      [
+        "Phone Place Kenya",
+        160200
+      ],
+      [
+        "Gadgets Leo",
+        166400
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Asus ROG Phone 9",
+    "spec": "6.78\" AMOLED 185Hz · SD 8 Elite",
+    "img": "asus-rog-phone-9",
+    "new": 0,
+    "interest": 816,
+    "stores": [
+      [
+        "Smartphones Planet",
+        110000
+      ],
+      [
+        "Phone Place Kenya",
+        112600
+      ],
+      [
+        "Silkroom",
+        116700
+      ],
+      [
+        "Avechi",
+        121000
+      ],
+      [
+        "iTey Store",
+        127500
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Asus Zenfone 12 Ultra",
+    "spec": "6.78\" AMOLED · SD 8 Elite · 50MP",
+    "img": "asus-zenfone-12-ultra",
+    "new": 1,
+    "interest": 1012,
+    "stores": [
+      [
+        "Silkroom",
+        115000
+      ],
+      [
+        "Avechi",
+        121600
+      ],
+      [
+        "Mobile Hub",
+        124100
+      ],
+      [
+        "Phone Place Kenya",
+        129000
+      ],
+      [
+        "iTey Store",
+        135500
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "Asus ROG Phone 8 Pro",
+    "spec": "6.78\" LTPO AMOLED · SD 8 Gen3",
+    "img": "asus-rog-phone-8-pro",
+    "new": 0,
+    "interest": 808,
+    "stores": [
+      [
+        "Mobile Hub",
+        120000
+      ],
+      [
+        "iTey Store",
+        125900
+      ],
+      [
+        "Digital Phones",
+        129700
+      ],
+      [
+        "Silkroom",
+        133600
+      ],
+      [
+        "Smartphones Planet",
+        139500
+      ],
+      [
+        "Avechi",
+        147300
+      ],
+      [
+        "Price Point",
+        153000
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "ZTE nubia Z70 Ultra",
+    "spec": "6.85\" flat AMOLED · SD 8 Elite · 35mm",
+    "img": "zte-nubia-z70-ultra",
+    "new": 1,
+    "interest": 961,
+    "stores": [
+      [
+        "iTey Store",
+        85000
+      ],
+      [
+        "Gadgets Leo",
+        89300
+      ],
+      [
+        "Avechi",
+        92200
+      ],
+      [
+        "Jumia KE",
+        97700
+      ],
+      [
+        "Price Point",
+        103600
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "ZTE nubia Red Magic 10 Pro",
+    "spec": "6.85\" AMOLED · SD 8 Elite · 7050mAh",
+    "img": "zte-nubia-red-magic-10-pro",
+    "new": 1,
+    "interest": 1089,
+    "stores": [
+      [
+        "Silkroom",
+        95000
+      ],
+      [
+        "Smartphones Planet",
+        98600
+      ],
+      [
+        "Jumia KE",
+        102600
+      ],
+      [
+        "Avechi",
+        109200
+      ],
+      [
+        "Gadgets Leo",
+        115300
+      ],
+      [
+        "Digital Phones",
+        120400
+      ],
+      [
+        "Price Point",
+        125200
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "ZTE Axon 60 Ultra",
+    "spec": "6.8\" AMOLED · SD 8 Gen3 · 50MP",
+    "img": "zte-axon-60-ultra",
+    "new": 0,
+    "interest": 783,
+    "stores": [
+      [
+        "Price Point",
+        70000
+      ],
+      [
+        "Avechi",
+        73200
+      ],
+      [
+        "Gadgets Leo",
+        76000
+      ],
+      [
+        "Silkroom",
+        78500
+      ],
+      [
+        "Digital Phones",
+        83500
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "ZTE nubia Flip 2",
+    "spec": "6.9\" flip · SD 7s Gen2",
+    "img": "zte-nubia-flip-2",
+    "new": 0,
+    "interest": 939,
+    "stores": [
+      [
+        "Silkroom",
+        42000
+      ],
+      [
+        "Mobile Hub",
+        43900
+      ],
+      [
+        "iTey Store",
+        44900
+      ],
+      [
+        "Avechi",
+        46800
+      ],
+      [
+        "Price Point",
+        47900
+      ],
+      [
+        "Phone Place Kenya",
+        48900
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "ZTE nubia Neo 3 5G",
+    "spec": "6.8\" 120Hz · Unisoc T8300 · gaming",
+    "img": "zte-nubia-neo-3",
+    "new": 0,
+    "interest": 931,
+    "stores": [
+      [
+        "Gadgets Leo",
+        28000
+      ],
+      [
+        "Price Point",
+        29100
+      ],
+      [
+        "Smartphones Planet",
+        29900
+      ],
+      [
+        "Mobile Hub",
+        31500
+      ],
+      [
+        "Avechi",
+        32700
+      ]
+    ]
+  },
+  {
+    "cat": "Phones",
+    "name": "ZTE Blade V70",
+    "spec": "6.6\" AMOLED · Unisoc T7300 · 108MP",
+    "img": "zte-blade-v70",
+    "new": 0,
+    "interest": 973,
+    "stores": [
+      [
+        "Digital Phones",
+        22000
+      ],
+      [
+        "Mobile Hub",
+        22700
+      ],
+      [
+        "Jumia KE",
+        24100
+      ],
+      [
+        "Price Point",
+        25100
+      ],
+      [
+        "Gadgets Leo",
+        26300
+      ],
+      [
+        "Phone Place Kenya",
+        26800
+      ]
+    ]
+  },
+  {
+    "cat": "Computers",
+    "name": "MacBook Air 15\" (M3)",
+    "spec": "15.3\" Liquid Retina · M3 · 16GB",
+    "img": "",
+    "new": 0,
+    "interest": 505,
+    "stores": [
+      [
+        "Gadgets Leo",
+        150000
+      ],
+      [
+        "Smartphones Planet",
+        156500
+      ],
+      [
+        "Digital Phones",
+        160400
+      ],
+      [
+        "Jumia KE",
+        170500
+      ],
+      [
+        "Silkroom",
+        175400
+      ],
+      [
+        "Phone Place Kenya",
+        182800
+      ],
+      [
+        "Price Point",
+        187000
+      ]
+    ]
+  },
+  {
+    "cat": "Computers",
+    "name": "MacBook Air 13\" (M2)",
+    "spec": "13.6\" Liquid Retina · M2 · 8GB",
+    "img": "",
+    "new": 0,
+    "interest": 459,
+    "stores": [
+      [
+        "Price Point",
+        120000
+      ],
+      [
+        "Mobile Hub",
+        123400
+      ],
+      [
+        "Gadgets Leo",
+        128300
+      ],
+      [
+        "Silkroom",
+        134200
+      ],
+      [
+        "Phone Place Kenya",
+        139400
+      ],
+      [
+        "Avechi",
+        144200
+      ]
+    ]
+  },
+  {
+    "cat": "Computers",
+    "name": "MacBook Air 13\" (M1)",
+    "spec": "13.3\" Retina · M1 · 8GB",
+    "img": "",
+    "new": 0,
+    "interest": 344,
+    "stores": [
+      [
+        "Silkroom",
+        95000
+      ],
+      [
+        "Smartphones Planet",
+        97300
+      ],
+      [
+        "iTey Store",
+        103300
+      ],
+      [
+        "Avechi",
+        109500
+      ],
+      [
+        "Digital Phones",
+        112100
+      ],
+      [
+        "Price Point",
+        116300
+      ]
+    ]
+  },
+  {
+    "cat": "Computers",
+    "name": "MacBook Pro 13\" (M2)",
+    "spec": "13.3\" Retina · M2 · Touch Bar",
+    "img": "",
+    "new": 0,
+    "interest": 397,
+    "stores": [
+      [
+        "Gadgets Leo",
+        150000
+      ],
+      [
+        "Phone Place Kenya",
+        159300
+      ],
+      [
+        "Silkroom",
+        163000
+      ],
+      [
+        "Mobile Hub",
+        170000
+      ],
+      [
+        "Price Point",
+        176300
+      ],
+      [
+        "iTey Store",
+        183100
+      ]
+    ]
+  },
+  {
+    "cat": "Computers",
+    "name": "MacBook Pro 13\" (M1)",
+    "spec": "13.3\" Retina · M1 · 8GB",
+    "img": "",
+    "new": 0,
+    "interest": 487,
+    "stores": [
+      [
+        "Price Point",
+        130000
+      ],
+      [
+        "Mobile Hub",
+        133500
+      ],
+      [
+        "Jumia KE",
+        139000
+      ],
+      [
+        "Phone Place Kenya",
+        147300
+      ],
+      [
+        "Digital Phones",
+        151900
+      ]
+    ]
+  },
+  {
+    "cat": "Computers",
+    "name": "MacBook Air 13\" (Retina, 2020 Intel)",
+    "spec": "13.3\" Retina · Core i3 · 8GB",
+    "img": "",
+    "new": 0,
+    "interest": 405,
+    "stores": [
+      [
+        "Phone Place Kenya",
+        85000
+      ],
+      [
+        "Smartphones Planet",
+        90000
+      ],
+      [
+        "Jumia KE",
+        94400
+      ],
+      [
+        "Digital Phones",
+        97500
+      ],
+      [
+        "Avechi",
+        103600
+      ],
+      [
+        "Silkroom",
+        109800
+      ],
+      [
+        "iTey Store",
+        112700
+      ]
+    ]
+  },
+  {
+    "cat": "Computers",
+    "name": "MacBook Pro 16\" (2019, Intel)",
+    "spec": "16\" Retina · Core i7/i9 · Radeon",
+    "img": "",
+    "new": 0,
+    "interest": 330,
+    "stores": [
+      [
+        "iTey Store",
+        140000
+      ],
+      [
+        "Digital Phones",
+        147300
+      ],
+      [
+        "Jumia KE",
+        150900
+      ],
+      [
+        "Mobile Hub",
+        159700
+      ],
+      [
+        "Avechi",
+        163900
+      ],
+      [
+        "Silkroom",
+        168400
+      ],
+      [
+        "Smartphones Planet",
+        177100
+      ]
+    ]
+  },
+  {
+    "cat": "Computers",
+    "name": "MacBook Pro 13\" (2019, Intel)",
+    "spec": "13.3\" Retina · Core i5 · Touch Bar",
+    "img": "",
+    "new": 0,
+    "interest": 489,
+    "stores": [
+      [
+        "Smartphones Planet",
+        95000
+      ],
+      [
+        "Price Point",
+        100200
+      ],
+      [
+        "Jumia KE",
+        105500
+      ],
+      [
+        "Mobile Hub",
+        110300
+      ],
+      [
+        "iTey Store",
+        116400
+      ],
+      [
+        "Silkroom",
+        122900
+      ]
+    ]
+  },
+  {
+    "cat": "Computers",
+    "name": "HP Spectre x360 14",
+    "spec": "13.5\" OLED 2-in-1 · Core Ultra 7",
+    "img": "",
+    "new": 0,
+    "interest": 482,
+    "stores": [
+      [
+        "Avechi",
+        165000
+      ],
+      [
+        "Jumia KE",
+        169100
+      ],
+      [
+        "iTey Store",
+        176500
+      ],
+      [
+        "Mobile Hub",
+        182900
+      ],
+      [
+        "Silkroom",
+        194100
+      ],
+      [
+        "Phone Place Kenya",
+        198900
+      ],
+      [
+        "Gadgets Leo",
+        207800
+      ]
+    ]
+  },
+  {
+    "cat": "Computers",
+    "name": "HP EliteBook 1040 G11",
+    "spec": "14\" WUXGA · Core Ultra 7 · 16GB",
+    "img": "",
+    "new": 0,
+    "interest": 335,
+    "stores": [
+      [
+        "Silkroom",
+        140000
+      ],
+      [
+        "Digital Phones",
+        147300
+      ],
+      [
+        "Jumia KE",
+        156800
+      ],
+      [
+        "iTey Store",
+        163200
+      ],
+      [
+        "Smartphones Planet",
+        167000
+      ]
+    ]
+  },
+  {
+    "cat": "Computers",
+    "name": "HP ProBook 450 G11",
+    "spec": "15.6\" FHD · Core i5 · 16GB",
+    "img": "",
+    "new": 0,
+    "interest": 472,
+    "stores": [
+      [
+        "Price Point",
+        85000
+      ],
+      [
+        "Mobile Hub",
+        90200
+      ],
+      [
+        "Phone Place Kenya",
+        92200
+      ],
+      [
+        "Jumia KE",
+        97900
+      ],
+      [
+        "Gadgets Leo",
+        100700
+      ],
+      [
+        "Silkroom",
+        106000
+      ]
+    ]
+  },
+  {
+    "cat": "Computers",
+    "name": "HP Omen 16",
+    "spec": "16.1\" QHD 240Hz · Core i7 · RTX 4070",
+    "img": "",
+    "new": 0,
+    "interest": 385,
+    "stores": [
+      [
+        "iTey Store",
+        180000
+      ],
+      [
+        "Smartphones Planet",
+        187500
+      ],
+      [
+        "Jumia KE",
+        193400
+      ],
+      [
+        "Phone Place Kenya",
+        204700
+      ],
+      [
+        "Avechi",
+        216200
+      ],
+      [
+        "Mobile Hub",
+        225200
+      ]
+    ]
+  },
+  {
+    "cat": "Computers",
+    "name": "HP Victus 15",
+    "spec": "15.6\" FHD 144Hz · Core i5 · RTX 4050",
+    "img": "",
+    "new": 0,
+    "interest": 361,
+    "stores": [
+      [
+        "Silkroom",
+        95000
+      ],
+      [
+        "Gadgets Leo",
+        99200
+      ],
+      [
+        "Phone Place Kenya",
+        104300
+      ],
+      [
+        "Jumia KE",
+        110200
+      ],
+      [
+        "Digital Phones",
+        116500
+      ],
+      [
+        "Price Point",
+        122000
+      ]
+    ]
+  },
+  {
+    "cat": "Computers",
+    "name": "HP Pavilion Aero 13",
+    "spec": "13.3\" WUXGA · Ryzen 7 · 16GB · 0.97kg",
+    "img": "",
+    "new": 0,
+    "interest": 403,
+    "stores": [
+      [
+        "iTey Store",
+        95000
+      ],
+      [
+        "Gadgets Leo",
+        100400
+      ],
+      [
+        "Avechi",
+        103600
+      ],
+      [
+        "Smartphones Planet",
+        106900
+      ],
+      [
+        "Jumia KE",
+        113400
+      ],
+      [
+        "Silkroom",
+        120500
+      ]
+    ]
+  },
+  {
+    "cat": "Computers",
+    "name": "HP 250 G10",
+    "spec": "15.6\" FHD · Core i5 · 8GB",
+    "img": "",
+    "new": 0,
+    "interest": 560,
+    "stores": [
+      [
+        "Gadgets Leo",
+        52000
+      ],
+      [
+        "Price Point",
+        53600
+      ],
+      [
+        "iTey Store",
+        54900
+      ],
+      [
+        "Digital Phones",
+        58200
+      ],
+      [
+        "Phone Place Kenya",
+        60800
+      ]
+    ]
+  },
+  {
+    "cat": "Computers",
+    "name": "Dell XPS 13 (2025)",
+    "spec": "13.4\" FHD+ · Core Ultra 7 · 16GB",
+    "img": "",
+    "new": 1,
+    "interest": 653,
+    "stores": [
+      [
+        "Avechi",
+        150000
+      ],
+      [
+        "Jumia KE",
+        154200
+      ],
+      [
+        "Mobile Hub",
+        157900
+      ],
+      [
+        "Phone Place Kenya",
+        162900
+      ],
+      [
+        "Silkroom",
+        168100
+      ]
+    ]
+  },
+  {
+    "cat": "Computers",
+    "name": "Dell Latitude 7450",
+    "spec": "14\" FHD+ · Core Ultra 7 · 16GB",
+    "img": "",
+    "new": 0,
+    "interest": 465,
+    "stores": [
+      [
+        "Gadgets Leo",
+        120000
+      ],
+      [
+        "Price Point",
+        123300
+      ],
+      [
+        "Avechi",
+        128800
+      ],
+      [
+        "Digital Phones",
+        133000
+      ],
+      [
+        "Smartphones Planet",
+        140400
+      ]
+    ]
+  },
+  {
+    "cat": "Computers",
+    "name": "Dell G15 Gaming",
+    "spec": "15.6\" FHD 120Hz · Core i7 · RTX 4060",
+    "img": "",
+    "new": 0,
+    "interest": 456,
+    "stores": [
+      [
+        "iTey Store",
+        110000
+      ],
+      [
+        "Price Point",
+        112800
+      ],
+      [
+        "Phone Place Kenya",
+        119100
+      ],
+      [
+        "Jumia KE",
+        122100
+      ],
+      [
+        "Avechi",
+        126500
+      ],
+      [
+        "Silkroom",
+        132700
+      ],
+      [
+        "Gadgets Leo",
+        139900
+      ]
+    ]
+  },
+  {
+    "cat": "Computers",
+    "name": "Dell Inspiron 14 2-in-1",
+    "spec": "14\" FHD+ touch · Core Ultra 5",
+    "img": "",
+    "new": 0,
+    "interest": 347,
+    "stores": [
+      [
+        "iTey Store",
+        85000
+      ],
+      [
+        "Phone Place Kenya",
+        89100
+      ],
+      [
+        "Gadgets Leo",
+        93200
+      ],
+      [
+        "Mobile Hub",
+        98800
+      ],
+      [
+        "Jumia KE",
+        103800
+      ],
+      [
+        "Digital Phones",
+        108100
+      ],
+      [
+        "Price Point",
+        112600
+      ]
+    ]
+  },
+  {
+    "cat": "Computers",
+    "name": "Dell Inspiron 15",
+    "spec": "15.6\" FHD · Core i5 · 8GB",
+    "img": "",
+    "new": 0,
+    "interest": 578,
+    "stores": [
+      [
+        "Avechi",
+        62000
+      ],
+      [
+        "Silkroom",
+        65000
+      ],
+      [
+        "Jumia KE",
+        66700
+      ],
+      [
+        "Gadgets Leo",
+        70000
+      ],
+      [
+        "Smartphones Planet",
+        73100
+      ],
+      [
+        "Price Point",
+        76100
+      ]
+    ]
+  },
+  {
+    "cat": "Computers",
+    "name": "Dell Vostro 3530",
+    "spec": "15.6\" FHD · Core i5 · 8GB",
+    "img": "",
+    "new": 0,
+    "interest": 526,
+    "stores": [
+      [
+        "Silkroom",
+        55000
+      ],
+      [
+        "Smartphones Planet",
+        56300
+      ],
+      [
+        "Price Point",
+        57900
+      ],
+      [
+        "Digital Phones",
+        59900
+      ],
+      [
+        "iTey Store",
+        61300
+      ]
+    ]
+  },
+  {
+    "cat": "Computers",
+    "name": "Lenovo Legion 5",
+    "spec": "16\" WQXGA 165Hz · Ryzen 7 · RTX 4060",
+    "img": "",
+    "new": 0,
+    "interest": 480,
+    "stores": [
+      [
+        "Gadgets Leo",
+        150000
+      ],
+      [
+        "Digital Phones",
+        153300
+      ],
+      [
+        "Silkroom",
+        160900
+      ],
+      [
+        "Avechi",
+        164500
+      ],
+      [
+        "Smartphones Planet",
+        172100
+      ],
+      [
+        "Jumia KE",
+        178600
+      ]
+    ]
+  },
+  {
+    "cat": "Computers",
+    "name": "Lenovo Yoga Slim 7",
+    "spec": "14\" OLED · Core Ultra 7 · 16GB",
+    "img": "",
+    "new": 0,
+    "interest": 503,
+    "stores": [
+      [
+        "iTey Store",
+        115000
+      ],
+      [
+        "Phone Place Kenya",
+        120800
+      ],
+      [
+        "Digital Phones",
+        127200
+      ],
+      [
+        "Mobile Hub",
+        134300
+      ],
+      [
+        "Silkroom",
+        142100
+      ],
+      [
+        "Jumia KE",
+        146900
+      ],
+      [
+        "Gadgets Leo",
+        150200
+      ]
+    ]
+  },
+  {
+    "cat": "Computers",
+    "name": "Lenovo LOQ 15",
+    "spec": "15.6\" FHD 144Hz · Core i7 · RTX 4050",
+    "img": "",
+    "new": 0,
+    "interest": 354,
+    "stores": [
+      [
+        "Phone Place Kenya",
+        110000
+      ],
+      [
+        "Digital Phones",
+        115700
+      ],
+      [
+        "Smartphones Planet",
+        121800
+      ],
+      [
+        "Silkroom",
+        125900
+      ],
+      [
+        "iTey Store",
+        128800
+      ],
+      [
+        "Price Point",
+        134300
+      ],
+      [
+        "Gadgets Leo",
+        140400
+      ]
+    ]
+  },
+  {
+    "cat": "Computers",
+    "name": "Lenovo ThinkPad E14 Gen 6",
+    "spec": "14\" WUXGA · Core Ultra 5 · 16GB",
+    "img": "",
+    "new": 0,
+    "interest": 371,
+    "stores": [
+      [
+        "Gadgets Leo",
+        85000
+      ],
+      [
+        "Digital Phones",
+        87800
+      ],
+      [
+        "Price Point",
+        91200
+      ],
+      [
+        "iTey Store",
+        93400
+      ],
+      [
+        "Avechi",
+        98500
+      ],
+      [
+        "Silkroom",
+        104700
+      ]
+    ]
+  },
+  {
+    "cat": "Computers",
+    "name": "Lenovo IdeaPad Slim 5",
+    "spec": "14\" OLED · Ryzen 5 · 16GB",
+    "img": "",
+    "new": 0,
+    "interest": 478,
+    "stores": [
+      [
+        "Silkroom",
+        72000
+      ],
+      [
+        "iTey Store",
+        73700
+      ],
+      [
+        "Digital Phones",
+        75700
+      ],
+      [
+        "Phone Place Kenya",
+        79900
+      ],
+      [
+        "Jumia KE",
+        81500
+      ],
+      [
+        "Avechi",
+        84500
+      ],
+      [
+        "Gadgets Leo",
+        87400
+      ]
+    ]
+  },
+  {
+    "cat": "Computers",
+    "name": "Lenovo IdeaPad 1",
+    "spec": "15.6\" FHD · Ryzen 5 · 8GB",
+    "img": "",
+    "new": 0,
+    "interest": 536,
+    "stores": [
+      [
+        "Mobile Hub",
+        38000
+      ],
+      [
+        "Silkroom",
+        39100
+      ],
+      [
+        "Digital Phones",
+        41200
+      ],
+      [
+        "Price Point",
+        42100
+      ],
+      [
+        "Gadgets Leo",
+        44400
+      ],
+      [
+        "Phone Place Kenya",
+        46300
+      ],
+      [
+        "iTey Store",
+        48800
+      ]
+    ]
+  },
+  {
+    "cat": "Computers",
+    "name": "ASUS Zenbook 14 OLED",
+    "spec": "14\" OLED · Core Ultra 7 · 16GB",
+    "img": "",
+    "new": 0,
+    "interest": 474,
+    "stores": [
+      [
+        "Mobile Hub",
+        120000
+      ],
+      [
+        "Price Point",
+        125300
+      ],
+      [
+        "Avechi",
+        129100
+      ],
+      [
+        "Phone Place Kenya",
+        131800
+      ],
+      [
+        "Gadgets Leo",
+        135800
+      ]
+    ]
+  },
+  {
+    "cat": "Computers",
+    "name": "ASUS Zenbook S 16",
+    "spec": "16\" 3K OLED · Ryzen AI 9 · 32GB",
+    "img": "",
+    "new": 1,
+    "interest": 669,
+    "stores": [
+      [
+        "Silkroom",
+        165000
+      ],
+      [
+        "Jumia KE",
+        171000
+      ],
+      [
+        "Mobile Hub",
+        179000
+      ],
+      [
+        "Avechi",
+        183900
+      ],
+      [
+        "Phone Place Kenya",
+        193900
+      ],
+      [
+        "Digital Phones",
+        204300
+      ],
+      [
+        "Price Point",
+        213700
+      ]
+    ]
+  },
+  {
+    "cat": "Computers",
+    "name": "ASUS ROG Strix G16",
+    "spec": "16\" QHD+ 240Hz · Core i9 · RTX 4070",
+    "img": "",
+    "new": 0,
+    "interest": 316,
+    "stores": [
+      [
+        "Phone Place Kenya",
+        190000
+      ],
+      [
+        "Silkroom",
+        194400
+      ],
+      [
+        "Price Point",
+        199300
+      ],
+      [
+        "Digital Phones",
+        207700
+      ],
+      [
+        "Avechi",
+        216400
+      ]
+    ]
+  },
+  {
+    "cat": "Computers",
+    "name": "ASUS TUF Gaming A15",
+    "spec": "15.6\" FHD 144Hz · Ryzen 7 · RTX 4060",
+    "img": "",
+    "new": 0,
+    "interest": 459,
+    "stores": [
+      [
+        "Silkroom",
+        120000
+      ],
+      [
+        "Price Point",
+        122900
+      ],
+      [
+        "Avechi",
+        126400
+      ],
+      [
+        "Smartphones Planet",
+        130700
+      ],
+      [
+        "Jumia KE",
+        137100
+      ],
+      [
+        "Phone Place Kenya",
+        142200
+      ],
+      [
+        "Gadgets Leo",
+        148600
+      ]
+    ]
+  },
+  {
+    "cat": "Computers",
+    "name": "ASUS Vivobook 15",
+    "spec": "15.6\" FHD · Core i5 · 16GB",
+    "img": "",
+    "new": 0,
+    "interest": 503,
+    "stores": [
+      [
+        "Gadgets Leo",
+        55000
+      ],
+      [
+        "Avechi",
+        56200
+      ],
+      [
+        "Digital Phones",
+        59300
+      ],
+      [
+        "Phone Place Kenya",
+        62700
+      ],
+      [
+        "iTey Store",
+        65500
+      ]
+    ]
+  },
+  {
+    "cat": "Computers",
+    "name": "ASUS Vivobook Go 15",
+    "spec": "15.6\" FHD · Ryzen 5 · 8GB",
+    "img": "",
+    "new": 0,
+    "interest": 518,
+    "stores": [
+      [
+        "Digital Phones",
+        42000
+      ],
+      [
+        "Avechi",
+        43200
+      ],
+      [
+        "Jumia KE",
+        45900
+      ],
+      [
+        "Silkroom",
+        47300
+      ],
+      [
+        "Smartphones Planet",
+        49000
+      ],
+      [
+        "Price Point",
+        52200
+      ]
+    ]
+  },
+  {
+    "cat": "Tablets",
+    "name": "iPad Pro 13\" (M4)",
+    "spec": "13\" Tandem OLED · M4 · 5G",
+    "img": "apple-ipad-pro-13-(2024)",
+    "new": 0,
+    "interest": 367,
+    "stores": [
+      [
+        "Price Point",
+        180000
+      ],
+      [
+        "Gadgets Leo",
+        188700
+      ],
+      [
+        "Jumia KE",
+        199400
+      ],
+      [
+        "iTey Store",
+        210800
+      ],
+      [
+        "Phone Place Kenya",
+        220100
+      ],
+      [
+        "Smartphones Planet",
+        230000
+      ],
+      [
+        "Avechi",
+        235500
+      ]
+    ]
+  },
+  {
+    "cat": "Tablets",
+    "name": "iPad Air 13\" (M2)",
+    "spec": "12.9\" Liquid Retina · M2",
+    "img": "apple-ipad-air-13-(2024)",
+    "new": 0,
+    "interest": 392,
+    "stores": [
+      [
+        "Digital Phones",
+        95000
+      ],
+      [
+        "Silkroom",
+        97400
+      ],
+      [
+        "iTey Store",
+        101500
+      ],
+      [
+        "Mobile Hub",
+        104200
+      ],
+      [
+        "Gadgets Leo",
+        109300
+      ],
+      [
+        "Avechi",
+        114500
+      ]
+    ]
+  },
+  {
+    "cat": "Tablets",
+    "name": "iPad Air 11\" (M3)",
+    "spec": "11\" Liquid Retina · M3",
+    "img": "apple-ipad-air-11-(m3)",
+    "new": 1,
+    "interest": 743,
+    "stores": [
+      [
+        "Gadgets Leo",
+        85000
+      ],
+      [
+        "iTey Store",
+        87500
+      ],
+      [
+        "Mobile Hub",
+        90100
+      ],
+      [
+        "Avechi",
+        94200
+      ],
+      [
+        "Silkroom",
+        96200
+      ],
+      [
+        "Smartphones Planet",
+        101100
+      ],
+      [
+        "Price Point",
+        103300
+      ]
+    ]
+  },
+  {
+    "cat": "Tablets",
+    "name": "iPad (11th gen, A16)",
+    "spec": "10.9\" Liquid Retina · A16",
+    "img": "apple-ipad-11-(2025)",
+    "new": 1,
+    "interest": 728,
+    "stores": [
+      [
+        "Silkroom",
+        52000
+      ],
+      [
+        "Digital Phones",
+        53300
+      ],
+      [
+        "Avechi",
+        54800
+      ],
+      [
+        "Price Point",
+        56400
+      ],
+      [
+        "Smartphones Planet",
+        57700
+      ],
+      [
+        "Phone Place Kenya",
+        61100
+      ]
+    ]
+  },
+  {
+    "cat": "Tablets",
+    "name": "iPad mini (A17 Pro)",
+    "spec": "8.3\" Liquid Retina · A17 Pro",
+    "img": "apple-ipad-mini-(2024)",
+    "new": 0,
+    "interest": 483,
+    "stores": [
+      [
+        "Gadgets Leo",
+        75000
+      ],
+      [
+        "iTey Store",
+        77400
+      ],
+      [
+        "Smartphones Planet",
+        80200
+      ],
+      [
+        "Mobile Hub",
+        83500
+      ],
+      [
+        "Price Point",
+        88500
+      ]
+    ]
+  },
+  {
+    "cat": "Tablets",
+    "name": "Samsung Galaxy Tab S10 Ultra",
+    "spec": "14.6\" AMOLED · Dimensity 9300+ · S Pen",
+    "img": "samsung-galaxy-tab-s10-ultra",
+    "new": 0,
+    "interest": 503,
+    "stores": [
+      [
+        "Price Point",
+        135000
+      ],
+      [
+        "Smartphones Planet",
+        137800
+      ],
+      [
+        "Phone Place Kenya",
+        145900
+      ],
+      [
+        "Jumia KE",
+        153100
+      ],
+      [
+        "Gadgets Leo",
+        161000
+      ],
+      [
+        "iTey Store",
+        164500
+      ]
+    ]
+  },
+  {
+    "cat": "Tablets",
+    "name": "Samsung Galaxy Tab S10+",
+    "spec": "12.4\" AMOLED · Dimensity 9300+ · S Pen",
+    "img": "samsung-galaxy-tab-s10-plus",
+    "new": 0,
+    "interest": 604,
+    "stores": [
+      [
+        "iTey Store",
+        105000
+      ],
+      [
+        "Smartphones Planet",
+        109100
+      ],
+      [
+        "Phone Place Kenya",
+        111400
+      ],
+      [
+        "Mobile Hub",
+        116900
+      ],
+      [
+        "Jumia KE",
+        124200
+      ],
+      [
+        "Digital Phones",
+        131000
+      ],
+      [
+        "Gadgets Leo",
+        137300
+      ]
+    ]
+  },
+  {
+    "cat": "Tablets",
+    "name": "Samsung Galaxy Tab S10 FE",
+    "spec": "10.9\" LCD · Exynos 1580 · S Pen",
+    "img": "samsung-galaxy-tab-s10-fe",
+    "new": 1,
+    "interest": 680,
+    "stores": [
+      [
+        "Digital Phones",
+        62000
+      ],
+      [
+        "Price Point",
+        65800
+      ],
+      [
+        "Jumia KE",
+        70000
+      ],
+      [
+        "Phone Place Kenya",
+        74500
+      ],
+      [
+        "Smartphones Planet",
+        78300
+      ],
+      [
+        "Mobile Hub",
+        82100
+      ],
+      [
+        "iTey Store",
+        84000
+      ]
+    ]
+  },
+  {
+    "cat": "Tablets",
+    "name": "Samsung Galaxy Tab S9 FE",
+    "spec": "10.9\" LCD · Exynos 1380 · S Pen",
+    "img": "samsung-galaxy-tab-s9-fe",
+    "new": 0,
+    "interest": 438,
+    "stores": [
+      [
+        "Smartphones Planet",
+        52000
+      ],
+      [
+        "Phone Place Kenya",
+        54800
+      ],
+      [
+        "Price Point",
+        56300
+      ],
+      [
+        "Silkroom",
+        59000
+      ],
+      [
+        "Avechi",
+        62000
+      ]
+    ]
+  },
+  {
+    "cat": "Tablets",
+    "name": "Samsung Galaxy Tab A9+",
+    "spec": "11\" LCD · SD 695 · quad speakers",
+    "img": "samsung-galaxy-tab-a9-plus",
+    "new": 0,
+    "interest": 547,
+    "stores": [
+      [
+        "Mobile Hub",
+        28000
+      ],
+      [
+        "Smartphones Planet",
+        29000
+      ],
+      [
+        "Price Point",
+        30700
+      ],
+      [
+        "Phone Place Kenya",
+        32100
+      ],
+      [
+        "Silkroom",
+        32900
+      ],
+      [
+        "Digital Phones",
+        35000
+      ],
+      [
+        "Jumia KE",
+        36100
+      ]
+    ]
+  },
+  {
+    "cat": "Tablets",
+    "name": "OnePlus Pad 2",
+    "spec": "12.1\" 144Hz · SD 8 Gen3",
+    "img": "oneplus-pad-2",
+    "new": 0,
+    "interest": 428,
+    "stores": [
+      [
+        "Mobile Hub",
+        62000
+      ],
+      [
+        "Avechi",
+        64700
+      ],
+      [
+        "iTey Store",
+        68600
+      ],
+      [
+        "Silkroom",
+        73000
+      ],
+      [
+        "Phone Place Kenya",
+        77000
+      ],
+      [
+        "Jumia KE",
+        80900
+      ]
+    ]
+  },
+  {
+    "cat": "Tablets",
+    "name": "OnePlus Pad Go",
+    "spec": "11.35\" 2.4K · Helio G99",
+    "img": "oneplus-pad-go",
+    "new": 0,
+    "interest": 387,
+    "stores": [
+      [
+        "Smartphones Planet",
+        32000
+      ],
+      [
+        "Price Point",
+        34100
+      ],
+      [
+        "Gadgets Leo",
+        35900
+      ],
+      [
+        "Silkroom",
+        37700
+      ],
+      [
+        "iTey Store",
+        38700
+      ],
+      [
+        "Phone Place Kenya",
+        40700
+      ],
+      [
+        "Avechi",
+        43300
+      ]
+    ]
+  },
+  {
+    "cat": "Tablets",
+    "name": "Xiaomi Pad 7",
+    "spec": "11.2\" 3.2K 144Hz · SD 7+ Gen3",
+    "img": "xiaomi-pad-7",
+    "new": 1,
+    "interest": 814,
+    "stores": [
+      [
+        "Silkroom",
+        42000
+      ],
+      [
+        "iTey Store",
+        44400
+      ],
+      [
+        "Mobile Hub",
+        45900
+      ],
+      [
+        "Gadgets Leo",
+        48000
+      ],
+      [
+        "Smartphones Planet",
+        50500
+      ]
+    ]
+  },
+  {
+    "cat": "Tablets",
+    "name": "Xiaomi Pad 6",
+    "spec": "11\" 2.8K 144Hz · SD 870",
+    "img": "xiaomi-pad-6",
+    "new": 0,
+    "interest": 588,
+    "stores": [
+      [
+        "iTey Store",
+        38000
+      ],
+      [
+        "Avechi",
+        40200
+      ],
+      [
+        "Gadgets Leo",
+        42200
+      ],
+      [
+        "Smartphones Planet",
+        44200
+      ],
+      [
+        "Silkroom",
+        46000
+      ],
+      [
+        "Jumia KE",
+        47800
+      ],
+      [
+        "Price Point",
+        49700
+      ]
+    ]
+  },
+  {
+    "cat": "Tablets",
+    "name": "Xiaomi Redmi Pad Pro",
+    "spec": "12.1\" 2.5K 120Hz · SD 7s Gen2",
+    "img": "xiaomi-redmi-pad-pro",
+    "new": 0,
+    "interest": 551,
+    "stores": [
+      [
+        "Avechi",
+        32000
+      ],
+      [
+        "Gadgets Leo",
+        33500
+      ],
+      [
+        "Jumia KE",
+        34800
+      ],
+      [
+        "Smartphones Planet",
+        36700
+      ],
+      [
+        "Silkroom",
+        38000
+      ],
+      [
+        "Price Point",
+        39400
+      ]
+    ]
+  },
+  {
+    "cat": "Tablets",
+    "name": "Lenovo Tab P12",
+    "spec": "12.7\" 3K · Dimensity 7050 · Pen",
+    "img": "",
+    "new": 0,
+    "interest": 507,
+    "stores": [
+      [
+        "iTey Store",
+        45000
+      ],
+      [
+        "Silkroom",
+        46500
+      ],
+      [
+        "Digital Phones",
+        48000
+      ],
+      [
+        "Jumia KE",
+        49700
+      ],
+      [
+        "Phone Place Kenya",
+        50900
+      ],
+      [
+        "Smartphones Planet",
+        53200
+      ],
+      [
+        "Gadgets Leo",
+        56600
+      ]
+    ]
+  },
+  {
+    "cat": "Tablets",
+    "name": "Lenovo Idea Tab Pro",
+    "spec": "12.7\" 3K 144Hz · Dimensity 8300",
+    "img": "",
+    "new": 0,
+    "interest": 451,
+    "stores": [
+      [
+        "Mobile Hub",
+        42000
+      ],
+      [
+        "Price Point",
+        44300
+      ],
+      [
+        "iTey Store",
+        46500
+      ],
+      [
+        "Digital Phones",
+        47800
+      ],
+      [
+        "Phone Place Kenya",
+        49300
+      ],
+      [
+        "Avechi",
+        51700
+      ],
+      [
+        "Smartphones Planet",
+        54200
+      ]
+    ]
+  },
+  {
+    "cat": "Tablets",
+    "name": "Lenovo Tab M11",
+    "spec": "11\" 90Hz · Helio G88 · Pen",
+    "img": "",
+    "new": 0,
+    "interest": 360,
+    "stores": [
+      [
+        "iTey Store",
+        28000
+      ],
+      [
+        "Price Point",
+        29600
+      ],
+      [
+        "Silkroom",
+        30700
+      ],
+      [
+        "Gadgets Leo",
+        32000
+      ],
+      [
+        "Digital Phones",
+        33600
+      ]
+    ]
+  },
+  {
+    "cat": "Audio",
+    "name": "AirPods 4 (ANC)",
+    "spec": "USB-C · H2 · active noise cancel",
+    "img": "",
+    "new": 1,
+    "interest": 703,
+    "stores": [
+      [
+        "Silkroom",
+        28000
+      ],
+      [
+        "Digital Phones",
+        29200
+      ],
+      [
+        "Smartphones Planet",
+        31000
+      ],
+      [
+        "Jumia KE",
+        32600
+      ],
+      [
+        "Gadgets Leo",
+        33900
+      ]
+    ]
+  },
+  {
+    "cat": "Audio",
+    "name": "AirPods 4",
+    "spec": "USB-C · H2 · open-fit",
+    "img": "",
+    "new": 1,
+    "interest": 724,
+    "stores": [
+      [
+        "iTey Store",
+        22000
+      ],
+      [
+        "Mobile Hub",
+        23200
+      ],
+      [
+        "Jumia KE",
+        24200
+      ],
+      [
+        "Digital Phones",
+        25600
+      ],
+      [
+        "Phone Place Kenya",
+        26600
+      ],
+      [
+        "Price Point",
+        28300
+      ]
+    ]
+  },
+  {
+    "cat": "Audio",
+    "name": "Bose QuietComfort Earbuds (2024)",
+    "spec": "ANC earbuds · aptive EQ",
+    "img": "",
+    "new": 0,
+    "interest": 430,
+    "stores": [
+      [
+        "Smartphones Planet",
+        32000
+      ],
+      [
+        "Gadgets Leo",
+        33100
+      ],
+      [
+        "Mobile Hub",
+        33900
+      ],
+      [
+        "Digital Phones",
+        35200
+      ],
+      [
+        "Phone Place Kenya",
+        37000
+      ],
+      [
+        "Avechi",
+        37800
+      ]
+    ]
+  },
+  {
+    "cat": "Audio",
+    "name": "Bose QuietComfort Headphones",
+    "spec": "over-ear ANC · 24h battery",
+    "img": "",
+    "new": 0,
+    "interest": 460,
+    "stores": [
+      [
+        "Phone Place Kenya",
+        42000
+      ],
+      [
+        "Smartphones Planet",
+        44500
+      ],
+      [
+        "iTey Store",
+        47100
+      ],
+      [
+        "Avechi",
+        49600
+      ],
+      [
+        "Jumia KE",
+        50800
+      ],
+      [
+        "Digital Phones",
+        53000
+      ],
+      [
+        "Price Point",
+        54800
+      ]
+    ]
+  },
+  {
+    "cat": "Audio",
+    "name": "Bose SoundLink Flex (2nd gen)",
+    "spec": "portable BT speaker · IP67",
+    "img": "",
+    "new": 0,
+    "interest": 375,
+    "stores": [
+      [
+        "Phone Place Kenya",
+        22000
+      ],
+      [
+        "Price Point",
+        22600
+      ],
+      [
+        "Jumia KE",
+        23200
+      ],
+      [
+        "Smartphones Planet",
+        23700
+      ],
+      [
+        "Gadgets Leo",
+        25300
+      ]
+    ]
+  },
+  {
+    "cat": "Audio",
+    "name": "JBL Live Beam 3",
+    "spec": "ANC earbuds · smart case display",
+    "img": "",
+    "new": 0,
+    "interest": 397,
+    "stores": [
+      [
+        "Smartphones Planet",
+        22000
+      ],
+      [
+        "Price Point",
+        23000
+      ],
+      [
+        "Avechi",
+        23600
+      ],
+      [
+        "Jumia KE",
+        24900
+      ],
+      [
+        "iTey Store",
+        25700
+      ]
+    ]
+  },
+  {
+    "cat": "Audio",
+    "name": "JBL Tune 770NC",
+    "spec": "over-ear ANC · 70h battery",
+    "img": "",
+    "new": 0,
+    "interest": 498,
+    "stores": [
+      [
+        "Gadgets Leo",
+        12000
+      ],
+      [
+        "Price Point",
+        12600
+      ],
+      [
+        "Mobile Hub",
+        13200
+      ],
+      [
+        "Digital Phones",
+        13600
+      ],
+      [
+        "Jumia KE",
+        14200
+      ],
+      [
+        "Silkroom",
+        14800
+      ],
+      [
+        "Smartphones Planet",
+        15400
+      ]
+    ]
+  },
+  {
+    "cat": "Audio",
+    "name": "JBL Flip 7",
+    "spec": "portable BT speaker · IP68",
+    "img": "",
+    "new": 1,
+    "interest": 679,
+    "stores": [
+      [
+        "Smartphones Planet",
+        18000
+      ],
+      [
+        "Jumia KE",
+        18400
+      ],
+      [
+        "Gadgets Leo",
+        19000
+      ],
+      [
+        "Phone Place Kenya",
+        19800
+      ],
+      [
+        "Price Point",
+        21100
+      ],
+      [
+        "Silkroom",
+        21600
+      ],
+      [
+        "Avechi",
+        22500
+      ]
+    ]
+  },
+  {
+    "cat": "Audio",
+    "name": "JBL Charge 6",
+    "spec": "portable BT speaker · 28h · powerbank",
+    "img": "",
+    "new": 1,
+    "interest": 626,
+    "stores": [
+      [
+        "Gadgets Leo",
+        24000
+      ],
+      [
+        "Silkroom",
+        24800
+      ],
+      [
+        "Mobile Hub",
+        25600
+      ],
+      [
+        "Smartphones Planet",
+        26600
+      ],
+      [
+        "Price Point",
+        28200
+      ],
+      [
+        "Jumia KE",
+        29400
+      ]
+    ]
+  },
+  {
+    "cat": "Audio",
+    "name": "JBL Wave Buds 2",
+    "spec": "earbuds · deep bass · 40h",
+    "img": "",
+    "new": 0,
+    "interest": 434,
+    "stores": [
+      [
+        "Smartphones Planet",
+        6500
+      ],
+      [
+        "iTey Store",
+        6800
+      ],
+      [
+        "Avechi",
+        7000
+      ],
+      [
+        "Phone Place Kenya",
+        7500
+      ],
+      [
+        "Digital Phones",
+        7800
+      ]
+    ]
+  },
+  {
+    "cat": "Audio",
+    "name": "JBL Go 4",
+    "spec": "ultra-portable BT speaker · IP67",
+    "img": "",
+    "new": 0,
+    "interest": 502,
+    "stores": [
+      [
+        "Phone Place Kenya",
+        5500
+      ],
+      [
+        "Digital Phones",
+        5600
+      ],
+      [
+        "Silkroom",
+        5900
+      ],
+      [
+        "Jumia KE",
+        6200
+      ],
+      [
+        "Price Point",
+        6300
+      ]
+    ]
+  },
+  {
+    "cat": "Audio",
+    "name": "Anker Soundcore Liberty 4 Pro",
+    "spec": "ANC earbuds · LDAC · 40h",
+    "img": "",
+    "new": 1,
+    "interest": 672,
+    "stores": [
+      [
+        "Silkroom",
+        17900
+      ],
+      [
+        "Jumia KE",
+        18900
+      ],
+      [
+        "Mobile Hub",
+        19600
+      ],
+      [
+        "Smartphones Planet",
+        20300
+      ],
+      [
+        "Price Point",
+        21300
+      ],
+      [
+        "Digital Phones",
+        22500
+      ]
+    ]
+  },
+  {
+    "cat": "Audio",
+    "name": "Anker Soundcore Space One Pro",
+    "spec": "over-ear ANC · 60h",
+    "img": "",
+    "new": 0,
+    "interest": 336,
+    "stores": [
+      [
+        "Avechi",
+        22000
+      ],
+      [
+        "Phone Place Kenya",
+        22700
+      ],
+      [
+        "Digital Phones",
+        23200
+      ],
+      [
+        "Price Point",
+        24100
+      ],
+      [
+        "Jumia KE",
+        25200
+      ]
+    ]
+  },
+  {
+    "cat": "Audio",
+    "name": "Anker Soundcore Liberty 4 NC",
+    "spec": "ANC earbuds · adaptive · 50h",
+    "img": "",
+    "new": 0,
+    "interest": 439,
+    "stores": [
+      [
+        "Price Point",
+        14000
+      ],
+      [
+        "Phone Place Kenya",
+        14500
+      ],
+      [
+        "Avechi",
+        15300
+      ],
+      [
+        "Digital Phones",
+        16000
+      ],
+      [
+        "Smartphones Planet",
+        16800
+      ]
+    ]
+  },
+  {
+    "cat": "Audio",
+    "name": "Anker Soundcore P40i",
+    "spec": "earbuds · ANC · 60h",
+    "img": "",
+    "new": 0,
+    "interest": 404,
+    "stores": [
+      [
+        "iTey Store",
+        8500
+      ],
+      [
+        "Phone Place Kenya",
+        9000
+      ],
+      [
+        "Silkroom",
+        9100
+      ],
+      [
+        "Jumia KE",
+        9400
+      ],
+      [
+        "Smartphones Planet",
+        9700
+      ],
+      [
+        "Price Point",
+        10000
+      ]
+    ]
+  },
+  {
+    "cat": "Audio",
+    "name": "Anker Soundcore Motion 300",
+    "spec": "BT speaker · Hi-Res · IPX7",
+    "img": "",
+    "new": 0,
+    "interest": 385,
+    "stores": [
+      [
+        "Avechi",
+        12000
+      ],
+      [
+        "iTey Store",
+        12800
+      ],
+      [
+        "Digital Phones",
+        13400
+      ],
+      [
+        "Jumia KE",
+        14000
+      ],
+      [
+        "Phone Place Kenya",
+        14800
+      ],
+      [
+        "Gadgets Leo",
+        15200
+      ],
+      [
+        "Silkroom",
+        15800
+      ]
+    ]
+  },
+  {
+    "cat": "Audio",
+    "name": "Sony WF-C710N",
+    "spec": "ANC earbuds · 30h",
+    "img": "",
+    "new": 1,
+    "interest": 812,
+    "stores": [
+      [
+        "iTey Store",
+        14000
+      ],
+      [
+        "Jumia KE",
+        14800
+      ],
+      [
+        "Mobile Hub",
+        15300
+      ],
+      [
+        "Silkroom",
+        16000
+      ],
+      [
+        "Price Point",
+        16800
+      ]
+    ]
+  },
+  {
+    "cat": "Audio",
+    "name": "Sony ULT Wear",
+    "spec": "over-ear ANC · ULT bass",
+    "img": "",
+    "new": 0,
+    "interest": 292,
+    "stores": [
+      [
+        "Gadgets Leo",
+        28000
+      ],
+      [
+        "Digital Phones",
+        29400
+      ],
+      [
+        "Mobile Hub",
+        31200
+      ],
+      [
+        "Phone Place Kenya",
+        32200
+      ],
+      [
+        "Price Point",
+        33500
+      ],
+      [
+        "Smartphones Planet",
+        34600
+      ]
+    ]
+  },
+  {
+    "cat": "Audio",
+    "name": "Samsung Galaxy Buds 3",
+    "spec": "earbuds · blade design · ANC",
+    "img": "",
+    "new": 0,
+    "interest": 356,
+    "stores": [
+      [
+        "iTey Store",
+        18000
+      ],
+      [
+        "Gadgets Leo",
+        19100
+      ],
+      [
+        "Digital Phones",
+        19800
+      ],
+      [
+        "Phone Place Kenya",
+        21000
+      ],
+      [
+        "Price Point",
+        21600
+      ]
+    ]
+  },
+  {
+    "cat": "Audio",
+    "name": "Samsung Galaxy Buds FE",
+    "spec": "earbuds · ANC · 30h",
+    "img": "",
+    "new": 0,
+    "interest": 555,
+    "stores": [
+      [
+        "Price Point",
+        12000
+      ],
+      [
+        "Smartphones Planet",
+        12300
+      ],
+      [
+        "iTey Store",
+        13000
+      ],
+      [
+        "Avechi",
+        13600
+      ],
+      [
+        "Silkroom",
+        14400
+      ],
+      [
+        "Mobile Hub",
+        15000
+      ],
+      [
+        "Gadgets Leo",
+        15800
+      ]
+    ]
+  },
+  {
+    "cat": "Audio",
+    "name": "Sennheiser Momentum True Wireless 4",
+    "spec": "ANC earbuds · aptX Lossless",
+    "img": "",
+    "new": 0,
+    "interest": 486,
+    "stores": [
+      [
+        "Gadgets Leo",
+        32000
+      ],
+      [
+        "Avechi",
+        33400
+      ],
+      [
+        "Price Point",
+        35600
+      ],
+      [
+        "Digital Phones",
+        36900
+      ],
+      [
+        "Smartphones Planet",
+        39200
+      ]
+    ]
+  },
+  {
+    "cat": "Audio",
+    "name": "Sennheiser Accentum Wireless",
+    "spec": "over-ear ANC · 50h",
+    "img": "",
+    "new": 0,
+    "interest": 379,
+    "stores": [
+      [
+        "Digital Phones",
+        22000
+      ],
+      [
+        "Price Point",
+        22500
+      ],
+      [
+        "Jumia KE",
+        23700
+      ],
+      [
+        "iTey Store",
+        24800
+      ],
+      [
+        "Phone Place Kenya",
+        25600
+      ],
+      [
+        "Silkroom",
+        26300
+      ],
+      [
+        "Gadgets Leo",
+        27700
+      ]
+    ]
+  }
+]
