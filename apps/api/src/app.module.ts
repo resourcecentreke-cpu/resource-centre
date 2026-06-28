@@ -18,6 +18,7 @@ import { IngestionModule } from './ingestion/ingestion.module';
 import { PaymentsModule } from './payments/payments.module';
 import { AnalyticsModule } from './analytics/analytics.module';
 import { AdminModule } from './admin/admin.module';
+import { ManageModule } from './manage/manage.module';
 import { parseRedisUrl } from './common/redis.util';
 
 @Module({
@@ -45,6 +46,7 @@ import { parseRedisUrl } from './common/redis.util';
     PaymentsModule,
     AnalyticsModule,
     AdminModule,
+    ManageModule,
   ],
   providers: [{ provide: APP_GUARD, useClass: ThrottlerGuard }],
 })

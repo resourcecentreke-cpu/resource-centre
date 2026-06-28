@@ -105,6 +105,9 @@ importers:
       helmet:
         specifier: ^8.0.0
         version: 8.2.0
+      intasend-node:
+        specifier: ^1.1.2
+        version: 1.1.2
       ioredis:
         specifier: ^5.4.1
         version: 5.11.1
@@ -2540,6 +2543,9 @@ packages:
   inquirer@9.2.15:
     resolution: {integrity: sha512-vI2w4zl/mDluHt9YEQ/543VTCwPKWiHzKtm9dM2V0NdFcqEexDAjUHzO1oA60HRNaVifGXXM1tRRNluLVHa0Kg==}
     engines: {node: '>=18'}
+
+  intasend-node@1.1.2:
+    resolution: {integrity: sha512-V9zQdcKEwFfMhfTKz7OrmSJ73BmBmT7MkjA2iN2k4PyxomOtWVgIYP5zYL9lF0wGuzpJaIp9cI8cZFo06n1TKQ==}
 
   internal-slot@1.1.0:
     resolution: {integrity: sha512-4gd7VpWNQNB4UKKCFFVcp1AVv+FMOgs9NKzjHKusc8jTMhd5eL1NqQqOpE0KzMds804/yHlglp3uxgluOqAPLw==}
@@ -7014,6 +7020,8 @@ snapshots:
       string-width: 4.2.3
       strip-ansi: 6.0.1
       wrap-ansi: 6.2.0
+
+  intasend-node@1.1.2: {}
 
   internal-slot@1.1.0:
     dependencies:

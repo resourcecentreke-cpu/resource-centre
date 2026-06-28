@@ -8,7 +8,7 @@ export default function TipPrompt() {
   return (
     <Link
       href="/tip"
-      className="group flex items-center gap-4 rounded-2xl border border-coral/25 bg-gradient-to-r from-[#FFF4EC] to-[#FFF8EE] p-4 shadow-sm hover:border-coral transition"
+      className="group flex items-center gap-4 rounded-2xl border border-coral/25 bg-gradient-to-r from-[#EEF1FB] to-[#F4F6FD] p-4 shadow-sm hover:border-coral transition"
     >
       <span className="text-2xl shrink-0">💛</span>
       <span className="flex-1">

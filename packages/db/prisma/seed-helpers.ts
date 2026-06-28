@@ -42,9 +42,18 @@ export function brandOf(name: string): string {
 export function catKeyFor(cat: string, name: string): string {
   if (cat === 'Phones') return 'Smartphones';
   if (cat === 'Computers') return 'Laptops';
-  if (cat === 'Premium TVs') return 'TVs';
+  if (cat === 'Premium TVs' || cat === 'TVs') return 'TVs';
   if (cat === 'Tablets') return 'Tablets';
   if (cat === 'Audio') return 'Audio';
+  // New large-appliance + accessory source categories pass straight through.
+  if (cat === 'Refrigerators') return 'Refrigerators';
+  if (cat === 'Washing Machines') return 'Washing Machines';
+  if (cat === 'Dishwashers') return 'Dishwashers';
+  if (cat === 'Earbuds') return 'Earbuds';
+  if (cat === 'Smart Watches') return 'Smart Watches';
+  if (cat === 'Powerbanks') return 'Powerbanks';
+  if (cat === 'Chargers & Cables') return 'Chargers & Cables';
+  if (cat === 'Phone Covers') return 'Phone Covers';
   if (/PlayStation|Switch|Quest/.test(name)) return 'Gaming Consoles';
   if (/DJI|GoPro/.test(name)) return 'Cameras';
   if (/Watch/.test(name)) return 'Smart Watches';
@@ -68,6 +77,8 @@ export function trustScore(s: SeedSeller): number {
 export const CATEGORIES = [
   'Smartphones', 'Laptops', 'TVs', 'Tablets', 'Audio', 'Gaming Consoles',
   'Cameras', 'Smart Watches', 'Accessories', 'Refrigerators', 'Home Appliances', 'Networking',
+  // Large appliances + phone-accessory sub-categories.
+  'Washing Machines', 'Dishwashers', 'Earbuds', 'Powerbanks', 'Chargers & Cables', 'Phone Covers',
 ];
 
 export const SELLERS: SeedSeller[] = [
@@ -85,6 +96,15 @@ export const SELLERS: SeedSeller[] = [
   { name: 'Hotpoint', years: 20, rating: 4.6, returns: 7, warranty: '12-mo', ship: 0.9, verified: true, website: 'https://hotpoint.co.ke', search: 'https://hotpoint.co.ke/catalogsearch/result/?q={q}' },
   { name: 'Carrefour Kenya', years: 9, rating: 4.4, returns: 7, warranty: '12-mo', ship: 0.85, verified: true, website: 'https://www.carrefour.ke', search: 'https://www.carrefour.ke/mafken/en/search?keyword={q}' },
   { name: 'Kilimall KE', years: 10, rating: 4.2, returns: 7, warranty: '6-mo', ship: 0.8, verified: true, website: 'https://www.kilimall.co.ke', search: 'https://www.kilimall.co.ke/new/commodities/searchView?keyword={q}' },
+  // Newly added Kenyan electronics retailers.
+  { name: 'Masoko', years: 8, rating: 4.5, returns: 7, warranty: '12-mo', ship: 0.9, verified: true, website: 'https://www.masoko.com', search: 'https://www.masoko.com/catalogsearch/result/?q={q}' },
+  { name: 'Cellular Kenya', years: 9, rating: 4.5, returns: 7, warranty: '12-mo', ship: 0.88, verified: true, website: 'https://cellularkenya.co.ke', search: 'https://cellularkenya.co.ke/?s={q}' },
+  { name: 'Phones & Tablets', years: 7, rating: 4.5, returns: 7, warranty: '12-mo', ship: 0.87, verified: true, website: 'https://www.phonestablets.co.ke', search: 'https://www.phonestablets.co.ke/?s={q}' },
+  { name: 'Saruk Digital', years: 6, rating: 4.4, returns: 7, warranty: '12-mo', ship: 0.85, verified: true, website: 'https://saruk.co.ke', search: 'https://saruk.co.ke/search?q={q}' },
+  { name: 'oraimo Kenya', years: 7, rating: 4.4, returns: 7, warranty: '12-mo', ship: 0.86, verified: true, website: 'https://ke.oraimo.com', search: 'https://ke.oraimo.com/search?q={q}' },
+  { name: 'Sweech', years: 5, rating: 4.4, returns: 14, warranty: '12-mo', ship: 0.84, verified: true, website: 'https://sweech.co.ke', search: 'https://sweech.co.ke/?s={q}' },
+  { name: 'Shopit', years: 8, rating: 4.2, returns: 7, warranty: '6-mo', ship: 0.82, verified: true, website: 'https://shopit.co.ke', search: 'https://shopit.co.ke/?s={q}' },
+  { name: 'Smartworld Kenya', years: 6, rating: 4.3, returns: 7, warranty: '12-mo', ship: 0.83, verified: true, website: 'https://smartworldkenya.com', search: 'https://smartworldkenya.com/?s={q}' },
 ];
 
 export const CITIES = ['Nairobi', 'Mombasa', 'Kisumu'];

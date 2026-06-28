@@ -36,7 +36,7 @@ export default function BarcodeScanner() {
 
   return (
     <div>
-      <button onClick={start} className="px-3 py-1.5 rounded-full text-xs font-bold border border-[#E7DACd] bg-white">📷 Scan barcode</button>
+      <button onClick={start} className="px-3 py-1.5 rounded-full text-xs font-bold border border-[#D5DAF0] bg-white">📷 Scan barcode</button>
       {err && <p className="text-xs text-[#E25555] mt-1">{err}</p>}
       {open && (
         <div className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4" onClick={() => setOpen(false)}>

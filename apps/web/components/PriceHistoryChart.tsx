@@ -10,8 +10,8 @@ export default function PriceHistoryChart({ history }: { history: PriceHistoryPo
   const pts = history.map((p, i) => `${sx(i)},${sy(p.price)}`).join(' ');
   return (
     <svg viewBox={`0 0 ${w} ${h}`} className="w-full" style={{ maxHeight: 180 }} preserveAspectRatio="none">
-      <polyline points={pts} fill="none" stroke="#FF6B5C" strokeWidth={2.4} strokeLinejoin="round" />
-      <circle cx={sx(history.length - 1)} cy={sy(prices[prices.length - 1])} r={4} fill="#FF6B5C" />
+      <polyline points={pts} fill="none" stroke="#3D52D5" strokeWidth={2.4} strokeLinejoin="round" />
+      <circle cx={sx(history.length - 1)} cy={sy(prices[prices.length - 1])} r={4} fill="#3D52D5" />
     </svg>
   );
 }

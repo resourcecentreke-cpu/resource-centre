@@ -104,6 +104,7 @@ model Product {
   imageSlug    String?
   isNew        Boolean            @default(false)
   isActive     Boolean            @default(true)
+  releaseDate  DateTime?          // when the device was released (for "age" + new-releases feed)
   minPrice     Int                @default(0)
   maxPrice     Int                @default(0)
   offerCount   Int                @default(0)
@@ -120,6 +121,7 @@ model Product {
   @@index([brand])
   @@index([minPrice])
   @@index([interestSeed])
+  @@index([releaseDate])
 }
 
 // ───────────────────────── Sellers ─────────────────────────

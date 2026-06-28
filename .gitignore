@@ -89,3 +89,6 @@ packages/db/prisma/migrations/dev.db*
 # logs / os
 *.log
 .DS_Store
+
+# typescript incremental build cache
+*.tsbuildinfo

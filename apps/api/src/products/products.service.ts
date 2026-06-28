@@ -71,17 +71,30 @@ export class ProductsService {
     });
     if (!p) throw new NotFoundException(`Product "${slug}" not found`);
 
-    const offers: OfferDTO[] = p.offers.map((o) => ({
-      sellerId: o.sellerId,
-      sellerName: o.seller.name,
-      price: o.price,
-      deliveryFee: o.deliveryFee,
-      inStock: o.inStock.toLowerCase() as OfferDTO['inStock'],
-      rating: o.rating,
-      trustScore: o.seller.metric?.trustScore ?? 0,
-      productUrl: o.productUrl ?? outboundUrl(o.seller.searchUrlTemplate, p.name) ?? '#',
-      lastSeenAt: o.lastSeenAt.toISOString(),
-    }));
+    const offers: OfferDTO[] = p.offers
+      .map((o) => ({
+        sellerId: o.sellerId,
+        sellerName: o.seller.name,
+        price: o.price,
+        deliveryFee: o.deliveryFee,
+        inStock: o.inStock.toLowerCase() as OfferDTO['inStock'],
+        rating: o.rating,
+        trustScore: o.seller.metric?.trustScore ?? 0,
+        // Deep-link to the seller's product/search page (where the live price is),
+        // with referral tracking — never an image or generic homepage.
+        productUrl: o.productUrl ?? outboundUrl(o.seller.searchUrlTemplate, p.name) ?? '#',
+        lastSeenAt: o.lastSeenAt.toISOString(),
+      }))
+      // In-stock (and low-stock) offers first by price; out-of-stock sink to the
+      // bottom of the comparison, still cheapest-first among themselves.
+      .sort((a, b) => {
+        const ao = a.inStock === 'out' ? 1 : 0;
+        const bo = b.inStock === 'out' ? 1 : 0;
+        return ao - bo || a.price - b.price;
+      });
+
+    // "Best price" = cheapest in-stock offer (falls back to cheapest overall).
+    const bestInStock = offers.find((o) => o.inStock !== 'out') ?? offers[0];
 
     const history: PriceHistoryPoint[] = p.priceHistory.map((h) => ({
       price: h.price,
@@ -111,7 +124,7 @@ export class ProductsService {
       maxPrice: p.maxPrice,
       offerCount: p.offerCount,
       images: Array.isArray(p.images) ? (p.images as string[]) : [],
-      bestSeller: offers[0]?.sellerName ?? null,
+      bestSeller: bestInStock?.sellerName ?? null,
       offers,
       priceStats: priceStats(p.minPrice, history.map((h) => h.price)),
       history,
@@ -200,6 +213,8 @@ export class ProductsService {
   private toSummary(p: {
     id: string; slug: string; name: string; brand: string; specSummary: string;
     images: unknown; minPrice: number; isNew: boolean; category: { name: string; slug: string };
+    releaseDate?: Date | null;
+    specs?: unknown;
   }): ProductSummaryDTO {
     return {
       id: p.id,
@@ -212,6 +227,8 @@ export class ProductsService {
       image: firstImage(p.images),
       minPrice: p.minPrice,
       isNew: p.isNew,
+      releaseDate: p.releaseDate ? p.releaseDate.toISOString() : null,
+      specs: (p.specs ?? null) as ProductSummaryDTO['specs'],
     };
   }
 }

@@ -1,12 +1,16 @@
 import type { Metadata } from 'next';
+import { Fragment } from 'react';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { getProduct, getProductReviews } from '../../../lib/api';
 import { fmtKES, stars } from '../../../lib/format';
 import PriceHistoryChart from '../../../components/PriceHistoryChart';
 import ProductActions from '../../../components/ProductActions';
+import ProductGallery from '../../../components/ProductGallery';
 import JsonLd from '../../../components/JsonLd';
 import { abs, priceString, SITE_NAME } from '../../../lib/seo';
+import { deviceAge, releasedLabel } from '../../../lib/age';
+import { buildProsCons, buildSpecSheet } from '../../../lib/prosCons';
 
 export const revalidate = 30;
 
@@ -49,6 +53,8 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
     notFound();
   }
   const best = p.offers[0];
+  const { pros, cons } = buildProsCons(p);
+  const specSheet = buildSpecSheet(p);
 
   // ───── Structured data: Product + AggregateOffer + Breadcrumbs ─────
   const inStockOffers = p.offers.filter((o) => o.inStock !== 'out');
@@ -112,13 +118,40 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
       </div>
 
       <div className="grid md:grid-cols-2 gap-8">
-        <div className="h-80 rounded-2xl border border-[#F1E7DC] bg-gradient-to-b from-white to-[#FFF6EE] flex items-center justify-center p-6 shadow-sm">
-          {p.image ? <img src={p.image} alt={p.name} className="max-h-[85%] max-w-[85%] object-contain drop-shadow-lg" /> : <span className="text-mut">{p.brand}</span>}
-        </div>
+        <ProductGallery slug={p.slug} images={p.images} fallback={p.image} brand={p.brand} name={p.name} />
         <div>
           <div className="text-xs uppercase tracking-wide text-[#A99FB4] font-bold">{p.brand} · {p.category}</div>
-          <h1 className="font-display text-2xl font-bold mt-1">{p.name}</h1>
+          <h1 className="font-display text-2xl font-bold mt-1">
+            {p.name}
+            {p.specs?.condition === 'Refurbished' && <span className="ml-2 align-middle text-[11px] font-bold px-2 py-0.5 rounded-full bg-amber/20 text-[#9a6a12]">REFURBISHED</span>}
+          </h1>
           <p className="text-mut text-sm mt-2">{p.specSummary}</p>
+          {(() => {
+            const age = deviceAge(p.releaseDate);
+            if (!age) return null;
+            return (
+              <div className="mt-2 flex items-center gap-2">
+                <span
+                  className={`text-[11px] font-bold px-2.5 py-1 rounded-full ${
+                    age.isUpcoming ? 'bg-coral/15 text-coral' : age.isFresh ? 'bg-mint/20 text-[#0e8f68]' : 'bg-[#EEF1FB] text-mut'
+                  }`}
+                >
+                  {age.isUpcoming ? '⏳ ' : '📅 '}{age.label}
+                </span>
+                <span className="text-xs text-[#A99FB4] font-semibold">{releasedLabel(p.releaseDate)}</span>
+              </div>
+            );
+          })()}
+          {p.specs?.condition === 'Refurbished' && (p.specs.battery || typeof p.specs.cycles === 'number') && (
+            <div className="mt-3 rounded-2xl border border-amber/40 bg-[#FBF3DA] p-3 text-sm">
+              <div className="font-bold text-[#9a6a12] mb-1">🔋 Refurbished — battery report</div>
+              <div className="flex flex-wrap gap-x-6 gap-y-1 text-mut">
+                {p.specs.battery && <span>Battery health: <b className="text-ink">{String(p.specs.battery)}</b></span>}
+                {typeof p.specs.cycles === 'number' && <span>Charge cycles: <b className="text-ink">{p.specs.cycles}</b></span>}
+              </div>
+              <p className="text-[11px] text-mut mt-1.5">Professionally tested. Higher health % and fewer charge cycles mean more battery life left.</p>
+            </div>
+          )}
           <div className="mt-4 rounded-2xl border border-mint bg-gradient-to-br from-mint/10 to-white p-4 flex items-center justify-between flex-wrap gap-3">
             <div>
               <div className="font-display text-3xl font-bold">{fmtKES(p.minPrice)}</div>
@@ -131,33 +164,86 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
       </div>
 
       <Section title="Price comparison" subtitle={`Updated ${new Date(p.updatedAt).toLocaleDateString('en-KE')}`}>
-        <div className="overflow-x-auto rounded-2xl border border-[#F1E7DC] bg-white">
+        <div className="overflow-x-auto rounded-2xl border border-[#E3E6F4] bg-white">
           <table className="w-full text-sm">
             <thead><tr className="text-left text-[11px] uppercase text-[#A99FB4]"><th className="p-3">Store</th><th className="p-3">Price</th><th className="p-3">Delivery</th><th className="p-3">Rating</th><th className="p-3">Trust</th><th className="p-3">Stock</th><th></th></tr></thead>
             <tbody>
-              {p.offers.map((o, i) => (
-                <tr key={o.sellerId} className={`border-t border-[#F1E7DC] ${i === 0 ? 'bg-mint/5' : ''}`}>
-                  <td className="p-3 font-semibold">{o.sellerName}{i === 0 && <span className="ml-2 text-[10px] text-coral font-bold">BEST</span>}</td>
-                  <td className="p-3 font-bold" style={{ color: i === 0 ? '#FF6B5C' : undefined }}>{fmtKES(o.price)}</td>
-                  <td className="p-3">{o.deliveryFee ? fmtKES(o.deliveryFee) : <span className="text-[#1FAE78] font-bold">Free</span>}</td>
-                  <td className="p-3 text-[#E8902B] font-bold">★ {o.rating}</td>
-                  <td className="p-3"><b>{o.trustScore}</b><span className="text-[#A99FB4]">/100</span></td>
-                  <td className="p-3">{o.inStock === 'in' ? '🟢 In stock' : o.inStock === 'low' ? '🟡 Low' : '🔴 Out'}</td>
-                  <td className="p-3"><a href={o.productUrl} target="_blank" rel="noopener sponsored noreferrer" className="text-coral font-bold text-xs">Buy →</a></td>
-                </tr>
-              ))}
+              {p.offers.map((o, i) => {
+                const out = o.inStock === 'out';
+                // Index of the first out-of-stock offer — insert a divider row above it.
+                const firstOut = p.offers.findIndex((x) => x.inStock === 'out');
+                const showDivider = out && i === firstOut;
+                return (
+                  <Fragment key={o.sellerId}>
+                    {showDivider && (
+                      <tr className="border-t border-[#E3E6F4] bg-[#EEF1FB]">
+                        <td colSpan={7} className="px-3 py-1.5 text-[11px] font-bold uppercase tracking-wide text-[#A99FB4]">Out of stock at these stores</td>
+                      </tr>
+                    )}
+                    <tr className={`border-t border-[#E3E6F4] ${i === 0 && !out ? 'bg-mint/5' : ''} ${out ? 'opacity-60' : ''}`}>
+                      <td className="p-3 font-semibold">{o.sellerName}{i === 0 && !out && <span className="ml-2 text-[10px] text-coral font-bold">BEST</span>}</td>
+                      <td className="p-3 font-bold" style={{ color: i === 0 && !out ? '#3D52D5' : undefined }}>{fmtKES(o.price)}</td>
+                      <td className="p-3">{o.deliveryFee ? fmtKES(o.deliveryFee) : <span className="text-[#1FAE78] font-bold">Free</span>}</td>
+                      <td className="p-3 text-[#E8902B] font-bold">★ {o.rating}</td>
+                      <td className="p-3"><b>{o.trustScore}</b><span className="text-[#A99FB4]">/100</span></td>
+                      <td className="p-3">{o.inStock === 'in' ? '🟢 In stock' : o.inStock === 'low' ? '🟡 Low' : '🔴 Out of stock'}</td>
+                      <td className="p-3">{out
+                        ? <span className="text-[#A99FB4] text-xs">Unavailable</span>
+                        : <a href={o.productUrl} target="_blank" rel="noopener sponsored noreferrer" className="text-coral font-bold text-xs">View price →</a>}</td>
+                    </tr>
+                  </Fragment>
+                );
+              })}
             </tbody>
           </table>
         </div>
       </Section>
 
+      <Section title="Pros & cons">
+        <div className="grid sm:grid-cols-2 gap-4">
+          <div className="rounded-2xl border border-mint/40 bg-[#F1FBF6] p-4">
+            <h4 className="font-bold text-sm text-[#0e8f68] mb-2">👍 Pros</h4>
+            <ul className="space-y-1.5">
+              {pros.map((pro, i) => (
+                <li key={i} className="text-sm text-ink/90 flex gap-2"><span className="text-[#1FAE78]">✓</span><span>{pro}</span></li>
+              ))}
+            </ul>
+          </div>
+          <div className="rounded-2xl border border-[#F0CFCF] bg-[#FCF3F3] p-4">
+            <h4 className="font-bold text-sm text-[#C0463F] mb-2">👎 Cons</h4>
+            <ul className="space-y-1.5">
+              {cons.map((con, i) => (
+                <li key={i} className="text-sm text-ink/90 flex gap-2"><span className="text-[#D9534F]">✕</span><span>{con}</span></li>
+              ))}
+            </ul>
+          </div>
+        </div>
+        <p className="text-[11px] text-mut mt-2">Pros and cons are generated from the device’s specifications and current pricing to help you compare quickly.</p>
+      </Section>
+
+      <Section title="Specifications">
+        <div className="rounded-2xl border border-[#E3E6F4] bg-white overflow-hidden">
+          <table className="w-full text-sm">
+            <tbody>
+              {specSheet.map((row, i) => (
+                <tr key={i} className="border-t border-[#E3E6F4] first:border-0">
+                  <td className="p-3 text-mut w-1/3 align-top">{row.label}</td>
+                  <td className="p-3 font-semibold">{row.value}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="text-[11px] text-mut mt-2">Key specs summarised — confirm full specifications on the retailer’s page before buying.</p>
+      </Section>
+
       <Section title="Price history">
-        <div className="rounded-2xl border border-[#F1E7DC] bg-white p-4">
+        <div className="rounded-2xl border border-[#E3E6F4] bg-white p-4">
           <div className="flex gap-6 flex-wrap mb-3 text-sm">
             <Stat label="Lowest" value={fmtKES(p.priceStats.lowest)} color="#1FAE78" />
             <Stat label="Highest" value={fmtKES(p.priceStats.highest)} color="#E25555" />
             <Stat label="Average" value={fmtKES(p.priceStats.average)} />
-            <Stat label="Current" value={fmtKES(p.priceStats.current)} color="#FF6B5C" />
+            <Stat label="Current" value={fmtKES(p.priceStats.current)} color="#3D52D5" />
           </div>
           <PriceHistoryChart history={p.history} />
           <p className="text-xs text-mut mt-2">{p.priceStats.isGoodDeal ? '✅ Current price is at or below the average — a good time to buy.' : '⏳ Current price is above the average — it may drop.'}</p>
@@ -165,12 +251,12 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
       </Section>
 
       <Section title="Delivery comparison">
-        <div className="overflow-x-auto rounded-2xl border border-[#F1E7DC] bg-white">
+        <div className="overflow-x-auto rounded-2xl border border-[#E3E6F4] bg-white">
           <table className="w-full text-sm">
             <thead><tr className="text-left text-[11px] uppercase text-[#A99FB4]"><th className="p-3">Store</th><th className="p-3">City</th><th className="p-3">Days</th><th className="p-3">Fee</th></tr></thead>
             <tbody>
               {p.delivery.map((d, i) => (
-                <tr key={i} className="border-t border-[#F1E7DC]"><td className="p-3 font-semibold">{d.sellerName}</td><td className="p-3">{d.city}</td><td className="p-3">{d.days}</td><td className="p-3">{d.fee ? fmtKES(d.fee) : <span className="text-[#1FAE78] font-bold">Free</span>}</td></tr>
+                <tr key={i} className="border-t border-[#E3E6F4]"><td className="p-3 font-semibold">{d.sellerName}</td><td className="p-3">{d.city}</td><td className="p-3">{d.days}</td><td className="p-3">{d.fee ? fmtKES(d.fee) : <span className="text-[#1FAE78] font-bold">Free</span>}</td></tr>
               ))}
             </tbody>
           </table>
@@ -179,7 +265,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
 
       <Section title="Reviews">
         {reviews.length ? reviews.map((r) => (
-          <div key={r.id} className="rounded-2xl border border-[#F1E7DC] bg-white p-4 mb-2">
+          <div key={r.id} className="rounded-2xl border border-[#E3E6F4] bg-white p-4 mb-2">
             <div className="flex justify-between"><span className="font-bold text-sm">{r.author}</span><span className="text-[#E8902B] text-sm">{stars(r.rating)}</span></div>
             {r.title && <div className="font-semibold text-sm mt-1">{r.title}</div>}
             <p className="text-sm text-mut mt-1">{r.body}</p>
@@ -191,7 +277,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
         <Section title="Similar devices">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {p.similar.map((s) => (
-              <Link key={s.slug} href={`/p/${s.slug}`} className="rounded-2xl border border-[#F1E7DC] bg-white p-3 hover:-translate-y-1 transition">
+              <Link key={s.slug} href={`/p/${s.slug}`} className="rounded-2xl border border-[#E3E6F4] bg-white p-3 hover:-translate-y-1 transition">
                 <div className="font-bold text-sm">{s.name}</div>
                 <div className="text-coral font-bold text-sm mt-1">{fmtKES(s.minPrice)}</div>
               </Link>

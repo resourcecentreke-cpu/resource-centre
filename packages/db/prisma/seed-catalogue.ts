@@ -1,5 +1,5 @@
 /* Phase 2 — import the 61-product catalogue + offers + price-history baseline. */
-import type { PrismaClient } from '@prisma/client';
+import type { PrismaClient, Prisma } from '@prisma/client';
 import { StockStatus } from '@prisma/client';
 import catalogue from '../data/catalogue.json';
 import { slugify, rng, brandOf, catKeyFor } from './seed-helpers';
@@ -11,7 +11,17 @@ interface CatItem {
   img: string;
   new: number;
   interest?: number; // baseline popularity weight (Top 10 by interest)
+  released?: string; // "YYYY-MM" release month, for device age + new-releases feed
+  specs?: Record<string, unknown>; // condition / battery / cycles / useCases
   stores: [string, number][];
+}
+
+/** Parse "YYYY-MM" into a Date (first of the month, UTC), or null. */
+function parseReleased(s: string | undefined): Date | null {
+  if (!s) return null;
+  const m = s.match(/^(\d{4})-(\d{2})$/);
+  if (!m) return null;
+  return new Date(Date.UTC(Number(m[1]), Number(m[2]) - 1, 1));
 }
 
 const GSM = (slug: string) => `https://fdn2.gsmarena.com/vv/bigpic/${slug}.jpg`;
@@ -35,18 +45,20 @@ export async function seedCatalogue(prisma: PrismaClient): Promise<void> {
     const slug = slugify(d.name);
     const imageSlug = d.img && d.img.charAt(0) !== '_' ? d.img : null;
     const images = imageSlug ? [GSM(imageSlug)] : [];
+    const specsJson = (d.specs ?? undefined) as Prisma.InputJsonValue | undefined;
+    const releaseDate = parseReleased(d.released);
 
     const product = await prisma.product.upsert({
       where: { slug },
       update: {
         name: d.name, brand: brandOf(d.name), categoryId: cat.id,
         specSummary: d.spec, imageSlug, images, isNew: Boolean(d.new),
-        interestSeed: d.interest ?? 0, isActive: true,
+        interestSeed: d.interest ?? 0, specs: specsJson, isActive: true, releaseDate,
       },
       create: {
         slug, name: d.name, brand: brandOf(d.name), categoryId: cat.id,
         specSummary: d.spec, imageSlug, images, isNew: Boolean(d.new),
-        interestSeed: d.interest ?? 0,
+        interestSeed: d.interest ?? 0, specs: specsJson, releaseDate,
       },
     });
 

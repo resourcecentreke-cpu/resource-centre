@@ -2,12 +2,19 @@ import { Body, Controller, Get, Param, Post, UseGuards } from '@nestjs/common';
 import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 import { PaymentsService } from './payments.service';
 import { InitiatePaymentDto } from './dto/initiate-payment.dto';
+import { InitiateTipDto } from './dto/initiate-tip.dto';
 import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 
 @ApiTags('payments')
 @Controller('payments')
 export class PaymentsController {
   constructor(private readonly payments: PaymentsService) {}
+
+  // Public — triggers an STK push to the supporter's phone for a voluntary tip.
+  @Post('tip')
+  tip(@Body() dto: InitiateTipDto) {
+    return this.payments.tip(dto);
+  }
 
   @Post('stk')
   @ApiBearerAuth()

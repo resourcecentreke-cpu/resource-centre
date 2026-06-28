@@ -38,6 +38,19 @@ export interface ProductSummaryDTO {
   image: string | null;
   minPrice: MoneyMinor;
   isNew: boolean;
+  /** Release month as an ISO date string (device age + new-releases feed); null if unknown. */
+  releaseDate?: string | null;
+  /** Extra structured attributes: condition, battery, cycles, useCases, etc. */
+  specs?: ProductSpecs | null;
+}
+
+/** Free-form structured attributes stored per product (esp. laptops/refurbished). */
+export interface ProductSpecs {
+  condition?: 'New' | 'Refurbished' | string;
+  battery?: string; // e.g. "88%" battery health for refurbished units
+  cycles?: number; // charge-cycle count for refurbished units
+  useCases?: string[]; // e.g. ["gaming","design"] — powers the laptop chooser
+  [key: string]: unknown;
 }
 
 /** A ranked product for the "Top 10 by interest" widget (GSM-Arena-style daily interest). */

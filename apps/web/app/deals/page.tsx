@@ -62,7 +62,7 @@ export default async function DealsPage() {
       </p>
 
       {deals.length === 0 ? (
-        <div className="rounded-2xl border border-[#F1E7DC] bg-white p-8 text-center text-mut">
+        <div className="rounded-2xl border border-[#E3E6F4] bg-white p-8 text-center text-mut">
           No price drops to show right now. Check back soon — prices refresh throughout the day.
         </div>
       ) : (
@@ -71,7 +71,7 @@ export default async function DealsPage() {
             <Link
               key={d.slug}
               href={`/p/${d.slug}`}
-              className="group rounded-2xl border border-[#F1E7DC] bg-white p-4 hover:-translate-y-1 hover:shadow-md transition flex flex-col"
+              className="group rounded-2xl border border-[#E3E6F4] bg-white p-4 hover:-translate-y-1 hover:shadow-md transition flex flex-col"
             >
               <div className="flex items-start justify-between gap-2">
                 <span className="text-[10px] uppercase tracking-wide text-[#A99FB4] font-bold">{d.brand} · {d.category}</span>

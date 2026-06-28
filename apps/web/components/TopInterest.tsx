@@ -20,17 +20,17 @@ export default function TopInterest({
   const max = Math.max(...items.map((p) => p.interest), 1);
 
   return (
-    <aside className="rounded-2xl border border-[#F1E7DC] bg-white shadow-sm overflow-hidden">
+    <aside className="rounded-2xl border border-[#E3E6F4] bg-white shadow-sm overflow-hidden">
       <div className="px-4 py-3 bg-gradient-to-r from-coral to-amber text-white">
         <h3 className="font-display font-bold text-sm flex items-center gap-2">📈 {title}</h3>
         {subtitle && <p className="text-[11px] text-white/85 mt-0.5">{subtitle}</p>}
       </div>
-      <ol className="divide-y divide-[#F6EEE5]">
+      <ol className="divide-y divide-[#EEF1FB]">
         {items.map((p) => (
           <li key={p.slug}>
             <Link
               href={`/p/${p.slug}`}
-              className="flex items-center gap-3 px-3 py-2.5 hover:bg-[#FFF7F0] transition"
+              className="flex items-center gap-3 px-3 py-2.5 hover:bg-[#F4F6FD] transition"
             >
               <span
                 className={`w-6 text-center font-display font-bold text-sm shrink-0 ${
@@ -41,7 +41,7 @@ export default function TopInterest({
               </span>
               <span className="flex-1 min-w-0">
                 <span className="block font-semibold text-[13px] leading-tight truncate">{p.name}</span>
-                <span className="mt-1 block h-1.5 rounded-full bg-[#F1E7DC] overflow-hidden">
+                <span className="mt-1 block h-1.5 rounded-full bg-[#E3E6F4] overflow-hidden">
                   <span
                     className="block h-full rounded-full bg-gradient-to-r from-coral to-amber"
                     style={{ width: `${Math.max(8, Math.round((p.interest / max) * 100))}%` }}

@@ -38,7 +38,7 @@ export default function ComparePage() {
   return (
     <div className="max-w-6xl mx-auto px-5 py-6">
       <h1 className="font-display text-2xl font-bold mb-4">Compare devices</h1>
-      <div className="overflow-x-auto rounded-2xl border border-[#F1E7DC] bg-white">
+      <div className="overflow-x-auto rounded-2xl border border-[#E3E6F4] bg-white">
         <table className="w-full text-sm min-w-[600px]">
           <thead><tr><th className="p-3"></th>{products.map((p) => (
             <th key={p.slug} className="p-3 text-center">
@@ -51,7 +51,7 @@ export default function ComparePage() {
             {rows.map(([label, render, score]) => {
               const wi = winner(score);
               return (
-                <tr key={label} className="border-t border-[#F1E7DC]">
+                <tr key={label} className="border-t border-[#E3E6F4]">
                   <td className="p-3 font-bold text-[11px] uppercase text-[#A99FB4]">{label}</td>
                   {products.map((p, i) => (
                     <td key={p.slug} className={`p-3 text-center ${i === wi ? 'bg-mint/15 font-bold' : ''}`}>{render(p)}{i === wi ? ' 🏆' : ''}</td>

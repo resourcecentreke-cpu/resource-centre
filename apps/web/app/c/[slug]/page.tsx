@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { getProducts, getCategories, getTopInterest } from '../../../lib/api';
 import { fmtKES } from '../../../lib/format';
 import { abs, priceString, SITE_NAME } from '../../../lib/seo';
@@ -95,6 +96,16 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
         live price history, seller trust scores and delivery options, so you can spot the best deal and the right time to buy.
       </p>
 
+      {slug === 'laptops' && (
+        <Link href="/laptops/chooser" className="mb-5 flex items-center gap-3 rounded-2xl border border-coral/25 bg-gradient-to-r from-[#EEF1FB] to-[#F4F6FD] p-4 shadow-sm hover:border-coral transition">
+          <span className="text-2xl">🧭</span>
+          <span className="flex-1">
+            <span className="block font-bold text-sm">Not sure which laptop to get?</span>
+            <span className="block text-xs text-mut mt-0.5">Answer two quick questions — use-case and budget — and we’ll recommend one (new or refurbished).</span>
+          </span>
+          <span className="shrink-0 rounded-full bg-coral text-white text-xs font-bold px-4 py-2">Open the chooser →</span>
+        </Link>
+      )}
       <div className="grid lg:grid-cols-[1fr_320px] gap-8 items-start">
         <div className="min-w-0">
           <Filters category={slug} initial={initial.items} />

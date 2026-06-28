@@ -2,8 +2,10 @@ import { BadRequestException, Injectable, Logger, NotFoundException, ServiceUnav
 import { PaymentStatus, SubscriptionPlan, SubscriptionStatus } from '@rc/db';
 import { PrismaService } from '../prisma/prisma.service';
 import { DarajaService } from '../mpesa/daraja.service';
+import { IntasendService } from './intasend.service';
 import { normalizeMsisdn, isValidMsisdn, parseStkCallback } from '../mpesa/mpesa.util';
 import { InitiatePaymentDto, PaymentPurposeInput, PlanInput } from './dto/initiate-payment.dto';
+import { InitiateTipDto } from './dto/initiate-tip.dto';
 import type { PaymentDTO, StkInitResponse } from '@rc/types';
 
 const PLAN_PRICES: Record<PlanInput, number> = { basic: 1000, premium: 5000, enterprise: 20000 };
@@ -18,7 +20,36 @@ export class PaymentsService {
   constructor(
     private readonly prisma: PrismaService,
     private readonly daraja: DarajaService,
+    private readonly intasend: IntasendService,
   ) {}
+
+  /**
+   * Public "tip us" — triggers an M-Pesa STK push via IntaSend (an aggregator that
+   * settles to the site owner's bank account) so the supporter just confirms with
+   * their PIN on their phone.
+   */
+  async tip(dto: InitiateTipDto): Promise<StkInitResponse> {
+    if (!this.intasend.isConfigured()) {
+      throw new ServiceUnavailableException('Tipping is not configured on this server');
+    }
+    const msisdn = normalizeMsisdn(dto.phone);
+    if (!isValidMsisdn(msisdn)) throw new BadRequestException('Invalid phone number');
+    const amount = Math.min(Math.max(Math.round(dto.amount), 10), 70000);
+
+    const payment = await this.prisma.payment.create({
+      data: { amount, purpose: 'tip', status: PaymentStatus.PENDING, reference: 'intasend' },
+    });
+    const res = await this.intasend.stkPush({ amount, phone: msisdn, ref: payment.id });
+    await this.prisma.payment.update({
+      where: { id: payment.id },
+      data: { mpesaCheckoutId: res.invoiceId },
+    });
+    return {
+      paymentId: payment.id,
+      checkoutRequestId: res.invoiceId ?? payment.id,
+      customerMessage: 'Check your phone and enter your M-Pesa PIN to complete the tip.',
+    };
+  }
 
   async initiate(dto: InitiatePaymentDto): Promise<StkInitResponse> {
     if (!this.daraja.isConfigured()) {
