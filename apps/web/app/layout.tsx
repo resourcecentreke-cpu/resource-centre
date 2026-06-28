@@ -4,7 +4,7 @@ import Header from '../components/Header';
 import PwaRegister from '../components/PwaRegister';
 import JsonLd from '../components/JsonLd';
 import Link from 'next/link';
-import { SITE_URL, SITE_NAME, abs } from '../lib/seo';
+import { SITE_URL, SITE_NAME, abs, ADSENSE_CLIENT, ADMITAD_VERIFY } from '../lib/seo';
 
 const DESCRIPTION =
   'Compare phones, laptops, TVs, gaming, cameras and more across Kenya’s trusted online stores — price history, seller trust scores, delivery comparison and price alerts.';
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-export const viewport = { themeColor: '#FF6B5C' };
+export const viewport = { themeColor: '#4F46E5' };
 
 // Site-wide structured data: the brand + a sitelinks search box in Google.
 const siteJsonLd = [
@@ -65,21 +65,71 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* Inter — one quiet, cohesive typeface across the whole site. */}
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&display=swap" rel="stylesheet" />
+        {/* Admitad ad-space ownership verification */}
+        <meta name="verify-admitad" content={ADMITAD_VERIFY} />
+        {/* Google AdSense — site verification + auto ads loader.
+            Rendered as a literal <script> (not next/script) so the AdSense
+            crawler finds it in the raw server HTML during site verification. */}
+        <meta name="google-adsense-account" content={ADSENSE_CLIENT} />
+        <script
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
+          crossOrigin="anonymous"
+        />
       </head>
       <body className="font-sans min-h-screen flex flex-col">
         <JsonLd data={siteJsonLd} />
         <Header />
         <main className="flex-1">{children}</main>
-        <footer className="border-t border-[#F1E7DC] bg-[#FFF4EC] mt-10">
-          <div className="max-w-6xl mx-auto px-5 py-8 text-sm text-mut flex flex-wrap gap-6 justify-between">
-            <p className="max-w-sm">Compare the lowest listed price across Kenya’s trusted online electronics stores. Prices indicative — confirm on the retailer’s page before buying.</p>
-            <div className="flex gap-6">
-              <Link href="/deals">Deals</Link>
-              <Link href="/compare">Compare</Link>
-              <Link href="/alerts">Alerts</Link>
-              <Link href="/tip">💛 Tip us</Link>
-            </div>
+        <footer className="mt-16 border-t border-line bg-surface">
+          <div className="mx-auto flex max-w-6xl flex-wrap justify-between gap-10 px-5 py-12 text-sm text-muted">
+            <p className="max-w-sm leading-relaxed">
+              Compare the lowest listed price across Kenya’s trusted online
+              electronics stores. Prices indicative — confirm on the retailer’s
+              page before buying.
+            </p>
+            <nav className="flex flex-wrap gap-x-7 gap-y-2.5">
+              {[
+                ['/deals', 'Deals'],
+                ['/releases', 'New & Upcoming'],
+                ['/phones', 'Phones'],
+                ['/accessories', 'Accessories'],
+                ['/guides', 'Guides'],
+                ['/compare', 'Compare'],
+                ['/alerts', 'Alerts'],
+                ['/tip', 'Tip us'],
+              ].map(([href, label]) => (
+                <Link
+                  key={href}
+                  href={href}
+                  className="text-muted transition-colors duration-fast ease-out hover:text-text"
+                >
+                  {label}
+                </Link>
+              ))}
+            </nav>
+            <nav className="flex flex-wrap gap-x-7 gap-y-2.5">
+              {[
+                ['/about', 'About'],
+                ['/contact', 'Contact'],
+                ['/privacy', 'Privacy'],
+                ['/terms', 'Terms'],
+              ].map(([href, label]) => (
+                <Link
+                  key={href}
+                  href={href}
+                  className="text-muted transition-colors duration-fast ease-out hover:text-text"
+                >
+                  {label}
+                </Link>
+              ))}
+            </nav>
+          </div>
+          <div className="mx-auto max-w-6xl px-5 pb-8 text-xs text-faint">
+            © {new Date().getFullYear()} {SITE_NAME}. All rights reserved.
           </div>
         </footer>
         <PwaRegister />

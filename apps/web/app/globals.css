@@ -2,5 +2,189 @@
 @tailwind components;
 @tailwind utilities;
 
-:root { color-scheme: light; }
-body { background: #FFFDF9; color: #2B2240; }
+/* ============================================================================
+   Resource Centre — refined design tokens
+   Inspired by Emil Kowalski's principles: quiet UI, one accent, layered
+   neutral surfaces, low-contrast lines, fast eased-out motion.
+   Colours are stored as space-separated RGB channels so Tailwind's
+   `rgb(var(--token) / <alpha-value>)` opacity syntax works.
+============================================================================ */
+:root {
+  color-scheme: light;
+
+  --page: 252 252 253;        /* app background            */
+  --surface: 255 255 255;     /* cards, inputs             */
+  --raised: 255 255 255;      /* popovers, menus           */
+  --line: 234 235 238;        /* hairline borders          */
+  --line-strong: 219 220 226; /* stronger borders, focus   */
+
+  --text: 26 26 32;           /* primary text              */
+  --muted: 107 107 118;       /* secondary text            */
+  --faint: 156 156 166;       /* tertiary / labels         */
+
+  --accent: 79 70 229;        /* indigo — the single accent */
+  --accent-fg: 255 255 255;   /* text on accent            */
+  --accent-soft: 238 238 252; /* tinted accent surface     */
+
+  --shadow-color: 17 17 26;
+}
+
+.dark {
+  color-scheme: dark;
+
+  --page: 11 11 14;
+  --surface: 21 21 26;
+  --raised: 28 28 34;
+  --line: 38 38 45;
+  --line-strong: 52 52 60;
+
+  --text: 237 237 240;
+  --muted: 158 158 168;
+  --faint: 110 110 120;
+
+  --accent: 129 124 255;
+  --accent-fg: 12 12 16;
+  --accent-soft: 32 31 56;
+
+  --shadow-color: 0 0 0;
+}
+
+@layer base {
+  * {
+    border-color: rgb(var(--line));
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background: rgb(var(--page));
+    color: rgb(var(--text));
+    font-feature-settings: 'cv11', 'ss01';
+    font-variant-ligatures: contextual;
+  }
+
+  /* Tabular figures for prices — keeps columns from jittering. */
+  .tnum,
+  [data-price] {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: 'tnum';
+  }
+
+  /* One consistent, well-shaped focus ring everywhere. */
+  :focus-visible {
+    outline: none;
+    box-shadow:
+      0 0 0 2px rgb(var(--page)),
+      0 0 0 4px rgb(var(--accent) / 0.55);
+    border-radius: 0.5rem;
+  }
+
+  ::selection {
+    background: rgb(var(--accent) / 0.18);
+    color: rgb(var(--text));
+  }
+
+  /* Quiet, on-brand scrollbars. */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(var(--line-strong)) transparent;
+  }
+  *::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  *::-webkit-scrollbar-thumb {
+    background: rgb(var(--line-strong));
+    border-radius: 9999px;
+    border: 3px solid rgb(var(--page));
+  }
+}
+
+/* ----------------------------------------------------------------------------
+   Reusable component classes — keep markup clean and consistent.
+---------------------------------------------------------------------------- */
+@layer components {
+  /* Buttons ---------------------------------------------------------------- */
+  .btn {
+    @apply inline-flex select-none items-center justify-center gap-2 whitespace-nowrap
+      rounded-xl px-4 py-2.5 text-sm font-medium
+      transition duration-fast ease-out
+      active:scale-[0.97] disabled:pointer-events-none disabled:opacity-50;
+  }
+  .btn-primary {
+    @apply btn bg-accent text-accent-fg shadow-xs hover:opacity-90;
+  }
+  .btn-secondary {
+    @apply btn border border-line-strong bg-surface text-text hover:bg-bg2;
+  }
+  .btn-ghost {
+    @apply btn text-muted hover:bg-bg2 hover:text-text;
+  }
+
+  /* Card ------------------------------------------------------------------- */
+  .card {
+    @apply rounded-2xl border border-line bg-surface shadow-xs
+      transition duration-200 ease-out;
+  }
+  .card-interactive {
+    @apply card hover:-translate-y-0.5 hover:shadow-soft hover:border-line-strong;
+  }
+
+  /* Inputs ----------------------------------------------------------------- */
+  .input {
+    @apply w-full rounded-xl border border-line-strong bg-surface px-3.5 py-2.5
+      text-sm text-text placeholder:text-faint
+      transition duration-fast ease-out
+      focus:border-accent focus-visible:shadow-none;
+  }
+
+  /* Small uppercase eyebrow label. */
+  .eyebrow {
+    @apply text-2xs font-semibold uppercase tracking-[0.08em] text-faint;
+  }
+
+  /* Pill badge ------------------------------------------------------------- */
+  .badge {
+    @apply inline-flex items-center rounded-full px-2 py-0.5 text-2xs font-semibold;
+  }
+}
+
+@layer utilities {
+  /* Skeleton shimmer for loading states. */
+  .skeleton {
+    @apply relative overflow-hidden bg-bg2;
+  }
+  .skeleton::after {
+    content: '';
+    @apply absolute inset-0 -translate-x-full animate-shimmer;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgb(var(--surface) / 0.6),
+      transparent
+    );
+  }
+
+  /* Optical hanging punctuation for big display headings. */
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* ----------------------------------------------------------------------------
+   Respect the user. No exceptions.
+---------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

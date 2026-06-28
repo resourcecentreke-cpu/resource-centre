@@ -21,35 +21,50 @@ export default function Header() {
   const go = () => { if (q.trim()) { setSug([]); router.push(`/search?q=${encodeURIComponent(q)}`); } };
 
   return (
-    <header className="sticky top-0 z-50 backdrop-blur bg-[#FFFDF9]/85 border-b border-[#F1E7DC]">
-      <div className="max-w-6xl mx-auto px-5 h-16 flex items-center gap-4">
-        <Link href="/" className="flex items-center gap-2 shrink-0">
-          <span className="flex gap-1">
-            <span className="w-2 h-2 rounded-full bg-coral" /><span className="w-2 h-2 rounded-full bg-amber" /><span className="w-2 h-2 rounded-full bg-mint" />
-          </span>
-          <b className="hidden sm:block">Resource Centre</b>
+    <header className="sticky top-0 z-50 border-b border-line bg-page/80 backdrop-blur-md backdrop-saturate-150">
+      <div className="mx-auto flex h-16 max-w-6xl items-center gap-4 px-5">
+        <Link href="/" className="flex shrink-0 items-center gap-2.5">
+          <span className="h-2.5 w-2.5 rounded-full bg-accent" />
+          <b className="hidden text-[15px] font-semibold tracking-tight sm:block">
+            Resource Centre
+          </b>
         </Link>
-        <div className="flex-1 relative max-w-xl">
-          <input value={q} onChange={(e) => setQ(e.target.value)} onKeyDown={(e) => e.key === 'Enter' && go()}
+        <div className="relative max-w-xl flex-1">
+          <input
+            value={q}
+            onChange={(e) => setQ(e.target.value)}
+            onKeyDown={(e) => e.key === 'Enter' && go()}
             placeholder="Search products, brands or models…"
-            className="w-full border-2 border-[#E7DACd] rounded-full px-4 py-2 text-sm outline-none focus:border-coral" />
+            className="input rounded-full"
+          />
           {sug.length > 0 && (
-            <div className="absolute top-11 left-0 right-0 bg-white border border-[#F1E7DC] rounded-2xl shadow-xl overflow-hidden z-50">
+            <div className="absolute left-0 right-0 top-12 z-50 origin-top animate-scale-in overflow-hidden rounded-2xl border border-line bg-raised shadow-raised">
               {sug.map((s) => (
-                <Link key={s.slug} href={`/p/${s.slug}`} onClick={() => setSug([])}
-                  className="flex items-center gap-3 px-4 py-2.5 hover:bg-[#FFF4EC] border-b border-[#F1E7DC] last:border-0">
-                  <span className="flex-1"><span className="font-semibold text-sm block">{s.name}</span><span className="text-xs text-mut">{s.category} · {s.brand}</span></span>
-                  <span className="text-coral font-bold text-sm">{fmtKES(s.minPrice)}</span>
+                <Link
+                  key={s.slug}
+                  href={`/p/${s.slug}`}
+                  onClick={() => setSug([])}
+                  className="flex items-center gap-3 border-b border-line px-4 py-3 transition-colors duration-fast ease-out last:border-0 hover:bg-bg2"
+                >
+                  <span className="flex-1">
+                    <span className="block text-sm font-medium text-text">{s.name}</span>
+                    <span className="text-xs text-muted">{s.category} · {s.brand}</span>
+                  </span>
+                  <span data-price className="text-sm font-semibold text-text tnum">{fmtKES(s.minPrice)}</span>
                 </Link>
               ))}
             </div>
           )}
         </div>
-        <nav className="flex gap-4 items-center shrink-0 text-sm font-semibold text-mut">
-          <Link href="/deals" className="hover:text-coral text-coral">🔥 Deals</Link>
-          <Link href="/compare" className="hover:text-ink">Compare</Link>
-          <Link href="/alerts" className="hover:text-ink hidden sm:block">Alerts</Link>
-          <Link href="/tip" className="hover:text-coral hidden sm:block">💛 Tip us</Link>
+        <nav className="flex shrink-0 items-center gap-5 text-sm font-medium text-muted">
+          <Link href="/deals" className="text-accent transition-colors duration-fast ease-out hover:opacity-80">Deals</Link>
+          <Link href="/releases" className="hidden transition-colors duration-fast ease-out hover:text-text md:block">New &amp; Upcoming</Link>
+          <Link href="/phones" className="hidden transition-colors duration-fast ease-out hover:text-text md:block">Phones</Link>
+          <Link href="/accessories" className="hidden transition-colors duration-fast ease-out hover:text-text lg:block">Accessories</Link>
+          <Link href="/guides" className="hidden transition-colors duration-fast ease-out hover:text-text lg:block">Guides</Link>
+          <Link href="/compare" className="transition-colors duration-fast ease-out hover:text-text">Compare</Link>
+          <Link href="/alerts" className="hidden transition-colors duration-fast ease-out hover:text-text sm:block">Alerts</Link>
+          <Link href="/tip" className="hidden transition-colors duration-fast ease-out hover:text-text sm:block">Tip us</Link>
         </nav>
       </div>
     </header>
