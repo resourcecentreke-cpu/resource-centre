@@ -26,7 +26,7 @@ const ACCENT: Record<string, string> = {
   Honor: '#00A1E0',
   Nothing: '#111111',
 };
-const accentFor = (brand: string) => ACCENT[brand] ?? '#3D52D5';
+const accentFor = (brand: string) => ACCENT[brand] ?? '#4F46E5';
 
 type Phase = 'feed' | 'local' | 'fail';
 
@@ -73,39 +73,39 @@ export default function FlagshipCards({ phones }: { phones: ProductSummaryDTO[] 
         return (
           <article
             key={p.slug}
-            className="group flex flex-col overflow-hidden rounded-3xl border border-[#E3E6F4] bg-white shadow-sm transition duration-300 hover:-translate-y-2 hover:shadow-xl"
+            className="group flex flex-col overflow-hidden rounded-2xl border border-line bg-surface shadow-xs transition duration-200 ease-out hover:-translate-y-0.5 hover:border-line-strong hover:shadow-soft"
           >
-            <div className="h-1.5 w-full" style={{ background: `linear-gradient(90deg, ${accent}, ${accent}55)` }} />
+            <div className="h-1 w-full" style={{ background: accent }} />
             <div
               className="relative flex h-64 items-center justify-center overflow-hidden"
-              style={{ background: `radial-gradient(120% 120% at 50% 10%, ${accent}14, #ffffff 70%)` }}
+              style={{ background: `radial-gradient(120% 120% at 50% 10%, ${accent}0f, rgb(var(--surface)) 70%)` }}
             >
               <CardImage p={p} accent={accent} />
             </div>
             <div className="flex flex-1 flex-col p-5">
-              <span className="text-[11px] font-extrabold uppercase tracking-wide" style={{ color: accent }}>
+              <span className="text-2xs font-semibold uppercase tracking-[0.08em]" style={{ color: accent }}>
                 {p.brand}
               </span>
-              <h3 className="mt-1 font-display text-xl font-bold leading-tight">{p.name}</h3>
+              <h3 className="mt-1.5 text-lg font-semibold leading-snug tracking-tight text-text">{p.name}</h3>
               {chips.length > 0 && (
-                <div className="mt-3 mb-4 flex flex-wrap gap-1.5">
+                <div className="mb-4 mt-3 flex flex-wrap gap-1.5">
                   {chips.map((c, idx) => (
-                    <span key={idx} className="rounded-lg bg-bg2 px-2.5 py-1 text-[11.5px] font-semibold text-ink">
+                    <span key={idx} className="badge bg-bg2 text-muted ring-1 ring-line">
                       {c}
                     </span>
                   ))}
                 </div>
               )}
               <div className="mt-auto">
-                <span className="block text-[11px] font-semibold text-mut">from</span>
-                <span className="font-display text-xl font-bold">{fmtKES(p.minPrice)}</span>
+                <span className="block text-2xs font-medium text-faint">from</span>
+                <span data-price className="text-xl font-semibold tracking-tight text-text tnum">{fmtKES(p.minPrice)}</span>
               </div>
               <Link
                 href={`/p/${p.slug}`}
-                className="mt-4 block rounded-xl py-2.5 text-center text-sm font-bold text-white transition hover:brightness-110"
-                style={{ background: `linear-gradient(90deg, ${accent}, ${accent}cc)` }}
+                className="mt-4 block rounded-xl py-2.5 text-center text-sm font-medium text-white transition duration-fast ease-out hover:opacity-90 active:scale-[0.98]"
+                style={{ background: accent }}
               >
-                Compare prices →
+                Compare prices
               </Link>
             </div>
           </article>

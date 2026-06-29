@@ -1,0 +1,67 @@
+# Production deploy — runs automatically after CI passes on `main`.
+#
+# Replaces the manual rsync + ssh dance. To enable, add these repository
+# secrets (Settings → Secrets and variables → Actions):
+#
+#   DEPLOY_HOST      102.68.86.216
+#   DEPLOY_USER      root
+#   DEPLOY_PATH      /var/www/resourcecentre
+#   DEPLOY_SSH_KEY   <a PRIVATE key whose public half is in the server's
+#                     ~/.ssh/authorized_keys>  (CI can't type a password)
+#
+# One-time server prep (so CI can log in without a password):
+#   ssh-keygen -t ed25519 -f deploy_key -C "github-actions" -N ""
+#   ssh-copy-id -i deploy_key.pub root@102.68.86.216
+#   # then paste the contents of `deploy_key` (the private file) into DEPLOY_SSH_KEY
+#
+# Notes:
+#  • No `--delete` — server-side files (uploaded product photos, .env) are preserved.
+#  • .env files are excluded; the server keeps its own production secrets.
+name: Deploy
+
+on:
+  workflow_run:
+    workflows: ['CI']
+    types: [completed]
+    branches: [main]
+  workflow_dispatch: {}
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    # Only deploy when CI succeeded (or when triggered manually).
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configure SSH
+        run: |
+          mkdir -p ~/.ssh
+          printf '%s\n' "${{ secrets.DEPLOY_SSH_KEY }}" > ~/.ssh/id_deploy
+          chmod 600 ~/.ssh/id_deploy
+          ssh-keyscan -H "${{ secrets.DEPLOY_HOST }}" >> ~/.ssh/known_hosts 2>/dev/null
+
+      - name: Sync source to server
+        run: |
+          rsync -az \
+            -e "ssh -i ~/.ssh/id_deploy -o IdentitiesOnly=yes" \
+            --exclude node_modules --exclude '.next' --exclude '.turbo' \
+            --exclude 'apps/*/dist' --exclude '.git' \
+            --exclude '.env' --exclude 'apps/*/.env' \
+            ./ "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:${{ secrets.DEPLOY_PATH }}/"
+
+      - name: Run deploy script on server
+        run: |
+          ssh -i ~/.ssh/id_deploy -o IdentitiesOnly=yes \
+            "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}" \
+            "cd ${{ secrets.DEPLOY_PATH }} && bash scripts/deploy.sh"
+
+      - name: Verify health
+        run: |
+          sleep 5
+          curl -fsS "https://resourcecentre.co.ke/api/health/ready" || \
+            echo "::warning::Health check did not return OK — verify manually."

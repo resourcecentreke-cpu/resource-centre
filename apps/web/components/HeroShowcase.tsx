@@ -19,12 +19,13 @@ import { fmtKES } from '../lib/format';
  * the hero shows real phones automatically — no code change.
  */
 
+// Cohesive indigo-family accents — restrained, no clashing hues.
 const ACCENTS = [
-  { accent: '#6f7cf0', glow: 'rgba(111,124,240,.5)' },
-  { accent: '#2FD3A5', glow: 'rgba(47,211,165,.5)' },
-  { accent: '#FF5DA2', glow: 'rgba(255,93,162,.5)' },
-  { accent: '#5B8DEF', glow: 'rgba(91,141,239,.5)' },
-  { accent: '#E6B422', glow: 'rgba(230,180,34,.5)' },
+  { accent: '#817cff', glow: 'rgba(129,124,255,.42)' },
+  { accent: '#6f7cf0', glow: 'rgba(111,124,240,.42)' },
+  { accent: '#5b8def', glow: 'rgba(91,141,239,.42)' },
+  { accent: '#9a8cff', glow: 'rgba(154,140,255,.42)' },
+  { accent: '#7d8bf5', glow: 'rgba(125,139,245,.42)' },
 ];
 
 type Phase = 'feed' | 'local' | 'render';
@@ -93,7 +94,7 @@ export default function HeroShowcase({ phones }: { phones: ProductSummaryDTO[] }
 
       <div className="hs-grid">
         <div className="hs-copy">
-          <span className="hs-badge">✨ Kenya · live price tracker</span>
+          <span className="hs-badge">Kenya · live price tracker</span>
           <h1 className="hs-title">
             The newest tech,
             <br />
@@ -105,7 +106,7 @@ export default function HeroShowcase({ phones }: { phones: ProductSummaryDTO[] }
           </p>
           <div className="hs-cta">
             <Link href="/phones" className="hs-btn hs-btn-p">Browse phones</Link>
-            <Link href="/deals" className="hs-btn hs-btn-s">🔥 Today’s deals</Link>
+            <Link href="/deals" className="hs-btn hs-btn-s">Today’s deals</Link>
           </div>
           <div className="hs-pills">
             {items.map((p, idx) => (
@@ -155,9 +156,9 @@ export default function HeroShowcase({ phones }: { phones: ProductSummaryDTO[] }
         }
         .hs-bg { position: absolute; inset: 0; z-index: 0; }
         .hs-blob { position: absolute; border-radius: 50%; filter: blur(60px); opacity: 0.7; mix-blend-mode: screen; will-change: transform; }
-        .hs-b1 { width: 420px; height: 420px; background: #3d52d5; top: -120px; left: -80px; animation: hs-float1 14s ease-in-out infinite; }
-        .hs-b2 { width: 360px; height: 360px; background: #ff5da2; bottom: -140px; left: 30%; animation: hs-float2 18s ease-in-out infinite; }
-        .hs-b3 { width: 300px; height: 300px; background: #e6b422; top: -60px; right: 18%; animation: hs-float3 16s ease-in-out infinite; }
+        .hs-b1 { width: 420px; height: 420px; background: #4f46e5; top: -120px; left: -80px; animation: hs-float1 16s ease-in-out infinite; }
+        .hs-b2 { width: 360px; height: 360px; background: #6f7cf0; bottom: -140px; left: 30%; animation: hs-float2 20s ease-in-out infinite; }
+        .hs-b3 { width: 300px; height: 300px; background: #817cff; top: -60px; right: 18%; animation: hs-float3 18s ease-in-out infinite; }
         .hs-b4 { width: 460px; height: 460px; right: -120px; bottom: -120px; opacity: 0.5; transition: background 1.2s ease; animation: hs-float1 20s ease-in-out infinite reverse; }
 
         .hs-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 24px; align-items: center; padding: 48px 44px; min-height: 440px; }
@@ -165,15 +166,17 @@ export default function HeroShowcase({ phones }: { phones: ProductSummaryDTO[] }
 
         .hs-copy { color: #fff; }
         .hs-badge { display: inline-flex; align-items: center; gap: 8px; border-radius: 999px; border: 1px solid rgba(255, 255, 255, 0.25); background: rgba(255, 255, 255, 0.08); backdrop-filter: blur(6px); padding: 6px 14px; font-size: 12px; font-weight: 700; color: #fff; }
-        .hs-title { margin: 16px 0 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: clamp(30px, 4.4vw, 50px); line-height: 1.05; letter-spacing: -0.01em; }
-        .hs-grad { background: linear-gradient(90deg, #ffd36e, #ff5da2 55%, #8aa0ff); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .hs-title { margin: 16px 0 0; font-family: 'Inter', system-ui, sans-serif; font-weight: 600; font-size: clamp(30px, 4.4vw, 50px); line-height: 1.04; letter-spacing: -0.03em; }
+        .hs-grad { background: linear-gradient(90deg, #c7c4ff, #817cff 60%, #9a8cff); -webkit-background-clip: text; background-clip: text; color: transparent; }
         .hs-sub { margin: 14px 0 0; max-width: 30rem; font-size: 15px; line-height: 1.6; color: rgba(255, 255, 255, 0.78); }
         @media (max-width: 860px) { .hs-sub { margin-inline: auto; } }
         .hs-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
         @media (max-width: 860px) { .hs-cta { justify-content: center; } }
-        .hs-btn { border-radius: 999px; padding: 11px 22px; font-weight: 700; font-size: 14px; transition: transform 0.15s ease; }
-        .hs-btn:hover { transform: translateY(-2px); }
-        .hs-btn-p { background: linear-gradient(90deg, #3d52d5, #6f7cf0); color: #fff; box-shadow: 0 12px 30px -10px rgba(61, 82, 213, 0.9); }
+        .hs-btn { border-radius: 999px; padding: 11px 22px; font-weight: 600; font-size: 14px; transition: transform 0.18s cubic-bezier(0.16,1,0.3,1), opacity 0.18s ease; }
+        .hs-btn:hover { transform: translateY(-1px); }
+        .hs-btn:active { transform: scale(0.97); }
+        .hs-btn-p { background: #4f46e5; color: #fff; box-shadow: 0 12px 30px -12px rgba(79, 70, 229, 0.9); }
+        .hs-btn-p:hover { opacity: 0.92; }
         .hs-btn-s { background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.25); color: #fff; }
         .hs-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 26px; }
         @media (max-width: 860px) { .hs-pills { justify-content: center; } }
@@ -201,7 +204,7 @@ export default function HeroShowcase({ phones }: { phones: ProductSummaryDTO[] }
         .hs-now-name { grid-area: name; font-weight: 800; font-size: 14px; color: #fff; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
         .hs-now-tag { grid-area: tag; font-size: 11px; line-height: 1.4; color: rgba(255, 255, 255, 0.66); margin-top: 2px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
         .hs-now-price { grid-area: price; font-size: 13px; font-weight: 800; color: #fff; margin-top: 4px; }
-        .hs-now-go { grid-area: go; margin-top: 6px; font-size: 12px; font-weight: 700; color: #ffd36e; }
+        .hs-now-go { grid-area: go; margin-top: 6px; font-size: 12px; font-weight: 600; color: #c7c4ff; }
 
         @keyframes hs-bob { 0%, 100% { transform: translateY(0) rotate(-1deg); } 50% { transform: translateY(-12px) rotate(1deg); } }
         @keyframes hs-pulse { 0%, 100% { transform: scale(1); opacity: 0.9; } 50% { transform: scale(1.08); opacity: 1; } }
