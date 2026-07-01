@@ -1,4 +1,63 @@
 slug,page_url
-# Manual overrides for products jumia-images.mjs couldn't match confidently.
-# Paste the retailer/manufacturer PRODUCT PAGE url (not the image url) and run:
-#     node scripts/fetch-og-images.mjs
+# Official manufacturer/press product pages (researched 2026-07-02).
+# Run: node scripts/fetch-og-images.mjs   — extracts each page's product image.
+# ── Audio ────────────────────────────────────────────────────────────────────
+bose-quietcomfort-earbuds-2024,https://www.bose.com/p/earbuds/bose-quietcomfort-headphones/QCEARB24-HEADPHONEIN.html
+bose-quietcomfort-headphones,https://www.bose.com/p/headphones/quietcomfort-acoustic-noise-cancelling-headphones/QC-HEADPHONEARN.html
+bose-soundlink-flex-2nd-gen,https://www.bose.com/p/speakers/bose-soundlink-flex-portable-speaker-2nd-gen/SLFLXII-SPEAKERWIRELESS.html
+jbl-live-beam-3,https://www.jbl.com/earbuds/LIVEBEAM3.html
+jbl-flip-7,https://global.jbl.com/bluetooth-speakers/FLIP-7.html
+jbl-charge-6,https://global.jbl.com/bluetooth-speakers/CHARGE-6.html
+jbl-wave-buds-2,https://global.jbl.com/wireless-earbuds/WAVE-BUDS-2.html
+jbl-wave-beam-2,https://mm.jbl.com/in-ear-headphones/WAVE-BEAM-2.html
+jbl-go-4,https://www.jbl.com/GO-4.html
+jbl-tune-770nc,https://www.jbl.com/over-ear-headphones/TUNE-770NC.html
+sony-wf-c710n,https://www.sony.co.uk/headphones/products/wf-c710n
+sony-ult-wear,https://www.sony-asia.com/headphones/products/ult-wear
+sennheiser-momentum-true-wireless-4,https://global.sennheiser-hearing.com/products/momentum-true-wireless-4
+sennheiser-accentum-wireless,https://global.sennheiser-hearing.com/products/accentum-wireless
+realme-buds-t200,https://www.realme.com/global/more-products/realme-buds-t200
+huawei-freebuds-se-3,https://consumer.huawei.com/en/headphones/freebuds-se-3/
+# ── TVs ──────────────────────────────────────────────────────────────────────
+von-32-hd-digital-tv,https://von.co.ke/catalogue/von-32-vel32hsvf-hd-smart-led-tv_3182/
+von-43-fhd-smart-tv,https://von.co.ke/catalogue/von-43-vel43fsvw-fhd-smart-led-tv_4304/
+haier-43-fhd-android-tv,https://www.haier.com/bd/tvs/h43k6fg.shtml
+haier-55-4k-google-tv,https://www.haier.com/in/tvs/55-inch-smart-google-tv-55p7gt-p7series.shtml
+hisense-65-uled-u7k,https://www.hisense-usa.com/support/hisense-65-u7-series-mini-led-uled-4k-google-tv-65u7k
+# ── Fridges ──────────────────────────────────────────────────────────────────
+ramtons-double-door-90l-rf-222,https://www.ramtons.com/90-litres-double-door-direct-cool-fridge-silver-rf-222
+mika-138l-single-door-fridge,https://www.jumia.co.ke/mika-138l-mrdcd138ds-double-door-fridge-177070062.html
+von-92l-single-door-fridge,https://hotpoint.co.ke/catalogue/von-vrm-91dras-mini-fridge-90l-silver_6363/
+hisense-433l-side-by-side,https://hisenseke.co.ke/product/hisense-fridge-side-by-side-434-liters/
+samsung-231l-double-door-rt28,https://www.samsung.com/africa_en/refrigerators/top-mount-freezer/231l-elegant-inox-rt22k3082s8-ut/
+samsung-580l-side-by-side-rs,https://www.samsung.com/africa_en/refrigerators/side-by-side/es-facelift-501l-black-rs50n3803bc-ef/
+lg-668l-instaview-side-by-side,https://www.lg.com/africa/refrigerators/lg-GC-X247CSAV
+# ── Washing machines ─────────────────────────────────────────────────────────
+ramtons-7kg-twin-tub-washer,https://www.ramtons.com/twin-tub-semi-automatic-7kg-washer-rw-225
+mika-7kg-top-load-washer,https://avechi.co.ke/product/mika-mwatl3507w-top-load-washing-machine/
+haier-7kg-top-load-washer,https://haier.co.ke/product/haier-hwm80-m826-8kg-top-load-fully-automatic-washing-machine-grey/
+samsung-7kg-front-load-ecobubble,https://www.samsung.com/uk/business/washers-and-dryers/washing-machines/front-load-7kg-white-ww70ta046te-eu/
+beko-9kg-front-load-washer,https://www.beko.com/au-en/home-appliances/washing-machines/front-loading-machine-9-kg-1400-rpm-bflb902adw
+bosch-series-4-8kg-front-load,https://www.bosch-home.com/za/products-list/washersanddryers/washingmachines/frontloader/WAK2426SZA
+# ── Dishwashers ──────────────────────────────────────────────────────────────
+midea-9-place-countertop-dishwasher,https://www.midea.com/us/store/dishwashers/counter-top/midea-22in-portable-countertop-dishwasher.mdc22p1aww
+beko-13-place-dishwasher,https://www.beko.com/za-en/products/freestanding-dishwashers/freestanding-dishwasher-13-place-settings-full-size-bdw202
+bosch-series-2-12-place-dishwasher,https://www.bosch-home.com/za/en/mkt-product/dishwashers/freestandingdishwashers/fsdishwasherswith60cmwidth/SMS24AW01Z
+bosch-series-4-13-place-dishwasher,https://www.bosch-home.com/za/en/product/dishwashers/freestandingdishwashers/fsdishwasherswith60cmwidth/SMS46NI00Z
+samsung-13-place-dishwasher,https://www.samsung.com/africa_en/dishwashers/freestanding/13-place-settings-stss-dw60m5050fs-sg/
+lg-14-place-quadwash-dishwasher,https://www.lg.com/za/dishwashers/dfb512fp/
+# ── Power banks / accessories ────────────────────────────────────────────────
+romoss-30000mah-powerbank,https://romossus.com/products/romoss-sense-8-power-bank-18w-30-000mah
+oraimo-27000mah-45w-powerbank,https://ng.oraimo.com/product/oraimo-powernova-qf1-27000mah-22.5w-power-bank-opb-7270q
+xiaomi-20000mah-50w-powerbank,https://www.mi.com/global/product/mi-50w-power-bank-20000/
+baseus-65w-20000mah-powerbank,https://www.baseus.com/products/adaman-power-bank-65w-20000mah
+anker-737-powerbank-24000mah,https://www.anker.com/products/a1289
+ringke-fusion-clear-case,https://www.ringkestore.com/products/iphone-15-pro-case-fusion
+spigen-tough-armor-case,https://www.spigen.com/products/iphone-15-series-case-tough-armor-magfit
+# ── TODO (no official page found — try the Jumia rerun or send me links) ─────
+# haier-195l-double-door-fridge     (only single-door 195L exists officially)
+# tcl-215l-double-door-fridge       (no official 215L page)
+# bruhm-250l-double-door-fridge     (bruhm.com has categories only)
+# ramtons-350l-bottom-freezer       (RF240 not on ramtons.com)
+# von-7kg-top-load-washer           (von.co.ke lists twin-tub/front-load only)
+# von-10kg-top-load-washer          (same)
