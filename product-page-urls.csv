@@ -1,0 +1,4 @@
+slug,page_url
+# Manual overrides for products jumia-images.mjs couldn't match confidently.
+# Paste the retailer/manufacturer PRODUCT PAGE url (not the image url) and run:
+#     node scripts/fetch-og-images.mjs

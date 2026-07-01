@@ -23,7 +23,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const CAT = join(__dirname, '..', 'packages', 'db', 'data', 'catalogue.json');
 const BIG = (slug) => `https://fdn2.gsmarena.com/vv/bigpic/${slug}.jpg`;
 const DRY = process.argv.includes('--dry');
-const CATS = new Set(['Phones', 'Tablets']);
+const CATS = new Set(['Phones', 'Tablets', 'Smart Watches']);
 
 const slugify = (s) =>
   s.toLowerCase()
