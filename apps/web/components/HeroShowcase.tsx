@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import type { ProductSummaryDTO } from '@rc/types';
 import { fmtKES } from '../lib/format';
@@ -66,6 +67,8 @@ function PhoneVisual({ p, accent }: { p: ProductSummaryDTO; accent: string }) {
 
 export default function HeroShowcase({ phones }: { phones: ProductSummaryDTO[] }) {
   const items = (phones ?? []).slice(0, 5);
+  const router = useRouter();
+  const [q, setQ] = useState('');
   const [i, setI] = useState(0);
   const [paused, setPaused] = useState(false);
 
@@ -104,6 +107,22 @@ export default function HeroShowcase({ phones }: { phones: ProductSummaryDTO[] }
             The latest flagships and every device after — compare prices across Kenya’s trusted
             stores, with price history, seller trust scores and delivery comparison.
           </p>
+          <form
+            className="hs-search"
+            onSubmit={(e) => {
+              e.preventDefault();
+              const query = q.trim();
+              if (query) router.push(`/search?q=${encodeURIComponent(query)}`);
+            }}
+          >
+            <input
+              value={q}
+              onChange={(e) => setQ(e.target.value)}
+              placeholder="Search a phone, laptop or brand — e.g. “phones under 20k”"
+              aria-label="Search products"
+            />
+            <button type="submit">Search</button>
+          </form>
           <div className="hs-cta">
             <Link href="/phones" className="hs-btn hs-btn-p">Browse phones</Link>
             <Link href="/deals" className="hs-btn hs-btn-s">Today’s deals</Link>
@@ -170,6 +189,13 @@ export default function HeroShowcase({ phones }: { phones: ProductSummaryDTO[] }
         .hs-grad { background: linear-gradient(90deg, #c7c4ff, #817cff 60%, #9a8cff); -webkit-background-clip: text; background-clip: text; color: transparent; }
         .hs-sub { margin: 14px 0 0; max-width: 30rem; font-size: 15px; line-height: 1.6; color: rgba(255, 255, 255, 0.78); }
         @media (max-width: 860px) { .hs-sub { margin-inline: auto; } }
+        .hs-search { display: flex; gap: 8px; margin-top: 20px; max-width: 30rem; border-radius: 999px; border: 1px solid rgba(255,255,255,0.22); background: rgba(255,255,255,0.1); backdrop-filter: blur(8px); padding: 5px 5px 5px 18px; }
+        @media (max-width: 860px) { .hs-search { margin-inline: auto; } }
+        .hs-search input { flex: 1; min-width: 0; background: transparent; border: 0; outline: none; color: #fff; font-size: 14px; }
+        .hs-search input::placeholder { color: rgba(255,255,255,0.55); }
+        .hs-search button { border-radius: 999px; background: #4f46e5; color: #fff; font-weight: 600; font-size: 13px; padding: 9px 18px; transition: opacity 0.18s ease, transform 0.18s ease; }
+        .hs-search button:hover { opacity: 0.92; }
+        .hs-search button:active { transform: scale(0.97); }
         .hs-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
         @media (max-width: 860px) { .hs-cta { justify-content: center; } }
         .hs-btn { border-radius: 999px; padding: 11px 22px; font-weight: 600; font-size: 14px; transition: transform 0.18s cubic-bezier(0.16,1,0.3,1), opacity 0.18s ease; }

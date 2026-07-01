@@ -1,154 +1,118 @@
 import Link from 'next/link';
-import { getCategories, getProducts, getTopInterest } from '../lib/api';
+import { getCategories, getDeals, getProducts, getTopInterest } from '../lib/api';
 import ProductCard from '../components/ProductCard';
 import HeroShowcase from '../components/HeroShowcase';
-import FlagshipCards from '../components/FlagshipCards';
-import TopInterest from '../components/TopInterest';
-import type { ProductSummaryDTO } from '@rc/types';
-import TipPrompt from '../components/TipPrompt';
+import PriceDropTicker from '../components/PriceDropTicker';
+import CategoryGroups from '../components/CategoryGroups';
 import AdSlot from '../components/AdSlot';
+import type { DealDTO, ProductSummaryDTO } from '@rc/types';
 
 export const revalidate = 60;
 
+/**
+ * Homepage — one clear job per scroll-section:
+ *   1. Hero + search
+ *   2. Price drops (ticker + top deals)
+ *   3. Shop by category (grouped)
+ *   4. Top 10 phones in Kenya
+ * Everything else (flagships, new arrivals, releases, tip) lives on /explore.
+ */
 export default async function Home() {
-  const [categories, deals, fresh, topPhones, premiumPhones] = await Promise.all([
+  const [categories, topPhones, deals, cheapest] = await Promise.all([
     getCategories(),
-    getProducts('?sort=price_asc&pageSize=8'),
-    getProducts('?isNew=true&pageSize=8'),
     getTopInterest('smartphones', 10).catch(() => []),
-    getProducts('?category=smartphones&sort=price_desc&pageSize=80').catch(() => ({ items: [] as ProductSummaryDTO[] })),
+    getDeals(8).catch(() => [] as DealDTO[]),
+    getProducts('?sort=price_asc&pageSize=8').catch(() => ({ items: [] as ProductSummaryDTO[] })),
   ]);
   const live = categories.filter((c) => c.productCount > 0);
-
-  // Curated flagship line-up (real, in-stock equivalents of the requested set).
-  const PREFERRED = [
-    'galaxy s26 ultra',
-    'pixel 10 pro xl',
-    'iphone 17 pro max',
-    'oppo find x9 ultra',
-    'vivo x200 pro',
-  ];
-  const pool = premiumPhones.items;
-  const flagships: ProductSummaryDTO[] = [];
-  for (const want of PREFERRED) {
-    const m = pool.find(
-      (p) => p.name.toLowerCase().includes(want) && !flagships.some((f) => f.slug === p.slug),
-    );
-    if (m) flagships.push(m);
-  }
-  // Backfill to five with the priciest remaining distinct brands, if any preferred missing.
-  if (flagships.length < 5) {
-    const seenBrand = new Set(flagships.map((f) => f.brand));
-    for (const p of pool) {
-      if (flagships.length >= 5) break;
-      if (flagships.some((f) => f.slug === p.slug) || seenBrand.has(p.brand)) continue;
-      seenBrand.add(p.brand);
-      flagships.push(p);
-    }
-  }
+  const heroPhones: ProductSummaryDTO[] = topPhones.length ? topPhones : cheapest.items;
 
   return (
     <div className="max-w-6xl mx-auto px-5">
+      {/* 1 · Hero + search */}
       <section className="pt-8 pb-4">
-        <HeroShowcase phones={topPhones.length ? topPhones : fresh.items} />
+        <HeroShowcase phones={heroPhones} />
       </section>
 
-      {flagships.length > 0 && (
-        <section className="pt-6 pb-4">
-          <p className="text-xs font-extrabold uppercase tracking-wider text-coral">Five flagships · {new Date().getFullYear()}</p>
-          <h2 className="mt-1 font-display text-2xl md:text-3xl font-bold">The best phones you can buy right now</h2>
-          <p className="mt-1.5 text-mut text-sm max-w-2xl">Top flagships from the biggest names — tap any phone to compare live prices across Kenya's trusted stores. Prices indicative; confirm on the retailer's page.</p>
-          <div className="mt-6">
-            <FlagshipCards phones={flagships} />
-          </div>
-        </section>
-      )}
-
-      <section className="my-8 rounded-3xl border border-[#E3E6F4] bg-gradient-to-br from-bg2 to-[#F4F6FD] p-8">
-        <div className="grid gap-6 [grid-template-columns:repeat(auto-fit,minmax(200px,1fr))]">
-          {[
-            { ic: '📉', t: 'Price history', d: 'See whether today’s price is actually a deal — every drop, tracked over time.' },
-            { ic: '🛡️', t: 'Seller trust scores', d: 'Buy with confidence from stores rated on reliability and delivery.' },
-            { ic: '🚚', t: 'Delivery comparison', d: 'Compare delivery cost and speed across Nairobi and countrywide.' },
-            { ic: '🔔', t: 'Price alerts', d: 'Get notified the moment your phone drops to your target price.' },
-          ].map((x) => (
-            <div key={x.t}>
-              <div className="text-2xl">{x.ic}</div>
-              <div className="mt-2 font-display font-bold">{x.t}</div>
-              <p className="mt-1 text-sm text-mut leading-relaxed">{x.d}</p>
+      {/* 2 · Price drops — the hook, right at the top */}
+      <section className="pt-2 pb-8">
+        <PriceDropTicker deals={deals} />
+        {deals.length > 0 ? (
+          <>
+            <div className="mt-6 mb-4 flex flex-wrap items-center justify-between gap-2">
+              <h2 className="font-display text-xl font-bold">Today’s top deals</h2>
+              <Link href="/deals" className="text-sm font-semibold text-accent hover:underline">
+                All price drops →
+              </Link>
             </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="pb-8">
-        <Link href="/releases" className="group block rounded-3xl overflow-hidden border border-coral/25 bg-gradient-to-r from-[#241a44] via-[#2A1E4D] to-[#160f2e] text-white p-6 md:p-7 hover:-translate-y-0.5 transition">
-          <div className="flex flex-wrap items-center justify-between gap-4">
-            <div>
-              <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 py-1 text-xs font-bold">🆕 New &amp; Upcoming</span>
-              <h2 className="font-display text-xl md:text-2xl font-bold mt-3">The latest global releases — priced for Kenya</h2>
-              <p className="text-white/75 text-sm mt-1 max-w-xl">See what just launched, how old each device is, and what&apos;s coming next — iPhone 18, Pixel 11, Galaxy Z Fold8 and more.</p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {deals.slice(0, 8).map((d) => (
+                <ProductCard
+                  key={d.slug}
+                  p={{ ...d, minPrice: d.currentPrice }}
+                  drop={{ pct: d.dropPct, previous: d.previousPrice }}
+                />
+              ))}
             </div>
-            <span className="shrink-0 rounded-full bg-white text-[#2A1E4D] font-bold text-sm px-5 py-2.5 group-hover:bg-amber group-hover:text-ink transition">Explore releases →</span>
-          </div>
-        </Link>
+          </>
+        ) : (
+          cheapest.items.length > 0 && (
+            <>
+              <div className="mt-6 mb-4 flex flex-wrap items-center justify-between gap-2">
+                <h2 className="font-display text-xl font-bold">Lowest prices right now</h2>
+                <Link href="/deals" className="text-sm font-semibold text-accent hover:underline">
+                  All deals →
+                </Link>
+              </div>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {cheapest.items.map((p) => <ProductCard key={p.slug} p={p} />)}
+              </div>
+            </>
+          )
+        )}
       </section>
 
+      {/* 3 · Shop by category — grouped, scannable */}
       <section className="pb-8">
-        <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
+        <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
           <h2 className="font-display text-xl font-bold">Shop by category</h2>
           <div className="flex gap-3 text-sm font-semibold">
-            <Link href="/phones" className="text-coral hover:underline">Phones by tier & price →</Link>
-            <Link href="/laptops/chooser" className="text-coral hover:underline hidden sm:inline">Laptop chooser →</Link>
+            <Link href="/phones" className="text-accent hover:underline">Phones by tier & price →</Link>
+            <Link href="/laptops/chooser" className="hidden text-accent hover:underline sm:inline">Laptop chooser →</Link>
           </div>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
-          {live.map((c) => (
-            <Link key={c.slug} href={`/c/${c.slug}`}
-              className="rounded-2xl border border-[#E3E6F4] bg-white p-4 text-center shadow-sm hover:-translate-y-1 hover:border-coral transition">
-              <div className="font-bold text-sm">{c.name}</div>
-              <div className="text-xs text-[#A99FB4] font-bold mt-0.5">{c.productCount} devices</div>
-            </Link>
-          ))}
-        </div>
+        <CategoryGroups categories={live} />
       </section>
 
       <AdSlot className="my-2" />
 
-      <div className="grid lg:grid-cols-[1fr_320px] gap-8 items-start">
-        <div>
-          <Section title="Best prices right now" items={deals.items} />
-          <Section title="New arrivals" items={fresh.items} />
-        </div>
-        <div className="lg:sticky lg:top-20">
-          <TopInterest
-            items={topPhones}
-            title="Top 10 phones in Kenya"
-            subtitle="Ranked by shopper interest — updated continuously"
-          />
-          <Link
-            href="/c/smartphones"
-            className="mt-3 block text-center text-sm font-semibold text-coral hover:underline"
-          >
-            See all phones →
-          </Link>
-          <div className="mt-4">
-            <TipPrompt />
+      {/* 4 · Top 10 phones in Kenya */}
+      {topPhones.length > 0 && (
+        <section className="pb-8 pt-4">
+          <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
+            <div>
+              <h2 className="font-display text-xl font-bold">Top 10 phones in Kenya</h2>
+              <p className="mt-0.5 text-sm text-muted">Ranked by shopper interest — updated continuously</p>
+            </div>
+            <Link href="/c/smartphones" className="text-sm font-semibold text-accent hover:underline">
+              See all phones →
+            </Link>
           </div>
-        </div>
-      </div>
-      <div className="h-10" />
-    </div>
-  );
-}
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+            {topPhones.map((p) => <ProductCard key={p.slug} p={p} rank={p.rank} />)}
+          </div>
+        </section>
+      )}
 
-function Section({ title, items }: { title: string; items: import('@rc/types').ProductSummaryDTO[] }) {
-  return (
-    <section className="pb-8">
-      <h2 className="font-display text-xl font-bold mb-4">{title}</h2>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        {items.map((p) => <ProductCard key={p.slug} p={p} />)}
-      </div>
-    </section>
+      {/* Everything else lives on /explore */}
+      <section className="pb-10">
+        <Link
+          href="/explore"
+          className="block rounded-2xl border border-line bg-surface px-5 py-4 text-center text-sm font-semibold text-accent shadow-xs transition duration-fast ease-out hover:border-line-strong"
+        >
+          Explore more — flagships, new arrivals & upcoming releases →
+        </Link>
+      </section>
+    </div>
   );
 }

@@ -58,6 +58,7 @@ export default function Header() {
         </div>
         <nav className="flex shrink-0 items-center gap-5 text-sm font-medium text-muted">
           <Link href="/deals" className="text-accent transition-colors duration-fast ease-out hover:opacity-80">Deals</Link>
+          <Link href="/explore" className="hidden transition-colors duration-fast ease-out hover:text-text md:block">Explore</Link>
           <Link href="/releases" className="hidden transition-colors duration-fast ease-out hover:text-text md:block">New &amp; Upcoming</Link>
           <Link href="/phones" className="hidden transition-colors duration-fast ease-out hover:text-text md:block">Phones</Link>
           <Link href="/accessories" className="hidden transition-colors duration-fast ease-out hover:text-text lg:block">Accessories</Link>
