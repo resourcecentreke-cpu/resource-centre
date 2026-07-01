@@ -16,7 +16,7 @@
  * — eyeball it after a run and fix any wrong matches by deleting the file and
  * adding a manual page URL to product-page-urls.csv (see fetch-og-images.mjs).
  */
-import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, mkdirSync, copyFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
@@ -85,22 +85,37 @@ function tokens(name) {
   return norm(name).split(' ').filter((t) => t && !STOP.has(t));
 }
 
+const isYear = (t) => /^(19|20)\d{2}$/.test(t);
+
 function scoreMatch(productName, candidateTitle) {
   const want = tokens(productName);
-  const have = new Set(tokens(candidateTitle));
+  const haveRaw = tokens(candidateTitle);
+  const have = new Set(haveRaw);
+  const haveJoined = haveRaw.join(' ');
   if (!want.length) return 0;
   let hit = 0;
   for (const t of want) {
     if (have.has(t)) { hit++; continue; }
     // "43" should match "43inch"/"43-inch" style joins
-    if ([...have].some((h) => h.includes(t) && t.length >= 2)) hit += 0.5;
+    if (t.length >= 2 && haveRaw.some((h) => h.includes(t))) hit += 0.5;
   }
-  // digit tokens (sizes, model numbers) are non-negotiable
-  const digits = want.filter((t) => /\d/.test(t));
+  // Sizes/capacities are non-negotiable, but compare their NUMERIC part only
+  // ("90l" matches "90 litres", "7kg" matches "7 kg"). Years are advisory.
+  const digits = want.filter((t) => /\d/.test(t) && !isYear(t));
   for (const d of digits) {
-    if (!have.has(d) && ![...have].some((h) => h.includes(d))) return 0;
+    const num = d.match(/\d+/)[0];
+    if (!haveJoined.includes(num)) return 0;
   }
   return hit / want.length;
+}
+
+// Query attempts, strictest first: full name → name minus years/model codes →
+// brand + first three meaningful tokens.
+function buildQueries(name) {
+  const full = tokens(name);
+  const noYear = full.filter((t) => !isYear(t));
+  const short = noYear.slice(0, 4);
+  return [...new Set([full.join(' '), noYear.join(' '), short.join(' ')])].filter(Boolean);
 }
 
 // ── Jumia fetch + parse ──────────────────────────────────────────────────────
@@ -153,11 +168,31 @@ let ok = 0, weak = 0, fail = 0, skip = 0;
 for (const t of targets) {
   const dest = join(OUT, `${t.slug}.jpg`);
   if (!FORCE && existsSync(dest)) { skip++; continue; }
-  const q = encodeURIComponent(norm(t.name));
+
+  // Refurbished variant of a model we already have? Reuse its photo.
+  if (/-refurbished$/.test(t.slug)) {
+    const base = join(OUT, `${t.slug.replace(/-refurbished$/, '')}.jpg`);
+    if (existsSync(base)) {
+      if (!DRY) copyFileSync(base, dest);
+      console.log(`📋 ${t.slug}  copied from base model`);
+      report.push([t.slug, DRY ? 'dry-copy' : 'ok', 'copied from base model', base]);
+      ok++;
+      continue;
+    }
+  }
+
   try {
-    const html = await fetchText(`https://www.jumia.co.ke/catalog/?q=${q}`);
-    const cards = parseCards(html);
-    if (!cards.length) throw new Error('no product cards parsed');
+    // Try progressively simpler queries until product cards appear.
+    let cards = [];
+    let sawResultsPage = false;
+    for (const query of buildQueries(t.name)) {
+      const html = await fetchText(`https://www.jumia.co.ke/catalog/?q=${encodeURIComponent(query)}`);
+      if (/no results for|did not match any/i.test(html)) { sawResultsPage = true; continue; }
+      cards = parseCards(html);
+      if (cards.length) break;
+      await new Promise((r) => setTimeout(r, 600));
+    }
+    if (!cards.length) throw new Error(sawResultsPage ? 'not stocked on Jumia' : 'no product cards parsed');
     const ranked = cards
       .map((c) => ({ ...c, score: scoreMatch(t.name, c.title) }))
       .sort((a, b) => b.score - a.score);
