@@ -78,6 +78,17 @@ if (FROM_REPORT) {
   }
   targets = targets.filter((t) => redoSlugs.has(t.slug));
 }
+// Never clobber photos that came from OFFICIAL pages (fetch-og-images.mjs).
+const OG_REPORT = join(ROOT, 'product-page-images-report.csv');
+if (existsSync(OG_REPORT) && !ONLY.length) {
+  const official = new Set();
+  for (const line of readFileSync(OG_REPORT, 'utf8').split(/\r?\n/).slice(1)) {
+    const c = parseCsvLine(line);
+    if (c[1] === 'ok') official.add(c[0]);
+  }
+  targets = targets.filter((t) => !official.has(t.slug));
+}
+
 if (ONLY.length) targets = targets.filter((t) => ONLY.includes(t.slug));
 if (LIMIT) targets = targets.slice(0, LIMIT);
 
