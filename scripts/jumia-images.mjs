@@ -87,7 +87,23 @@ function tokens(name) {
 
 const isYear = (t) => /^(19|20)\d{2}$/.test(t);
 
+// Reject listings that are accessories FOR the product ("charger for HP
+// Victus 15", "case for iPhone…") unless the product itself is an accessory.
+const ACCESSORY_WORDS = [
+  'case', 'cover', 'pouch', 'sleeve', 'skin', 'protector', 'tempered', 'films',
+  'charger', 'adapter', 'cable', 'replacement', 'strap', 'band', 'mount',
+  'stand', 'holder', 'dock', 'hub', 'stylus', 'screen guard', 'battery for',
+  'parts', 'repair', 'motherboard', 'hinge', 'bezel',
+];
+function isAccessoryListing(productName, title) {
+  const p = norm(productName);
+  const t = norm(title);
+  if (/\bfor\b/.test(t) && !/\bfor\b/.test(p)) return true;
+  return ACCESSORY_WORDS.some((w) => t.includes(w) && !p.includes(w));
+}
+
 function scoreMatch(productName, candidateTitle) {
+  if (isAccessoryListing(productName, candidateTitle)) return 0;
   const want = tokens(productName);
   const haveRaw = tokens(candidateTitle);
   const have = new Set(haveRaw);
