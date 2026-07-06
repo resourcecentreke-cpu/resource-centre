@@ -2,54 +2,57 @@ import Link from 'next/link';
 import type { CategoryDTO } from '@rc/types';
 
 /**
- * Categories grouped into three scannable clusters instead of one flat
- * 16-tag row: Phones & Accessories / Computing & Cameras / Home & Appliances.
- * Matching is keyword-based on the slug so new categories slot in automatically.
+ * eBay-style "Explore popular categories" — circular icon tiles, still
+ * organised into three scannable clusters so 16 categories never feel like a
+ * flat tag dump. Keyword-matched on the slug so new categories slot in.
  */
 
-const GROUPS: { title: string; icon: string; match: RegExp }[] = [
-  {
-    title: 'Phones & Accessories',
-    icon: '📱',
-    match: /phone|tablet|accessor|audio|earbud|headphone|speaker|wearable|watch|power/,
-  },
-  {
-    title: 'Computing & Cameras',
-    icon: '💻',
-    match: /laptop|desktop|computer|monitor|printer|storage|camera|drone|gaming|console|network|router/,
-  },
-  {
-    title: 'Home & Appliances',
-    icon: '🏠',
-    match: /tv|television|fridge|refrigerator|dishwasher|washer|washing|cooker|oven|microwave|kettle|blender|vacuum|air|iron|freezer|appliance/,
-  },
+const GROUPS: { title: string; match: RegExp }[] = [
+  { title: 'Phones & Accessories', match: /phone|tablet|accessor|audio|earbud|headphone|speaker|wearable|watch|power|charger|cable|cover/ },
+  { title: 'Computing & Cameras', match: /laptop|desktop|computer|monitor|printer|storage|camera|drone|gaming|console|network|router/ },
+  { title: 'Home & Appliances', match: /tv|television|fridge|refrigerator|dishwasher|washer|washing|cooker|oven|microwave|kettle|blender|vacuum|air|iron|freezer|appliance/ },
 ];
+
+const ICONS: [RegExp, string][] = [
+  [/smartphone|phone(?!.*cover)/, '📱'],
+  [/tablet/, '📲'],
+  [/laptop|computer/, '💻'],
+  [/tv|television/, '📺'],
+  [/fridge|refrigerator|freezer/, '🧊'],
+  [/dishwasher/, '🍽️'],
+  [/wash/, '🌀'],
+  [/audio|speaker|headphone/, '🎧'],
+  [/earbud/, '🎧'],
+  [/watch|wearable/, '⌚'],
+  [/camera|drone/, '📷'],
+  [/power/, '🔋'],
+  [/charger|cable/, '🔌'],
+  [/cover|case/, '🛡️'],
+  [/accessor/, '🎒'],
+];
+const iconFor = (slug: string) => (ICONS.find(([re]) => re.test(slug)) || [null, '🛍️'])[1];
 
 export default function CategoryGroups({ categories }: { categories: CategoryDTO[] }) {
   const buckets: CategoryDTO[][] = GROUPS.map(() => []);
   for (const c of categories) {
     const idx = GROUPS.findIndex((g) => g.match.test(c.slug.toLowerCase()));
-    buckets[idx === -1 ? 2 : idx]!.push(c); // unmatched → Home & Appliances
+    buckets[idx === -1 ? 2 : idx]!.push(c);
   }
 
   return (
-    <div className="grid gap-4 md:grid-cols-3">
+    <div className="space-y-6">
       {GROUPS.map((g, i) =>
         buckets[i]!.length === 0 ? null : (
-          <div key={g.title} className="rounded-2xl border border-line bg-surface p-4 shadow-xs">
-            <div className="flex items-center gap-2">
-              <span className="text-lg" aria-hidden>{g.icon}</span>
-              <h3 className="text-sm font-bold text-text">{g.title}</h3>
-            </div>
-            <div className="mt-3 flex flex-wrap gap-2">
+          <div key={g.title}>
+            <h3 className="mb-3 text-sm font-bold text-muted">{g.title}</h3>
+            <div className="flex flex-wrap gap-x-5 gap-y-4">
               {buckets[i]!.map((c) => (
-                <Link
-                  key={c.slug}
-                  href={`/c/${c.slug}`}
-                  className="inline-flex items-center gap-1.5 rounded-full bg-bg2 px-3 py-1.5 text-xs font-semibold text-text ring-1 ring-line transition duration-fast ease-out hover:ring-line-strong hover:-translate-y-0.5"
-                >
-                  {c.name}
-                  <span className="font-medium text-faint">{c.productCount}</span>
+                <Link key={c.slug} href={`/c/${c.slug}`} className="group flex w-20 flex-col items-center text-center">
+                  <span className="flex h-16 w-16 items-center justify-center rounded-full bg-bg2 text-2xl ring-1 ring-line transition duration-fast ease-out group-hover:ring-2 group-hover:ring-text group-hover:-translate-y-0.5">
+                    {c.icon || iconFor(c.slug)}
+                  </span>
+                  <span className="mt-2 line-clamp-2 text-xs font-semibold leading-tight text-text">{c.name}</span>
+                  <span className="text-2xs font-medium text-faint">{c.productCount}</span>
                 </Link>
               ))}
             </div>

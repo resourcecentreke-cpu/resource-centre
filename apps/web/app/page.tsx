@@ -10,19 +10,17 @@ import type { DealDTO, ProductSummaryDTO } from '@rc/types';
 export const revalidate = 60;
 
 /**
- * Homepage — one clear job per scroll-section:
- *   1. Hero + search
- *   2. Price drops (ticker + top deals)
- *   3. Shop by category (grouped)
- *   4. Top 10 phones in Kenya
- * Everything else (flagships, new arrivals, releases, tip) lives on /explore.
+ * Homepage — eBay-style cover: big light banner hero, horizontal deal
+ * carousels, circular category tiles, Top-10 rail. One job per section:
+ *   1. Hero + search   2. Price drops   3. Categories   4. Top 10
+ * Everything else lives on /explore.
  */
 export default async function Home() {
   const [categories, topPhones, deals, cheapest] = await Promise.all([
     getCategories(),
     getTopInterest('smartphones', 10).catch(() => []),
-    getDeals(8).catch(() => [] as DealDTO[]),
-    getProducts('?sort=price_asc&pageSize=8').catch(() => ({ items: [] as ProductSummaryDTO[] })),
+    getDeals(12).catch(() => [] as DealDTO[]),
+    getProducts('?sort=price_asc&pageSize=12').catch(() => ({ items: [] as ProductSummaryDTO[] })),
   ]);
   const live = categories.filter((c) => c.productCount > 0);
   const heroPhones: ProductSummaryDTO[] = topPhones.length ? topPhones : cheapest.items;
@@ -30,55 +28,51 @@ export default async function Home() {
   return (
     <div className="max-w-6xl mx-auto px-5">
       {/* 1 · Hero + search */}
-      <section className="pt-8 pb-4">
+      <section className="pt-6 pb-4">
         <HeroShowcase phones={heroPhones} />
       </section>
 
-      {/* 2 · Price drops — the hook, right at the top */}
-      <section className="pt-2 pb-8">
+      {/* 2 · Price drops — carousel, eBay "Today's deals" style */}
+      <section className="pt-2 pb-10">
         <PriceDropTicker deals={deals} />
-        {deals.length > 0 ? (
+        {(deals.length > 0 || cheapest.items.length > 0) && (
           <>
-            <div className="mt-6 mb-4 flex flex-wrap items-center justify-between gap-2">
-              <h2 className="font-display text-xl font-bold">Today’s top deals</h2>
-              <Link href="/deals" className="text-sm font-semibold text-accent hover:underline">
-                All price drops →
+            <div className="mt-8 mb-4 flex flex-wrap items-baseline justify-between gap-2">
+              <div className="flex items-baseline gap-3">
+                <h2 className="font-display text-2xl font-bold tracking-tight">
+                  {deals.length ? 'Today’s top deals' : 'Lowest prices right now'}
+                </h2>
+                {deals.length > 0 && <span className="text-sm font-semibold text-mint">All with price drops</span>}
+              </div>
+              <Link href="/deals" className="text-sm font-bold text-text underline underline-offset-4 hover:text-accent">
+                See all
               </Link>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {deals.slice(0, 8).map((d) => (
-                <ProductCard
-                  key={d.slug}
-                  p={{ ...d, minPrice: d.currentPrice }}
-                  drop={{ pct: d.dropPct, previous: d.previousPrice }}
-                />
+            <Carousel>
+              {(deals.length ? deals : cheapest.items).map((p) => (
+                <CarouselItem key={p.slug}>
+                  {'dropPct' in p ? (
+                    <ProductCard
+                      p={{ ...(p as DealDTO), minPrice: (p as DealDTO).currentPrice }}
+                      drop={{ pct: (p as DealDTO).dropPct, previous: (p as DealDTO).previousPrice }}
+                    />
+                  ) : (
+                    <ProductCard p={p} />
+                  )}
+                </CarouselItem>
               ))}
-            </div>
+            </Carousel>
           </>
-        ) : (
-          cheapest.items.length > 0 && (
-            <>
-              <div className="mt-6 mb-4 flex flex-wrap items-center justify-between gap-2">
-                <h2 className="font-display text-xl font-bold">Lowest prices right now</h2>
-                <Link href="/deals" className="text-sm font-semibold text-accent hover:underline">
-                  All deals →
-                </Link>
-              </div>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {cheapest.items.map((p) => <ProductCard key={p.slug} p={p} />)}
-              </div>
-            </>
-          )
         )}
       </section>
 
-      {/* 3 · Shop by category — grouped, scannable */}
-      <section className="pb-8">
-        <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
-          <h2 className="font-display text-xl font-bold">Shop by category</h2>
-          <div className="flex gap-3 text-sm font-semibold">
-            <Link href="/phones" className="text-accent hover:underline">Phones by tier & price →</Link>
-            <Link href="/laptops/chooser" className="hidden text-accent hover:underline sm:inline">Laptop chooser →</Link>
+      {/* 3 · Explore popular categories */}
+      <section className="pb-10">
+        <div className="mb-5 flex flex-wrap items-baseline justify-between gap-2">
+          <h2 className="font-display text-2xl font-bold tracking-tight">Explore popular categories</h2>
+          <div className="flex gap-4 text-sm font-bold">
+            <Link href="/phones" className="text-text underline underline-offset-4 hover:text-accent">Phones by tier</Link>
+            <Link href="/laptops/chooser" className="hidden text-text underline underline-offset-4 hover:text-accent sm:inline">Laptop chooser</Link>
           </div>
         </div>
         <CategoryGroups categories={live} />
@@ -89,18 +83,22 @@ export default async function Home() {
       {/* 4 · Top 10 phones in Kenya */}
       {topPhones.length > 0 && (
         <section className="pb-8 pt-4">
-          <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
+          <div className="mb-4 flex flex-wrap items-baseline justify-between gap-2">
             <div>
-              <h2 className="font-display text-xl font-bold">Top 10 phones in Kenya</h2>
+              <h2 className="font-display text-2xl font-bold tracking-tight">Top 10 phones in Kenya</h2>
               <p className="mt-0.5 text-sm text-muted">Ranked by shopper interest — updated continuously</p>
             </div>
-            <Link href="/c/smartphones" className="text-sm font-semibold text-accent hover:underline">
-              See all phones →
+            <Link href="/c/smartphones" className="text-sm font-bold text-text underline underline-offset-4 hover:text-accent">
+              See all phones
             </Link>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-            {topPhones.map((p) => <ProductCard key={p.slug} p={p} rank={p.rank} />)}
-          </div>
+          <Carousel>
+            {topPhones.map((p) => (
+              <CarouselItem key={p.slug}>
+                <ProductCard p={p} rank={p.rank} />
+              </CarouselItem>
+            ))}
+          </Carousel>
         </section>
       )}
 
@@ -108,11 +106,24 @@ export default async function Home() {
       <section className="pb-10">
         <Link
           href="/explore"
-          className="block rounded-2xl border border-line bg-surface px-5 py-4 text-center text-sm font-semibold text-accent shadow-xs transition duration-fast ease-out hover:border-line-strong"
+          className="block rounded-2xl border-2 border-text bg-surface px-5 py-4 text-center text-sm font-bold text-text transition duration-fast ease-out hover:bg-bg2"
         >
-          Explore more — flagships, new arrivals & upcoming releases →
+          Explore more — flagships, new arrivals &amp; upcoming releases →
         </Link>
       </section>
     </div>
   );
+}
+
+/** eBay-style horizontal snap carousel (no visible scrollbar). */
+function Carousel({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="-mx-1 flex snap-x snap-mandatory gap-4 overflow-x-auto px-1 pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+      {children}
+    </div>
+  );
+}
+
+function CarouselItem({ children }: { children: React.ReactNode }) {
+  return <div className="w-44 shrink-0 snap-start sm:w-48">{children}</div>;
 }
