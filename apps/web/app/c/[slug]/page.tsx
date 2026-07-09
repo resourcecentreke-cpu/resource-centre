@@ -6,6 +6,7 @@ import { abs, priceString, SITE_NAME } from '../../../lib/seo';
 import Filters from '../../../components/Filters';
 import JsonLd from '../../../components/JsonLd';
 import TopInterest from '../../../components/TopInterest';
+import AdSlot from '../../../components/AdSlot';
 
 export const revalidate = 60;
 
@@ -120,6 +121,8 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
           </div>
         )}
       </div>
+
+      <AdSlot className="my-6" />
     </div>
   );
 }

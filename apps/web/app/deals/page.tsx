@@ -4,6 +4,7 @@ import { getDeals } from '../../lib/api';
 import { fmtKES } from '../../lib/format';
 import { abs, SITE_NAME } from '../../lib/seo';
 import JsonLd from '../../components/JsonLd';
+import AdSlot from '../../components/AdSlot';
 
 // Refresh a few times an hour — deals change as prices move.
 export const revalidate = 300;
@@ -100,6 +101,8 @@ export default async function DealsPage() {
           ))}
         </div>
       )}
+
+      <AdSlot className="my-6" />
     </div>
   );
 }

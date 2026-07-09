@@ -114,6 +114,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <nav className="flex flex-wrap gap-x-7 gap-y-2.5">
               {[
                 ['/about', 'About'],
+                ['/advertise', 'Advertise'],
                 ['/contact', 'Contact'],
                 ['/privacy', 'Privacy'],
                 ['/terms', 'Terms'],

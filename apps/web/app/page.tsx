@@ -1,9 +1,10 @@
 import Link from 'next/link';
-import { getCategories, getDeals, getProducts, getTopInterest } from '../lib/api';
+import { getCategories, getDeals, getProducts, getTopInterest, getSponsored } from '../lib/api';
 import ProductCard from '../components/ProductCard';
 import HeroShowcase from '../components/HeroShowcase';
 import PriceDropTicker from '../components/PriceDropTicker';
 import CategoryGroups from '../components/CategoryGroups';
+import SponsoredStrip from '../components/SponsoredStrip';
 import AdSlot from '../components/AdSlot';
 import type { DealDTO, ProductSummaryDTO } from '@rc/types';
 
@@ -16,11 +17,12 @@ export const revalidate = 60;
  * Everything else lives on /explore.
  */
 export default async function Home() {
-  const [categories, topPhones, deals, cheapest] = await Promise.all([
+  const [categories, topPhones, deals, cheapest, sponsored] = await Promise.all([
     getCategories(),
     getTopInterest('smartphones', 10).catch(() => []),
     getDeals(12).catch(() => [] as DealDTO[]),
     getProducts('?sort=price_asc&pageSize=12').catch(() => ({ items: [] as ProductSummaryDTO[] })),
+    getSponsored('home').catch(() => []),
   ]);
   const live = categories.filter((c) => c.productCount > 0);
   const heroPhones: ProductSummaryDTO[] = topPhones.length ? topPhones : cheapest.items;
@@ -31,6 +33,9 @@ export default async function Home() {
       <section className="pt-6 pb-4">
         <HeroShowcase phones={heroPhones} />
       </section>
+
+      {/* Paid placements — only shows when a campaign is live */}
+      <SponsoredStrip items={sponsored} />
 
       {/* 2 · Price drops — carousel, eBay "Today's deals" style */}
       <section className="pt-2 pb-10">

@@ -5,6 +5,7 @@ import type { ProductSummaryDTO } from '@rc/types';
 import { search, logEvent } from '../../lib/api';
 import ProductCard from '../../components/ProductCard';
 import BarcodeScanner from '../../components/BarcodeScanner';
+import AdSlot from '../../components/AdSlot';
 
 function Results() {
   const params = useSearchParams();
@@ -29,6 +30,7 @@ function Results() {
         {items.map((p) => <ProductCard key={p.slug} p={p} />)}
       </div>
       {!loading && !items.length && <p className="text-mut">No devices match “{q}”.</p>}
+      <AdSlot className="my-6" />
     </div>
   );
 }

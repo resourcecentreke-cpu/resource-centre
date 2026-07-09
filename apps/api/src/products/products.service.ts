@@ -73,6 +73,7 @@ export class ProductsService {
 
     const offers: OfferDTO[] = p.offers
       .map((o) => ({
+        id: o.id,
         sellerId: o.sellerId,
         sellerName: o.seller.name,
         price: o.price,
@@ -83,6 +84,8 @@ export class ProductsService {
         // Deep-link to the seller's product/search page (where the live price is),
         // with referral tracking — never an image or generic homepage.
         productUrl: o.productUrl ?? outboundUrl(o.seller.searchUrlTemplate, p.name) ?? '#',
+        // Monetized redirect: logs the click and appends affiliate codes server-side.
+        goUrl: `/api/go/${o.id}`,
         lastSeenAt: o.lastSeenAt.toISOString(),
       }))
       // In-stock (and low-stock) offers first by price; out-of-stock sink to the

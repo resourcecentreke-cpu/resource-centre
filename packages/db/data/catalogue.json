@@ -3,7 +3,7 @@
     "cat": "Phones",
     "name": "Samsung Galaxy S26 Ultra",
     "spec": "6.9\" QHD+ · SD 8 Elite Gen5 · 200MP",
-    "img": "samsung-galaxy-s26-ultra-5g",
+    "img": "samsung-galaxy-s26-ultra",
     "new": 1,
     "stores": [
       [
@@ -159,7 +159,7 @@
     "cat": "Phones",
     "name": "Samsung Galaxy S26+",
     "spec": "6.7\" QHD+ · SD 8 Elite Gen5 · 50MP",
-    "img": "samsung-galaxy-s26-plus-5g",
+    "img": "samsung-galaxy-s26-plus",
     "new": 1,
     "stores": [
       [
@@ -198,7 +198,7 @@
     "cat": "Phones",
     "name": "Samsung Galaxy S26",
     "spec": "6.3\" FHD+ · SD 8 Elite Gen5 · 50MP",
-    "img": "samsung-galaxy-s26-5g",
+    "img": "samsung-galaxy-s26",
     "new": 1,
     "stores": [
       [
@@ -237,7 +237,7 @@
     "cat": "Phones",
     "name": "Google Pixel 10 Pro",
     "spec": "6.3\" LTPO · Tensor G5 · 50MP triple",
-    "img": "google-pixel-10-pro",
+    "img": "",
     "new": 1,
     "stores": [
       [
@@ -393,7 +393,7 @@
     "cat": "Phones",
     "name": "OnePlus Nord 6 Pro",
     "spec": "6.72\" AMOLED 120Hz · 50MP IMX",
-    "img": "oneplus-nord-6",
+    "img": "",
     "new": 1,
     "stores": [
       [
@@ -432,7 +432,7 @@
     "cat": "Phones",
     "name": "Xiaomi 16 Pro",
     "spec": "6.73\" LTPO · SD 8 Elite Gen5 · Leica 50MP",
-    "img": "xiaomi-16-pro",
+    "img": "",
     "new": 1,
     "stores": [
       [
@@ -627,7 +627,7 @@
     "cat": "Tablets",
     "name": "iPad Air 13\" (M3)",
     "spec": "13\" LCD · M3 · USB-C",
-    "img": "apple-ipad-air-13-m3-2025",
+    "img": "",
     "new": 0,
     "stores": [
       [
@@ -666,7 +666,7 @@
     "cat": "Tablets",
     "name": "OnePlus Pad 3",
     "spec": "13.2\" 144Hz · SD 8 Elite · 12140mAh",
-    "img": "oneplus-pad-3",
+    "img": "",
     "new": 1,
     "stores": [
       [
@@ -744,7 +744,7 @@
     "cat": "Tablets",
     "name": "Honor Pad 10",
     "spec": "12.1\" 2.5K · SD 7 Gen3",
-    "img": "honor-pad-10",
+    "img": "",
     "new": 0,
     "stores": [
       [
@@ -2294,7 +2294,7 @@
     "cat": "Phones",
     "name": "CMF Phone 2 Pro",
     "spec": "6.77\" AMOLED · Dimensity 7300 Pro",
-    "img": "cmf-by-nothing-phone-2-pro",
+    "img": "",
     "new": 1,
     "stores": [
       [
@@ -2528,7 +2528,7 @@
     "cat": "Phones",
     "name": "Samsung Galaxy S25 Ultra",
     "spec": "6.9\" QHD+ · SD 8 Elite · 200MP",
-    "img": "samsung-galaxy-s25-ultra-5g",
+    "img": "",
     "new": 0,
     "stores": [
       [
@@ -2645,7 +2645,7 @@
     "cat": "Phones",
     "name": "Infinix Note 40 Pro",
     "spec": "6.78\" AMOLED 120Hz · Helio G99 · 108MP",
-    "img": "infinix-note-40-pro",
+    "img": "",
     "new": 0,
     "stores": [
       [
@@ -2769,7 +2769,7 @@
     "cat": "Phones",
     "name": "Samsung Galaxy S24 Ultra",
     "spec": "6.8\" QHD+ · SD 8 Gen3 · 200MP",
-    "img": "samsung-galaxy-s24-ultra-5g",
+    "img": "",
     "new": 0,
     "stores": [
       [
@@ -2808,7 +2808,7 @@
     "cat": "Phones",
     "name": "Google Pixel 9 Pro",
     "spec": "6.3\" LTPO OLED · Tensor G4 · 50MP triple",
-    "img": "google-pixel-9-pro",
+    "img": "",
     "new": 0,
     "stores": [
       [
@@ -2886,7 +2886,7 @@
     "cat": "Phones",
     "name": "Samsung Galaxy S24 FE",
     "spec": "6.7\" AMOLED 120Hz · Exynos 2400e · 50MP",
-    "img": "samsung-galaxy-s24-fe",
+    "img": "",
     "new": 0,
     "stores": [
       [
@@ -2964,7 +2964,7 @@
     "cat": "Phones",
     "name": "Xiaomi Redmi Note 14",
     "spec": "6.67\" AMOLED 120Hz · Helio G99 · 108MP",
-    "img": "xiaomi-redmi-note-14",
+    "img": "xiaomi-redmi-note-14-5g",
     "new": 0,
     "stores": [
       [
@@ -3003,7 +3003,7 @@
     "cat": "Phones",
     "name": "Samsung Galaxy A16",
     "spec": "6.7\" AMOLED 90Hz · 50MP · 5000mAh",
-    "img": "samsung-galaxy-a16",
+    "img": "samsung-galaxy-a16-5g",
     "new": 0,
     "stores": [
       [
@@ -3603,7 +3603,7 @@
     "cat": "Phones",
     "name": "iPhone 15 Plus",
     "spec": "6.7\" OLED · A16 · 48MP",
-    "img": "apple-iphone-15-plus",
+    "img": "",
     "new": 0,
     "interest": 885,
     "stores": [
@@ -3677,7 +3677,7 @@
     "cat": "Phones",
     "name": "Samsung Galaxy S25+",
     "spec": "6.7\" QHD+ 120Hz · SD 8 Elite",
-    "img": "samsung-galaxy-s25-plus-5g",
+    "img": "",
     "new": 0,
     "interest": 1064,
     "stores": [
@@ -3751,7 +3751,7 @@
     "cat": "Phones",
     "name": "Samsung Galaxy A56 5G",
     "spec": "6.7\" AMOLED 120Hz · Exynos 1580 · 50MP",
-    "img": "samsung-galaxy-a56-5g",
+    "img": "",
     "new": 1,
     "interest": 1335,
     "stores": [
@@ -3790,7 +3790,7 @@
     "cat": "Phones",
     "name": "Samsung Galaxy A36 5G",
     "spec": "6.7\" AMOLED · SD 6 Gen3 · 50MP",
-    "img": "samsung-galaxy-a36-5g",
+    "img": "samsung-galaxy-a36",
     "new": 1,
     "interest": 1312,
     "stores": [
@@ -3825,7 +3825,7 @@
     "cat": "Phones",
     "name": "Samsung Galaxy A26 5G",
     "spec": "6.7\" AMOLED · Exynos 1380 · 50MP",
-    "img": "samsung-galaxy-a26-5g",
+    "img": "samsung-galaxy-a26",
     "new": 1,
     "interest": 1295,
     "stores": [
@@ -3903,7 +3903,7 @@
     "cat": "Phones",
     "name": "Samsung Galaxy A06",
     "spec": "6.7\" HD+ · Helio G85 · 50MP",
-    "img": "samsung-galaxy-a06",
+    "img": "samsung-galaxy-a06-5g",
     "new": 0,
     "interest": 976,
     "stores": [
@@ -3942,7 +3942,7 @@
     "cat": "Phones",
     "name": "Samsung Galaxy A35 5G",
     "spec": "6.6\" AMOLED · Exynos 1380 · 50MP",
-    "img": "samsung-galaxy-a35-5g",
+    "img": "samsung-galaxy-a35",
     "new": 0,
     "interest": 1053,
     "stores": [
@@ -3981,7 +3981,7 @@
     "cat": "Phones",
     "name": "Google Pixel 10 Pro XL",
     "spec": "6.8\" LTPO · Tensor G5 · 5x tele",
-    "img": "google-pixel-10-pro-xl",
+    "img": "",
     "new": 1,
     "interest": 1241,
     "stores": [
@@ -4016,7 +4016,7 @@
     "cat": "Phones",
     "name": "Google Pixel 10",
     "spec": "6.3\" OLED 120Hz · Tensor G5 · 48MP",
-    "img": "google-pixel-10",
+    "img": "",
     "new": 1,
     "interest": 1113,
     "stores": [
@@ -4055,7 +4055,7 @@
     "cat": "Phones",
     "name": "Google Pixel 10 Pro Fold",
     "spec": "8\" foldable · Tensor G5",
-    "img": "google-pixel-10-pro-fold",
+    "img": "",
     "new": 1,
     "interest": 1194,
     "stores": [
@@ -4094,7 +4094,7 @@
     "cat": "Phones",
     "name": "Google Pixel 9",
     "spec": "6.3\" OLED · Tensor G4 · 50MP",
-    "img": "google-pixel-9",
+    "img": "",
     "new": 0,
     "interest": 925,
     "stores": [
@@ -4129,7 +4129,7 @@
     "cat": "Phones",
     "name": "Google Pixel 9 Pro XL",
     "spec": "6.8\" LTPO · Tensor G4 · 5x tele",
-    "img": "google-pixel-9-pro-xl",
+    "img": "",
     "new": 0,
     "interest": 938,
     "stores": [
@@ -4199,7 +4199,7 @@
     "cat": "Phones",
     "name": "OnePlus 14",
     "spec": "6.82\" LTPO · SD 8 Elite Gen5 · 50MP",
-    "img": "oneplus-14",
+    "img": "",
     "new": 1,
     "interest": 1081,
     "stores": [
@@ -4351,7 +4351,7 @@
     "cat": "Phones",
     "name": "OnePlus Nord 5",
     "spec": "6.83\" 144Hz · SD 8s Gen3 · 50MP",
-    "img": "oneplus-nord-5",
+    "img": "",
     "new": 1,
     "interest": 1209,
     "stores": [
@@ -4390,7 +4390,7 @@
     "cat": "Phones",
     "name": "OnePlus Nord 4",
     "spec": "6.74\" AMOLED · SD 7+ Gen3 · 50MP",
-    "img": "oneplus-nord-4",
+    "img": "",
     "new": 0,
     "interest": 908,
     "stores": [
@@ -4429,7 +4429,7 @@
     "cat": "Phones",
     "name": "OnePlus Nord CE4",
     "spec": "6.7\" AMOLED · SD 7 Gen3 · 50MP",
-    "img": "oneplus-nord-ce4",
+    "img": "",
     "new": 0,
     "interest": 1022,
     "stores": [
@@ -4468,7 +4468,7 @@
     "cat": "Phones",
     "name": "Xiaomi 16",
     "spec": "6.3\" LTPO · SD 8 Elite Gen5 · 50MP",
-    "img": "xiaomi-16",
+    "img": "",
     "new": 1,
     "interest": 1159,
     "stores": [
@@ -4546,7 +4546,7 @@
     "cat": "Phones",
     "name": "Xiaomi 15 Ultra",
     "spec": "6.73\" QHD+ · SD 8 Elite · Leica 200MP",
-    "img": "xiaomi-15-ultra",
+    "img": "",
     "new": 0,
     "interest": 975,
     "stores": [
@@ -4620,7 +4620,7 @@
     "cat": "Phones",
     "name": "Xiaomi Redmi Note 14 Pro",
     "spec": "6.67\" AMOLED · Dimensity 7300 · 200MP",
-    "img": "xiaomi-redmi-note-14-pro",
+    "img": "xiaomi-redmi-note-14-pro-5g",
     "new": 0,
     "interest": 1049,
     "stores": [
@@ -4659,7 +4659,7 @@
     "cat": "Phones",
     "name": "Xiaomi Redmi Note 15 Pro",
     "spec": "6.67\" AMOLED · Dimensity 7400 · 50MP",
-    "img": "xiaomi-redmi-note-15-pro",
+    "img": "xiaomi-redmi-note-15-pro-5g",
     "new": 1,
     "interest": 1244,
     "stores": [
@@ -4698,7 +4698,7 @@
     "cat": "Phones",
     "name": "Xiaomi Redmi 15",
     "spec": "6.9\" 144Hz · SD 6s Gen3 · 50MP",
-    "img": "xiaomi-redmi-15",
+    "img": "xiaomi-redmi-15-5g",
     "new": 1,
     "interest": 1345,
     "stores": [
@@ -4850,7 +4850,7 @@
     "cat": "Phones",
     "name": "Xiaomi Poco C75",
     "spec": "6.88\" · Helio G81 · 50MP",
-    "img": "xiaomi-poco-c75",
+    "img": "",
     "new": 0,
     "interest": 857,
     "stores": [
@@ -4885,7 +4885,7 @@
     "cat": "Phones",
     "name": "Tecno Camon 40 Pro 5G",
     "spec": "6.78\" AMOLED · Dimensity 7300 · 50MP",
-    "img": "tecno-camon-40-pro",
+    "img": "tecno-camon-40-pro-5g",
     "new": 1,
     "interest": 1341,
     "stores": [
@@ -4924,7 +4924,7 @@
     "cat": "Phones",
     "name": "Tecno Camon 40",
     "spec": "6.78\" AMOLED · Helio G100 · 50MP",
-    "img": "tecno-camon-40",
+    "img": "",
     "new": 1,
     "interest": 1267,
     "stores": [
@@ -5002,7 +5002,7 @@
     "cat": "Phones",
     "name": "Tecno Spark 40 Pro+",
     "spec": "6.78\" AMOLED · Helio G200 · 50MP",
-    "img": "tecno-spark-40-pro-plus",
+    "img": "",
     "new": 1,
     "interest": 1430,
     "stores": [
@@ -5041,7 +5041,7 @@
     "cat": "Phones",
     "name": "Tecno Spark 40",
     "spec": "6.7\" · Helio G100 · 50MP",
-    "img": "tecno-spark-40",
+    "img": "tecno-spark-40-5g",
     "new": 1,
     "interest": 1173,
     "stores": [
@@ -5115,7 +5115,7 @@
     "cat": "Phones",
     "name": "Tecno Pova 7 Pro 5G",
     "spec": "6.78\" AMOLED · Dimensity 7300 · 6000mAh",
-    "img": "tecno-pova-7-pro",
+    "img": "",
     "new": 1,
     "interest": 1405,
     "stores": [
@@ -5154,7 +5154,7 @@
     "cat": "Phones",
     "name": "Tecno Pova 6 Pro 5G",
     "spec": "6.78\" AMOLED · Dimensity 6080 · 108MP",
-    "img": "tecno-pova-6-pro",
+    "img": "",
     "new": 0,
     "interest": 1142,
     "stores": [
@@ -5193,7 +5193,7 @@
     "cat": "Phones",
     "name": "Tecno Phantom V Fold2 5G",
     "spec": "7.85\" foldable · Dimensity 9000+",
-    "img": "tecno-phantom-v-fold2",
+    "img": "",
     "new": 0,
     "interest": 1047,
     "stores": [
@@ -5232,7 +5232,7 @@
     "cat": "Phones",
     "name": "Tecno Phantom V Flip2 5G",
     "spec": "6.9\" flip · Dimensity 8350",
-    "img": "tecno-phantom-v-flip2",
+    "img": "",
     "new": 0,
     "interest": 874,
     "stores": [
@@ -5271,7 +5271,7 @@
     "cat": "Phones",
     "name": "Infinix Note 50 Pro+ 5G",
     "spec": "6.78\" AMOLED · Dimensity 8350 · 50MP",
-    "img": "infinix-note-50-pro-plus",
+    "img": "",
     "new": 1,
     "interest": 1382,
     "stores": [
@@ -5310,7 +5310,7 @@
     "cat": "Phones",
     "name": "Infinix Note 50 Pro",
     "spec": "6.78\" AMOLED · Helio G100 · 50MP",
-    "img": "infinix-note-50-pro",
+    "img": "",
     "new": 1,
     "interest": 1361,
     "stores": [
@@ -5349,7 +5349,7 @@
     "cat": "Phones",
     "name": "Infinix Note 50",
     "spec": "6.78\" AMOLED · Dimensity 7300 · 50MP",
-    "img": "infinix-note-50",
+    "img": "",
     "new": 1,
     "interest": 1251,
     "stores": [
@@ -5427,7 +5427,7 @@
     "cat": "Phones",
     "name": "Infinix Hot 60",
     "spec": "6.8\" · Helio G100 · 50MP",
-    "img": "infinix-hot-60",
+    "img": "",
     "new": 1,
     "interest": 1202,
     "stores": [
@@ -5466,7 +5466,7 @@
     "cat": "Phones",
     "name": "Infinix GT 30 Pro 5G",
     "spec": "6.78\" AMOLED 144Hz · Dimensity 8350",
-    "img": "infinix-gt-30-pro",
+    "img": "",
     "new": 1,
     "interest": 1288,
     "stores": [
@@ -5505,7 +5505,7 @@
     "cat": "Phones",
     "name": "Infinix Zero 40 5G",
     "spec": "6.78\" AMOLED · Dimensity 8200 · 50MP",
-    "img": "infinix-zero-40",
+    "img": "",
     "new": 0,
     "interest": 1059,
     "stores": [
@@ -5540,7 +5540,7 @@
     "cat": "Phones",
     "name": "Infinix Smart 9",
     "spec": "6.7\" · Unisoc T7250 · 13MP",
-    "img": "infinix-smart-9",
+    "img": "",
     "new": 0,
     "interest": 899,
     "stores": [
@@ -5653,7 +5653,7 @@
     "cat": "Phones",
     "name": "Nothing CMF Phone 2",
     "spec": "6.77\" AMOLED · Dimensity 7300 Pro",
-    "img": "cmf-by-nothing-phone-2",
+    "img": "",
     "new": 1,
     "interest": 1232,
     "stores": [
@@ -5692,7 +5692,7 @@
     "cat": "Phones",
     "name": "Nothing CMF Phone 1",
     "spec": "6.67\" AMOLED · Dimensity 7300 · 50MP",
-    "img": "cmf-by-nothing-phone-1",
+    "img": "",
     "new": 0,
     "interest": 881,
     "stores": [
@@ -5836,7 +5836,7 @@
     "cat": "Phones",
     "name": "Oppo Reno 14 Pro 5G",
     "spec": "6.83\" AMOLED · Dimensity 8450 · 50MP",
-    "img": "oppo-reno-14-pro",
+    "img": "",
     "new": 1,
     "interest": 1127,
     "stores": [
@@ -5871,7 +5871,7 @@
     "cat": "Phones",
     "name": "Oppo Reno 14 5G",
     "spec": "6.59\" AMOLED · Dimensity 8350 · 50MP",
-    "img": "oppo-reno-14",
+    "img": "",
     "new": 1,
     "interest": 1310,
     "stores": [
@@ -5906,7 +5906,7 @@
     "cat": "Phones",
     "name": "Oppo Reno 13 5G",
     "spec": "6.59\" AMOLED · Dimensity 8350 · 50MP",
-    "img": "oppo-reno-13",
+    "img": "",
     "new": 0,
     "interest": 1055,
     "stores": [
@@ -6015,7 +6015,7 @@
     "cat": "Phones",
     "name": "Realme 14 Pro+ 5G",
     "spec": "6.83\" curved AMOLED · SD 7s Gen3 · 50MP",
-    "img": "realme-14-pro-plus",
+    "img": "",
     "new": 1,
     "interest": 1227,
     "stores": [
@@ -6050,7 +6050,7 @@
     "cat": "Phones",
     "name": "Realme GT 7 Pro",
     "spec": "6.78\" LTPO · SD 8 Elite · 50MP",
-    "img": "realme-gt-7-pro",
+    "img": "",
     "new": 1,
     "interest": 1102,
     "stores": [
@@ -6202,7 +6202,7 @@
     "cat": "Phones",
     "name": "Realme Note 60",
     "spec": "6.74\" · Unisoc T612 · 32MP",
-    "img": "realme-note-60",
+    "img": "",
     "new": 0,
     "interest": 884,
     "stores": [
@@ -6311,7 +6311,7 @@
     "cat": "Phones",
     "name": "Nokia G42 5G",
     "spec": "6.56\" · SD 4 Gen2 · 50MP",
-    "img": "nokia-g42",
+    "img": "nokia-g42-5g",
     "new": 0,
     "interest": 955,
     "stores": [
@@ -6350,7 +6350,7 @@
     "cat": "Phones",
     "name": "Nokia C32",
     "spec": "6.5\" · Unisoc SC9863A1 · 50MP",
-    "img": "nokia-c32",
+    "img": "",
     "new": 0,
     "interest": 770,
     "stores": [
@@ -6428,7 +6428,7 @@
     "cat": "Phones",
     "name": "Honor Magic 7 Pro",
     "spec": "6.8\" LTPO · SD 8 Elite · 200MP tele",
-    "img": "honor-magic-7-pro",
+    "img": "",
     "new": 1,
     "interest": 1235,
     "stores": [
@@ -6467,7 +6467,7 @@
     "cat": "Phones",
     "name": "Honor Magic 7",
     "spec": "6.78\" · SD 8 Elite · 50MP",
-    "img": "honor-magic-7",
+    "img": "",
     "new": 0,
     "interest": 878,
     "stores": [
@@ -6619,7 +6619,7 @@
     "cat": "Phones",
     "name": "Honor 200 Pro",
     "spec": "6.78\" curved AMOLED · SD 8s Gen3 · 50MP",
-    "img": "honor-200-pro",
+    "img": "",
     "new": 0,
     "interest": 776,
     "stores": [
@@ -6693,7 +6693,7 @@
     "cat": "Phones",
     "name": "Honor X7c",
     "spec": "6.77\" · SD 685 · 108MP · 6500mAh",
-    "img": "honor-x7c",
+    "img": "honor-x7c-5g",
     "new": 0,
     "interest": 1049,
     "stores": [
@@ -6997,7 +6997,7 @@
     "cat": "Phones",
     "name": "Motorola Moto G55 5G",
     "spec": "6.49\" · Dimensity 7025 · 50MP",
-    "img": "motorola-moto-g55",
+    "img": "motorola-moto-g55-5g",
     "new": 0,
     "interest": 1044,
     "stores": [
@@ -7270,7 +7270,7 @@
     "cat": "Phones",
     "name": "Vivo Y29 5G",
     "spec": "6.68\" · Dimensity 6300 · 50MP",
-    "img": "vivo-y29",
+    "img": "",
     "new": 0,
     "interest": 933,
     "stores": [
@@ -7601,7 +7601,7 @@
     "cat": "Phones",
     "name": "ZTE nubia Flip 2",
     "spec": "6.9\" flip · SD 7s Gen2",
-    "img": "zte-nubia-flip-2",
+    "img": "",
     "new": 0,
     "interest": 939,
     "stores": [
@@ -7640,7 +7640,7 @@
     "cat": "Phones",
     "name": "ZTE nubia Neo 3 5G",
     "spec": "6.8\" 120Hz · Unisoc T8300 · gaming",
-    "img": "zte-nubia-neo-3",
+    "img": "zte-nubia-neo-3-5g",
     "new": 0,
     "interest": 931,
     "stores": [
@@ -9204,7 +9204,7 @@
     "cat": "Tablets",
     "name": "iPad Pro 13\" (M4)",
     "spec": "13\" Tandem OLED · M4 · 5G",
-    "img": "apple-ipad-pro-13-(2024)",
+    "img": "",
     "new": 0,
     "interest": 367,
     "stores": [
@@ -9243,7 +9243,7 @@
     "cat": "Tablets",
     "name": "iPad Air 13\" (M2)",
     "spec": "12.9\" Liquid Retina · M2",
-    "img": "apple-ipad-air-13-(2024)",
+    "img": "",
     "new": 0,
     "interest": 392,
     "stores": [
@@ -9282,7 +9282,7 @@
     "cat": "Tablets",
     "name": "iPad Air 11\" (M3)",
     "spec": "11\" Liquid Retina · M3",
-    "img": "apple-ipad-air-11-(m3)",
+    "img": "",
     "new": 1,
     "interest": 743,
     "stores": [
@@ -9321,7 +9321,7 @@
     "cat": "Tablets",
     "name": "iPad (11th gen, A16)",
     "spec": "10.9\" Liquid Retina · A16",
-    "img": "apple-ipad-11-(2025)",
+    "img": "",
     "new": 1,
     "interest": 728,
     "stores": [
@@ -9360,7 +9360,7 @@
     "cat": "Tablets",
     "name": "iPad mini (A17 Pro)",
     "spec": "8.3\" Liquid Retina · A17 Pro",
-    "img": "apple-ipad-mini-(2024)",
+    "img": "",
     "new": 0,
     "interest": 483,
     "stores": [
@@ -9512,7 +9512,7 @@
     "cat": "Tablets",
     "name": "Samsung Galaxy Tab S9 FE",
     "spec": "10.9\" LCD · Exynos 1380 · S Pen",
-    "img": "samsung-galaxy-tab-s9-fe",
+    "img": "",
     "new": 0,
     "interest": 438,
     "stores": [
@@ -9586,7 +9586,7 @@
     "cat": "Tablets",
     "name": "OnePlus Pad 2",
     "spec": "12.1\" 144Hz · SD 8 Gen3",
-    "img": "oneplus-pad-2",
+    "img": "",
     "new": 0,
     "interest": 428,
     "stores": [
@@ -9664,7 +9664,7 @@
     "cat": "Tablets",
     "name": "Xiaomi Pad 7",
     "spec": "11.2\" 3.2K 144Hz · SD 7+ Gen3",
-    "img": "xiaomi-pad-7",
+    "img": "",
     "new": 1,
     "interest": 814,
     "stores": [
@@ -9699,7 +9699,7 @@
     "cat": "Tablets",
     "name": "Xiaomi Pad 6",
     "spec": "11\" 2.8K 144Hz · SD 870",
-    "img": "xiaomi-pad-6",
+    "img": "",
     "new": 0,
     "interest": 588,
     "stores": [
@@ -13010,7 +13010,7 @@
     "cat": "Smart Watches",
     "name": "Amazfit Bip 6",
     "spec": "1.97\" AMOLED · GPS · 14d",
-    "img": "amazfit-bip-6",
+    "img": "",
     "new": 1,
     "interest": 763,
     "stores": [
@@ -13084,7 +13084,7 @@
     "cat": "Smart Watches",
     "name": "Amazfit GTR 4",
     "spec": "1.43\" AMOLED · dual GPS · 14d",
-    "img": "amazfit-gtr-4",
+    "img": "",
     "new": 0,
     "interest": 554,
     "stores": [
@@ -13154,7 +13154,7 @@
     "cat": "Smart Watches",
     "name": "Apple Watch SE (2nd gen)",
     "spec": "40/44mm · S8 · fitness+",
-    "img": "apple-watch-se-2022",
+    "img": "",
     "new": 0,
     "interest": 400,
     "stores": [
@@ -13228,7 +13228,7 @@
     "cat": "Smart Watches",
     "name": "Garmin Forerunner 165",
     "spec": "1.2\" AMOLED · running GPS",
-    "img": "garmin-forerunner-165",
+    "img": "",
     "new": 0,
     "interest": 436,
     "stores": [
@@ -13267,7 +13267,7 @@
     "cat": "Smart Watches",
     "name": "Apple Watch Series 10",
     "spec": "42/46mm · S10 · always-on",
-    "img": "apple-watch-series-10",
+    "img": "",
     "new": 1,
     "interest": 667,
     "stores": [

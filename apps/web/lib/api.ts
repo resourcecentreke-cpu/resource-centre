@@ -1,6 +1,6 @@
 import type {
   CategoryDTO, Paginated, ProductSummaryDTO, ProductDetailDTO, ReviewDTO, SearchSuggestion, DealDTO,
-  TopInterestDTO,
+  TopInterestDTO, SponsoredListingDTO,
 } from '@rc/types';
 
 function base(): string {
@@ -23,6 +23,8 @@ export const getDeals = (limit = 24) => get<DealDTO[]>(`/products/deals?limit=${
 export const getTopInterest = (category?: string, limit = 10) =>
   get<TopInterestDTO[]>(`/products/top-interest?limit=${limit}${category ? `&category=${category}` : ''}`, 120);
 export const getProductReviews = (slug: string) => get<ReviewDTO[]>(`/reviews/product/${slug}`, 30);
+export const getSponsored = (placement: 'home' | 'category' | 'product' = 'home') =>
+  get<SponsoredListingDTO[]>(`/sponsored?placement=${placement}`, 120);
 export const search = (qs: string) => get<Paginated<ProductSummaryDTO>>(`/search${qs}`);
 
 export async function autocomplete(q: string): Promise<SearchSuggestion[]> {

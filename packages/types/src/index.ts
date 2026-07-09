@@ -16,6 +16,8 @@ export interface HealthResponse {
 export type MoneyMinor = number;
 
 export interface OfferDTO {
+  /** Offer row id — used by the /api/go/:offerId affiliate redirect. */
+  id: string;
   sellerId: string;
   sellerName: string;
   price: MoneyMinor;
@@ -24,6 +26,8 @@ export interface OfferDTO {
   rating: number;
   trustScore: number;
   productUrl: string;
+  /** Tracked outbound link (click logging + affiliate codes). Prefer over productUrl. */
+  goUrl: string;
   lastSeenAt: string;
 }
 
@@ -57,6 +61,17 @@ export interface ProductSpecs {
 export interface TopInterestDTO extends ProductSummaryDTO {
   rank: number;
   interest: number; // blended score: baseline seed + live product views
+}
+
+/** An active paid placement, rendered with a "Sponsored" badge on the storefront. */
+export interface SponsoredListingDTO {
+  id: string;
+  sellerName: string;
+  sellerSlug: string;
+  sellerWebsite: string | null;
+  placement: string;
+  endsAt: string;
+  product: ProductSummaryDTO | null;
 }
 
 /** A product whose current price has dropped versus its recent high — for the Deals page. */

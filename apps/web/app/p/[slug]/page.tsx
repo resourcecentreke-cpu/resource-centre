@@ -11,6 +11,7 @@ import JsonLd from '../../../components/JsonLd';
 import { abs, priceString, SITE_NAME } from '../../../lib/seo';
 import { deviceAge, releasedLabel } from '../../../lib/age';
 import { buildProsCons, buildSpecSheet } from '../../../lib/prosCons';
+import AdSlot from '../../../components/AdSlot';
 
 export const revalidate = 30;
 
@@ -157,7 +158,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
               <div className="font-display text-3xl font-bold">{fmtKES(p.minPrice)}</div>
               <div className="text-xs text-mut">Best price at {p.bestSeller} · {best?.deliveryFee ? fmtKES(best.deliveryFee) + ' delivery' : 'Free delivery'}</div>
             </div>
-            {best && <a href={best.productUrl} target="_blank" rel="noopener sponsored noreferrer" className="px-5 py-2.5 rounded-full bg-coral text-white font-bold text-sm">Buy at {best.sellerName} →</a>}
+            {best && <a href={best.goUrl} target="_blank" rel="noopener sponsored noreferrer" className="px-5 py-2.5 rounded-full bg-coral text-white font-bold text-sm">Buy at {best.sellerName} →</a>}
           </div>
           <ProductActions slug={p.slug} productId={p.id} suggestedTarget={Math.round((p.minPrice * 0.95) / 1000) * 1000} />
         </div>
@@ -189,7 +190,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                       <td className="p-3">{o.inStock === 'in' ? '🟢 In stock' : o.inStock === 'low' ? '🟡 Low' : '🔴 Out of stock'}</td>
                       <td className="p-3">{out
                         ? <span className="text-[#A99FB4] text-xs">Unavailable</span>
-                        : <a href={o.productUrl} target="_blank" rel="noopener sponsored noreferrer" className="text-coral font-bold text-xs">View price →</a>}</td>
+                        : <a href={o.goUrl} target="_blank" rel="noopener sponsored noreferrer" className="text-coral font-bold text-xs">View price →</a>}</td>
                     </tr>
                   </Fragment>
                 );
@@ -272,6 +273,8 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
           </div>
         )) : <p className="text-mut text-sm">No reviews yet.</p>}
       </Section>
+
+      <AdSlot className="my-4" />
 
       {p.similar.length > 0 && (
         <Section title="Similar devices">

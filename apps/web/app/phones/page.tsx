@@ -5,6 +5,7 @@ import { PHONE_TIERS, PHONE_BANDS } from '../../lib/phoneTiers';
 import { fmtKES } from '../../lib/format';
 import TopInterest from '../../components/TopInterest';
 import { abs, SITE_NAME } from '../../lib/seo';
+import AdSlot from '../../components/AdSlot';
 
 export const revalidate = 120;
 const YEAR = new Date().getFullYear();
@@ -70,6 +71,8 @@ export default async function PhonesHub() {
           <TopInterest items={top} title="Top 10 phones in Kenya" subtitle="Ranked by shopper interest" />
         </div>
       </div>
+
+      <AdSlot className="my-6" />
     </div>
   );
 }
