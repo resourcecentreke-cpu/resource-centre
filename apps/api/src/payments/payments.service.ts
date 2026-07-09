@@ -1,5 +1,6 @@
 import { BadRequestException, Injectable, Logger, NotFoundException, ServiceUnavailableException } from '@nestjs/common';
-import { PaymentStatus, SubscriptionPlan, SubscriptionStatus } from '@rc/db';
+import { ConfigService } from '@nestjs/config';
+import { OrderStatus, PaymentStatus, SubscriptionPlan, SubscriptionStatus } from '@rc/db';
 import { PrismaService } from '../prisma/prisma.service';
 import { DarajaService } from '../mpesa/daraja.service';
 import { IntasendService } from './intasend.service';
@@ -21,6 +22,7 @@ export class PaymentsService {
     private readonly prisma: PrismaService,
     private readonly daraja: DarajaService,
     private readonly intasend: IntasendService,
+    private readonly config: ConfigService,
   ) {}
 
   /**
@@ -128,6 +130,44 @@ export class PaymentsService {
       this.logger.warn(`Payment ${payment.id} failed: ${parsed.resultDesc}`);
     }
     return { ResultCode: 0, ResultDesc: 'Accepted' };
+  }
+
+  /**
+   * IntaSend invoice webhook (tips + concierge orders). Payload includes
+   * invoice_id, state and the optional shared challenge. Idempotent.
+   */
+  async handleIntasendWebhook(body: unknown): Promise<{ ok: true }> {
+    const b = (body ?? {}) as Record<string, unknown>;
+    const expected = this.config.get<string>('INTASEND_WEBHOOK_CHALLENGE');
+    if (expected && b.challenge !== expected) {
+      this.logger.warn('IntaSend webhook with bad challenge — ignored');
+      return { ok: true };
+    }
+    const invoiceId = (b.invoice_id ?? (b.invoice as Record<string, unknown> | undefined)?.invoice_id) as string | undefined;
+    const state = String(b.state ?? '').toUpperCase();
+    if (!invoiceId || !state) return { ok: true };
+
+    const payment = await this.prisma.payment.findFirst({ where: { mpesaCheckoutId: invoiceId } });
+    if (!payment || payment.status !== PaymentStatus.PENDING) return { ok: true };
+
+    if (state === 'COMPLETE' || state === 'COMPLETED') {
+      await this.prisma.payment.update({
+        where: { id: payment.id },
+        data: { status: PaymentStatus.COMPLETED, mpesaReceipt: (b.mpesa_reference as string) ?? null },
+      });
+      if (payment.purpose === 'order' && payment.reference) {
+        // updateMany keeps this idempotent — no-op if the order already moved on.
+        await this.prisma.order.updateMany({
+          where: { id: payment.reference, status: OrderStatus.PENDING_PAYMENT },
+          data: { status: OrderStatus.PAID },
+        });
+        this.logger.log(`Order ${payment.reference} paid (invoice ${invoiceId})`);
+      }
+      await this.fulfil(payment.id);
+    } else if (state === 'FAILED') {
+      await this.prisma.payment.update({ where: { id: payment.id }, data: { status: PaymentStatus.FAILED } });
+    }
+    return { ok: true };
   }
 
   private async fulfil(paymentId: string): Promise<void> {

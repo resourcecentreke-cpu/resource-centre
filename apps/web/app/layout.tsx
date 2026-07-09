@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import Header from '../components/Header';
+import Logo from '../components/Logo';
 import PwaRegister from '../components/PwaRegister';
 import JsonLd from '../components/JsonLd';
 import Link from 'next/link';
@@ -84,13 +85,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <JsonLd data={siteJsonLd} />
         <Header />
         <main className="flex-1">{children}</main>
-        <footer className="mt-16 border-t border-line bg-surface">
-          <div className="mx-auto flex max-w-6xl flex-wrap justify-between gap-10 px-5 py-12 text-sm text-muted">
-            <p className="max-w-sm leading-relaxed">
-              Compare the lowest listed price across Kenya’s trusted online
-              electronics stores. Prices indicative — confirm on the retailer’s
-              page before buying.
-            </p>
+        <footer className="mt-16 border-t border-white/10 bg-[#0A0A0F] text-white/60">
+          <div className="mx-auto flex max-w-6xl flex-wrap justify-between gap-10 px-5 py-12 text-sm">
+            <div className="max-w-sm">
+              <Logo dark size={34} />
+              <p className="mt-4 leading-relaxed">
+                Compare the lowest listed price across Kenya’s trusted online
+                electronics stores. Prices indicative — confirm on the retailer’s
+                page before buying.
+              </p>
+            </div>
             <nav className="flex flex-wrap gap-x-7 gap-y-2.5">
               {[
                 ['/deals', 'Deals'],
@@ -105,7 +109,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <Link
                   key={href}
                   href={href}
-                  className="text-muted transition-colors duration-fast ease-out hover:text-text"
+                  className="transition-colors duration-fast ease-out hover:text-white"
                 >
                   {label}
                 </Link>
@@ -122,14 +126,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <Link
                   key={href}
                   href={href}
-                  className="text-muted transition-colors duration-fast ease-out hover:text-text"
+                  className="transition-colors duration-fast ease-out hover:text-white"
                 >
                   {label}
                 </Link>
               ))}
             </nav>
           </div>
-          <div className="mx-auto max-w-6xl px-5 pb-8 text-xs text-faint">
+          <div className="mx-auto max-w-6xl px-5 pb-8 text-xs text-white/30">
             © {new Date().getFullYear()} {SITE_NAME}. All rights reserved.
           </div>
         </footer>

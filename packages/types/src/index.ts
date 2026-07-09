@@ -231,6 +231,48 @@ export interface StkInitResponse {
   customerMessage: string;
 }
 
+// ───────── Concierge orders (checkout) ─────────
+export type OrderStatusWire =
+  | 'pending_payment' | 'paid' | 'purchasing' | 'out_for_delivery' | 'delivered' | 'cancelled';
+
+export interface OrderQuoteDTO {
+  offerId: string;
+  productName: string;
+  productSlug: string;
+  sellerName: string;
+  unitPrice: MoneyMinor;
+  serviceFee: MoneyMinor;
+  total: MoneyMinor;
+  inStock: boolean;
+}
+
+export interface CreateOrderResponse {
+  orderId: string;
+  paymentId: string;
+  total: MoneyMinor;
+  customerMessage: string;
+}
+
+export interface OrderDTO {
+  id: string;
+  productName: string;
+  productSlug: string;
+  sellerName: string | null;
+  unitPrice: MoneyMinor;
+  serviceFee: MoneyMinor;
+  total: MoneyMinor;
+  customerName: string;
+  phone: string;
+  email: string | null;
+  city: string;
+  address: string;
+  notes: string | null;
+  status: OrderStatusWire;
+  paymentStatus: PaymentStatusWire | null;
+  mpesaReceipt: string | null;
+  createdAt: string;
+}
+
 // ───────── Analytics (Phase 11) ─────────
 export type AnalyticsEventType = 'search' | 'product_view' | 'offer_click';
 

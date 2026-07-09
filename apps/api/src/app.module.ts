@@ -19,6 +19,7 @@ import { PaymentsModule } from './payments/payments.module';
 import { AnalyticsModule } from './analytics/analytics.module';
 import { GoModule } from './go/go.module';
 import { SponsoredModule } from './sponsored/sponsored.module';
+import { OrdersModule } from './orders/orders.module';
 import { AdminModule } from './admin/admin.module';
 import { ManageModule } from './manage/manage.module';
 import { parseRedisUrl } from './common/redis.util';
@@ -49,6 +50,7 @@ import { parseRedisUrl } from './common/redis.util';
     AnalyticsModule,
     GoModule,
     SponsoredModule,
+    OrdersModule,
     AdminModule,
     ManageModule,
   ],

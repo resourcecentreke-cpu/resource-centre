@@ -29,6 +29,13 @@ export class PaymentsController {
     return this.payments.handleCallback(body);
   }
 
+  // Public — called by IntaSend on invoice state changes (tips + orders).
+  // Verified via the shared challenge configured in the IntaSend dashboard.
+  @Post('intasend-webhook')
+  intasendWebhook(@Body() body: unknown) {
+    return this.payments.handleIntasendWebhook(body);
+  }
+
   @Get(':id')
   @ApiBearerAuth()
   @UseGuards(JwtAuthGuard)

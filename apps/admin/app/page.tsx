@@ -2,9 +2,9 @@
 
 import { useEffect, useState, useCallback } from 'react';
 import { api, login, logout, getToken } from '../lib/api';
-import type { AnalyticsSummaryDTO, ReviewDTO } from '@rc/types';
+import type { AnalyticsSummaryDTO, ReviewDTO, OrderDTO, OrderStatusWire } from '@rc/types';
 
-type Tab = 'analytics' | 'sellers' | 'reviews' | 'products' | 'sponsored';
+type Tab = 'analytics' | 'orders' | 'sellers' | 'reviews' | 'products' | 'sponsored';
 
 const btn = 'px-3 py-1.5 rounded-full text-xs font-bold cursor-pointer border';
 const primary = `${btn} bg-coral text-white border-coral hover:bg-coral-dark`;
@@ -34,7 +34,7 @@ export default function Admin() {
       </header>
 
       <nav className="flex gap-2 mb-5 flex-wrap">
-        {(['analytics', 'sellers', 'reviews', 'products', 'sponsored'] as Tab[]).map((t) => (
+        {(['analytics', 'orders', 'sellers', 'reviews', 'products', 'sponsored'] as Tab[]).map((t) => (
           <button key={t} onClick={() => { setErr(''); setTab(t); }}
             className={tab === t ? primary : ghost} style={{ textTransform: 'capitalize' }}>{t}</button>
         ))}
@@ -44,6 +44,7 @@ export default function Admin() {
 
       <div className="bg-white border border-[#F1E7DC] rounded-2xl p-5 shadow-sm">
         {tab === 'analytics' && <Analytics onErr={setErr} />}
+        {tab === 'orders' && <Orders onErr={setErr} />}
         {tab === 'sellers' && <Sellers onErr={setErr} />}
         {tab === 'reviews' && <Reviews onErr={setErr} />}
         {tab === 'products' && <Products onErr={setErr} />}
@@ -308,5 +309,90 @@ function Sponsored({ onErr }: { onErr: (m: string) => void }) {
           </td>
         </tr>
       ))}</tbody></table>
+  );
+}
+
+// ── Concierge orders: customer paid us, we buy from the store & deliver ──
+const ORDER_FLOW: OrderStatusWire[] = ['paid', 'purchasing', 'out_for_delivery', 'delivered'];
+const ORDER_LABEL: Record<OrderStatusWire, string> = {
+  pending_payment: '⏳ Awaiting payment',
+  paid: '💰 Paid — buy it now',
+  purchasing: '🛒 Purchasing',
+  out_for_delivery: '🚚 Out for delivery',
+  delivered: '✅ Delivered',
+  cancelled: '✖ Cancelled',
+};
+const NEXT_LABEL: Record<string, string> = {
+  paid: 'Mark purchasing',
+  purchasing: 'Mark out for delivery',
+  out_for_delivery: 'Mark delivered',
+};
+
+function Orders({ onErr }: { onErr: (m: string) => void }) {
+  const [filter, setFilter] = useState<'' | OrderStatusWire>('');
+  const [rows, reload] = useLoad<OrderDTO[]>(`/admin/orders${filter ? `?status=${filter}` : ''}`, onErr);
+
+  const setStatus = async (id: string, status: OrderStatusWire) => {
+    try { await api(`/admin/orders/${id}`, { method: 'PATCH', body: JSON.stringify({ status }) }); reload(); }
+    catch (e) { onErr((e as Error).message); }
+  };
+
+  if (!rows) return <p className="text-mut text-sm">Loading…</p>;
+
+  const next = (s: OrderStatusWire): OrderStatusWire | null => {
+    const i = ORDER_FLOW.indexOf(s);
+    return i >= 0 && i < ORDER_FLOW.length - 1 ? ORDER_FLOW[i + 1]! : null;
+  };
+
+  return (
+    <div>
+      <div className="flex gap-2 flex-wrap mb-4">
+        {(['', 'paid', 'purchasing', 'out_for_delivery', 'delivered', 'pending_payment', 'cancelled'] as const).map((f) => (
+          <button key={f || 'all'} className={filter === f ? primary : ghost} onClick={() => setFilter(f)}>
+            {f === '' ? 'All' : ORDER_LABEL[f]}
+          </button>
+        ))}
+      </div>
+      {!rows.length ? <p className="text-mut text-sm">No orders{filter ? ' with this status' : ' yet'}.</p> : (
+        <table>
+          <thead><tr><th>When</th><th>Customer</th><th>Product</th><th>Buy from</th><th>Totals</th><th>Status</th><th>Actions</th></tr></thead>
+          <tbody>{rows.map((o) => {
+            const n = next(o.status);
+            return (
+              <tr key={o.id} className="align-top">
+                <td className="whitespace-nowrap text-xs text-mut">{new Date(o.createdAt).toLocaleString('en-KE')}</td>
+                <td>
+                  <b>{o.customerName}</b>
+                  <div className="text-xs text-mut">{o.phone}{o.email ? ` · ${o.email}` : ''}</div>
+                  <div className="text-xs text-mut">{o.city} — {o.address}</div>
+                  {o.notes && <div className="text-xs italic text-mut mt-0.5">“{o.notes}”</div>}
+                </td>
+                <td className="font-semibold">{o.productName}</td>
+                <td>{o.sellerName ?? '—'}</td>
+                <td className="whitespace-nowrap text-xs">
+                  <div>Item: <b>KSh {o.unitPrice.toLocaleString()}</b></div>
+                  <div>Fee: KSh {o.serviceFee.toLocaleString()}</div>
+                  <div className="font-bold">Paid: KSh {o.total.toLocaleString()}</div>
+                  {o.mpesaReceipt && <div className="text-mut">M-Pesa {o.mpesaReceipt}</div>}
+                </td>
+                <td className="whitespace-nowrap text-xs font-bold">{ORDER_LABEL[o.status]}</td>
+                <td className="py-2">
+                  <div className="flex gap-1.5 flex-wrap">
+                    {n && <button className={primary} onClick={() => setStatus(o.id, n)}>{NEXT_LABEL[o.status]}</button>}
+                    {o.status !== 'cancelled' && o.status !== 'delivered' && (
+                      <button className={ghost} onClick={() => setStatus(o.id, 'cancelled')}>Cancel</button>
+                    )}
+                  </div>
+                </td>
+              </tr>
+            );
+          })}</tbody>
+        </table>
+      )}
+      <p className="text-xs text-mut mt-3">
+        Flow: customer pays → <b>Paid</b> (buy it from the store now, shipped to their address) →
+        <b> Purchasing</b> → <b>Out for delivery</b> → <b>Delivered</b>. Cancelled orders need a manual M-Pesa refund.
+      </p>
+    </div>
   );
 }

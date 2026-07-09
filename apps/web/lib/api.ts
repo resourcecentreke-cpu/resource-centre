@@ -1,6 +1,6 @@
 import type {
   CategoryDTO, Paginated, ProductSummaryDTO, ProductDetailDTO, ReviewDTO, SearchSuggestion, DealDTO,
-  TopInterestDTO, SponsoredListingDTO,
+  TopInterestDTO, SponsoredListingDTO, OrderQuoteDTO, OrderDTO, CreateOrderResponse,
 } from '@rc/types';
 
 function base(): string {
@@ -23,6 +23,7 @@ export const getDeals = (limit = 24) => get<DealDTO[]>(`/products/deals?limit=${
 export const getTopInterest = (category?: string, limit = 10) =>
   get<TopInterestDTO[]>(`/products/top-interest?limit=${limit}${category ? `&category=${category}` : ''}`, 120);
 export const getProductReviews = (slug: string) => get<ReviewDTO[]>(`/reviews/product/${slug}`, 30);
+export const getSellers = () => get<{ slug: string; name: string }[]>('/sellers', 300);
 export const getSponsored = (placement: 'home' | 'category' | 'product' = 'home') =>
   get<SponsoredListingDTO[]>(`/sponsored?placement=${placement}`, 120);
 export const search = (qs: string) => get<Paginated<ProductSummaryDTO>>(`/search${qs}`);
@@ -31,6 +32,28 @@ export async function autocomplete(q: string): Promise<SearchSuggestion[]> {
   const res = await fetch(`/api/search/autocomplete?q=${encodeURIComponent(q)}`);
   if (!res.ok) return [];
   return res.json();
+}
+
+export const getOrderQuote = (offerId: string) => get<OrderQuoteDTO>(`/orders/quote/${offerId}`, 0);
+
+export async function createOrder(body: Record<string, string>): Promise<CreateOrderResponse> {
+  const res = await fetch('/api/orders', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body),
+  });
+  if (!res.ok) {
+    const err = (await res.json().catch(() => null)) as { message?: string | string[] } | null;
+    const msg = Array.isArray(err?.message) ? err?.message[0] : err?.message;
+    throw new Error(msg || 'Could not place the order');
+  }
+  return res.json() as Promise<CreateOrderResponse>;
+}
+
+export async function getOrder(id: string): Promise<OrderDTO> {
+  const res = await fetch(`/api/orders/${id}`, { cache: 'no-store' });
+  if (!res.ok) throw new Error('Order not found');
+  return res.json() as Promise<OrderDTO>;
 }
 
 export async function logEvent(type: 'search' | 'product_view' | 'offer_click', extra: Record<string, string> = {}) {

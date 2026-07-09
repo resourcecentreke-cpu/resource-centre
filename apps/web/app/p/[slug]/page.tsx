@@ -158,7 +158,12 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
               <div className="font-display text-3xl font-bold">{fmtKES(p.minPrice)}</div>
               <div className="text-xs text-mut">Best price at {p.bestSeller} · {best?.deliveryFee ? fmtKES(best.deliveryFee) + ' delivery' : 'Free delivery'}</div>
             </div>
-            {best && <a href={best.goUrl} target="_blank" rel="noopener sponsored noreferrer" className="px-5 py-2.5 rounded-full bg-coral text-white font-bold text-sm">Buy at {best.sellerName} →</a>}
+            {best && (
+              <div className="flex flex-wrap items-center gap-2">
+                <Link href={`/checkout/${best.id}`} className="px-5 py-2.5 rounded-full bg-coral text-white font-bold text-sm">🛒 Order it — we buy for you</Link>
+                <a href={best.goUrl} target="_blank" rel="noopener sponsored noreferrer" className="px-5 py-2.5 rounded-full border-2 border-[#D5DAF0] font-bold text-sm hover:border-coral transition">Buy at {best.sellerName} →</a>
+              </div>
+            )}
           </div>
           <ProductActions slug={p.slug} productId={p.id} suggestedTarget={Math.round((p.minPrice * 0.95) / 1000) * 1000} />
         </div>
@@ -190,7 +195,10 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                       <td className="p-3">{o.inStock === 'in' ? '🟢 In stock' : o.inStock === 'low' ? '🟡 Low' : '🔴 Out of stock'}</td>
                       <td className="p-3">{out
                         ? <span className="text-[#A99FB4] text-xs">Unavailable</span>
-                        : <a href={o.goUrl} target="_blank" rel="noopener sponsored noreferrer" className="text-coral font-bold text-xs">View price →</a>}</td>
+                        : <span className="flex items-center gap-3 whitespace-nowrap">
+                            <Link href={`/checkout/${o.id}`} className="text-[#0e8f68] font-bold text-xs">Order 🛒</Link>
+                            <a href={o.goUrl} target="_blank" rel="noopener sponsored noreferrer" className="text-coral font-bold text-xs">View price →</a>
+                          </span>}</td>
                     </tr>
                   </Fragment>
                 );

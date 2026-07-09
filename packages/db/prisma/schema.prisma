@@ -65,6 +65,15 @@ enum PaymentStatus {
   FAILED
 }
 
+enum OrderStatus {
+  PENDING_PAYMENT
+  PAID
+  PURCHASING
+  OUT_FOR_DELIVERY
+  DELIVERED
+  CANCELLED
+}
+
 enum SponsoredPlacement {
   HOME_HERO
   CATEGORY_TOP
@@ -114,6 +123,7 @@ model Product {
   reviews      Review[]
   alerts       Alert[]
   sponsored    SponsoredListing[]
+  orders       Order[]
   createdAt    DateTime           @default(now())
   updatedAt    DateTime           @updatedAt
 
@@ -143,6 +153,7 @@ model Seller {
   sponsored         SponsoredListing[]
   subscription      Subscription?
   payments          Payment[]
+  orders            Order[]
   createdAt         DateTime           @default(now())
   updatedAt         DateTime           @updatedAt
 }
@@ -299,10 +310,39 @@ model Payment {
   status          PaymentStatus @default(PENDING)
   mpesaCheckoutId String?
   mpesaReceipt    String?
+  order           Order?
   createdAt       DateTime      @default(now())
   updatedAt       DateTime      @updatedAt
 
   @@index([status])
+}
+
+/// Concierge checkout: the customer pays us (M-Pesa via IntaSend) and we
+/// purchase the product from the seller on their behalf.
+model Order {
+  id           String      @id @default(cuid())
+  productId    String
+  product      Product     @relation(fields: [productId], references: [id], onDelete: Restrict)
+  sellerId     String?
+  seller       Seller?     @relation(fields: [sellerId], references: [id], onDelete: SetNull)
+  offerId      String?
+  unitPrice    Int // KES, server-derived from the offer at order time
+  serviceFee   Int         @default(0)
+  total        Int
+  customerName String
+  phone        String
+  email        String?
+  city         String
+  address      String
+  notes        String?
+  status       OrderStatus @default(PENDING_PAYMENT)
+  paymentId    String?     @unique
+  payment      Payment?    @relation(fields: [paymentId], references: [id], onDelete: SetNull)
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+
+  @@index([status])
+  @@index([createdAt])
 }
 
 // ───────────────────────── Analytics ─────────────────────────
