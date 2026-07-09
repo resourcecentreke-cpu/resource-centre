@@ -32,6 +32,17 @@ const ICONS: [RegExp, string][] = [
 ];
 const iconFor = (slug: string) => (ICONS.find(([re]) => re.test(slug)) || [null, '🛍️'])[1];
 
+/**
+ * Only trust the DB icon when it's an actual short glyph (emoji). Some rows
+ * carry slugs/words in the icon column, which would render as giant text and
+ * wreck the circle layout — fall back to the keyword-matched emoji instead.
+ */
+const glyphFor = (c: { icon: string | null; slug: string }) => {
+  const icon = (c.icon ?? '').trim();
+  const isGlyph = icon.length > 0 && [...icon].length <= 2 && !/[a-zA-Z0-9]/.test(icon);
+  return isGlyph ? icon : iconFor(c.slug);
+};
+
 export default function CategoryGroups({ categories }: { categories: CategoryDTO[] }) {
   const buckets: CategoryDTO[][] = GROUPS.map(() => []);
   for (const c of categories) {
@@ -48,8 +59,8 @@ export default function CategoryGroups({ categories }: { categories: CategoryDTO
             <div className="flex flex-wrap gap-x-5 gap-y-4">
               {buckets[i]!.map((c) => (
                 <Link key={c.slug} href={`/c/${c.slug}`} className="group flex w-20 flex-col items-center text-center">
-                  <span className="flex h-16 w-16 items-center justify-center rounded-full bg-bg2 text-2xl ring-1 ring-line transition duration-fast ease-out group-hover:ring-2 group-hover:ring-text group-hover:-translate-y-0.5">
-                    {c.icon || iconFor(c.slug)}
+                  <span className="flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-full bg-bg2 text-2xl ring-1 ring-line transition duration-fast ease-out group-hover:ring-2 group-hover:ring-text group-hover:-translate-y-0.5">
+                    {glyphFor(c)}
                   </span>
                   <span className="mt-2 line-clamp-2 text-xs font-semibold leading-tight text-text">{c.name}</span>
                   <span className="text-2xs font-medium text-faint">{c.productCount}</span>
