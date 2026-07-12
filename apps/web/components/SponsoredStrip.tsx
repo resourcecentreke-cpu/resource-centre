@@ -22,7 +22,7 @@ export default function SponsoredStrip({ items, title = 'Sponsored' }: { items: 
               <span className="absolute top-2 right-2 rounded-full bg-amber/20 text-[#9a6a12] text-[9px] font-bold uppercase tracking-wide px-2 py-0.5">Sponsored</span>
               <div className="h-20 flex items-center justify-center">
                 {s.product?.image
-                  ? <img src={s.product.image} alt={s.product.name} className="max-h-full max-w-[80%] object-contain" />
+                  ? <img src={s.product.image} alt={s.product.name} loading="lazy" decoding="async" className="max-h-full max-w-[80%] object-contain" />
                   : <span className="text-2xl">🏪</span>}
               </div>
               <div className="mt-2 font-bold text-xs leading-snug line-clamp-2">{s.product?.name ?? s.sellerName}</div>

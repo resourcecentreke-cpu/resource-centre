@@ -8,9 +8,10 @@ import type { CategoryDTO } from '@rc/types';
  */
 
 const GROUPS: { title: string; match: RegExp }[] = [
-  { title: 'Phones & Accessories', match: /phone|tablet|accessor|audio|earbud|headphone|speaker|wearable|watch|power|charger|cable|cover/ },
+  { title: 'Phones & Accessories', match: /phone|tablet|accessor|audio|earbud|headphone|speaker|wearable|watch|powerbank|power-bank|charger|cable|cover/ },
   { title: 'Computing & Cameras', match: /laptop|desktop|computer|monitor|printer|storage|camera|drone|gaming|console|network|router/ },
-  { title: 'Home & Appliances', match: /tv|television|fridge|refrigerator|dishwasher|washer|washing|cooker|oven|microwave|kettle|blender|vacuum|air|iron|freezer|appliance/ },
+  { title: 'Tools, Power & Outdoor', match: /tool|drill|grinder|welder|saw|generator|solar|inverter|battery-backup|pump|compressor|mower|pressure-washer/ },
+  { title: 'Home & Appliances', match: /tv|television|fridge|refrigerator|dishwasher|washer|washing|cooker|oven|microwave|kettle|blender|vacuum|air|iron|freezer|appliance|water-dispenser/ },
 ];
 
 const ICONS: [RegExp, string][] = [
@@ -28,6 +29,16 @@ const ICONS: [RegExp, string][] = [
   [/power/, '🔋'],
   [/charger|cable/, '🔌'],
   [/cover|case/, '🛡️'],
+  [/drill|tool|grinder|saw/, '🛠️'],
+  [/generator/, '⚡'],
+  [/solar/, '☀️'],
+  [/inverter|battery/, '🔋'],
+  [/pump|pressure/, '💦'],
+  [/welder/, '🔥'],
+  [/mower|outdoor/, '🌿'],
+  [/cooker|oven|microwave/, '🍳'],
+  [/kettle|blender/, '🫖'],
+  [/vacuum/, '🧹'],
   [/accessor/, '🎒'],
 ];
 const iconFor = (slug: string) => (ICONS.find(([re]) => re.test(slug)) || [null, '🛍️'])[1];
@@ -47,7 +58,7 @@ export default function CategoryGroups({ categories }: { categories: CategoryDTO
   const buckets: CategoryDTO[][] = GROUPS.map(() => []);
   for (const c of categories) {
     const idx = GROUPS.findIndex((g) => g.match.test(c.slug.toLowerCase()));
-    buckets[idx === -1 ? 2 : idx]!.push(c);
+    buckets[idx === -1 ? GROUPS.length - 1 : idx]!.push(c);
   }
 
   return (

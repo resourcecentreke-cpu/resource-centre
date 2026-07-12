@@ -45,5 +45,5 @@ export default function ProductImage({
 
   if (failed) return <div className={brandClassName}>{brand}</div>;
   // eslint-disable-next-line @next/next/no-img-element
-  return <img src={src} alt={alt} className={className} onError={handleError} />;
+  return <img src={src} alt={alt} className={className} loading="lazy" decoding="async" onError={handleError} />;
 }

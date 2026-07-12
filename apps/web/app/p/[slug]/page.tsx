@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Fragment } from 'react';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { getProduct, getProductReviews } from '../../../lib/api';
+import { getProduct, getProductReviews, getSponsored } from '../../../lib/api';
 import { fmtKES, stars } from '../../../lib/format';
 import PriceHistoryChart from '../../../components/PriceHistoryChart';
 import ProductActions from '../../../components/ProductActions';
@@ -12,6 +12,10 @@ import { abs, priceString, SITE_NAME } from '../../../lib/seo';
 import { deviceAge, releasedLabel } from '../../../lib/age';
 import { buildProsCons, buildSpecSheet } from '../../../lib/prosCons';
 import AdSlot from '../../../components/AdSlot';
+import StickyBuyBar from '../../../components/StickyBuyBar';
+import AdsterraBanner from '../../../components/AdsterraBanner';
+import SponsoredStrip from '../../../components/SponsoredStrip';
+import { RecentTracker } from '../../../components/RecentlyViewed';
 
 export const revalidate = 30;
 
@@ -48,8 +52,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   let p, reviews;
+  let sponsoredHere: Awaited<ReturnType<typeof getSponsored>> = [];
   try {
     [p, reviews] = await Promise.all([getProduct(slug), getProductReviews(slug).catch(() => [])]);
+    sponsoredHere = await getSponsored('product').catch(() => []);
   } catch {
     notFound();
   }
@@ -160,12 +166,23 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             </div>
             {best && (
               <div className="flex flex-wrap items-center gap-2">
-                <Link href={`/checkout/${best.id}`} className="px-5 py-2.5 rounded-full bg-coral text-white font-bold text-sm">🛒 Order it — we buy for you</Link>
+                {best.id && <Link href={`/checkout/${best.id}`} className="px-5 py-2.5 rounded-full bg-coral text-white font-bold text-sm">🛒 Order it — we buy for you</Link>}
                 <a href={best.goUrl} target="_blank" rel="noopener sponsored noreferrer" className="px-5 py-2.5 rounded-full border-2 border-[#D5DAF0] font-bold text-sm hover:border-coral transition">Buy at {best.sellerName} →</a>
+                <a
+                  href={`https://wa.me/?text=${encodeURIComponent(`${p.name} from ${fmtKES(p.minPrice)} at ${p.bestSeller} 🔥 Compare all store prices: ${abs(`/p/${p.slug}`)}`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2.5 rounded-full bg-[#25D366]/10 text-[#128C4B] font-bold text-sm hover:bg-[#25D366]/20 transition"
+                  title="Share this deal on WhatsApp"
+                >
+                  💬 Share deal
+                </a>
               </div>
             )}
           </div>
-          <ProductActions slug={p.slug} productId={p.id} suggestedTarget={Math.round((p.minPrice * 0.95) / 1000) * 1000} />
+          <div id="alerts" className="scroll-mt-24">
+            <ProductActions slug={p.slug} productId={p.id} suggestedTarget={Math.round((p.minPrice * 0.95) / 1000) * 1000} />
+          </div>
         </div>
       </div>
 
@@ -196,8 +213,8 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                       <td className="p-3">{out
                         ? <span className="text-[#A99FB4] text-xs">Unavailable</span>
                         : <span className="flex items-center gap-3 whitespace-nowrap">
-                            <Link href={`/checkout/${o.id}`} className="text-[#0e8f68] font-bold text-xs">Order 🛒</Link>
-                            <a href={o.goUrl} target="_blank" rel="noopener sponsored noreferrer" className="text-coral font-bold text-xs">View price →</a>
+                            {o.id && <Link href={`/checkout/${o.id}`} className="text-[#0e8f68] font-bold text-xs">Order 🛒</Link>}
+                            <a href={o.goUrl} target="_blank" rel="noopener sponsored noreferrer" className="text-coral font-bold text-xs">See today’s price →</a>
                           </span>}</td>
                     </tr>
                   </Fragment>
@@ -255,7 +272,29 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             <Stat label="Current" value={fmtKES(p.priceStats.current)} color="#3D52D5" />
           </div>
           <PriceHistoryChart history={p.history} />
-          <p className="text-xs text-mut mt-2">{p.priceStats.isGoodDeal ? '✅ Current price is at or below the average — a good time to buy.' : '⏳ Current price is above the average — it may drop.'}</p>
+          {p.priceStats.isGoodDeal ? (
+            <div className="mt-3 rounded-2xl border border-mint bg-[#F1FBF6] p-3.5 flex items-center gap-3">
+              <span className="text-2xl">✅</span>
+              <div>
+                <div className="font-bold text-sm text-[#0e8f68]">Good time to buy</div>
+                <p className="text-xs text-mut mt-0.5">
+                  Today’s best price is at or below the recorded average
+                  {p.priceStats.highest > p.priceStats.current && <> — that’s <b className="text-ink">{fmtKES(p.priceStats.highest - p.priceStats.current)}</b> less than its recorded high</>}.
+                </p>
+              </div>
+            </div>
+          ) : (
+            <div className="mt-3 rounded-2xl border border-amber/50 bg-[#FBF3DA] p-3.5 flex items-center gap-3">
+              <span className="text-2xl">⏳</span>
+              <div>
+                <div className="font-bold text-sm text-[#9a6a12]">Wait if you can</div>
+                <p className="text-xs text-mut mt-0.5">
+                  The current price is above the recorded average of <b className="text-ink">{fmtKES(p.priceStats.average)}</b>.{' '}
+                  <a href="#alerts" className="font-bold text-coral">Set a price alert</a> and we’ll ping you the moment it drops.
+                </p>
+              </div>
+            </div>
+          )}
         </div>
       </Section>
 
@@ -283,6 +322,25 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
       </Section>
 
       <AdSlot className="my-4" />
+      <AdsterraBanner className="my-3" />
+
+      <RecentTracker item={{ slug: p.slug, name: p.name, price: p.minPrice, image: p.image }} />
+
+      {sponsoredHere.length > 0 && (
+        <div className="mt-8">
+          <SponsoredStrip items={sponsoredHere} title="Sponsored" />
+        </div>
+      )}
+
+      {best && (
+        <StickyBuyBar
+          name={p.name}
+          price={p.minPrice}
+          sellerName={best.sellerName}
+          offerId={best.id || undefined}
+          goUrl={best.goUrl}
+        />
+      )}
 
       {p.similar.length > 0 && (
         <Section title="Similar devices">

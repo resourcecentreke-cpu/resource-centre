@@ -5,6 +5,7 @@ import { fmtKES } from '../../lib/format';
 import { abs, SITE_NAME } from '../../lib/seo';
 import JsonLd from '../../components/JsonLd';
 import AdSlot from '../../components/AdSlot';
+import AdsterraBanner from '../../components/AdsterraBanner';
 
 // Refresh a few times an hour — deals change as prices move.
 export const revalidate = 300;
@@ -83,7 +84,7 @@ export default async function DealsPage() {
 
               <div className="h-32 my-3 flex items-center justify-center">
                 {d.image ? (
-                  <img src={d.image} alt={d.name} className="max-h-full max-w-[80%] object-contain drop-shadow" />
+                  <img src={d.image} alt={d.name} loading="lazy" decoding="async" className="max-h-full max-w-[80%] object-contain drop-shadow" />
                 ) : (
                   <span className="text-mut text-sm">{d.brand}</span>
                 )}
@@ -103,6 +104,7 @@ export default async function DealsPage() {
       )}
 
       <AdSlot className="my-6" />
+      <AdsterraBanner className="my-4" width={728} height={90} />
     </div>
   );
 }

@@ -98,6 +98,12 @@ export default function CheckoutForm({ quote }: { quote: OrderQuoteDTO }) {
   }
 
   return (
+    <>
+    <div className="mb-5 grid grid-cols-3 gap-2 text-center text-[11px] font-bold">
+      <div className="rounded-xl border border-[#E3E6F4] bg-white px-2 py-2.5">📲 Pay with M-Pesa</div>
+      <div className="rounded-xl border border-[#E3E6F4] bg-white px-2 py-2.5">🛡️ Refund if unfulfilled</div>
+      <div className="rounded-xl border border-[#E3E6F4] bg-white px-2 py-2.5">🚚 Delivery coordinated</div>
+    </div>
     <form onSubmit={submit} className="grid lg:grid-cols-[1fr_340px] gap-6 items-start">
       <div className="rounded-2xl border border-[#E3E6F4] bg-white p-6 space-y-4">
         <h2 className="font-display text-lg font-bold">Delivery details</h2>
@@ -134,7 +140,7 @@ export default function CheckoutForm({ quote }: { quote: OrderQuoteDTO }) {
         <h2 className="font-display text-lg font-bold">Order summary</h2>
         <div className="mt-3 text-sm space-y-2">
           <div className="flex justify-between gap-3"><span className="text-mut">{quote.productName}</span><b className="tnum whitespace-nowrap">{fmtKES(quote.unitPrice)}</b></div>
-          <div className="flex justify-between gap-3"><span className="text-mut">Service fee (we buy &amp; track it for you)</span><b className="tnum whitespace-nowrap">{fmtKES(quote.serviceFee)}</b></div>
+          <div className="flex justify-between gap-3"><span className="text-mut">Service fee ({Math.max(1, Math.round((quote.serviceFee / quote.unitPrice) * 100))}% — we buy &amp; deliver it for you)</span><b className="tnum whitespace-nowrap">{fmtKES(quote.serviceFee)}</b></div>
           <div className="border-t border-[#E3E6F4] pt-2 flex justify-between gap-3 text-base"><span className="font-bold">Total</span><b className="tnum text-coral">{fmtKES(quote.total)}</b></div>
         </div>
         <p className="text-[11px] text-[#A99FB4] mt-3 leading-relaxed">
@@ -149,7 +155,11 @@ export default function CheckoutForm({ quote }: { quote: OrderQuoteDTO }) {
           {busy ? 'Sending M-Pesa prompt…' : `Pay ${fmtKES(quote.total)} with M-Pesa`}
         </button>
         {!quote.inStock && <p className="text-xs font-bold text-coral mt-2 text-center">This offer is currently out of stock.</p>}
+        <p className="mt-3 text-center text-[11px] text-[#A99FB4]">
+          🔒 Paid via M-Pesa (IntaSend). Nothing is charged until you enter your PIN on your phone.
+        </p>
       </div>
     </form>
+    </>
   );
 }

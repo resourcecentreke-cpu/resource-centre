@@ -1,11 +1,12 @@
 import Link from 'next/link';
 import { getCategories, getDeals, getProducts, getTopInterest, getSponsored, getSellers } from '../lib/api';
 import ProductCard from '../components/ProductCard';
-import HeroShowcase from '../components/HeroShowcase';
+import SearchBand from '../components/SearchBand';
 import PriceDropTicker from '../components/PriceDropTicker';
 import CategoryGroups from '../components/CategoryGroups';
 import SponsoredStrip from '../components/SponsoredStrip';
 import StatsBand from '../components/StatsBand';
+import RecentlyViewed from '../components/RecentlyViewed';
 import Reveal from '../components/Reveal';
 import AdSlot from '../components/AdSlot';
 import type { DealDTO, ProductSummaryDTO } from '@rc/types';
@@ -13,10 +14,9 @@ import type { DealDTO, ProductSummaryDTO } from '@rc/types';
 export const revalidate = 60;
 
 /**
- * Homepage — eBay-style cover: big light banner hero, horizontal deal
- * carousels, circular category tiles, Top-10 rail. One job per section:
- *   1. Hero + search   2. Price drops   3. Categories   4. Top 10
- * Everything else lives on /explore.
+ * Homepage — search-first, money-first. No billboard hero: shoppers land on
+ * search + budget shortcuts, then today's drops, then the products Kenya
+ * actually wants (live interest analytics). One job per section.
  */
 export default async function Home() {
   const [categories, topPhones, deals, cheapest, sponsored, sellers] = await Promise.all([
@@ -35,32 +35,19 @@ export default async function Home() {
     { value: live.length, label: 'Categories' },
     { value: deals.length, label: 'Price drops today' },
   ].filter((s) => s.value > 0);
-  const heroPhones: ProductSummaryDTO[] = topPhones.length ? topPhones : cheapest.items;
 
   return (
     <div className="max-w-6xl mx-auto px-5">
-      {/* 1 · Hero + search */}
-      <section className="pt-6 pb-4">
-        <HeroShowcase phones={heroPhones} />
-      </section>
+      {/* 1 · Search + budget shortcuts (the hero is gone — search IS the hero) */}
+      <SearchBand mostWanted={topPhones.map((p) => ({ name: p.name, slug: p.slug }))} />
 
-      {/* Live catalogue numbers — WorldQuant-style counters */}
-      {stats.length > 0 && (
-        <Reveal className="pb-10">
-          <StatsBand stats={stats} />
-        </Reveal>
-      )}
-
-      {/* Paid placements — only shows when a campaign is live */}
-      <SponsoredStrip items={sponsored} />
-
-      {/* 2 · Price drops — carousel, eBay "Today's deals" style */}
+      {/* 2 · Today's drops — the money section, straight after search */}
       <Reveal>
-      <section className="pt-2 pb-10">
+      <section className="pb-10">
         <PriceDropTicker deals={deals} />
         {(deals.length > 0 || cheapest.items.length > 0) && (
           <>
-            <div className="mt-8 mb-4 flex flex-wrap items-baseline justify-between gap-2">
+            <div className="mt-6 mb-4 flex flex-wrap items-baseline justify-between gap-2">
               <div className="flex items-baseline gap-3">
                 <h2 className="font-display text-2xl font-bold tracking-tight">
                   {deals.length ? 'Today’s top deals' : 'Lowest prices right now'}
@@ -90,30 +77,14 @@ export default async function Home() {
       </section>
       </Reveal>
 
-      {/* 3 · Explore popular categories */}
-      <Reveal>
-      <section className="pb-10">
-        <div className="mb-5 flex flex-wrap items-baseline justify-between gap-2">
-          <h2 className="font-display text-2xl font-bold tracking-tight">Explore popular categories</h2>
-          <div className="flex gap-4 text-sm font-bold">
-            <Link href="/phones" className="text-text underline underline-offset-4 hover:text-accent">Phones by tier</Link>
-            <Link href="/laptops/chooser" className="hidden text-text underline underline-offset-4 hover:text-accent sm:inline">Laptop chooser</Link>
-          </div>
-        </div>
-        <CategoryGroups categories={live} />
-      </section>
-      </Reveal>
-
-      <AdSlot className="my-2" />
-
-      {/* 4 · Top 10 phones in Kenya */}
+      {/* 3 · Most wanted in Kenya — live interest analytics */}
       {topPhones.length > 0 && (
         <Reveal>
-        <section className="pb-8 pt-4">
+        <section className="pb-8">
           <div className="mb-4 flex flex-wrap items-baseline justify-between gap-2">
             <div>
-              <h2 className="font-display text-2xl font-bold tracking-tight">Top 10 phones in Kenya</h2>
-              <p className="mt-0.5 text-sm text-muted">Ranked by shopper interest — updated continuously</p>
+              <h2 className="font-display text-2xl font-bold tracking-tight">Most wanted in Kenya 🇰🇪</h2>
+              <p className="mt-0.5 text-sm text-muted">What shoppers are comparing right now — updated continuously</p>
             </div>
             <Link href="/c/smartphones" className="text-sm font-bold text-text underline underline-offset-4 hover:text-accent">
               See all phones
@@ -129,6 +100,35 @@ export default async function Home() {
         </section>
         </Reveal>
       )}
+
+      {/* Paid placements — only shows when a campaign is live */}
+      <SponsoredStrip items={sponsored} />
+
+      <AdSlot className="my-2" />
+
+      {/* 4 · Categories */}
+      <Reveal>
+      <section className="pt-6 pb-10">
+        <div className="mb-5 flex flex-wrap items-baseline justify-between gap-2">
+          <h2 className="font-display text-2xl font-bold tracking-tight">Explore popular categories</h2>
+          <div className="flex gap-4 text-sm font-bold">
+            <Link href="/phones" className="text-text underline underline-offset-4 hover:text-accent">Phones by tier</Link>
+            <Link href="/laptops/chooser" className="hidden text-text underline underline-offset-4 hover:text-accent sm:inline">Laptop chooser</Link>
+          </div>
+        </div>
+        <CategoryGroups categories={live} />
+      </section>
+      </Reveal>
+
+      {/* Live catalogue numbers */}
+      {stats.length > 0 && (
+        <Reveal className="pb-10">
+          <StatsBand stats={stats} />
+        </Reveal>
+      )}
+
+      {/* Returning shoppers: continue where they stopped */}
+      <RecentlyViewed />
 
       {/* Everything else lives on /explore */}
       <section className="pb-10">

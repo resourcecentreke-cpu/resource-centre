@@ -8,7 +8,7 @@ import Link from 'next/link';
 import { SITE_URL, SITE_NAME, abs, ADSENSE_CLIENT, ADMITAD_VERIFY } from '../lib/seo';
 
 const DESCRIPTION =
-  'Compare phones, laptops, TVs, gaming, cameras and more across Kenya’s trusted online stores — price history, seller trust scores, delivery comparison and price alerts.';
+  'Compare phones, laptops, TVs, home appliances, power tools and more across Kenya’s trusted online stores — live prices, price history, seller trust scores, product age and price alerts, all at a glance.';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -19,7 +19,11 @@ export const metadata: Metadata = {
   description: DESCRIPTION,
   manifest: '/manifest.webmanifest',
   applicationName: SITE_NAME,
-  keywords: ['price comparison Kenya', 'phone prices Kenya', 'laptop prices Kenya', 'electronics Kenya', 'best price Kenya'],
+  keywords: [
+    'price comparison Kenya', 'phone prices Kenya', 'laptop prices Kenya', 'electronics Kenya',
+    'best price Kenya', 'home appliances Kenya', 'power tools prices Kenya', 'TV prices Kenya',
+    'fridge prices Kenya', 'washing machine prices Kenya', 'generator prices Kenya', 'solar prices Kenya',
+  ],
   alternates: { canonical: '/' },
   openGraph: {
     type: 'website',
@@ -67,6 +71,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* Product photos frequently come from GSMArena's CDN — start the TLS handshake early. */}
+        <link rel="preconnect" href="https://fdn2.gsmarena.com" />
         {/* Inter — one quiet, cohesive typeface across the whole site. */}
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&display=swap" rel="stylesheet" />
         {/* Admitad ad-space ownership verification */}
@@ -80,6 +86,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
           crossOrigin="anonymous"
         />
+        {/* Monetag — second CPC/CPM network (good non-Tier-1 rates, $5 min payout).
+            Loads only when both env vars are set; paste values from the Monetag
+            dashboard's tag snippet: src → NEXT_PUBLIC_MONETAG_SRC, data-zone →
+            NEXT_PUBLIC_MONETAG_ZONE. */}
+        {process.env.NEXT_PUBLIC_MONETAG_SRC && process.env.NEXT_PUBLIC_MONETAG_ZONE && (
+          <script
+            async
+            src={process.env.NEXT_PUBLIC_MONETAG_SRC}
+            data-zone={process.env.NEXT_PUBLIC_MONETAG_ZONE}
+            data-cfasync="false"
+          />
+        )}
       </head>
       <body className="font-sans min-h-screen flex flex-col">
         <JsonLd data={siteJsonLd} />
@@ -101,6 +119,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 ['/releases', 'New & Upcoming'],
                 ['/phones', 'Phones'],
                 ['/accessories', 'Accessories'],
+                ['/stores', 'Stores'],
                 ['/guides', 'Guides'],
                 ['/compare', 'Compare'],
                 ['/alerts', 'Alerts'],

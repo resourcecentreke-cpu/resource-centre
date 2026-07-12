@@ -13,6 +13,10 @@ export function toggleCompare(slug: string): string[] {
   window.dispatchEvent(new Event('rc-compare'));
   return list;
 }
+export function setCompare(slugs: string[]): void {
+  localStorage.setItem(KEY, JSON.stringify(slugs.slice(0, 4)));
+  window.dispatchEvent(new Event('rc-compare'));
+}
 export function inCompare(slug: string): boolean {
   return getCompare().includes(slug);
 }

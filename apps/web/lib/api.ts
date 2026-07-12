@@ -1,6 +1,6 @@
 import type {
   CategoryDTO, Paginated, ProductSummaryDTO, ProductDetailDTO, ReviewDTO, SearchSuggestion, DealDTO,
-  TopInterestDTO, SponsoredListingDTO, OrderQuoteDTO, OrderDTO, CreateOrderResponse,
+  TopInterestDTO, SponsoredListingDTO, OrderQuoteDTO, OrderDTO, CreateOrderResponse, SellerProfileDTO,
 } from '@rc/types';
 
 function base(): string {
@@ -23,7 +23,7 @@ export const getDeals = (limit = 24) => get<DealDTO[]>(`/products/deals?limit=${
 export const getTopInterest = (category?: string, limit = 10) =>
   get<TopInterestDTO[]>(`/products/top-interest?limit=${limit}${category ? `&category=${category}` : ''}`, 120);
 export const getProductReviews = (slug: string) => get<ReviewDTO[]>(`/reviews/product/${slug}`, 30);
-export const getSellers = () => get<{ slug: string; name: string }[]>('/sellers', 300);
+export const getSellers = () => get<SellerProfileDTO[]>('/sellers', 300);
 export const getSponsored = (placement: 'home' | 'category' | 'product' = 'home') =>
   get<SponsoredListingDTO[]>(`/sponsored?placement=${placement}`, 120);
 export const search = (qs: string) => get<Paginated<ProductSummaryDTO>>(`/search${qs}`);

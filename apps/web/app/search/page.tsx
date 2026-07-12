@@ -27,9 +27,26 @@ function Results() {
         <BarcodeScanner />
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        {items.map((p) => <ProductCard key={p.slug} p={p} />)}
+        {loading
+          ? Array.from({ length: 8 }).map((_, i) => (
+              <div key={i} className="overflow-hidden rounded-2xl border border-line bg-white">
+                <div className="skeleton h-40" />
+                <div className="space-y-2 p-4">
+                  <div className="skeleton h-3 w-1/3 rounded" />
+                  <div className="skeleton h-4 w-4/5 rounded" />
+                  <div className="skeleton h-5 w-1/2 rounded" />
+                </div>
+              </div>
+            ))
+          : items.map((p) => <ProductCard key={p.slug} p={p} />)}
       </div>
-      {!loading && !items.length && <p className="text-mut">No devices match “{q}”.</p>}
+      {!loading && !items.length && (
+        <div className="rounded-2xl border border-line bg-white p-8 text-center">
+          <div className="text-3xl">🔍</div>
+          <p className="mt-2 font-bold">No devices match “{q}”</p>
+          <p className="text-mut text-sm mt-1">Try a shorter name — “spark” instead of “tecno spark 40 pro plus”.</p>
+        </div>
+      )}
       <AdSlot className="my-6" />
     </div>
   );

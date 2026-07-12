@@ -11,15 +11,29 @@ export default function Header() {
   const router = useRouter();
   const [q, setQ] = useState('');
   const [sug, setSug] = useState<SearchSuggestion[]>([]);
+  const [active, setActive] = useState(-1); // keyboard-highlighted suggestion
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     if (timer.current) clearTimeout(timer.current);
-    if (!q.trim()) { setSug([]); return; }
-    timer.current = setTimeout(async () => setSug(await autocomplete(q)), 160);
+    if (!q.trim()) { setSug([]); setActive(-1); return; }
+    timer.current = setTimeout(async () => { setSug(await autocomplete(q)); setActive(-1); }, 160);
   }, [q]);
 
-  const go = () => { if (q.trim()) { setSug([]); router.push(`/search?q=${encodeURIComponent(q)}`); } };
+  const close = () => { setSug([]); setActive(-1); };
+  const go = () => { if (q.trim()) { close(); router.push(`/search?q=${encodeURIComponent(q)}`); } };
+
+  // Apple-style keyboard flow: up/down move, Enter opens, Esc dismisses.
+  const onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Escape') { close(); return; }
+    if (!sug.length) { if (e.key === 'Enter') go(); return; }
+    if (e.key === 'ArrowDown') { e.preventDefault(); setActive((v) => (v + 1) % sug.length); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); setActive((v) => (v <= 0 ? sug.length - 1 : v - 1)); }
+    else if (e.key === 'Enter') {
+      const pick = active >= 0 ? sug[active] : null;
+      if (pick) { close(); router.push(`/p/${pick.slug}`); } else go();
+    }
+  };
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-[#0A0A0F]/90 backdrop-blur-md backdrop-saturate-150">
@@ -31,18 +45,22 @@ export default function Header() {
           <input
             value={q}
             onChange={(e) => setQ(e.target.value)}
-            onKeyDown={(e) => e.key === 'Enter' && go()}
+            onKeyDown={onKeyDown}
+            onBlur={() => setTimeout(close, 150)}
+            role="combobox"
+            aria-expanded={sug.length > 0}
+            aria-autocomplete="list"
             placeholder="Search products, brands or models…"
             className="w-full rounded-full border border-white/15 bg-white/[0.07] px-4 py-2.5 text-sm text-white placeholder:text-white/40 transition duration-fast ease-out focus:border-white/40 focus-visible:shadow-none"
           />
           {sug.length > 0 && (
             <div className="absolute left-0 right-0 top-12 z-50 origin-top animate-scale-in overflow-hidden rounded-2xl border border-line bg-raised shadow-raised">
-              {sug.map((s) => (
+              {sug.map((s, i) => (
                 <Link
                   key={s.slug}
                   href={`/p/${s.slug}`}
-                  onClick={() => setSug([])}
-                  className="flex items-center gap-3 border-b border-line px-4 py-3 transition-colors duration-fast ease-out last:border-0 hover:bg-bg2"
+                  onClick={close}
+                  className={`flex items-center gap-3 border-b border-line px-4 py-3 transition-colors duration-fast ease-out last:border-0 hover:bg-bg2 ${i === active ? 'bg-bg2' : ''}`}
                 >
                   <span className="flex-1">
                     <span className="block text-sm font-medium text-text">{s.name}</span>
@@ -61,6 +79,7 @@ export default function Header() {
           <Link href="/phones" className="hidden transition-colors duration-fast ease-out hover:text-white md:block">Phones</Link>
           <Link href="/accessories" className="hidden transition-colors duration-fast ease-out hover:text-white lg:block">Accessories</Link>
           <Link href="/guides" className="hidden transition-colors duration-fast ease-out hover:text-white lg:block">Guides</Link>
+          <Link href="/stores" className="hidden transition-colors duration-fast ease-out hover:text-white md:block">Stores</Link>
           <Link href="/compare" className="transition-colors duration-fast ease-out hover:text-white">Compare</Link>
           <Link href="/alerts" className="hidden transition-colors duration-fast ease-out hover:text-white sm:block">Alerts</Link>
           <Link href="/tip" className="hidden transition-colors duration-fast ease-out hover:text-white sm:block">Tip us</Link>

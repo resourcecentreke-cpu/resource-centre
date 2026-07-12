@@ -1,12 +1,13 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { getProducts, getCategories, getTopInterest } from '../../../lib/api';
+import { getProducts, getCategories, getTopInterest, getSponsored } from '../../../lib/api';
 import { fmtKES } from '../../../lib/format';
 import { abs, priceString, SITE_NAME } from '../../../lib/seo';
 import Filters from '../../../components/Filters';
 import JsonLd from '../../../components/JsonLd';
 import TopInterest from '../../../components/TopInterest';
 import AdSlot from '../../../components/AdSlot';
+import SponsoredStrip from '../../../components/SponsoredStrip';
 
 export const revalidate = 60;
 
@@ -107,6 +108,8 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
           <span className="shrink-0 rounded-full bg-coral text-white text-xs font-bold px-4 py-2">Open the chooser →</span>
         </Link>
       )}
+      <SponsoredStrip items={await getSponsored('category').catch(() => [])} title="Sponsored in this category" />
+
       <div className="grid lg:grid-cols-[1fr_320px] gap-8 items-start">
         <div className="min-w-0">
           <Filters category={slug} initial={initial.items} />
